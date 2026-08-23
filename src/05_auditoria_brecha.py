@@ -22,12 +22,11 @@ from __future__ import annotations
 import re
 from collections import Counter
 import duckdb, pandas as pd
-from util import (INTERMEDIO, REPORTES, cargar_diccionario, como_lista,
-                  construir_matchers, detectar, normalizar, guardar_reporte)
+from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
+                  como_lista, construir_matchers, detectar, normalizar,
+                  guardar_reporte)
 
-# Codigos cuyo termino nombra tambien un ingrediente, vitamina o mineral de uso
-# no colorante. Se excluyen de la cifra depurada salvo que el contexto los avale.
-AMBIGUOS = {"E101", "E170", "E171", "E100", "E160a", "E160c", "E140"}
+AMBIGUOS = REQUIEREN_CONTEXTO   # definido en util.py, con su historial
 
 RE_TRUNCADO = re.compile(r"(\.\.\.|…)\s*$|[a-z,]\s*$")
 RE_CONTEXTO = re.compile(r"colorante|color(?:es)?\b|pigmento")

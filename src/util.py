@@ -84,6 +84,30 @@ def detectar(texto_norm: str, matchers) -> dict[str, str]:
     return hallados
 
 
+# Codigos cuyo termino nombra tambien un ingrediente, vitamina, mineral o especia
+# de uso NO colorante. Solo cuentan si la palabra "colorante" aparece cerca.
+#
+# Se declara UNA sola vez y la importan 05 y 06, para que no puedan divergir.
+# Cuando se publique el diccionario como material suplementario, esto debe
+# migrar a colorantes.yaml como campo `requiere_contexto` de cada entrada.
+#
+# Historial:
+#   v1 (23/08) E100, E101, E140, E160a, E160c, E170, E171
+#              Motivo: curcuma-especia, vitamina B2, minerales, carotenos y
+#              paprika como ingrediente.
+#   v2 (23/08) + E160b, E162, E163
+#              Motivo: son trampas especificas del mercado mexicano. El achiote
+#              es condimento antes que colorante (recado rojo, cochinita); la
+#              jamaica en un agua de jamaica ES la bebida, no la colorea; el
+#              betabel aparece como jugo o extracto en calidad de ingrediente.
+#              La correccion es del instrumento, no del umbral: se aplica de
+#              forma uniforme y se reportan las dos versiones.
+REQUIEREN_CONTEXTO = frozenset({
+    "E100", "E101", "E140", "E160a", "E160b", "E160c", "E162", "E163",
+    "E170", "E171",
+})
+
+
 def como_lista(valor) -> list:
     """Normaliza a lista de cadenas cualquier campo de tipo lista del parquet.
 

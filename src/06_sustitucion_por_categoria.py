@@ -28,14 +28,19 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 import duckdb, pandas as pd, yaml
-from util import (INTERMEDIO, REPORTES, cargar_diccionario, como_lista,
-                  construir_matchers, detectar, normalizar, guardar_reporte)
+from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
+                  como_lista, construir_matchers, detectar, normalizar,
+                  guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
-AMBIGUOS = {"E101", "E170", "E171", "E100", "E160a", "E160c", "E140"}
+AMBIGUOS = REQUIEREN_CONTEXTO   # definido en util.py, con su historial
 RE_CONTEXTO = re.compile(r"colorante|color(?:es)?\b|pigmento")
 VENTANA = 60
-N_MINIMO = 30   # celdas con menos productos no se interpretan; se reportan igual
+# El minimo se aplica al DENOMINADOR DEL INDICE, es decir a los productos que
+# declaran algun colorante, no al tamano de la categoria. Conservas tenia 437
+# productos pero solo 21 coloreados: el indice descansaba sobre 21 casos y el
+# script lo marcaba como suficiente. Error corregido el 23/08.
+N_MINIMO = 30
 
 
 def cargar_categorias() -> dict:
@@ -119,11 +124,15 @@ def main() -> None:
             "n_ambos": n_amb,
             # Indice de sustitucion: entre los que declaran color, que fraccion es
             # solo natural. No mide reformulacion; describe composicion actual.
+            # El indice describe el PERFIL DE ORIGEN del sistema de color, no
+            # sustitucion. Una categoria puede salir "natural" porque migro o
+            # porque nunca uso sinteticos: carnicos con 38 % de carmin es el
+            # segundo caso, y el diseno transversal no los distingue.
             "pct_solo_natural_entre_coloreados": (
                 round(100 * int(((g.naturales.map(bool) | g.carmin) &
                                  ~g.sinteticos.map(bool)).sum()) / con_color, 1)
                 if con_color else None),
-            "potencia_suficiente": n >= N_MINIMO,
+            "potencia_suficiente": con_color >= N_MINIMO,
         })
     mat = pd.DataFrame(filas_mat).sort_values("n", ascending=False)
 
@@ -169,6 +178,9 @@ def main() -> None:
                    "marcas_con_ambos": len(marcas_nat & marcas_sin)}
 
     resumen = {
+        "criterio_potencia": (f"n_con_colorante >= {N_MINIMO}. Se aplica al denominador "
+                              f"del indice, no al tamano de la categoria."),
+        "codigos_que_requieren_contexto": sorted(AMBIGUOS),
         "n_con_texto_y_categoria": len(r),
         "reparto_universo": Counter(
             r.categoria.map(lambda c: c if c.startswith("_") else "analizable")).most_common(),

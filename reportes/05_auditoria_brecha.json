@@ -6,12 +6,12 @@
     "pct": 77.6
   },
   "BRECHA_DEPURADA": {
-    "n_con_colorante": 1679,
-    "n_con_brecha": 1150,
-    "pct": 68.5,
-    "criterio": "excluye ['E100', 'E101', 'E140', 'E160a', 'E160c', 'E170', 'E171'] salvo que 'colorante' aparezca a menos de 60 caracteres"
+    "n_con_colorante": 1570,
+    "n_con_brecha": 1037,
+    "pct": 66.1,
+    "criterio": "excluye ['E100', 'E101', 'E140', 'E160a', 'E160b', 'E160c', 'E162', 'E163', 'E170', 'E171'] salvo que 'colorante' aparezca a menos de 60 caracteres"
   },
-  "n_descartados_por_ambiguedad": 1138,
+  "n_descartados_por_ambiguedad": 1284,
   "descartados_por_codigo": [
     [
       "E101",
@@ -20,6 +20,10 @@
     [
       "E170",
       234
+    ],
+    [
+      "E160b",
+      170
     ],
     [
       "E100",
@@ -38,14 +42,22 @@
       90
     ],
     [
+      "E163",
+      33
+    ],
+    [
       "E140",
       7
+    ],
+    [
+      "E162",
+      5
     ]
   ],
   "sesgo_truncamiento": {
     "pct_textos_truncados": 16.0,
-    "deteccion_en_truncados_pct": 14.8,
-    "deteccion_en_completos_pct": 22.9,
+    "deteccion_en_truncados_pct": 13.4,
+    "deteccion_en_completos_pct": 21.5,
     "diferencia_pp": 8.1,
     "lectura": "Si la diferencia es positiva y grande, el truncamiento hace perder colorantes y la prevalencia real es mayor. Va en limitaciones."
   },
