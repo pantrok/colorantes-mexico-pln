@@ -1,0 +1,53 @@
+{
+  "n_con_texto": 7775,
+  "BRECHA_BRUTA": {
+    "n_con_colorante": 2502,
+    "n_con_brecha": 1942,
+    "pct": 77.6
+  },
+  "BRECHA_DEPURADA": {
+    "n_con_colorante": 1679,
+    "n_con_brecha": 1150,
+    "pct": 68.5,
+    "criterio": "excluye ['E100', 'E101', 'E140', 'E160a', 'E160c', 'E170', 'E171'] salvo que 'colorante' aparezca a menos de 60 caracteres"
+  },
+  "n_descartados_por_ambiguedad": 1138,
+  "descartados_por_codigo": [
+    [
+      "E101",
+      601
+    ],
+    [
+      "E170",
+      234
+    ],
+    [
+      "E100",
+      147
+    ],
+    [
+      "E160c",
+      135
+    ],
+    [
+      "E160a",
+      122
+    ],
+    [
+      "E171",
+      90
+    ],
+    [
+      "E140",
+      7
+    ]
+  ],
+  "sesgo_truncamiento": {
+    "pct_textos_truncados": 16.0,
+    "deteccion_en_truncados_pct": 14.8,
+    "deteccion_en_completos_pct": 22.9,
+    "diferencia_pp": 8.1,
+    "lectura": "Si la diferencia es positiva y grande, el truncamiento hace perder colorantes y la prevalencia real es mayor. Va en limitaciones."
+  },
+  "para_el_resumen": "Reportar la cifra DEPURADA. La bruta se menciona en metodos para mostrar cuanto pesa la ambiguedad de uso, que es justamente el argumento a favor del reconocimiento de entidades frente al emparejamiento por diccionario."
+}

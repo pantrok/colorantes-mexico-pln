@@ -12,7 +12,7 @@ Referencias externas de cobertura:
 from __future__ import annotations
 from collections import Counter
 import duckdb, pandas as pd
-from util import INTERMEDIO, REPORTES, guardar_reporte
+from util import INTERMEDIO, REPORTES, como_lista, guardar_reporte
 
 CENSO_INSP = 38872
 CENSO_ZANCHETA = 15846
@@ -44,12 +44,25 @@ def main() -> None:
         return round(100 * sum(v for _, v in cnt.most_common(k)) / max(sum(cnt.values()), 1), 1)
 
     # --- categorias: se usa la etiqueta de primer nivel para no fragmentar ---
-    cats = Counter()
-    for lista in df.categorias.dropna():
-        for c in (lista if isinstance(lista, (list, tuple)) else []):
-            if str(c).startswith("en:"):
-                cats[str(c)] += 1
+    cats, cats_hoja = Counter(), Counter()
+    n_con_categoria = 0
+    for lista in df.categorias:
+        etiquetas = [c for c in como_lista(lista) if c.startswith("en:")]
+        if not etiquetas:
+            continue
+        n_con_categoria += 1
+        for c in etiquetas:
+            cats[c] += 1
+        # La ultima etiqueta suele ser la mas especifica; util para el recorte.
+        cats_hoja[etiquetas[-1]] += 1
     top_cats = cats.most_common(40)
+
+    # Interseccion critica: sin categoria Y sin texto no hay analisis posible.
+    con_texto = df.ingredientes_texto.notna() & (
+        df.ingredientes_texto.astype(str).str.strip() != "")
+    con_cat = df.categorias.map(lambda x: bool([c for c in como_lista(x)
+                                                if c.startswith("en:")]))
+    n_utiles = int((con_texto & con_cat).sum())
 
     # --- actividad de contribucion en el tiempo ---
     # OJO: esto NO es reformulacion. Es actividad de la comunidad. Etiquetar asi
@@ -69,6 +82,9 @@ def main() -> None:
 
     resumen = {
         "n_productos_mx": n,
+        "n_con_categoria": n_con_categoria,
+        "n_con_texto_Y_categoria": n_utiles,
+        "pct_utiles_para_analisis_por_categoria": round(100 * n_utiles / n, 1),
         "cobertura_vs_censo_INSP_pct": round(100 * n / CENSO_INSP, 1),
         "cobertura_vs_Zancheta_pct": round(100 * n / CENSO_ZANCHETA, 1),
         "advertencia_cobertura": ("Las razones anteriores comparan conteos, no universos. "
@@ -85,12 +101,15 @@ def main() -> None:
         "top20_marcas": marcas.most_common(20),
         "top20_contribuidores": contrib.most_common(20),
         "top40_categorias": top_cats,
+        "top40_categorias_hoja": cats_hoja.most_common(40),
         "completitud_pct": completitud,
         "altas_por_anio": altas.to_dict("records"),
         "nota_altas": "Actividad de contribucion, NO reformulacion de producto.",
     }
 
     print(f"  productos MX: {n:,}")
+    print(f"  con categoria: {n_con_categoria:,}")
+    print(f"  con texto Y categoria (n util): {n_utiles:,}")
     print(f"  vs censo INSP: {resumen['cobertura_vs_censo_INSP_pct']} %")
     print(f"  top-10 contribuidores aportan: {resumen['pct_top10_contribuidores']} %")
     print(f"  gini contribuidores: {resumen['gini_contribuidores']}")
@@ -99,8 +118,10 @@ def main() -> None:
     guardar_reporte("03_cobertura_sesgo", resumen)
 
     REPORTES.mkdir(exist_ok=True)
-    pd.DataFrame(top_cats, columns=["categoria", "n"]).to_csv(
+    pd.DataFrame(cats.most_common(), columns=["categoria", "n"]).to_csv(
         REPORTES / "03_categorias.csv", index=False, encoding="utf-8")
+    pd.DataFrame(cats_hoja.most_common(), columns=["categoria_hoja", "n"]).to_csv(
+        REPORTES / "03_categorias_hoja.csv", index=False, encoding="utf-8")
     print(f"-> {REPORTES / '03_categorias.csv'}")
 
     if resumen["pct_top10_contribuidores"] > 50:

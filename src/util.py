@@ -84,6 +84,27 @@ def detectar(texto_norm: str, matchers) -> dict[str, str]:
     return hallados
 
 
+def como_lista(valor) -> list:
+    """Normaliza a lista de cadenas cualquier campo de tipo lista del parquet.
+
+    BUG QUE ARREGLA (2026-08-23): al leer parquet con pandas, las columnas de
+    lista llegan como numpy.ndarray, que NO es list ni tuple. Un
+    `isinstance(x, (list, tuple))` las descarta en silencio, y por eso el conteo
+    de categorias en 03_cobertura_sesgo.py salio vacio pese a que el 52.8 % de
+    los productos tienen categoria. Nunca uses isinstance con estos campos.
+    """
+    if valor is None:
+        return []
+    if isinstance(valor, str):
+        return [valor]
+    try:
+        if hasattr(valor, "tolist"):
+            valor = valor.tolist()
+        return [str(x) for x in valor if x is not None and str(x).strip()]
+    except TypeError:
+        return []
+
+
 def guardar_reporte(nombre: str, datos: dict) -> Path:
     REPORTES.mkdir(parents=True, exist_ok=True)
     ruta = REPORTES / f"{nombre}.json"
