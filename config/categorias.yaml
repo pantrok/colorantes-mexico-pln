@@ -1,0 +1,148 @@
+# Mapeo de la taxonomia de Open Food Facts a categorias analiticas del articulo.
+#
+# POR QUE HACE FALTA. La taxonomia de OFF es un grafo con herencia: un yogur de
+# fresa lleva a la vez en:dairies, en:fermented-foods, en:fermented-milk-products,
+# en:yogurts y en:flavoured-yogurts. Contar todas las etiquetas infla; contar solo
+# la hoja fragmenta —hay cientos de hojas con n=1— y ademas la hoja mas frecuente
+# del subconjunto mexicano es en:groceries (394), que significa "sin clasificar".
+# Se necesita un mapeo declarado y auditable.
+#
+# COMO ASIGNA. Cada producto va a UNA sola categoria: la primera que coincida
+# recorriendo `prioridad` en orden. El orden importa y es una decision, no un
+# detalle: una galleta de chocolate cae en panificacion, no en confiteria.
+#
+# Las categorias estan pensadas para poder mapearse despues contra los grupos de
+# gasto alimentario de la ENIGH. Ese cruce se documenta aparte.
+
+meta:
+  version: "0.1"
+  fecha: "2026-08-23"
+  nota: "Propuesta inicial. Revisar con la Dra. Granados-Balbuena antes de fijar."
+
+# Se descartan del universo de analisis. El subconjunto trae productos no
+# alimentarios: jabon liquido, cosmeticos, un medicamento (diclofenaco), slime.
+excluir:
+  - "en:non-food-products"
+  - "en:cosmeticos"
+  - "en:jabon-liquido-para-manos"
+  - "en:slime"
+  - "en:compuesto-b-diclofenaco"
+  - "en:Nicotine"
+  - "en:Bactericide"
+  - "en:non-open-products-facts"
+
+# Fuera del analisis principal pero se cuentan aparte: el acuerdo de COFEPRIS
+# sobre eritrosina si los cubre, asi que conviene no perderlos de vista.
+aparte:
+  suplementos:
+    - "en:dietary-supplements"
+    - "en:vitamin-supplements"
+    - "en:protein-powders"
+    - "en:bodybuilding-supplements"
+    - "en:collagen-protein"
+    - "en:creatine"
+  alcohol:
+    - "en:alcoholic-beverages"
+    - "en:beers"
+    - "en:wines"
+    - "en:liqueurs"
+    - "en:tequilas"
+    - "en:rums"
+    - "en:mezcal"
+
+# Orden de asignacion. Primera coincidencia gana.
+prioridad:
+  - confiteria
+  - helados_y_paletas
+  - botanas_saladas
+  - panificacion_y_galleteria
+  - cereales_desayuno
+  - postres_y_gelatinas
+  - lacteos
+  - bebidas_no_alcoholicas
+  - carnicos_procesados
+  - salsas_y_aderezos
+  - conservas_y_untables
+  - comidas_preparadas
+
+categorias:
+  confiteria:
+    etiqueta: "Confitería y golosinas"
+    tags: ["en:confectioneries", "en:candies", "en:gummi-candies", "en:hard-candies",
+           "en:lollipops", "en:marshmallows", "en:bonbons", "en:chewing-gum",
+           "en:sugar-free-chewing-gum", "en:chocolates", "en:milk-chocolates",
+           "en:dark-chocolates", "en:white-chocolates", "en:chocolate-candies",
+           "en:sugar-coated-chocolate-confectioneries", "en:chocolate-truffles",
+           "en:caramels", "en:rock-candies", "en:marzipan"]
+  helados_y_paletas:
+    etiqueta: "Helados y paletas"
+    tags: ["en:ice-creams", "en:ice-pops", "en:ice-cream-bars", "en:ice-cream-tubs",
+           "en:ice-creams-and-sorbets", "en:frozen-desserts", "en:granizados"]
+  botanas_saladas:
+    etiqueta: "Botanas saladas"
+    tags: ["en:crisps", "en:salty-snacks", "en:potato-crisps", "en:corn-chips",
+           "en:chips-and-fries", "en:popcorn", "en:salted-popcorn", "en:sugared-popcorn",
+           "en:appetizers", "en:extruded-cereals", "en:pretzel", "en:crackers",
+           "en:tortilla-chips", "en:dried-tortilla-chips", "en:plantain-chips",
+           "en:taro-chips", "en:snacks-salados", "en:botanas-snacks-salados"]
+  panificacion_y_galleteria:
+    etiqueta: "Panificación y galletería"
+    tags: ["en:biscuits", "en:biscuits-and-cakes", "en:breads", "en:sliced-breads",
+           "en:cakes", "en:pastries", "en:toasts", "en:wafers", "en:muffins",
+           "en:croissants", "en:brownies", "en:chocolate-biscuits", "en:filled-biscuits",
+           "en:sandwich-biscuits", "en:churros", "en:bakery-products", "en:crispbreads",
+           "en:hamburger-buns", "en:panettone", "en:madeleines"]
+  cereales_desayuno:
+    etiqueta: "Cereales de desayuno y barras"
+    tags: ["en:breakfast-cereals", "en:mueslis", "en:cereal-bars", "en:bars",
+           "en:corn-flakes", "en:puffed-cereals", "en:cereal-flakes", "en:energy-bars",
+           "en:protein-bars", "en:granola", "en:rolled-oats", "en:oat"]
+  postres_y_gelatinas:
+    etiqueta: "Postres y gelatinas"
+    tags: ["en:jelly-desserts", "en:gelatin", "en:mixes-for-jelly-desserts",
+           "en:flans", "en:desserts", "en:dessert-mixes", "en:rice-puddings",
+           "en:dairy-desserts", "en:fermented-dairy-desserts", "en:cheesecakes"]
+  lacteos:
+    etiqueta: "Lácteos"
+    tags: ["en:yogurts", "en:flavoured-yogurts", "en:greek-style-yogurts",
+           "en:fruit-yogurts", "en:drinkable-yogurts", "en:yogurt-drinks",
+           "en:cheeses", "en:pasteurized-cheeses", "en:milks", "en:flavoured-milks",
+           "en:chocolate-milks", "en:milkshakes", "en:creams", "en:butters",
+           "en:condensed-milks", "en:evaporated-milks", "en:milk-powders",
+           "en:kefir", "en:dairies", "en:fermented-milk-products", "en:dairy-drinks"]
+  bebidas_no_alcoholicas:
+    etiqueta: "Bebidas no alcohólicas"
+    tags: ["en:sodas", "en:colas", "en:carbonated-drinks", "en:sweetened-beverages",
+           "en:artificially-sweetened-beverages", "en:fruit-based-beverages",
+           "en:fruit-juices", "en:fruit-nectars", "en:flavored-waters",
+           "en:flavored-sparkling-waters", "en:energy-drinks", "en:iced-teas",
+           "en:sports-drink", "en:waters", "en:beverages", "en:plant-based-beverages",
+           "en:almond-based-drinks", "en:soy-based-drinks", "en:oat-based-drinks",
+           "en:coconut-waters", "en:instant-beverages", "en:dehydrated-beverages",
+           "en:powdered-beverages", "en:coffees", "en:instant-coffees", "en:teas",
+           "en:herbal-teas", "en:kombuchas", "en:fruit-sodas", "en:refrescos"]
+  carnicos_procesados:
+    etiqueta: "Cárnicos procesados"
+    tags: ["en:sausages", "en:smoked-sausages", "en:turkey-sausages", "en:chorizo",
+           "en:hams", "en:dried-hams", "en:white-hams", "en:raw-cured-ham",
+           "en:prepared-meats", "en:canned-meats", "en:dried-meats", "en:bacon",
+           "en:salami", "en:frankfurter-sausages", "en:meats-and-their-products"]
+  salsas_y_aderezos:
+    etiqueta: "Salsas y aderezos"
+    tags: ["en:ketchup", "en:tomato-ketchup", "en:catsup", "en:mayonnaises",
+           "en:light-mayonnaises", "en:salad-dressings", "en:hot-sauces",
+           "en:mustards", "en:dijon-mustards", "en:soy-sauces", "en:barbecue-sauces",
+           "en:tomato-sauces", "en:pasta-sauces", "en:sauces", "en:condiments",
+           "en:salsa", "en:green-sauces", "en:chamoy", "en:mole"]
+  conservas_y_untables:
+    etiqueta: "Conservas y untables"
+    tags: ["en:jams", "en:marmalades", "en:sweet-spreads", "en:spreads",
+           "en:peanut-butters", "en:cocoa-and-hazelnuts-spreads", "en:honeys",
+           "en:canned-vegetables", "en:canned-fruits", "en:fruits-in-syrup",
+           "en:canned-foods", "en:refried-beans", "en:milk-jams", "en:compotes"]
+  comidas_preparadas:
+    etiqueta: "Comidas preparadas"
+    tags: ["en:frozen-ready-made-meals", "en:refrigerated-meals", "en:meals",
+           "en:dehydrated-soups", "en:soups", "en:canned-soups", "en:instant-noodles",
+           "en:instant-noodle-soups", "en:pot-noodles", "en:pizzas",
+           "en:frozen-pizzas", "en:sandwiches", "en:burritos", "en:fajitas"]
