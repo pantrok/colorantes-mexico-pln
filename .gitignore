@@ -1,0 +1,5 @@
+datos/crudo/
+datos/intermedio/
+__pycache__/
+.venv/
+*.pyc

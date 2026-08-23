@@ -1,0 +1,92 @@
+"""Utilidades compartidas: normalizacion de texto y carga del diccionario."""
+from __future__ import annotations
+import json, re, unicodedata
+from pathlib import Path
+import yaml
+
+RAIZ = Path(__file__).resolve().parents[1]
+CONFIG = RAIZ / "config" / "colorantes.yaml"
+REPORTES = RAIZ / "reportes"
+INTERMEDIO = RAIZ / "datos" / "intermedio"
+
+
+def normalizar(texto: str | None) -> str:
+    """Minusculas, sin acentos, puntuacion a espacio, espacios colapsados.
+
+    Se aplica igual al texto de la etiqueta y a los terminos del diccionario,
+    para que la comparacion sea simetrica.
+    """
+    if not texto:
+        return ""
+    t = unicodedata.normalize("NFKD", str(texto))
+    t = "".join(c for c in t if not unicodedata.combining(c)).lower()
+    t = re.sub(r"[^\w\s&.]", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def cargar_diccionario() -> dict:
+    with open(CONFIG, encoding="utf-8") as f:
+        d = yaml.safe_load(f)
+    for bloque in ("sinteticos", "naturales", "fuera_de_eje"):
+        for codigo, info in d.get(bloque, {}).items():
+            info["clase"] = bloque
+            info["codigo"] = codigo
+            info["terminos_norm"] = sorted(
+                {normalizar(t) for t in info.get("terminos", [])}, key=len, reverse=True
+            )
+    d["genericos"]["terminos_norm"] = [normalizar(t) for t in d["genericos"]["terminos"]]
+    return d
+
+
+def construir_matchers(dic: dict) -> list[tuple[str, str, re.Pattern]]:
+    """Devuelve (codigo, clase, patron) UNO POR TERMINO, del mas largo al mas corto.
+
+    El orden tiene que ser por termino y no por sustancia. Si se ordenara por
+    sustancia, E120 se probaria antes que E124 —porque su termino mas largo,
+    'carmin de cochinilla', tiene 20 caracteres frente a los 17 de 'rojo
+    cochinilla a'— y entonces el termino corto 'cochinilla' se comeria el texto
+    antes de que E124 tuviera oportunidad. Las dos trampas del dominio dependen
+    de esto:
+
+      'rojo cochinilla a' -> E124 SINTETICO, no 'cochinilla' -> E120 natural
+      'carmin de indigo'  -> E132 SINTETICO, no 'carmin'     -> E120 natural
+
+    Hay una prueba en tests/test_diccionario.py que lo verifica. Si la tocas y
+    falla, es que reintrodujiste el error.
+    """
+    return [(c, b, re.compile(rf"(?<!\w){re.escape(t)}(?!\w)"))
+            for t, c, b in terminos_ordenados(dic)]
+
+
+def terminos_ordenados(dic: dict) -> list[tuple[str, str, str]]:
+    """(termino, codigo, clase) del termino mas largo al mas corto. Ver construir_matchers."""
+    terminos = [
+        (t, codigo, bloque)
+        for bloque in ("sinteticos", "naturales", "fuera_de_eje")
+        for codigo, info in dic.get(bloque, {}).items()
+        for t in info["terminos_norm"] if t
+    ]
+    terminos.sort(key=lambda x: len(x[0]), reverse=True)
+    return terminos
+
+
+def detectar(texto_norm: str, matchers) -> dict[str, str]:
+    """Devuelve {codigo: clase} de los colorantes hallados, consumiendo el texto.
+
+    Consumir es lo que resuelve las trampas: al reconocer 'rojo cochinilla a' se
+    borra del texto, de modo que 'cochinilla' ya no puede volver a coincidir.
+    """
+    hallados, resto = {}, texto_norm
+    for codigo, clase, patron in matchers:
+        if patron.search(resto):
+            hallados[codigo] = clase
+            resto = patron.sub(" ", resto)
+    return hallados
+
+
+def guardar_reporte(nombre: str, datos: dict) -> Path:
+    REPORTES.mkdir(parents=True, exist_ok=True)
+    ruta = REPORTES / f"{nombre}.json"
+    ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"-> {ruta}")
+    return ruta

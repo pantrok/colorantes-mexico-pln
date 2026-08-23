@@ -1,0 +1,90 @@
+{
+  "n_con_texto_ingredientes": 7775,
+  "n_con_colorante_en_texto": 2502,
+  "n_con_brecha": 1942,
+  "PCT_BRECHA": 77.6,
+  "n_solo_en_tags": 112,
+  "n_generico_sin_sustancia": 164,
+  "codigos_mas_perdidos": [
+    [
+      "E101",
+      605
+    ],
+    [
+      "E110",
+      246
+    ],
+    [
+      "E133",
+      224
+    ],
+    [
+      "E120",
+      214
+    ],
+    [
+      "E170",
+      206
+    ],
+    [
+      "E160c",
+      198
+    ],
+    [
+      "E100",
+      178
+    ],
+    [
+      "E160a",
+      176
+    ],
+    [
+      "E160b",
+      170
+    ],
+    [
+      "E102",
+      151
+    ],
+    [
+      "E129",
+      142
+    ],
+    [
+      "E132",
+      45
+    ],
+    [
+      "E171",
+      31
+    ],
+    [
+      "E127",
+      26
+    ],
+    [
+      "E163",
+      17
+    ]
+  ],
+  "brecha_relativa_por_codigo_pct": {
+    "E160c": 100.0,
+    "E160a": 100.0,
+    "E160b": 100.0,
+    "E101": 98.5,
+    "E120": 95.5,
+    "E127": 89.7,
+    "E100": 78.4,
+    "E170": 78.0,
+    "E133": 63.6,
+    "E132": 60.0,
+    "E163": 51.5,
+    "E110": 46.6,
+    "E122": 35.7,
+    "E140": 30.0,
+    "E171": 22.8,
+    "E129": 21.5,
+    "E102": 20.4
+  },
+  "nota": "PCT_BRECHA es la proporcion de productos con colorante nombrado en el texto que no lo tienen en additives_tags. Es el numero de portada. 'solo_en_tags' es el caso inverso y sirve de control: si es alto, el diccionario semilla esta incompleto, no additives_tags."
+}

@@ -1,0 +1,30 @@
+{
+  "n_total_mx": 17330,
+  "n_con_texto": 7775,
+  "pct_con_texto": 44.9,
+  "longitud_caracteres": {
+    "p5": 20,
+    "p25": 105,
+    "p50": 222,
+    "p75": 398,
+    "p95": 809
+  },
+  "pct_muy_corto_menos_30_car": 7.9,
+  "idioma_inferido": {
+    "es": 90.7,
+    "en": 3.4,
+    "indeterminado": 5.8,
+    "mixto": 0.1
+  },
+  "idioma_declarado_en_volcado": {
+    "es": 7008,
+    "nulo": 9555,
+    "main": 760,
+    "en": 6,
+    "fr": 1
+  },
+  "pct_posible_ocr": 1.0,
+  "pct_posible_truncado": 16.0,
+  "pct_con_al_menos_un_colorante": 35.9,
+  "colorantes_por_producto_media": 0.66
+}

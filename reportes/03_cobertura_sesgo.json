@@ -1,0 +1,250 @@
+{
+  "n_productos_mx": 17330,
+  "cobertura_vs_censo_INSP_pct": 44.6,
+  "cobertura_vs_Zancheta_pct": 109.4,
+  "advertencia_cobertura": "Las razones anteriores comparan conteos, no universos. El censo del INSP se levanto en autoservicio en 2016-2017; OFF acumula desde 2012 sin marco muestral. Sirve como orden de magnitud, no como tasa de cobertura formal.",
+  "n_marcas": 5112,
+  "pct_top10_marcas": 10.6,
+  "pct_top50_marcas": 25.5,
+  "gini_marcas": 0.567,
+  "n_contribuidores": 538,
+  "pct_top10_contribuidores": 76.9,
+  "gini_contribuidores": 0.937,
+  "top20_marcas": [
+    [
+      "Great Value",
+      283
+    ],
+    [
+      "Lala",
+      172
+    ],
+    [
+      "Bimbo",
+      151
+    ],
+    [
+      "Nestlé",
+      145
+    ],
+    [
+      "Sabritas",
+      128
+    ],
+    [
+      "Kellogg's",
+      124
+    ],
+    [
+      "Danone",
+      122
+    ],
+    [
+      "Jumex",
+      117
+    ],
+    [
+      "Gamesa",
+      98
+    ],
+    [
+      "Yoplait",
+      97
+    ],
+    [
+      "Alpura",
+      97
+    ],
+    [
+      "Barcel",
+      97
+    ],
+    [
+      "Kirkland",
+      92
+    ],
+    [
+      "Marinela",
+      80
+    ],
+    [
+      "Quaker",
+      78
+    ],
+    [
+      "La Costeña",
+      73
+    ],
+    [
+      "Nestle",
+      69
+    ],
+    [
+      "HEB",
+      66
+    ],
+    [
+      "Aurrera",
+      65
+    ],
+    [
+      "Member's Mark",
+      60
+    ]
+  ],
+  "top20_contribuidores": [
+    [
+      "macrofactor",
+      3352
+    ],
+    [
+      "openfoodfacts-contributors",
+      2058
+    ],
+    [
+      "foodvisor",
+      1622
+    ],
+    [
+      "smoothie-app",
+      1250
+    ],
+    [
+      "openfoodfactsmx4",
+      1235
+    ],
+    [
+      "xpiry",
+      1136
+    ],
+    [
+      "kiliweb",
+      1101
+    ],
+    [
+      "openfoodfactsmx5",
+      599
+    ],
+    [
+      "openfoodfactsmx",
+      535
+    ],
+    [
+      "app-kaki",
+      437
+    ],
+    [
+      "veganeamos",
+      294
+    ],
+    [
+      "openfoodfactsmx7",
+      288
+    ],
+    [
+      "martini101",
+      252
+    ],
+    [
+      "elcoco",
+      225
+    ],
+    [
+      "openfoodfactsmx2",
+      190
+    ],
+    [
+      "foodless",
+      165
+    ],
+    [
+      "fabe56",
+      161
+    ],
+    [
+      "openfoodfactsmx3",
+      160
+    ],
+    [
+      "nobeeakon",
+      134
+    ],
+    [
+      "usda-ndb-import",
+      133
+    ]
+  ],
+  "top40_categorias": [],
+  "completitud_pct": {
+    "nombre_producto": 92.0,
+    "ingredientes_texto": 44.9,
+    "aditivos_tags": 46.1,
+    "categorias": 52.8,
+    "marcas": 80.9,
+    "nova": 39.7,
+    "nutriscore": 99.2
+  },
+  "altas_por_anio": [
+    {
+      "anio": 2012,
+      "n": 7
+    },
+    {
+      "anio": 2013,
+      "n": 6
+    },
+    {
+      "anio": 2014,
+      "n": 13
+    },
+    {
+      "anio": 2015,
+      "n": 63
+    },
+    {
+      "anio": 2016,
+      "n": 40
+    },
+    {
+      "anio": 2017,
+      "n": 280
+    },
+    {
+      "anio": 2018,
+      "n": 3162
+    },
+    {
+      "anio": 2019,
+      "n": 1359
+    },
+    {
+      "anio": 2020,
+      "n": 978
+    },
+    {
+      "anio": 2021,
+      "n": 1252
+    },
+    {
+      "anio": 2022,
+      "n": 1177
+    },
+    {
+      "anio": 2023,
+      "n": 1161
+    },
+    {
+      "anio": 2024,
+      "n": 2461
+    },
+    {
+      "anio": 2025,
+      "n": 3451
+    },
+    {
+      "anio": 2026,
+      "n": 1920
+    }
+  ],
+  "nota_altas": "Actividad de contribucion, NO reformulacion de producto."
+}
