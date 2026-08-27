@@ -1,0 +1,118 @@
+# Adiciones al diccionario, tomadas de la nomenclatura OFICIAL mexicana.
+#
+# Fuente: Acuerdo de aditivos, DOF 16/07/2012, Anexos III y IV, mas las listas
+# incrementales de COFEPRIS 2015-2026. El articulo DECIMOSEGUNDO obliga a
+# declarar con el nombre comun o con alguno de estos sinonimos, asi que cada
+# forma de aqui es una declaracion valida en etiqueta.
+#
+# Se aplican con `python src/fusionar_diccionario.py`. NO reemplaza el YAML:
+# lo amplia, con respaldo previo y reporte de lo que cambio.
+#
+# Origen de la seleccion: script 10, bloque C. Son las formas legales que el
+# diccionario no reconocia y que SI aparecen en el subconjunto mexicano, mas las
+# que no aparecieron pero son legales y de la misma familia.
+
+meta:
+  fecha: "2026-08-28"
+  motivo: "321 detecciones eran falsos negativos reales y 10 estaban mal clasificadas"
+
+# ---------------------------------------------------------------- SINTETICOS
+sinteticos:
+  E102:  ["amarillo alimentos 4", "amarillo fd&c5", "amarillo fd&c 5"]
+  E110:  ["amarillo alimentos 3", "amarillo fd&c 6"]
+  E122:  ["rojo alimentos 3", "rojo d&c 5"]
+  E124:  ["rojo alimentos 7", "rojo 6", "rojo d&c6"]
+  E127:  ["rojo alimentos 14"]
+  E129:  ["rojo alimentos 17", "rojo fd&c40", "rojo curry", "rojo coccin"]
+  # TRAMPA: la numeracion mexicana va INVERTIDA respecto de la FD&C.
+  # «azul alimentos 1» es INDIGOTINA (E132); «azul alimentos 2» es AZUL
+  # BRILLANTE (E133). En la nomenclatura estadounidense «Azul 1» es el
+  # brillante. Meterlos al reves invierte los dos azules.
+  E132:  ["azul alimentos 1"]
+  E133:  ["azul alimentos 2"]
+  E143:  ["verde alimentos 3", "verde fd&c3", "verde japon"]
+
+  # --- codigos nuevos ---
+  # LA CORRECCION QUE MOTIVA ESTE PARCHE. La ley mexicana separa el beta
+  # caroteno por origen: 160a(i) sintetico (CI 40800) y 160a(ii) natural
+  # (CI 75130). Nuestro diccionario los tenia juntos bajo E160a, en el bloque de
+  # naturales, asi que los 10 productos que declaran «beta caroteno sintetico»
+  # se contaban como colorante NATURAL: del lado equivocado del eje que mide el
+  # articulo. Como el emparejador ordena de termino mas largo a mas corto y
+  # consume el texto al reconocer, «beta caroteno sintetico» gana sobre «beta
+  # caroteno» y la trampa queda resuelta con el mecanismo que ya existia, el
+  # mismo que resuelve «rojo cochinilla a».
+  E160a-i:
+    tono: naranja
+    base: liposoluble
+    terminos: ["beta caroteno sintetico", "betacaroteno sintetico",
+               "beta-caroteno sintetico", "caroteno sintetico",
+               "carotenos sinteticos"]
+  E160e:
+    tono: naranja
+    base: liposoluble
+    terminos: ["beta-apo-8'-carotenal", "beta apo 8 carotenal",
+               "anaranjado alimentos 6"]
+  E160f:
+    tono: naranja
+    base: liposoluble
+    terminos: ["anaranjado alimentos 7"]
+  E161g:
+    tono: naranja
+    base: liposoluble
+    terminos: ["cantaxantina"]
+  E107:
+    tono: amarillo
+    base: hidrosoluble
+    terminos: ["amarillo 2g", "amarillo alimentos 5"]
+
+# ---------------------------------------------------------------- NATURALES
+naturales:
+  E100:   ["curcuma turmerico", "curcuma en polvo", "azafran indio", "azafran de indias"]
+  E120:   ["rojo natural 4", "extracto de coccus cacti"]
+  E140:   ["verde natural 3"]
+  E160b:  ["extracto de annato", "anaranjado natural 4", "anaranjado 3",
+           "extracto de semillas de bixa orellana"]
+  E161b:  ["extracto de cempazuchitl", "extracto de cempasuchil"]
+  E162:   ["rojo betabel", "rojo remolacha", "rojo raiz de betabel"]
+  # Subcodigos de antocianina que la autoridad mexicana reconoce por fuente
+  # botanica. La campanilla azul entro en noviembre de 2025 y es fuente AZUL:
+  # toca la prediccion P1.
+  E163:   ["extracto de zanahoria negra", "extracto de papa dulce morada",
+           "extracto de rabano rojo", "extracto de campanilla azul",
+           "conchita azul", "extracto de tegumento de uva"]
+  SPIRULINA: ["extracto de espirulina"]
+  E183:
+    tono: azul
+    base: hidrosoluble
+    terminos: ["azul de jagua"]
+  # «azafran» a secas es especia antes que colorante: entra a los codigos que
+  # exigen contexto. «azafran indio» y «azafran de indias» son CURCUMA (E100) y
+  # ganan primero por ser mas largos.
+  E164:
+    tono: amarillo
+    base: hidrosoluble
+    requiere_contexto: true
+    terminos: ["azafran", "amarillo natural 6"]
+
+# ------------------------------------------------------- MINERALES / OTROS
+# Se anaden al bloque donde ya viven E170 y E171 en el YAML actual. La clase
+# `mineral_inorganico` la asignan los scripts por codigo, no por bloque.
+minerales:
+  E171: ["pigmento blanco 6"]
+  E172: ["oxido de hierro negro", "oxido de hierro rojo", "oxido de hierro amarillo",
+         "pigmento negro 11", "pigmento rojo 101", "pigmento amarillo 42"]
+
+# ------------------------------------------------------------- NO SE ANADEN
+# Formas legales que quedan FUERA a proposito, y por que.
+excluidas:
+  "anaranjado alimentos 5":
+    motivo: >
+      La propia ley lo da como sinonimo de las DOS entradas, 160a(i) sintetica y
+      160a(ii) natural. No es resoluble ni con contexto. 52 detecciones en el
+      subconjunto. Va al manuscrito como caso donde la norma misma impide
+      recuperar el origen; contarlo de cualquier lado seria inventar.
+  "caramelo clase i":
+    motivo: "«caramelo» ya lo captura por subcadena. Anadirlo no cambia nada."
+  "rojo allura ac":
+    motivo: "«rojo allura» ya lo captura. Idem «azul brillante fcf», «amarillo ocaso fcf»."

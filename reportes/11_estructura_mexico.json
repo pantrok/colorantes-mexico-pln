@@ -1,0 +1,302 @@
+{
+  "pais": "en:mexico",
+  "fuente": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\intermedio\\productos_mx.parquet",
+  "n_detecciones": 3095,
+  "prevalencia_de_las_marcas": {
+    "pct_detecciones_con_codigo_en_texto": 1.9,
+    "pct_con_clase_declarada_antes": 40.4,
+    "pct_con_forma_colorante_dos_puntos": 0.0
+  },
+  "tabla_decisoria": [
+    {
+      "tiene_codigo": false,
+      "tiene_clase": false,
+      "n": 1826,
+      "recuperadas": 1077,
+      "pct_recuperado": 59.0
+    },
+    {
+      "tiene_codigo": false,
+      "tiene_clase": true,
+      "n": 1211,
+      "recuperadas": 651,
+      "pct_recuperado": 53.8
+    },
+    {
+      "tiene_codigo": true,
+      "tiene_clase": false,
+      "n": 20,
+      "recuperadas": 20,
+      "pct_recuperado": 100.0
+    },
+    {
+      "tiene_codigo": true,
+      "tiene_clase": true,
+      "n": 38,
+      "recuperadas": 36,
+      "pct_recuperado": 94.7
+    }
+  ],
+  "tabla_decisoria_solo_sujetos_a_la_regla": [
+    {
+      "tiene_codigo": false,
+      "tiene_clase": false,
+      "n": 152,
+      "recuperadas": 1,
+      "pct_recuperado": 0.7
+    },
+    {
+      "tiene_codigo": false,
+      "tiene_clase": true,
+      "n": 132,
+      "recuperadas": 7,
+      "pct_recuperado": 5.3
+    },
+    {
+      "tiene_codigo": true,
+      "tiene_clase": true,
+      "n": 3,
+      "recuperadas": 3,
+      "pct_recuperado": 100.0
+    }
+  ],
+  "por_codigo": [
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 876,
+      "pct_con_codigo": 1.1,
+      "pct_con_clase": 34.0,
+      "pct_recuperado": 81.1
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 672,
+      "pct_con_codigo": 1.5,
+      "pct_con_clase": 35.7,
+      "pct_recuperado": 78.1
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 541,
+      "pct_con_codigo": 1.5,
+      "pct_con_clase": 32.3,
+      "pct_recuperado": 54.3
+    },
+    {
+      "codigo": "E133",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 359,
+      "pct_con_codigo": 3.1,
+      "pct_con_clase": 34.3,
+      "pct_recuperado": 36.5
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "sujeto_a_regla": true,
+      "n": 224,
+      "pct_con_codigo": 1.3,
+      "pct_con_clase": 32.1,
+      "pct_recuperado": 4.5
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 85,
+      "pct_con_codigo": 3.5,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 25.9
+    },
+    {
+      "codigo": "E132",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 78,
+      "pct_con_codigo": 5.1,
+      "pct_con_clase": 44.9,
+      "pct_recuperado": 41.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": true,
+      "n": 60,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160b",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 49,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 36,
+      "pct_con_codigo": 2.8,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E171",
+      "clase": "mineral_inorganico",
+      "sujeto_a_regla": false,
+      "n": 31,
+      "pct_con_codigo": 19.4,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 90.3
+    },
+    {
+      "codigo": "E127",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 29,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 34.5,
+      "pct_recuperado": 10.3
+    },
+    {
+      "codigo": "E122",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 14,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 50.0,
+      "pct_recuperado": 64.3
+    },
+    {
+      "codigo": "E163",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 8,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 87.5
+    },
+    {
+      "codigo": "E101",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 7,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 42.9
+    },
+    {
+      "codigo": "SPIRULINA",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 6,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 0.0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E140",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 5,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 80.0
+    },
+    {
+      "codigo": "E124",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 4,
+      "pct_con_codigo": 25.0,
+      "pct_con_clase": 50.0,
+      "pct_recuperado": 75.0
+    },
+    {
+      "codigo": "E153",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 3,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 33.3,
+      "pct_recuperado": 33.3
+    },
+    {
+      "codigo": "E170",
+      "clase": "mineral_inorganico",
+      "sujeto_a_regla": true,
+      "n": 3,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 33.3
+    },
+    {
+      "codigo": "E161b",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 2,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 50.0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160d",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 2,
+      "pct_con_codigo": 0.0,
+      "pct_con_clase": 0.0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E141",
+      "clase": "natural_botanico",
+      "sujeto_a_regla": false,
+      "n": 1,
+      "pct_con_codigo": 100.0,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 100.0
+    }
+  ],
+  "por_clase": {
+    "carmin": {
+      "n": 224,
+      "recuperadas": 10,
+      "pct_recuperado": 4.5
+    },
+    "mineral_inorganico": {
+      "n": 34,
+      "recuperadas": 29,
+      "pct_recuperado": 85.3
+    },
+    "natural_botanico": {
+      "n": 264,
+      "recuperadas": 38,
+      "pct_recuperado": 14.4
+    },
+    "sintetico": {
+      "n": 2573,
+      "recuperadas": 1707,
+      "pct_recuperado": 66.3
+    }
+  },
+  "VEREDICTO": {
+    "solo_codigo_pct": 100.0,
+    "solo_clase_pct": 53.8,
+    "ninguna_pct": 59.0,
+    "apoya": "H2 el codigo en el texto",
+    "nota": "Se compara cuanto sube la recuperacion respecto de las detecciones que no traen ni codigo ni clase. La marca que mas la suba es el mecanismo."
+  },
+  "advertencia": "`tiene_codigo` mira todo el texto, no la vecindad del termino: un producto con varios aditivos puede traer el codigo de OTRO. Es una cota superior."
+}

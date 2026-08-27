@@ -1,1004 +1,358 @@
-code,producto,forma_oficial,sin,codigo_e,clase,ya_en_tags
-0014100085478,GOLDFISH,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0036731106018,Gatorade Sabor Naranja,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0036731106025,Lime,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0036731106049,Gatorade Sabor Uva,rojo allura ac,SIN129,E129,sintetico,True
-0036731106049,Gatorade Sabor Uva,azul brillante fcf,SIN133,E133,sintetico,True
-0036731106063,gatorade rojo 600,rojo allura ac,SIN129,E129,sintetico,True
-0036731136916,Gatorade Fierce,azul brillante fcf,SIN133,E133,sintetico,True
-0036731140067,Gatorade Polvo sabor Ponche de Frutas,rojo allura ac,SIN129,E129,sintetico,True
-0036731140067,Gatorade Polvo sabor Ponche de Frutas,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0036731321008,Gatorade Sabor Naranja,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0036731322005,Bebida Gatorade sabor limonada,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0036731324009,Bebida Gatorade sabor uva,rojo allura ac,SIN129,E129,sintetico,True
-0036731324009,Bebida Gatorade sabor uva,azul brillante fcf,SIN133,E133,sintetico,True
-0036731326003,Punch de fruta,rojo allura ac,SIN129,E129,sintetico,True
-0036731328007,Fresandia,rojo allura ac,SIN129,E129,sintetico,True
-0036731451002,Gatorade Polvo sabor naranja,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0036731501004,Gatorade naranja 500 ml,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0036731506009,Gatorade sabor Ponche de Frutas,rojo allura ac,SIN129,E129,sintetico,True
-0038000019210,Galletas rellenas pop tarts,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0038000318108,POP TARTS FROSTED CHERRY NATURALLY FLAVORED,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0038000318108,POP TARTS FROSTED CHERRY NATURALLY FLAVORED,rojo allura ac,SIN129,E129,sintetico,True
-0038000318108,POP TARTS FROSTED CHERRY NATURALLY FLAVORED,azul brillante fcf,SIN133,E133,sintetico,True
-0041580750008,CEREZAS DESHUESADAS AL MARRASQUINO,rojo allura ac,SIN129,E129,sintetico,True
-0070847017332,Monster Punch,rojo allura ac,SIN129,E129,sintetico,True
-0076150601336,ACT II sabor Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0078742091976,MOSTAZA AMARILLA,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-0078895128789,SOY SAUCE,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0078895700015,HOISIN SAUCE,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0850697002012,Barquillos,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0850697002456,Abanico Mac'Ma,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0850697002456,Abanico Mac'Ma,amarillo fd&c 6,SIN110,E110,sintetico,True
-0850697002470,Grofenata,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0850697002517,Escoses,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0850697002524,Selecciones,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0850697002661,CRISPY WAFER FAN,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0850697002661,CRISPY WAFER FAN,amarillo fd&c 6,SIN110,E110,sintetico,True
-0850697002722,Real,amarillo ocaso fcf,SIN110,E110,sintetico,True
-0869774000124,"Maika, Veggie Burger, Carrot Orange",annato norbixina,SIN160(b),E160b,natural_botanico,False
-0884912112217,HONEY BUNCHES OF OATS STRAWBERRIES,extracto de annato,SIN160(b),E160b,natural_botanico,False
-2000000073649,Gatorade Perform,amarillo ocaso fcf,SIN110,E110,sintetico,False
-3168930009191,Doritos Nachos sabor Queso,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478002801,Cremax sabor a chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478002801,Cremax sabor a chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-7500478002818,Cremax sabor fresa,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478002818,Cremax sabor fresa,rojo allura ac,SIN129,E129,sintetico,True
-7500478002818,Cremax sabor fresa,azul brillante fcf,SIN133,E133,sintetico,True
-7500478002894,Emperador sabor a chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478002894,Emperador sabor a chocolate,rojo allura ac,SIN129,E129,sintetico,True
-7500478002894,Emperador sabor a chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-7500478003006,Doradas de Marías,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7500478003600,Sabritones Rodacas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478004690,Buenos Días Galletas Quaker con Chocolate,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501000142705,Cuernitos,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501000617432,Arcoiris,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000617432,Arcoiris,rojo allura ac,SIN129,E129,sintetico,True
-7501000617432,Arcoiris,azul brillante fcf,SIN133,E133,sintetico,True
-7501000628377,Marias Doradas,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501000635306,Chokis clásica,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7501000662739,Chocolatines,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000662739,Chocolatines,rojo allura ac,SIN129,E129,sintetico,True
-7501000662739,Chocolatines,azul brillante fcf,SIN133,E133,sintetico,True
-7501000673186,Maravillas clásicas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000673193,Florentinas sabor fresa,rojo allura ac,SIN129,E129,sintetico,True
-7501002612114,Cheez Whiz,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501002612213,Cheez Whiz Jalapeño,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501003393050,Búfalo clasica,rojo allura ac,SIN129,E129,sintetico,False
-7501003393180,Salsa Botanera,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501005102667,Soya + jugo de naranja,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005102667,Soya + jugo de naranja,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501005106801,Fécula de maiz para preparar atole fortificado sabor fresa,rojo allura ac,SIN129,E129,sintetico,True
-7501005106801,Fécula de maiz para preparar atole fortificado sabor fresa,azul brillante fcf,SIN133,E133,sintetico,True
-7501008706091,Marías con cajeta,rojo allura ac,SIN129,E129,sintetico,True
-7501011130975,chetos torcidos,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501011130975,chetos torcidos,rojo allura ac,SIN129,E129,sintetico,False
-7501011131064,Doritos Nachos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011131118,Frios Chile & limón,rojo allura ac,SIN129,E129,sintetico,True
-7501011135512,Tostitos Salsa Verde,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011135512,Tostitos Salsa Verde,rojo allura ac,SIN129,E129,sintetico,False
-7501011165892,Belight sabor Naranja,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011167667,Botana a base de papá sabor adobo,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011167667,Botana a base de papá sabor adobo,rojo allura ac,SIN129,E129,sintetico,True
-7501011167667,Botana a base de papá sabor adobo,azul brillante fcf,SIN133,E133,sintetico,True
-7501011169821,Belight  Fresa,rojo allura ac,SIN129,E129,sintetico,True
-7501011169838,Belight Manzana,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011169838,Belight Manzana,rojo allura ac,SIN129,E129,sintetico,True
-7501011181762,be light sabor Toronja,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011181762,be light sabor Toronja,rojo allura ac,SIN129,E129,sintetico,True
-7501011181809,Jamaica,rojo allura ac,SIN129,E129,sintetico,True
-7501011181809,Jamaica,azul brillante fcf,SIN133,E133,sintetico,True
-7501014302133,Choco choco,azul brillante fcf,SIN133,E133,sintetico,True
-7501017006762,Tamal de dulce,rojo fd&c40,SIN129,E129,sintetico,False
-7501020512250,Queso manchego LALA,carotenos naturales,SIN160a(ii),E160a,natural_botanico,False
-7501020512281,Queso Chihuahua LALA,carotenos naturales,SIN160a(ii),E160a,natural_botanico,False
-7501020537390,Queso Manchego LALA,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7501020537482,Queso Manchego LALA,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7501020537550,Americano Nutri Leche,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7501020555226,Gouda rebanadas de queso,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501022011157,Agua con jugo de mango,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501022011188,Agua con jugo arándano-jamaica,rojo allura ac,SIN129,E129,sintetico,True
-7501022011188,Agua con jugo arándano-jamaica,azul brillante fcf,SIN133,E133,sintetico,True
-7501022011201,Agua con jugo de guayaba,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501022012482,Epurita essentials con jugo 6 pack,rojo allura ac,SIN129,E129,sintetico,True
-7501022012482,Epurita essentials con jugo 6 pack,azul brillante fcf,SIN133,E133,sintetico,True
-7501022012499,Epurita essentials con jugo de Mango 6 pack,amarillo ocaso fcf,SIN110,E110,sintetico,False
-75010221011195,Agua con jugo de guayaba,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501024577286,Jarabe sabor a chocolate Light,rojo allura ac,SIN129,E129,sintetico,False
-7501030454786,PANQUÉ CASERO Y MANTEQUILLA TÍA ROSA,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501030457428,Explosión de tartas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501031111039,Surtido Castilla,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501031111039,Surtido Castilla,amarillo fd&c 6,SIN110,E110,sintetico,True
-7501031111039,Surtido Castilla,rojo d&c 5,SIN122,E122,sintetico,False
-7501031111190,Galletas Cuenta Conmigo,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501031111190,Galletas Cuenta Conmigo,amarillo fd&c 6,SIN110,E110,sintetico,True
-7501031111190,Galletas Cuenta Conmigo,rojo d&c 5,SIN122,E122,sintetico,False
-7501031303878,Be Light Jamaica,rojo allura ac,SIN129,E129,sintetico,True
-7501031303878,Be Light Jamaica,azul brillante fcf,SIN133,E133,sintetico,True
-7501031303885,Be light Sabor Limon,azul brillante fcf,SIN133,E133,sintetico,True
-7501031303892,Be light sabor mango,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501031303892,Be light sabor mango,rojo allura ac,SIN129,E129,sintetico,True
-7501035046122,B:oost active energy Pop,rojo allura ac,SIN129,E129,sintetico,False
-7501037217063,CEREZAS EN ALMÍBAR LOLTUN,rojo 6,SIN124,E124,sintetico,False
-7501040081422,Queso tipo Manchego rebanado,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040081477,Queso Americano La Villita,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501040081477,Queso Americano La Villita,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501040081477,Queso Americano La Villita,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7501040082016,Queso Machego FUD,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040090745,Yoplait contiene trozos de fresa natural y probióticos,rojo 6,SIN124,E124,sintetico,False
-7501054787877,Totopos de maíz salados,rojo allura ac,SIN129,E129,sintetico,True
-7501055909582,Manchasmx,rojo allura ac,SIN129,E129,sintetico,True
-7501069213446,Harina de trigo preparada para hot cakes,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7501092109143,Queso Fundido Lyncott,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501295600621,Lechita 100% pura de vaca sabor helado de fresa,rojo natural 4,SIN120,E120,carmin,False
-7501413540778,Itto Salsa con Habanero,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501413549733,Itto Salsa con chile,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501413549740,Itto Salsa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501505630028,Sangría Casera,rojo allura ac,SIN129,E129,sintetico,False
-7501669804198,Aderezo para nachos El ciervo,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501669880109,Queso tipo Americano Esmeralda,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501761810691,Harina para preparar hot cakes,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501761810714,Harina preparada para Hot Cakes,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501761838367,Stila sabor fresa,rojo allura ac,SIN129,E129,sintetico,False
-7501761847987,Barre de céréales Pomme Canelle,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501761865394,Multibran con pasas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501761865394,Multibran con pasas,azul brillante fcf,SIN133,E133,sintetico,True
-7501761865394,Multibran con pasas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501761869149,Hotcakes tradicionales,rojo allura ac,SIN129,E129,sintetico,True
-7501791616553,Queso tipo americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791624640,Queso tipo Americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791650236,Queso tipo Americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791668569,Barras de coco,amarillo fd&c5,SIN102,E102,sintetico,False
-7502244270155,Dip alcachofa con parmesano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7502244270155,Dip alcachofa con parmesano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7502244270193,Dip elote,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7502244270193,Dip elote,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501791632362,World table Galletas de hojaldre tipo banderillascon queso gouda y edam,amarillo natural 6,SINnr_azafran,,natural_botanico,False
-7501761857245,Barras de avena Quaker Stila sabor fresa,rojo allura ac,SIN129,E129,sintetico,True
-7501761857245,Barras de avena Quaker Stila sabor fresa,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0724865045210,Soles,amarillo fd&c5,SIN102,E102,sintetico,False
-0850697002425,Galletas Mac Ma fresa,amarillo fd&c5,SIN102,E102,sintetico,True
-0850697002425,Galletas Mac Ma fresa,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0850697002425,Galletas Mac Ma fresa,rojo fd&c40,SIN129,E129,sintetico,False
-7501791670555,Queso tipo Manchego Great Value,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478005765,Churrumais con limoncito,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501020547207,Queso manchego rallado,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501761863291,Barras de avena Quaker Stila sabor fresa,rojo allura ac,SIN129,E129,sintetico,True
-0016000467583,Cinnamon Toast Crunch Treats,anaranjado 3,SIN160(b),E160b,natural_botanico,False
-7501761876369,Barras Quaker rellenas con manzanas,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501761810202,barras de avena rellen sabor a fresa,rojo allura ac,SIN129,E129,sintetico,True
-7501761810202,barras de avena rellen sabor a fresa,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501761864816,Stila Fit Chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501761864816,Stila Fit Chocolate,rojo allura ac,SIN129,E129,sintetico,True
-7501761864816,Stila Fit Chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-7501761864816,Stila Fit Chocolate,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7501000137237,Bran Frut Fresa,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501000137237,Bran Frut Fresa,rojo allura ac,SIN129,E129,sintetico,True
-7501000137237,Bran Frut Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501761847970,Barras de avena Quaker Stila sabor moras,rojo allura ac,SIN129,E129,sintetico,True
-7501761847970,Barras de avena Quaker Stila sabor moras,azul brillante fcf,SIN133,E133,sintetico,True
-7501761847970,Barras de avena Quaker Stila sabor moras,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501000137763,Bran Frut Piña,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501030459620,Multigrano arandanos y sabor fresa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501025511326,Soful Lt,rojo betabel,SIN162,E162,natural_botanico,False
-8741784876055,Stila Guayaba y Mora Acai,rojo allura ac,SIN129,E129,sintetico,True
-7501689026402,Capistrano Salchicha de Pavo,extracto de coccus cacti,SIN120,E120,carmin,False
-7501147515035,Kir Salchicha para asar,rojo d&c 5,SIN122,E122,sintetico,False
-7501031307241,Jumex Fresh Conga,rojo allura ac,SIN129,E129,sintetico,True
-7501031307210,bebida jumex fresh citrus,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501005114523,Ades Max sabor Mango,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005114523,Ades Max sabor Mango,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501005108065,Ades Max,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005108065,Ades Max,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501005114516,Soya + Jugo de naranja,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005114516,Soya + Jugo de naranja,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7506306305724,Ades cero sabor mango,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7506306305724,Ades cero sabor mango,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7622210852052,GALLETA OREO PAY DE LIMON,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7501000655151,"Cremax surtido, fresa, vainilla chocolate",amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000655151,"Cremax surtido, fresa, vainilla chocolate",rojo allura ac,SIN129,E129,sintetico,True
-7501000655151,"Cremax surtido, fresa, vainilla chocolate",azul brillante fcf,SIN133,E133,sintetico,True
-7501761842234,TARTAS QUAKER FRESA,rojo allura ac,SIN129,E129,sintetico,True
-7501761832372,GALLETAS QUAKER VAINILLA,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7501761832471,GALLETAS QUAKER CON ALMENDRA,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7501020537499,Queso americano Lala,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501020537499,Queso americano Lala,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501020537499,Queso americano Lala,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7501077510599,Noche buena queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040083761,Fud queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501077510575,Noche buena queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501077510377,Noche buena Queso Manchego reducido en grasa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501002202179,caperucita queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501077513156,Noche buena queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040083570,Queso tipo manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040083884,Queso tipo manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501020537383,Queso procesado americano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501020537383,Queso procesado americano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501020537383,Queso procesado americano,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-0046100010990,Queso mozzarella pizza double cheese,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040083587,Queso manchego rallado,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791725439,Queso mozzarella picado,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501689021001,Capistrano Vida Deli,extracto de coccus cacti,SIN120,E120,carmin,False
-7501761848847,AVENA INSTANT FRESAS CON CREMA,rojo allura ac,SIN129,E129,sintetico,True
-7501011134324,Patatas Sabrita pizza,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011134324,Patatas Sabrita pizza,rojo allura ac,SIN129,E129,sintetico,False
-7501761868982,AVENA INSTANT FRESAS CON CREMA,rojo allura ac,SIN129,E129,sintetico,True
-7501761856743,Quaker Granola de Avena y Trigo,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791636018,Sustituto de crema,amarillo fd&c 6,SIN110,E110,sintetico,True
-7501791640954,Extra Special Queso semicurado,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791640930,Extra Special Queso Iberico Semicurado,azul brillante fcf,SIN133,E133,sintetico,True
-7501761873542,Avena Quaker O's sabor vainilla,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0884912020505,Cereal Hojuelas De Maiz Con Almendr,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0038527591060,Oatmeal Squares Brown Sugar,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501761865424,Avena flakes quaker sabor vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791667043,BRAN FIBRA,rojo allura ac,SIN129,E129,sintetico,True
-7501791645119,BRAN FIBRA FLAKES,amarillo fd&c 6,SIN110,E110,sintetico,True
-0002544317101,POP TARTS FROSTED STRAWBERRY,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0002544317101,POP TARTS FROSTED STRAWBERRY,rojo allura ac,SIN129,E129,sintetico,True
-0002544317101,POP TARTS FROSTED STRAWBERRY,azul brillante fcf,SIN133,E133,sintetico,True
-7501761865561,Natural Balance Sabor Arándano,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501413560370,SALSA KUSHIAGUE,rojo allura ac,SIN129,E129,sintetico,False
-7501413560370,SALSA KUSHIAGUE,caramelo clase ii,SIN150(b),E150,fuera_de_eje,False
-7502233117768,Golden Fit chocolate,rojo allura ac,SIN129,E129,sintetico,True
-7502233117768,Golden Fit chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-0042400036173,Honey Buzzers,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-0078895130188,Less Sodium Soy Sauce,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-04842293,Vaquitas leche semidescremada sabor vainilla,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501791657518,Mermelada de Guayaba,anaranjado natural 4,SIN160(b),E160b,natural_botanico,False
-7501791647175,Mermelada de Fresa,rojo natural 4,SIN120,E120,carmin,False
-7501791647175,Mermelada de Fresa,anaranjado natural 4,SIN160(b),E160b,natural_botanico,False
-7501003301475,Mc Cormick Mermelada Frutos rojos,rojo allura ac,SIN129,E129,sintetico,False
-0605388716163,Mermelada de Fresa reducida en calorias,rojo natural 4,SIN120,E120,carmin,False
-0051500361702,Smucker´s Mermelaa de zarzamora,azul alimentos 2,SIN133,E133,sintetico,False
-0051500038178,Smucker´s Mermelada de Naranja,amarillo alimentos 4,SIN102,E102,sintetico,False
-7501791647182,Mermelada de zarzamora,azul alimentos 2,SIN133,E133,sintetico,False
-0071828003108,Stone Ground Mustard,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-0071828003108,Stone Ground Mustard,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0071828002385,Mostaza American Picnic  Beaver Brand,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-0071828002385,Mostaza American Picnic  Beaver Brand,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501003107848,CREMA DE CHILE POBLANO,verde natural 3,SIN140,E140,natural_botanico,False
-7501018203849,Salsa Tipo Catsup Tetrabrick,rojo allura ac,SIN129,E129,sintetico,False
-0078742091952,MUSTARD YELLOW,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-0051500054864,Mermelada de zarzamora Smucker´s,rojo alimentos 17,SIN129,E129,sintetico,False
-0051500054864,Mermelada de zarzamora Smucker´s,azul alimentos 2,SIN133,E133,sintetico,False
-0051500054888,Mermelada de chabacano Smucker´s,amarillo alimentos 4,SIN102,E102,sintetico,False
-0051500054888,Mermelada de chabacano Smucker´s,amarillo alimentos 3,SIN110,E110,sintetico,False
-7500478008933,Choky's,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501000621866,Emperador combinado,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000621866,Emperador combinado,rojo allura ac,SIN129,E129,sintetico,False
-7501000621866,Emperador combinado,azul brillante fcf,SIN133,E133,sintetico,False
-7501031307227,Jumex Fresh Uva,azul brillante fcf,SIN133,E133,sintetico,False
-7503005273354,Palm Tree Cookies D´meals,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478004720,Galletas de avena manzana y canela,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501761882391,Granola 3 Minutos,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7501761882391,Granola 3 Minutos,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0012142100661,Mostaza de Dijon Great Value,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-7501005102681,Adès Soja Mangue,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005102681,Adès Soja Mangue,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7503006575143,Piña colada,amarillo fd&c5,SIN102,E102,sintetico,False
-7501791669405,Choco Bowl,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501791669405,Choco Bowl,rojo allura ac,SIN129,E129,sintetico,True
-7501791669405,Choco Bowl,azul brillante fcf,SIN133,E133,sintetico,True
-7501000654840,Cremax Sabor Vainilla,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000654840,Cremax Sabor Vainilla,rojo allura ac,SIN129,E129,sintetico,True
-7501000654840,Cremax Sabor Vainilla,azul brillante fcf,SIN133,E133,sintetico,True
-7501005181365,Caldo de Pollo,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501005181365,Caldo de Pollo,extracto de annato,SIN160(b),E160b,natural_botanico,False
-75012182,Mayonesa tipo casero Kraft,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501018315399,Speciale,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501018315443,sopa de coditos abanero,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501018315207,sopa munición con tomate y sabor a pollo,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501018315436,Sopa de fideo chipotle,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501018315344,Sopa moñitos  serrano,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7506306307698,Sopa crema elote,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7506306307698,Sopa crema elote,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7802410070108,Crema de espárragos,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-7802410000617,Crema de elote,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7802410000198,Crema de alcachofas,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7802410000174,Sopa de cebolla,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7802410002303,Crema de Calabaza al curry,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7802410000136,Crema de champiñones,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7501032398538,LICUADO NUEZ Y CEREAL,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501006505689,Hungs wings,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501006505689,Hungs wings,rojo allura ac,SIN129,E129,sintetico,True
-7501006505689,Hungs wings,azul brillante fcf,SIN133,E133,sintetico,True
-7501006505689,Hungs wings,pigmento blanco 6,SIN171,E171,mineral_inorganico,False
-7501020539417,YOGHURT DE FRAMBUESA,rojo allura ac,SIN129,E129,sintetico,False
-7501020539417,YOGHURT DE FRAMBUESA,azul brillante fcf,SIN133,E133,sintetico,False
-7501209701314,LICUATTO DE NUEZ,amarillo alimentos 4,SIN102,E102,sintetico,False
-7501209701314,LICUATTO DE NUEZ,azul alimentos 2,SIN133,E133,sintetico,False
-7501209701352,Delighurt Durazno,amarillo alimentos 3,SIN110,E110,sintetico,False
-7501209701345,Delighurt Fresa,rojo alimentos 17,SIN129,E129,sintetico,False
-7501032398361,Danone con durazno,rojo allura ac,SIN129,E129,sintetico,True
-7501025511289,Soful sabor Fresa,rojo betabel,SIN162,E162,natural_botanico,False
-7501209701284,Delighurt Durazno,amarillo alimentos 3,SIN110,E110,sintetico,False
-7501209701277,Delighurt Fresa,rojo alimentos 17,SIN129,E129,sintetico,False
-7501055904792,Yoghurt Deslactosado para beber sabor Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501055361199,Yogurt fresa,rojo natural 4,SIN120,E120,carmin,False
-7501059233478,LICUADO DE PLATANO CON AVENA,rojo allura ac,SIN129,E129,sintetico,True
-7501005114196,Mayonesa Light Hellmann's,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005114196,Mayonesa Light Hellmann's,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501040093197,Licuado con Fresa y Granola,rojo 6,SIN124,E124,sintetico,False
-7802410370244,crema de calabaza,annato norbixina,SIN160(b),E160b,natural_botanico,False
-0070272232058,Reddi wip fat free dairy whipped topping,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501055905997,Frutal delactosado sabor fresa,rojo natural 4,SIN120,E120,carmin,False
-7501055903795,Frutal con leche y fruta sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501055905843,Frutal con leche y fruta sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040090158,Yoplait Yoghurt con Frutas Rojas,rojo 6,SIN124,E124,sintetico,False
-7501040090356,"Yoplait Yohurt con Cereales, Durazno y Nueces",rojo 6,SIN124,E124,sintetico,False
-7501040090080,fresa natural y probioticos,rojo 6,SIN124,E124,sintetico,False
-7501040090349,Yoplait Yoghurt con cereales Fresas y almendras,rojo 6,SIN124,E124,sintetico,False
-7501055902255,Yoghurt con Mango,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501055900220,Yoghurt con Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501055900206,Yoghurt con Fresa,rojo 6,SIN124,E124,sintetico,False
-8410663000248,Tarta de vainilla,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7501020510591,Lala Yoghurt Durazno,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501020510591,Lala Yoghurt Durazno,rojo allura ac,SIN129,E129,sintetico,True
-7501020510881,Lala Yoghurt Mango,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501020513639,Lala Yoghurt Cereales,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501055909278,Alpura Yoghurt con Fresa,rojo 6,SIN124,E124,sintetico,False
-7501055909285,Alpura Yoghurt con Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501055909292,Alpura Yoghurt con Mango,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501032395308,Danone Durazno,rojo allura ac,SIN129,E129,sintetico,True
-7501032332433,DanUp LICUADO NUEZ Y CEREAL,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501059229884,Nestle Licuado Fresa,rojo allura ac,SIN129,E129,sintetico,False
-7501013610055,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501059296756,Eskimal Napolitano,rojo natural 4,SIN120,E120,carmin,False
-7501059296756,Eskimal Napolitano,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501059229877,Licuado Nestle,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501013611267,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013610048,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7506390200653,Pela Pop Kaskaraleta vainilla,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7506390200653,Pela Pop Kaskaraleta vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501020555516,Gelatina Yomi 8 Pack Lala,rojo alimentos 3,SIN122,E122,sintetico,False
-7506390200745,TV Pack Nestle,rojo natural 4,SIN120,E120,carmin,False
-7506390200745,TV Pack Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7506390200745,TV Pack Nestle,extracto de cempazuchitl,SIN161(b),E161b,natural_botanico,False
-7501058616609,Paletas Lápiz de color Nestle,rojo natural 4,SIN120,E120,carmin,False
-7501058616609,Paletas Lápiz de color Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501059218987,Sandwich Eskimal de Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501020539400,Lala Yoghurt bebible con fresa,rojo allura ac,SIN129,E129,sintetico,False
-7501209701321,Licuatto,amarillo alimentos 4,SIN102,E102,sintetico,False
-7501209701239,Sheik Piña coco,amarillo alimentos 4,SIN102,E102,sintetico,False
-7501209701215,Sheik Durazno,amarillo alimentos 3,SIN110,E110,sintetico,False
-7501209701215,Sheik Durazno,rojo alimentos 17,SIN129,E129,sintetico,False
-7501055902125,"Alpura, Yoghurt para beber con mango",extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501020539424,Lala Yoghurt Durazno,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501013611113,MANTEQUILLA UNTABLE SIN GRASA,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013610413,MANTEQUILLA UNTABLE CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501055900404,Alpura Yoghurt para beber con durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501209701338,Licuatto,amarillo alimentos 4,SIN102,E102,sintetico,False
-7501209701338,Licuatto,amarillo alimentos 3,SIN110,E110,sintetico,False
-7501020549997,Lala Yoghurt de fresa 8 pack,rojo allura ac,SIN129,E129,sintetico,False
-7501013610031,MANTEQUILLA CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013620283,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013610154,Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013610024,Mantequilla Gloria sin sal,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013610017,MANTEQUILLA CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013610161,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013620276,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040092596,Yoplait Mini,rojo 6,SIN124,E124,sintetico,False
-7501032332020,Danone Mix Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501032395230,Danone Mix Manzana con Frutiaroz,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501328126029,Jugó verde delli,verde fd&c3,SIN143,E143,sintetico,True
-7501020539646,Frutas Fresa Lala,rojo alimentos 17,SIN129,E129,sintetico,False
-7501040034756,Flautas de res adobada,rojo allura ac,SIN129,E129,sintetico,True
-5514223807766,Botana de Queso Gouda,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501101546334,Nuggets de Pechuga,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501101545702,Alitas Picositas Bachoco,rojo allura ac,SIN129,E129,sintetico,True
-7501101545702,Alitas Picositas Bachoco,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501020555783,Yomi Sabores Lala,rojo alimentos 3,SIN122,E122,sintetico,False
-7501040091254,Yoplait doble cero,rojo 6,SIN124,E124,sintetico,False
-75034009,Danette vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-75042813,Danette Cajeta Danone,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-75042813,Danette Cajeta Danone,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501020555486,Yomi Fresa Lala,rojo alimentos 3,SIN122,E122,sintetico,False
-7501032600648,Margarina Sin Sal 4 en 1 Iberia,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7506306312494,Margarina Con Sal oliva Primavera,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501020526981,Yoghurt Light Fresa,rojo allura ac,SIN129,E129,sintetico,True
-7502004719764,Arrachera de pollo adobada Pilgrim's,curcuma en polvo,SIN100(i),E100,natural_botanico,False
-7502004719764,Arrachera de pollo adobada Pilgrim's,amarillo fd&c 6,SIN110,E110,sintetico,True
-7501041418661,Dedos de atun,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7501791660792,Papas a la francesa corte ondulado Great Value,annato norbixina,SIN160(b),E160b,natural_botanico,False
-2548791659284,"Nuggets de Pescado, Great Value",rojo 6,SIN124,E124,sintetico,False
-7501011119482,Cacahuate Japonés Karate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011119482,Cacahuate Japonés Karate,rojo allura ac,SIN129,E129,sintetico,True
-0725181105015,Skwinkles Clásicos Mars,rojo allura ac,SIN129,E129,sintetico,True
-7501011177239,Gudu cubos fresa-limón,rojo allura ac,SIN129,E129,sintetico,True
-7501011177239,Gudu cubos fresa-limón,azul brillante fcf,SIN133,E133,sintetico,True
-7501791650922,"Barritas de pescado, Great Value,",pigmento blanco 6,SIN171,E171,mineral_inorganico,False
-7501000666720,Mamut Flipy Gamesa,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000666720,Mamut Flipy Gamesa,rojo allura ac,SIN129,E129,sintetico,True
-7501000666720,Mamut Flipy Gamesa,azul brillante fcf,SIN133,E133,sintetico,True
-7501011151567,Kacang,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011151567,Kacang,rojo allura ac,SIN129,E129,sintetico,True
-7501011151567,Kacang,azul brillante fcf,SIN133,E133,sintetico,True
-7501011153950,Kacang,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011153950,Kacang,rojo allura ac,SIN129,E129,sintetico,False
-7501011125599,Mafer Premium,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011125599,Mafer Premium,rojo allura ac,SIN129,E129,sintetico,True
-7501011125599,Mafer Premium,azul brillante fcf,SIN133,E133,sintetico,True
-7501011127012,Tostitos salsa verde,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011127012,Tostitos salsa verde,rojo allura ac,SIN129,E129,sintetico,True
-7501011114524,Ruffles,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011143739,Sabritas Xtra Flamin’ Hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011143739,Sabritas Xtra Flamin’ Hot,rojo allura ac,SIN129,E129,sintetico,True
-7501011135024,Paketaxo Mezcladito,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011135024,Paketaxo Mezcladito,azul brillante fcf,SIN133,E133,sintetico,True
-7501011133426,Crujitos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011133426,Crujitos,rojo allura ac,SIN129,E129,sintetico,False
-7501011133426,Crujitos,azul brillante fcf,SIN133,E133,sintetico,False
-7501011116252,Fritos,rojo allura ac,SIN129,E129,sintetico,False
-7501011112254,Fritos chorizo,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011112254,Fritos chorizo,rojo allura ac,SIN129,E129,sintetico,True
-7501011111028,Rancheritos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011111028,Rancheritos,rojo allura ac,SIN129,E129,sintetico,True
-7501011123878,Doritos incógnita,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011123878,Doritos incógnita,rojo allura ac,SIN129,E129,sintetico,True
-7501011143999,cheetos nacho,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011143999,cheetos nacho,rojo allura ac,SIN129,E129,sintetico,True
-7501011165717,Cheetos Colmillos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011165717,Cheetos Colmillos,rojo allura ac,SIN129,E129,sintetico,True
-7501011165717,Cheetos Colmillos,azul brillante fcf,SIN133,E133,sintetico,True
-7501011143777,Cheetos Bolitas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011143777,Cheetos Bolitas,rojo allura ac,SIN129,E129,sintetico,True
-7501011143777,Cheetos Bolitas,azul brillante fcf,SIN133,E133,sintetico,True
-7500478006175,cheetos Xtra flamin hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478006175,cheetos Xtra flamin hot,rojo allura ac,SIN129,E129,sintetico,True
-7501011144460,Paketaxo xtra flamin hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011144460,Paketaxo xtra flamin hot,rojo allura ac,SIN129,E129,sintetico,True
-7501011114623,Paketaxo Quexo,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501011114623,Paketaxo Quexo,azul brillante fcf,SIN133,E133,sintetico,True
-2000000087048,Paketaxo Botanero,amarillo ocaso fcf,SIN110,E110,sintetico,False
-2000000087048,Paketaxo Botanero,rojo allura ac,SIN129,E129,sintetico,False
-2000000087048,Paketaxo Botanero,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501011137431,Sabritas Habanero,azul brillante fcf,SIN133,E133,sintetico,False
-7501011137431,Sabritas Habanero,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7500478011735,Chokis Choko Navidad Gamesa,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478011735,Chokis Choko Navidad Gamesa,rojo allura ac,SIN129,E129,sintetico,True
-7500478011735,Chokis Choko Navidad Gamesa,azul brillante fcf,SIN133,E133,sintetico,True
-7500478005857,Bizcochitos Gamesa,rojo allura ac,SIN129,E129,sintetico,True
-7501011167674,Ruffles,amarillo ocaso fcf,SIN110,E110,sintetico,False
-08101038,Mirinda,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500326103339,Sangría Señorial,rojo allura ac,SIN129,E129,sintetico,True
-7500326103339,Sangría Señorial,azul brillante fcf,SIN133,E133,sintetico,True
-7501441604114,Jarritos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501441604114,Jarritos,rojo allura ac,SIN129,E129,sintetico,True
-7501441611112,Toronjita,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501441611112,Toronjita,rojo allura ac,SIN129,E129,sintetico,True
-7501441611112,Toronjita,azul brillante fcf,SIN133,E133,sintetico,True
-7500326103483,Chaparritas sabor Mandarina,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500326103483,Chaparritas sabor Mandarina,rojo allura ac,SIN129,E129,sintetico,True
-7500326103490,Chaparritas sabor Piña,rojo allura ac,SIN129,E129,sintetico,False
-7500326103506,Chaparritas sabor Uva,rojo allura ac,SIN129,E129,sintetico,True
-7500326103506,Chaparritas sabor Uva,azul brillante fcf,SIN133,E133,sintetico,True
-7500326103360,sangria Señorial,rojo allura ac,SIN129,E129,sintetico,True
-7500326103360,sangria Señorial,azul brillante fcf,SIN133,E133,sintetico,True
-7500326103391,Sangria Señorial Light,rojo allura ac,SIN129,E129,sintetico,True
-7500326103391,Sangria Señorial Light,azul brillante fcf,SIN133,E133,sintetico,True
-7500326103322,Sangria Señorial,rojo allura ac,SIN129,E129,sintetico,True
-7500326103322,Sangria Señorial,azul brillante fcf,SIN133,E133,sintetico,True
-7501505630073,Sangría Casera Pepsi,rojo allura ac,SIN129,E129,sintetico,False
-7501011123588,doritos nacho,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501005104715,Mayonesa Hellmann's,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005104715,Mayonesa Hellmann's,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501011115675,Ruffles Queso,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011114579,Cheetos torciditos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011114579,Cheetos torciditos,rojo allura ac,SIN129,E129,sintetico,True
-7501011149434,Sabritones con Chile sabor Limón,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011149434,Sabritones con Chile sabor Limón,rojo allura ac,SIN129,E129,sintetico,True
-7501011154902,Pake-taxo Sabritas Botana Mezcladito Mezcladito,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011154902,Pake-taxo Sabritas Botana Mezcladito Mezcladito,azul brillante fcf,SIN133,E133,sintetico,True
-7501011154865,Paketaxo Botanero,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011154865,Paketaxo Botanero,rojo allura ac,SIN129,E129,sintetico,False
-7501011154865,Paketaxo Botanero,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501011159266,Receta Crujiente Flamin Hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011115590,Sabritas Crema y Especias,rojo allura ac,SIN129,E129,sintetico,True
-7501011115590,Sabritas Crema y Especias,azul brillante fcf,SIN133,E133,sintetico,True
-7500478007981,Queso,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501011167735,Nacho,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7500478006571,Fritos Chorizo y Chipotle,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478006571,Fritos Chorizo y Chipotle,rojo allura ac,SIN129,E129,sintetico,True
-7500478006571,Fritos Chorizo y Chipotle,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501011143258,Sabritas receta crujiente sabor jalapeño,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011167728,Torcidos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011167728,Torcidos,rojo allura ac,SIN129,E129,sintetico,True
-7501011167728,Torcidos,azul brillante fcf,SIN133,E133,sintetico,True
-7501011155008,Paque-Taxo,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7501011155008,Paque-Taxo,azul brillante fcf,SIN133,E133,sintetico,True
-7501011143265,Sabritas Chiles Rojo Receta crujiente,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011143265,Sabritas Chiles Rojo Receta crujiente,rojo allura ac,SIN129,E129,sintetico,True
-7501011133921,Sabritas Adobadas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011133921,Sabritas Adobadas,rojo allura ac,SIN129,E129,sintetico,True
-7501011133921,Sabritas Adobadas,azul brillante fcf,SIN133,E133,sintetico,True
-7501011153455,Quesabritas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011153455,Quesabritas,rojo allura ac,SIN129,E129,sintetico,True
-7501011153455,Quesabritas,azul brillante fcf,SIN133,E133,sintetico,True
-7501011167759,Rancheritos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011167759,Rancheritos,rojo allura ac,SIN129,E129,sintetico,True
-7501011194465,Dip Tostitos sabor queso y jalapeño,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478012107,Botana surtida Paketaxo Sabritas party bowl,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478012107,Botana surtida Paketaxo Sabritas party bowl,azul brillante fcf,SIN133,E133,sintetico,True
-7501011121997,Sabritas Stax Crema y cebolla,rojo allura ac,SIN129,E129,sintetico,True
-7501011121997,Sabritas Stax Crema y cebolla,azul brillante fcf,SIN133,E133,sintetico,True
-7501011121980,Sabritas Stax cheddar,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011134690,Sabritas Stax BBQ Picante,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011134690,Sabritas Stax BBQ Picante,rojo allura ac,SIN129,E129,sintetico,True
-7501011134690,Sabritas Stax BBQ Picante,azul brillante fcf,SIN133,E133,sintetico,True
-0038000185182,Pringles Chile y Limón,rojo allura ac,SIN129,E129,sintetico,True
-0038000185212,Pringles Extra Hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0038000185212,Pringles Extra Hot,rojo allura ac,SIN129,E129,sintetico,True
-7501011174184,Sunbites sabor Chiles Rojos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011174184,Sunbites sabor Chiles Rojos,rojo allura ac,SIN129,E129,sintetico,True
-7501011174184,Sunbites sabor Chiles Rojos,azul brillante fcf,SIN133,E133,sintetico,True
-7501006559507,Act II Sabor Queso,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501006559484,Act II sabor Chile y Limón,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501006559484,Act II sabor Chile y Limón,rojo allura ac,SIN129,E129,sintetico,True
-7501006559484,Act II sabor Chile y Limón,azul brillante fcf,SIN133,E133,sintetico,False
-7501003114785,Palomitas Cinepolis Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0076150200249,Act II Minis Sabor Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501006559071,Act II sabor Mantequilla 3 Pack,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501006559088,Act II sabor Mantequilla Extra 3 Pack,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501006559309,Act II sabor Infierno ultra picante,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501006559309,Act II sabor Infierno ultra picante,rojo allura ac,SIN129,E129,sintetico,True
-7501006559309,Act II sabor Infierno ultra picante,azul brillante fcf,SIN133,E133,sintetico,True
-7501006559309,Act II sabor Infierno ultra picante,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501006559330,Act II sabor Chile y Limón,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501006559316,ACT II sabor Queso Jalapeño,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501006559323,Act II sabor Queso Xtremo,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501006559323,Act II sabor Queso Xtremo,rojo allura ac,SIN129,E129,sintetico,True
-7501006559323,Act II sabor Queso Xtremo,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501006559026,Act II sabor Mantequilla Extra,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501003109095,Palomitas Cinepolis,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501003109088,Palomitas Cinepolis,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501006551075,Act II sabor Mantequilla Light,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478012138,Doritos ADN Incognita unidades,rojo allura ac,SIN129,E129,sintetico,True
-7500478012114,Xtra flamin hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478012114,Xtra flamin hot,rojo allura ac,SIN129,E129,sintetico,True
-0757528026936,Snaps sabor Esquites,extracto de annato,SIN160(b),E160b,natural_botanico,False
-5507439404027,Pato Pascual Uva,rojo allura ac,SIN129,E129,sintetico,True
-5507439404027,Pato Pascual Uva,azul brillante fcf,SIN133,E133,sintetico,True
-0735257002469,Gelatina sabor limón,azul brillante fcf,SIN133,E133,sintetico,True
-0020515100000,Queso estilo asadero La Villita,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0760412179519,Tequila Mix,plata,SIN174,,mineral_inorganico,False
-7501011114517,Rancheritos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011114517,Rancheritos,rojo allura ac,SIN129,E129,sintetico,True
-7501011114517,Rancheritos,azul brillante fcf,SIN133,E133,sintetico,True
-7501032485177,Caribe cooler tinto,rojo d&c 5,SIN122,E122,sintetico,False
-7501011124776,Mafer Cacahuate Enchilado 180GR Frito Enchilado,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011124776,Mafer Cacahuate Enchilado 180GR Frito Enchilado,rojo allura ac,SIN129,E129,sintetico,True
-7501011124776,Mafer Cacahuate Enchilado 180GR Frito Enchilado,azul brillante fcf,SIN133,E133,sintetico,True
-7501761842241,Tartas Quaker sabor pay de limón,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501954910238,Chocolate,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501005152006,Aderezo Hellmann's light,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005152006,Aderezo Hellmann's light,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501011164512,Sabritas Adobadas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011164512,Sabritas Adobadas,azul brillante fcf,SIN133,E133,sintetico,False
-7501795828426,Sabor a Chocolate,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501209701420,Naranjada,amarillo alimentos 3,SIN110,E110,sintetico,False
-7501791655439,Mozzarella Picado,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501040090875,Strawberry Yogurt,rojo 6,SIN124,E124,sintetico,False
-7501011143586,Cheetos torciditos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011143586,Cheetos torciditos,rojo allura ac,SIN129,E129,sintetico,True
-7501005151979,Mayonesa Hellmann's Clásica,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005151979,Mayonesa Hellmann's Clásica,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7500478001620,Rancheritos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478001620,Rancheritos,rojo allura ac,SIN129,E129,sintetico,True
-7500478001620,Rancheritos,azul brillante fcf,SIN133,E133,sintetico,True
-7501008007884,All Bran Flakes,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7500478007967,Ruffles,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478007967,Ruffles,rojo allura ac,SIN129,E129,sintetico,True
-7501761856217,Hot cakes de avena,rojo allura ac,SIN129,E129,sintetico,True
-7501011167070,be light Sabor Mango,rojo allura ac,SIN129,E129,sintetico,False
-7501011148963,Pake Taxo Mezcladito,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011148963,Pake Taxo Mezcladito,rojo allura ac,SIN129,E129,sintetico,True
-7501011148963,Pake Taxo Mezcladito,azul brillante fcf,SIN133,E133,sintetico,True
-7501011128323,Cheetos torciditos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011128323,Cheetos torciditos,rojo allura ac,SIN129,E129,sintetico,True
-7501008754030,Galletas Surtido Diario,amarillo fd&c 6,SIN110,E110,sintetico,True
-7501008754030,Galletas Surtido Diario,rojo no 40 fd&c,SIN129,E129,sintetico,False
-7501008754030,Galletas Surtido Diario,azul no 1 fd&c,SIN133,E133,sintetico,False
-7501008754030,Galletas Surtido Diario,caramelo clase ii,SIN150(b),E150,fuera_de_eje,False
-7501011167445,Papas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011167445,Papas,rojo allura ac,SIN129,E129,sintetico,True
-7501011167445,Papas,azul brillante fcf,SIN133,E133,sintetico,True
-7500478014606,Cheetos Poffs,amarillo ocaso fcf,SIN110,E110,sintetico,False
+code,producto,forma_oficial,sin,codigo_e,clase,categoria,ya_en_tags
+0014100085478,GOLDFISH,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0076150601336,ACT II sabor Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0850697002456,Abanico Mac'Ma,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+0850697002661,CRISPY WAFER FAN,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+0884912112217,HONEY BUNCHES OF OATS STRAWBERRIES,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501000142705,Cuernitos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501002612114,Cheez Whiz,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501002612213,Cheez Whiz Jalapeño,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501005102667,Soya + jugo de naranja,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005102667,Soya + jugo de naranja,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501017006762,Tamal de dulce,rojo fd&c40,SIN129,E129,sintetico,falso_negativo_real,False
+7501020537390,Queso Manchego LALA,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7501020537482,Queso Manchego LALA,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7501020537550,Americano Nutri Leche,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7501020555226,Gouda rebanadas de queso,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501030454786,PANQUÉ CASERO Y MANTEQUILLA TÍA ROSA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501030457428,Explosión de tartas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501031111039,Surtido Castilla,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501031111039,Surtido Castilla,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
+7501031111190,Galletas Cuenta Conmigo,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501031111190,Galletas Cuenta Conmigo,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
+7501037217063,CEREZAS EN ALMÍBAR LOLTUN,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501040081422,Queso tipo Manchego rebanado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040081477,Queso Americano La Villita,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501040081477,Queso Americano La Villita,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501040081477,Queso Americano La Villita,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7501040082016,Queso Machego FUD,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040090745,Yoplait contiene trozos de fresa natural y probióticos,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501092109143,Queso Fundido Lyncott,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501295600621,Lechita 100% pura de vaca sabor helado de fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7501413540778,Itto Salsa con Habanero,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501413549733,Itto Salsa con chile,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501413549740,Itto Salsa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501669804198,Aderezo para nachos El ciervo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501669880109,Queso tipo Americano Esmeralda,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501761865394,Multibran con pasas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791616553,Queso tipo americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791624640,Queso tipo Americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791650236,Queso tipo Americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791668569,Barras de coco,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+7502244270155,Dip alcachofa con parmesano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7502244270155,Dip alcachofa con parmesano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7502244270193,Dip elote,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7502244270193,Dip elote,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501791632362,World table Galletas de hojaldre tipo banderillascon queso gouda y edam,amarillo natural 6,SINnr_azafran,,natural_botanico,falso_negativo_real,False
+0724865045210,Soles,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+0850697002425,Galletas Mac Ma fresa,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,True
+0850697002425,Galletas Mac Ma fresa,rojo fd&c40,SIN129,E129,sintetico,falso_negativo_real,False
+7501791670555,Queso tipo Manchego Great Value,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501020547207,Queso manchego rallado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0016000467583,Cinnamon Toast Crunch Treats,anaranjado 3,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501000137237,Bran Frut Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501000137763,Bran Frut Piña,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501030459620,Multigrano arandanos y sabor fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501025511326,Soful Lt,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+7501689026402,Capistrano Salchicha de Pavo,extracto de coccus cacti,SIN120,E120,carmin,falso_negativo_real,False
+7501147515035,Kir Salchicha para asar,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
+7501005114523,Ades Max sabor Mango,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005114523,Ades Max sabor Mango,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501005108065,Ades Max,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005108065,Ades Max,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501005114516,Soya + Jugo de naranja,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005114516,Soya + Jugo de naranja,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7506306305724,Ades cero sabor mango,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7506306305724,Ades cero sabor mango,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7622210852052,GALLETA OREO PAY DE LIMON,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+7501020537499,Queso americano Lala,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501020537499,Queso americano Lala,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501020537499,Queso americano Lala,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7501077510599,Noche buena queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040083761,Fud queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501077510575,Noche buena queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501077510377,Noche buena Queso Manchego reducido en grasa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501002202179,caperucita queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501077513156,Noche buena queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040083570,Queso tipo manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040083884,Queso tipo manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501020537383,Queso procesado americano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501020537383,Queso procesado americano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501020537383,Queso procesado americano,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+0046100010990,Queso mozzarella pizza double cheese,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040083587,Queso manchego rallado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791725439,Queso mozzarella picado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501689021001,Capistrano Vida Deli,extracto de coccus cacti,SIN120,E120,carmin,falso_negativo_real,False
+7501761856743,Quaker Granola de Avena y Trigo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791636018,Sustituto de crema,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501791640954,Extra Special Queso semicurado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0884912020505,Cereal Hojuelas De Maiz Con Almendr,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501761865424,Avena flakes quaker sabor vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791645119,BRAN FIBRA FLAKES,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501791657518,Mermelada de Guayaba,anaranjado natural 4,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791647175,Mermelada de Fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7501791647175,Mermelada de Fresa,anaranjado natural 4,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0605388716163,Mermelada de Fresa reducida en calorias,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+0051500361702,Smucker´s Mermelaa de zarzamora,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
+0051500038178,Smucker´s Mermelada de Naranja,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
+7501791647182,Mermelada de zarzamora,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
+0071828003108,Stone Ground Mustard,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0071828002385,Mostaza American Picnic  Beaver Brand,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501003107848,CREMA DE CHILE POBLANO,verde natural 3,SIN140,E140,natural_botanico,falso_negativo_real,False
+0051500054864,Mermelada de zarzamora Smucker´s,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
+0051500054864,Mermelada de zarzamora Smucker´s,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
+0051500054888,Mermelada de chabacano Smucker´s,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
+0051500054888,Mermelada de chabacano Smucker´s,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
+7503005273354,Palm Tree Cookies D´meals,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501761882391,Granola 3 Minutos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501005102681,Adès Soja Mangue,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005102681,Adès Soja Mangue,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7503006575143,Piña colada,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+7501005181365,Caldo de Pollo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+75012182,Mayonesa tipo casero Kraft,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501018315399,Speciale,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501018315443,sopa de coditos abanero,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501018315207,sopa munición con tomate y sabor a pollo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501018315436,Sopa de fideo chipotle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501018315344,Sopa moñitos  serrano,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506306307698,Sopa crema elote,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7506306307698,Sopa crema elote,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501006505689,Hungs wings,pigmento blanco 6,SIN171,E171,mineral_inorganico,falso_negativo_real,False
+7501209701314,LICUATTO DE NUEZ,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
+7501209701314,LICUATTO DE NUEZ,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
+7501209701352,Delighurt Durazno,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
+7501209701345,Delighurt Fresa,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
+7501025511289,Soful sabor Fresa,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+7501209701284,Delighurt Durazno,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
+7501209701277,Delighurt Fresa,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
+7501055904792,Yoghurt Deslactosado para beber sabor Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501055361199,Yogurt fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7501005114196,Mayonesa Light Hellmann's,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005114196,Mayonesa Light Hellmann's,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501040093197,Licuado con Fresa y Granola,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501055905997,Frutal delactosado sabor fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7501055903795,Frutal con leche y fruta sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501055905843,Frutal con leche y fruta sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040090158,Yoplait Yoghurt con Frutas Rojas,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501040090356,"Yoplait Yohurt con Cereales, Durazno y Nueces",rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501040090080,fresa natural y probioticos,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501040090349,Yoplait Yoghurt con cereales Fresas y almendras,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501055902255,Yoghurt con Mango,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501055900220,Yoghurt con Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501055900206,Yoghurt con Fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501055909278,Alpura Yoghurt con Fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501055909285,Alpura Yoghurt con Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501055909292,Alpura Yoghurt con Mango,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013610055,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501059296756,Eskimal Napolitano,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7501059296756,Eskimal Napolitano,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013611267,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013610048,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506390200653,Pela Pop Kaskaraleta vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501020555516,Gelatina Yomi 8 Pack Lala,rojo alimentos 3,SIN122,E122,sintetico,falso_negativo_real,False
+7506390200745,TV Pack Nestle,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7506390200745,TV Pack Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506390200745,TV Pack Nestle,extracto de cempazuchitl,SIN161(b),E161b,natural_botanico,falso_negativo_real,False
+7501058616609,Paletas Lápiz de color Nestle,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7501058616609,Paletas Lápiz de color Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501059218987,Sandwich Eskimal de Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501209701321,Licuatto,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
+7501209701239,Sheik Piña coco,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
+7501209701215,Sheik Durazno,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
+7501209701215,Sheik Durazno,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
+7501055902125,"Alpura, Yoghurt para beber con mango",extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013611113,MANTEQUILLA UNTABLE SIN GRASA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013610413,MANTEQUILLA UNTABLE CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501055900404,Alpura Yoghurt para beber con durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501209701338,Licuatto,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
+7501209701338,Licuatto,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
+7501013610031,MANTEQUILLA CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013620283,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013610154,Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013610024,Mantequilla Gloria sin sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013610017,MANTEQUILLA CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013610161,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013620276,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040092596,Yoplait Mini,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501032332020,Danone Mix Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501032395230,Danone Mix Manzana con Frutiaroz,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501328126029,Jugó verde delli,verde fd&c3,SIN143,E143,sintetico,falso_negativo_real,True
+7501020539646,Frutas Fresa Lala,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
+5514223807766,Botana de Queso Gouda,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501101546334,Nuggets de Pechuga,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501101545702,Alitas Picositas Bachoco,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501020555783,Yomi Sabores Lala,rojo alimentos 3,SIN122,E122,sintetico,falso_negativo_real,False
+7501040091254,Yoplait doble cero,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+75034009,Danette vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+75042813,Danette Cajeta Danone,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+75042813,Danette Cajeta Danone,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501020555486,Yomi Fresa Lala,rojo alimentos 3,SIN122,E122,sintetico,falso_negativo_real,False
+7501032600648,Margarina Sin Sal 4 en 1 Iberia,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506306312494,Margarina Con Sal oliva Primavera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7502004719764,Arrachera de pollo adobada Pilgrim's,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501041418661,Dedos de atun,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+2548791659284,"Nuggets de Pescado, Great Value",rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501791650922,"Barritas de pescado, Great Value,",pigmento blanco 6,SIN171,E171,mineral_inorganico,falso_negativo_real,False
+7501005104715,Mayonesa Hellmann's,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005104715,Mayonesa Hellmann's,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501011194465,Dip Tostitos sabor queso y jalapeño,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501003114785,Palomitas Cinepolis Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0076150200249,Act II Minis Sabor Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501006559071,Act II sabor Mantequilla 3 Pack,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501006559088,Act II sabor Mantequilla Extra 3 Pack,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501006559309,Act II sabor Infierno ultra picante,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501006559323,Act II sabor Queso Xtremo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501006559026,Act II sabor Mantequilla Extra,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501003109095,Palomitas Cinepolis,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501003109088,Palomitas Cinepolis,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501006551075,Act II sabor Mantequilla Light,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0757528026936,Snaps sabor Esquites,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0020515100000,Queso estilo asadero La Villita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0760412179519,Tequila Mix,plata,SIN174,,mineral_inorganico,falso_negativo_real,False
+7501032485177,Caribe cooler tinto,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
+7501005152006,Aderezo Hellmann's light,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005152006,Aderezo Hellmann's light,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501209701420,Naranjada,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
+7501791655439,Mozzarella Picado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040090875,Strawberry Yogurt,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501005151979,Mayonesa Hellmann's Clásica,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005151979,Mayonesa Hellmann's Clásica,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501008754030,Galletas Surtido Diario,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501008754030,Galletas Surtido Diario,rojo no 40 fd&c,SIN129,E129,sintetico,falso_negativo_real,False
+7501008754030,Galletas Surtido Diario,azul no 1 fd&c,SIN133,E133,sintetico,falso_negativo_real,False
 7501058639639,"Coffee mate.
-Coffee mate.",extracto de annato,SIN160(b),E160b,natural_botanico,False
-0041616173122,"Mezcla de Botanas, South of the Border",amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501008005934,Nutri fibra All Bran Manzana Crunch,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000106974,Leche sabor helado menta con chocolate,verde natural 3,SIN140,E140,natural_botanico,False
-7501761865530,Quaker Stila Fit Chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501761865530,Quaker Stila Fit Chocolate,rojo allura ac,SIN129,E129,sintetico,True
-7501761865530,Quaker Stila Fit Chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-7501761865530,Quaker Stila Fit Chocolate,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-0036731106186,Bebida Gatorade sabor fresandia,rojo allura ac,SIN129,E129,sintetico,True
-7501008004562,All Brain Pasas,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501761802351,Galletas de Avena,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501000606566,Galletas con relleno sabor chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000606566,Galletas con relleno sabor chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-7622210255648,Tang tamarindo,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7622210255648,Tang tamarindo,rojo allura ac,SIN129,E129,sintetico,True
-7501000112388,Panquecitos con chispas sabar a chocolate,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501011123380,Doritos pizzerolas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011123380,Doritos pizzerolas,rojo allura ac,SIN129,E129,sintetico,True
-7501000606580,Galletas Con relleno sabor fresa,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000606580,Galletas Con relleno sabor fresa,azul brillante fcf,SIN133,E133,sintetico,False
-7501761880540,Galletas de Avena,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501031345083,Mirinda sabor naranja,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011150690,Chetos flaming,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011150690,Chetos flaming,rojo allura ac,SIN129,E129,sintetico,True
-7538129336005,Gomitas de pectina GOMAROMAS,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7538129336005,Gomitas de pectina GOMAROMAS,azul brillante fcf,SIN133,E133,sintetico,True
-7501902770525,Caramelos macizos sabor a mantequilla,rojo allura ac,SIN129,E129,sintetico,True
-7501000673162,Galletas Gamesa Ricanelas clásicas sabor canela,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000673162,Galletas Gamesa Ricanelas clásicas sabor canela,rojo allura ac,SIN129,E129,sintetico,True
-7501000673162,Galletas Gamesa Ricanelas clásicas sabor canela,azul brillante fcf,SIN133,E133,sintetico,True
-7501008072509,choco krispis barra,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501000612130,Cremax sabor a chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000612130,Cremax sabor a chocolate,rojo allura ac,SIN129,E129,sintetico,True
-7501000612130,Cremax sabor a chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-7802225426336,Chubi,rojo allura ac,SIN129,E129,sintetico,True
-7802225426336,Chubi,azul brillante fcf,SIN133,E133,sintetico,True
-7500478014613,Poffs,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501005113373,Soya + Jugo de fruta (durazno),extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501441604121,Jarritos sabor piña,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501069210100,Hot Cakes Tradicionales,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7500478000722,Multibran,riboflavina 5 fosfato de sodio,SIN101(ii),E101,natural_botanico,False
-7500478000722,Multibran,sales de sodio y potasio de complejos cupricos de clorofilinas,SIN141(ii),E141,natural_botanico,False
-7500478000722,Multibran,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7622210728869,Trident x layers,azul brillante fcf,SIN133,E133,sintetico,True
-7501040090950,Yoplait con fresas naturales,rojo 6,SIN124,E124,sintetico,False
-7501761873740,Avena o's,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0070662247150,Diblo,curcuma en polvo,SIN100(i),E100,natural_botanico,False
-7622210938367,Twist,azul brillante fcf,SIN133,E133,sintetico,True
-7501003303639,Salsa Clasica Liquida,rojo allura ac,SIN129,E129,sintetico,False
-7501008023594,All Bran flakes,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501023500773,Chorizo de Soya,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501200482366,Pronto light sabor uva,rojo 6,SIN124,E124,sintetico,False
-0735257003244,Polvo para pero preparar gelatina sabor mango,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0735257003244,Polvo para pero preparar gelatina sabor mango,rojo allura ac,SIN129,E129,sintetico,True
-0735257003244,Polvo para pero preparar gelatina sabor mango,azul brillante fcf,SIN133,E133,sintetico,True
-0735257003251,Polvo para preparar gelatina de agua sabor Manzana verde,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0735257003251,Polvo para preparar gelatina de agua sabor Manzana verde,rojo allura ac,SIN129,E129,sintetico,True
-0735257003251,Polvo para preparar gelatina de agua sabor Manzana verde,azul brillante fcf,SIN133,E133,sintetico,True
-7501011143753,Botana Sabritas Cheetos Xtra Flamin´Hot sabor chile y limón,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011143753,Botana Sabritas Cheetos Xtra Flamin´Hot sabor chile y limón,rojo allura ac,SIN129,E129,sintetico,True
-11857877,Fusión picante sabor : mantequilla + chile,rojo allura ac,SIN129,E129,sintetico,True
-11857877,Fusión picante sabor : mantequilla + chile,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7622210541192,Oreo; Pat de Limón,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7501792400403,Mini Orejas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0012546671231,Trident Splash X Frutilla y Limón,azul brillante fcf,SIN133,E133,sintetico,True
-7501008733417,galletas gaufrette napolitanas,amarillo fd&c 6,SIN110,E110,sintetico,True
-7501008733417,galletas gaufrette napolitanas,azul fd&c 1,SIN133,E133,sintetico,True
-7500093712604,valley foods cereal de trigo integral,azul brillante fcf,SIN133,E133,sintetico,True
-7500093712604,valley foods cereal de trigo integral,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0636817014253,Salsa Chipotle Cremosa,rojo allura ac,SIN129,E129,sintetico,True
-7501040006197,chimex,rojo curry,SIN129,E129,sintetico,False
-0064144030330,Pam,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500093712611,cereal de avena integral con pasas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501954907078,Bitz galletas rellenas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501030423522,Bran Fruit con Fresa,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501030423522,Bran Fruit con Fresa,rojo allura ac,SIN129,E129,sintetico,False
-7501030423522,Bran Fruit con Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501000606573,Cremax,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000606573,Cremax,rojo allura ac,SIN129,E129,sintetico,True
-7501055912391,Yogurt cereal,rojo 6,SIN124,E124,sintetico,False
-7500478013654,Emperador Vainilla,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478013654,Emperador Vainilla,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7501011151086,Botana de harina de trigo con chile y sabor limón unidades,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011151086,Botana de harina de trigo con chile y sabor limón unidades,rojo allura ac,SIN129,E129,sintetico,True
-7506302800247,Tortillas de harins taqueroa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501069210391,HotCakes tradicionales tres estrellas,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7501006559101,palomitas ACT II mantequilla 3 pack,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501761869156,Harina para hot cakes Gamesa tradicional,rojo allura ac,SIN129,E129,sintetico,True
-7501761847994,stila,rojo allura ac,SIN129,E129,sintetico,False
-7501761847994,stila,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501011125704,Doritos Nacho,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0073390018382,Xtremes Frutas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0073390018382,Xtremes Frutas,azul brillante fcf,SIN133,E133,sintetico,False
-7503028965717,Cargando…,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7503028643424,Tartinas sabor piña Tia Rosa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501002202261,queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501000641482,Gamesa Maravillas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0781159415982,Obleas de amaranto sabor Leche Dorada,curcuma en polvo,SIN100(i),E100,natural_botanico,False
-7500478023608,Galletas Gamesa Maravillas clásicas sabor vainilla,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478007974,Ruffles,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011101463,sabrías adobadas,rojo allura ac,SIN129,E129,sintetico,True
-7501003100917,Salsa de Guacamole -  Picante,azul brillante fcf,SIN133,E133,sintetico,False
-0608875001209,mayonesa con limón Heinz,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7802000009280,Stax sabor Crema y Cebolla,rojo allura ac,SIN129,E129,sintetico,True
-7802000009280,Stax sabor Crema y Cebolla,azul brillante fcf,SIN133,E133,sintetico,True
-7502226815022,Muecas chamoy,rojo allura ac,SIN129,E129,sintetico,True
-7501011145764,Churrumais,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011145764,Churrumais,rojo allura ac,SIN129,E129,sintetico,True
-7502225960020,Super Rebanaditas,rojo allura ac,SIN129,E129,sintetico,True
-7502225960020,Super Rebanaditas,azul brillante fcf,SIN133,E133,sintetico,True
-7501005151955,HELLMANN'S clásica,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501005151955,HELLMANN'S clásica,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7622210938664,Trident X twist,rojo allura ac,SIN129,E129,sintetico,True
-7501011130869,Botana Tostitos sabor salsa verde,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011130869,Botana Tostitos sabor salsa verde,rojo allura ac,SIN129,E129,sintetico,True
-7501011130869,Botana Tostitos sabor salsa verde,azul brillante fcf,SIN133,E133,sintetico,True
-7501791655408,polvo de chocolate aurrera,azul brillante fcf,SIN133,E133,sintetico,False
-7501018312039,Spaghetti con queso cheddar,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7802225688758,Rocklets Galletas sabor Vainilla,rojo allura ac,SIN129,E129,sintetico,True
-7802225688758,Rocklets Galletas sabor Vainilla,azul brillante fcf,SIN133,E133,sintetico,True
-7501030474722,Barritas fresa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501031302819,Mirinda,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0650240032257,Bebida sabor manzana,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0020899087562,Barra hojaldrada con relleno sabor zarzamora 5 pzas,rojo allura ac,SIN129,E129,sintetico,True
-7501008001387,All Bran raise,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0735257006405,jarabe de fresa,rojo allura ac,SIN129,E129,sintetico,False
-7622210697431,JellO,rojo allura ac,SIN129,E129,sintetico,True
-7506306317628,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7506306317628,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-2548006559101,Act II,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501761863062,Avena integral fresas con crema,rojo betabel,SIN162,E162,natural_botanico,False
-7622210690074,Bubbaloo crack-ups,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7622210690074,Bubbaloo crack-ups,rojo allura ac,SIN129,E129,sintetico,True
-7898142864252,Chubi,amarillo ocaso fcf,SIN110,E110,sintetico,True
-7898142864252,Chubi,rojo allura ac,SIN129,E129,sintetico,True
-7898142864252,Chubi,azul brillante fcf,SIN133,E133,sintetico,True
-0016757631107,Pancho’s,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011135581,Botana Tostitos sabor flamin hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011135581,Botana Tostitos sabor flamin hot,rojo allura ac,SIN129,E129,sintetico,True
-0735257003077,Gelatina cero sin azúcar limón,azul brillante fcf,SIN133,E133,sintetico,True
-7502261262096,earthflakes chocoballs,rojo allura ac,SIN129,E129,sintetico,False
-7622210562951,Tang Jamaica,rojo allura ac,SIN129,E129,sintetico,True
-7622210562951,Tang Jamaica,azul brillante fcf,SIN133,E133,sintetico,True
-7500478018581,Chokis,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-7501011131040,Crujitos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7506105606077,Trident Freshmint,azul brillante fcf,SIN133,E133,sintetico,True
-7501030474739,Tostadas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0735257003183,gelatina light,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0735257003183,gelatina light,rojo allura ac,SIN129,E129,sintetico,True
-7060495901292,Mijitos maíz inflado,rojo allura ac,SIN129,E129,sintetico,False
-0096619224098,Mezcla de 4 quesos rallados,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0096619224098,Mezcla de 4 quesos rallados,extracto de semillas de bixa orellana,SIN160(b),E160b,natural_botanico,False
-7502259040415,Merengues sin azúcar,rojo allura ac,SIN129,E129,sintetico,True
-7501013103359,Jumex Durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7500478010691,Tostitos salsa verde,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478010691,Tostitos salsa verde,rojo allura ac,SIN129,E129,sintetico,False
-7500478010691,Tostitos salsa verde,azul brillante fcf,SIN133,E133,sintetico,False
-7501013103212,Bebida Jumex con durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7501020512267,Queso tipo manchego rebanado con leche,carotenos naturales,SIN160a(ii),E160a,natural_botanico,False
-80941385,tic tac,rojo remolacha,SIN162,E162,natural_botanico,True
-7500478008025,Botana Sabritas Doritos Nacho con queso sabor chile,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7702993027271,Oka Loka Chicle en polvo,azul brillante fcf,SIN133,E133,sintetico,True
-7501076117645,Dip escosa chipotle,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7506443102309,Activia Chía Alimento lácteo fermentado sabor frutos rojos con chía deslactosado,extracto de zanahoria negra,SIN163(vi),E163,natural_botanico,False
-15061898,trident sabor sandía,rojo allura ac,SIN129,E129,sintetico,False
-15061898,trident sabor sandía,azul brillante fcf,SIN133,E133,sintetico,False
-7501013103144,Bebida Jumex con durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7501008006290,Cereal Kellogg's All Bran flakes,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501040091124,Yogurt yoplait de fresa,rojo 6,SIN124,E124,sintetico,False
-7622210688842,Polvo para preparar bebida Clight sabor a manzana,rojo allura ac,SIN129,E129,sintetico,True
-7501761802504,Avena integral Quaker instant sabor fresas con crema,rojo betabel,SIN162,E162,natural_botanico,False
-7501000665747,Hot Cakes Tradicionales,rojo allura ac,SIN129,E129,sintetico,True
-7501011151703,Paleta Sonric´s Rockaleta Junior enchilada,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501011151703,Paleta Sonric´s Rockaleta Junior enchilada,rojo allura ac,SIN129,E129,sintetico,True
-7501011151703,Paleta Sonric´s Rockaleta Junior enchilada,azul brillante fcf,SIN133,E133,sintetico,True
-7500478018628,Nachos Sabritas Tostitos salsa verde,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478018628,Nachos Sabritas Tostitos salsa verde,rojo allura ac,SIN129,E129,sintetico,True
-7500478018628,Nachos Sabritas Tostitos salsa verde,azul brillante fcf,SIN133,E133,sintetico,True
-0703885006203,unicornio,rojo allura ac,SIN129,E129,sintetico,False
-65410011,Salsa de Soya,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0724865022327,Bicochitos,amarillo fd&c5,SIN102,E102,sintetico,False
-7503006791062,Queso menonita,extracto de annato,SIN160(b),E160b,natural_botanico,False
-54148604,salsa tipo inglesa,caramelo clase ii,SIN150(b),E150,fuera_de_eje,False
-7501035010260,La Original Sangrita Viuda de Sánchez,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501035010260,La Original Sangrita Viuda de Sánchez,rojo allura ac,SIN129,E129,sintetico,True
-7500478018512,Doritos dinamita Chile y limon,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478018512,Doritos dinamita Chile y limon,rojo allura ac,SIN129,E129,sintetico,True
-2548630203432,hojuelas de trigo integral con pasas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-2548630203432,hojuelas de trigo integral con pasas,rojo allura ac,SIN129,E129,sintetico,True
-7622201770570,Bubbaloo mora azul,rojo allura ac,SIN129,E129,sintetico,False
-7622210566195,bubbaloo gomix,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7622210566195,bubbaloo gomix,rojo allura ac,SIN129,E129,sintetico,True
-7501040097768,Yoplait Pina Coco natural,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7503018023779,Sangría Señorial,rojo allura ac,SIN129,E129,sintetico,True
-7503018023779,Sangría Señorial,azul brillante fcf,SIN133,E133,sintetico,True
-7501000612147,Cremax,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501000612147,Cremax,rojo allura ac,SIN129,E129,sintetico,True
-7501000612147,Cremax,azul brillante fcf,SIN133,E133,sintetico,True
-0735257003091,gelatina sabor naranja sin azúcar,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0750176188239,Granola Quaker 3 minutos Natural,caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-0750176188239,Granola Quaker 3 minutos Natural,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0009433141056,Granola Granvita Tradicional con Frutas,carotenos naturales,SIN160a(ii),E160a,natural_botanico,False
-7501069213811,Hot cakes tradicionales,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7502264764917,Bubble Tea,rojo no 40 fd&c,SIN129,E129,sintetico,False
-7502264764917,Bubble Tea,azul no 1 fd&c,SIN133,E133,sintetico,False
-0603554011180,Ricato,rojo allura ac,SIN129,E129,sintetico,True
-0603554011180,Ricato,azul brillante fcf,SIN133,E133,sintetico,True
-7501253665532,Margarina Light Untable con sal,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0001205129961,Sopa preparada de fideos,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7506306314023,Sopa preparada de Estrellas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7622210996190,Bubbaloo Pik Pop,rojo allura ac,SIN129,E129,sintetico,True
-0757528044992,Takis Fuego,rojo allura ac,SIN129,E129,sintetico,True
-7506495013844,Tallarines instantáneos,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7506306321014,Sopa del Sheriff,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0735257002650,Gelatina sabor Chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0735257002650,Gelatina sabor Chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-0650240032271,Electrolitos orales sabor uva,rojo allura ac,SIN129,E129,sintetico,False
-2000000147062,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-2000000147062,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-2000000147163,Mostaza Great Value,curcuma turmerico,SIN100(i),E100,natural_botanico,False
-7501055914630,Yoghurt Alpura Bebible Fresa y Zarzamora,rojo natural 4,SIN120,E120,carmin,False
-0735257002636,gelatina vainilla,rojo allura ac,SIN129,E129,sintetico,True
-2000000123898,Mantequilla Alpura sin sal,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-2000000123898,Mantequilla Alpura sin sal,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-2000000123899,Mantequilla sin sal Gloria en barra,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501020563405,Zero piña coco,extracto de annato,SIN160(b),E160b,natural_botanico,False
-2000000147300,"Granola Quaker 3 Minutos avena, amaranto, pasas y cacahuates",caramelo clase i,SIN150(a),E150,fuera_de_eje,True
-2000000147300,"Granola Quaker 3 Minutos avena, amaranto, pasas y cacahuates",extracto de annato,SIN160(b),E160b,natural_botanico,False
-2000000147336,Cereal Kellogg's All Bran pasas,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000147338,Cereal Kellogg's All Bran Nutri Fibra natural,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000147339,Cereal Great Value Bran Fibra Flakes,rojo allura ac,SIN129,E129,sintetico,True
-2000000147340,Cereal Kellogg's All Bran original,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000147342,Cereal de avena Quaker Multibran con pasas,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000147343,Cereal Kellogg's All Bran cosecha frutal,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000147345,Cereal Kellogg's All Bran flakes,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000147348,Cereal Post Honey Bunches Of Oats de almendras,extracto de annato,SIN160(b),E160b,natural_botanico,False
-2000000147349,Cereal Special K Equilibrio sabor vainilla con almendras,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-2000000147356,Cereal Golden Mix taro y amaranto,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501590286377,multimixFX,riboflavina 5 fosfato de sodio,SIN101(ii),E101,natural_botanico,False
-7503013179044,Barrita de ajonjolí y miel,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501040097577,Yoghurt con fresa para beber,rojo 6,SIN124,E124,sintetico,False
-7500810016787,Pan Tostado Brioche,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478030309,Stax Flamin' Hot,rojo allura ac,SIN129,E129,sintetico,True
-7502261268685,Cacahuate japonés,amarillo fd&c 6,SIN110,E110,sintetico,True
-7500478035274,Emperador Senzo Chocotella,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478035274,Emperador Senzo Chocotella,rojo allura ac,SIN129,E129,sintetico,True
-7500478035274,Emperador Senzo Chocotella,azul brillante fcf,SIN133,E133,sintetico,True
-7500478033805,Rancheritos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478033805,Rancheritos,rojo allura ac,SIN129,E129,sintetico,True
-7500478033805,Rancheritos,azul brillante fcf,SIN133,E133,sintetico,False
-7501055914838,Yogurt Alpura Bebible Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478022335,Flipy 2 PACK,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478022335,Flipy 2 PACK,rojo allura ac,SIN129,E129,sintetico,True
-7500478022335,Flipy 2 PACK,azul brillante fcf,SIN133,E133,sintetico,True
-7500478034444,Chetos Colmillos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478034444,Chetos Colmillos,rojo allura ac,SIN129,E129,sintetico,False
-7500478034444,Chetos Colmillos,azul brillante fcf,SIN133,E133,sintetico,True
-0735257003763,Mazapán,rojo allura ac,SIN129,E129,sintetico,True
-0735257003763,Mazapán,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0735257002629,Rompope,rojo allura ac,SIN129,E129,sintetico,True
-7503002998472,Queso Chihuahua Menonita,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500810022733,Bimbollos Parrilleros,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478026036,7500478026036,rojo allura ac,SIN129,E129,sintetico,True
-7501002202452,Queso Manchego rebanado premium,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478037896,Cheetos Mix,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478037896,Cheetos Mix,rojo allura ac,SIN129,E129,sintetico,True
-7501008039380,Chocokrispis Sin Sellos,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7501055915286,Alpura Pro Leche Sabor Fresa con extra de Proteína deslactosada,rojo allura ac,SIN129,E129,sintetico,False
-7501013105537,Jugo de durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7501013105735,Bebida con durazno y vitaminas,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7500810016282,Besos de nuez,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7501020568592,Queso manchego pro deslactosado reducido en grasa,carotenos naturales,SIN160a(ii),E160a,natural_botanico,False
-7501669804822,Queso Chihuahua Menonita,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7506306321007,Sopa mickey,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501040083136,Queso manchego rebanadas rectangulares,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501073427532,Trix,rojo allura ac,SIN129,E129,sintetico,True
-7501791607858,Aceite de Canola en Aerosol,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0735257003312,Dúo Polvo para preparar flan y relleno sabor menta chocolate,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0735257003312,Dúo Polvo para preparar flan y relleno sabor menta chocolate,rojo allura ac,SIN129,E129,sintetico,True
-0735257003312,Dúo Polvo para preparar flan y relleno sabor menta chocolate,azul brillante fcf,SIN133,E133,sintetico,True
-7501040097973,fresa natural,rojo 6,SIN124,E124,sintetico,False
-2000000151259,Chiclets Menta,azul brillante fcf,SIN133,E133,sintetico,True
-7506495006242,Barritas de Pescado,rojo 6,SIN124,E124,sintetico,False
-7500478036332,Calorcito,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478036332,Calorcito,rojo allura ac,SIN129,E129,sintetico,True
-7501040084867,Cuida-t Queso Hilado Reducido En Grasa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7790580200107,"Tiburoncitos sabor Piña, Naranja y Manzana",azul brillante fcf,SIN133,E133,sintetico,True
-7500478037407,7500478037407,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478037407,7500478037407,rojo allura ac,SIN129,E129,sintetico,True
-7500478037407,7500478037407,azul brillante fcf,SIN133,E133,sintetico,True
-7501020568585,Queso Manchego Rallado,carotenos naturales,SIN160a(ii),E160a,natural_botanico,False
-9783894767112,Cereal Kelloggs all Bran,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0001011145566,Rockaleta,amarillo ocaso fcf,SIN110,E110,sintetico,False
-0001011145566,Rockaleta,rojo allura ac,SIN129,E129,sintetico,True
-0001011145566,Rockaleta,azul brillante fcf,SIN133,E133,sintetico,True
-0076186000026,NOODLES & CHIKEN,curcuma en polvo,SIN100(i),E100,natural_botanico,False
-0750103610581,MANTEQUILLA GOURMET,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0750141604411,Jarritos Frutas,rojo allura ac,SIN129,E129,sintetico,True
-0076057110131,crema pars cafe,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0802410000198,Crema de alcachofas,annato norbixina,SIN160(b),E160b,natural_botanico,False
-7501045404691,Cubitos De Atún Con Camarón,rojo betabel,SIN162,E162,natural_botanico,False
-7500478037216,Marias doradas,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7506306417977,Nieve Sabor Limon,azul brillante fcf,SIN133,E133,sintetico,False
-7502247420922,Donitas,rojo allura ac,SIN129,E129,sintetico,True
-7501076120850,Chile en Polvo Sabor Tamarindo,rojo 6,SIN124,E124,sintetico,False
-7502259040033,Merengues Light Sabor A Cajeta,rojo curry,SIN129,E129,sintetico,False
-7501055914524,Mango,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7503036819293,Xile Chile Mixto,azul brillante fcf,SIN133,E133,sintetico,True
-7500478044283,Bolzaza Cheetos flamin hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478044283,Bolzaza Cheetos flamin hot,rojo allura ac,SIN129,E129,sintetico,True
-7500478044221,Ruffles Queso,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501253652402,Helado sabor Napolitano,rojo 6,SIN124,E124,sintetico,False
-7500478044467,doritos,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478030460,Hotcakes tradicionales,rojo allura ac,SIN129,E129,sintetico,True
-7500810001660,Pan Molido Clasico,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0724865042455,Galletas de soda,amarillo fd&c5,SIN102,E102,sintetico,False
-7501045402697,Atun en Agua,rojo betabel,SIN162,E162,natural_botanico,False
-7506306417861,Nieve de limón,azul brillante fcf,SIN133,E133,sintetico,True
-0352570032687,Gelatina limón light,azul brillante fcf,SIN133,E133,sintetico,True
-7501020564082,Imitación queso americano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501020564082,Imitación queso americano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501020564082,Imitación queso americano,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-6508055915903,Yoghurt  super foods fresa con cereales,rojo 6,SIN124,E124,sintetico,False
-7501441610412,Jarritos Sabor Tutti Frutti,rojo allura ac,SIN129,E129,sintetico,False
-7500478044924,Santito es,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478044924,Santito es,rojo allura ac,SIN129,E129,sintetico,False
-7500478034895,Ruffles switch chetos,rojo allura ac,SIN129,E129,sintetico,True
-7500478046676,Cheetos Xtra Flamin Hot,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478046676,Cheetos Xtra Flamin Hot,rojo allura ac,SIN129,E129,sintetico,True
-0735257031834,Flan sabor vainilla,rojo allura ac,SIN129,E129,sintetico,True
-7500810026984,Mini Pan Tostado Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7503018023953,Sangría,rojo allura ac,SIN129,E129,sintetico,True
-7503018023953,Sangría,azul brillante fcf,SIN133,E133,sintetico,True
-7501014302355,Chocolate en Polvo Granulado,azul brillante fcf,SIN133,E133,sintetico,True
-7501005129961,Sopa de Fideos,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478044092,Adobadas,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478044092,Adobadas,rojo allura ac,SIN129,E129,sintetico,True
-7500478044092,Adobadas,azul brillante fcf,SIN133,E133,sintetico,True
-7501040080166,Queso Daisy Rebanado,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7502261260771,Mantequilla pasteurizada sin sal,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7500478047734,Rancheritos Salsa Negra,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478047734,Rancheritos Salsa Negra,rojo allura ac,SIN129,E129,sintetico,True
-7500478047734,Rancheritos Salsa Negra,azul brillante fcf,SIN133,E133,sintetico,True
-7500810038789,Mante chox Con Relleno Elaborado Con Cocoa,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0722776005606,,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7301040083884,Queso manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501791603720,Aurrera rebanadas,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501791603720,Aurrera rebanadas,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501791603720,Aurrera rebanadas,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-7502233111377,Cereal Banana Shake,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7502273907305,Golosina Sabor Durazno con Polvito Tronador,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7502273907305,Golosina Sabor Durazno con Polvito Tronador,rojo allura ac,SIN129,E129,sintetico,True
-7502273907305,Golosina Sabor Durazno con Polvito Tronador,azul brillante fcf,SIN133,E133,sintetico,True
-7500478044382,Botana salada sabor salsa inglesa dark mix,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7500478044382,Botana salada sabor salsa inglesa dark mix,rojo allura ac,SIN129,E129,sintetico,True
-7500478044382,Botana salada sabor salsa inglesa dark mix,caramelo clase ii,SIN150(b),E150,fuera_de_eje,False
-7506475108614,Boost Menos Azúcar,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-7503020692680,Churritos picorey,rojo 6,SIN124,E124,sintetico,False
-2904441855435,Gerber Grain & Grow Puffs sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501013106725,Bebida Carbonatada Sabor Naranja -Hierbabuena con 8% de jugo de naranja,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-0724865024369,Galletas sabor vainilla y limón,amarillo fd&c5,SIN102,E102,sintetico,False
-0724865021375,Galletas sabor vainilla y mantequilla,amarillo fd&c5,SIN102,E102,sintetico,False
-0724865021375,Galletas sabor vainilla y mantequilla,rojo fd&c40,SIN129,E129,sintetico,False
-7506443107748,Yogurt griego deslactosado sabor fresa,rojo 6,SIN124,E124,sintetico,False
-7501013105056,Bebida sabor mango baja en calorías,beta caroteno sintetico,SIN160a(i),E160a,sintetico,False
-7501022014004,,rojo allura ac,SIN129,E129,sintetico,True
-0735257004005,Gelatina sin azúcar sabor mora,azul brillante fcf,SIN133,E133,sintetico,True
-0753030199995,Roles con canela,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0024865052263,Galletas rellenas sabor chocolate Choco Nieve,amarillo fd&c 6,SIN110,E110,sintetico,True
-0024865052263,Galletas rellenas sabor chocolate Choco Nieve,azul fd&c 1,SIN133,E133,sintetico,True
-0094331355502,Harina para Hot Cakes con Avena,rojo 6,SIN124,E124,sintetico,False
-0650240074455,Electrolitos orales sabor uva mora azul,azul brillante fcf,SIN133,E133,sintetico,True
-7506475125017,Cereal sabor chocolate con malvaviscos,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7501088050039,Te Negro Limón,caramelo clase i,SIN150(a),E150,fuera_de_eje,False
-0681131778138,Bactericida para desinfectar,plata,SIN174,,mineral_inorganico,False
-7501362623034,Nutri,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7502261263925,Galletas saladas sabor mantequilla,amarillo fd&c5,SIN102,E102,sintetico,False
-7501253687718,Queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0735257005576,Polvo para preparar gelatina con agua sabor flotante limón,rojo allura ac,SIN129,E129,sintetico,True
-0735257005576,Polvo para preparar gelatina con agua sabor flotante limón,azul brillante fcf,SIN133,E133,sintetico,True
-7501040080067,Queso chihuahua,extracto de annato,SIN160(b),E160b,natural_botanico,False
-0735257003404,Gelatina en polvo Maracuya,amarillo ocaso fcf,SIN110,E110,sintetico,False
-7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,False
-7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,False
-7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 6,SIN160(e),E160e,sintetico,False
-0810179083694,Peelerz,amarillo fd&c 6,SIN110,E110,sintetico,True
-7501020572391,Yoghurt Griego Bebible Deslactosado Con Mango Bajo En Grasa Reducido En Azúcar,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7502261273221,Cubitos de Atun,rojo remolacha,SIN162,E162,natural_botanico,True
-7500533002258,Rica Burguer Carne para Hamburguesa,rojo betabel,SIN162,E162,natural_botanico,False
-8719200303508,Margarina Light Pasteurizada con sal,extracto de annato,SIN160(b),E160b,natural_botanico,False
-7502261266353,Carne preparada para hamburguesas,rojo betabel,SIN162,E162,natural_botanico,False
-7501022015667,Refresco sabor naranja,amarillo ocaso fcf,SIN110,E110,sintetico,False
+Coffee mate.",extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+2000000106974,Leche sabor helado menta con chocolate,verde natural 3,SIN140,E140,natural_botanico,falso_negativo_real,False
+7501000112388,Panquecitos con chispas sabar a chocolate,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501005113373,Soya + Jugo de fruta (durazno),extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040090950,Yoplait con fresas naturales,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501023500773,Chorizo de Soya,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501200482366,Pronto light sabor uva,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+11857877,Fusión picante sabor : mantequilla + chile,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7622210541192,Oreo; Pat de Limón,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+7501792400403,Mini Orejas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501008733417,galletas gaufrette napolitanas,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501008733417,galletas gaufrette napolitanas,azul fd&c 1,SIN133,E133,sintetico,falso_negativo_real,True
+7500093712604,valley foods cereal de trigo integral,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040006197,chimex,rojo curry,SIN129,E129,sintetico,falso_negativo_real,False
+0064144030330,Pam,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7500093712611,cereal de avena integral con pasas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501954907078,Bitz galletas rellenas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501030423522,Bran Fruit con Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501055912391,Yogurt cereal,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7506302800247,Tortillas de harins taqueroa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501006559101,palomitas ACT II mantequilla 3 pack,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7503028643424,Tartinas sabor piña Tia Rosa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501002202261,queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0608875001209,mayonesa con limón Heinz,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501005151955,HELLMANN'S clásica,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501005151955,HELLMANN'S clásica,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501018312039,Spaghetti con queso cheddar,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501030474722,Barritas fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506306317628,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7506306317628,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+2548006559101,Act II,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501761863062,Avena integral fresas con crema,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+7501030474739,Tostadas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0096619224098,Mezcla de 4 quesos rallados,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0096619224098,Mezcla de 4 quesos rallados,extracto de semillas de bixa orellana,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013103359,Jumex Durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+7501013103212,Bebida Jumex con durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+80941385,tic tac,rojo remolacha,SIN162,E162,natural_botanico,falso_negativo_real,True
+7501076117645,Dip escosa chipotle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013103144,Bebida Jumex con durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+7501040091124,Yogurt yoplait de fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501761802504,Avena integral Quaker instant sabor fresas con crema,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+0724865022327,Bicochitos,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+7503006791062,Queso menonita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040097768,Yoplait Pina Coco natural,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0750176188239,Granola Quaker 3 minutos Natural,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7502264764917,Bubble Tea,rojo no 40 fd&c,SIN129,E129,sintetico,falso_negativo_real,False
+7502264764917,Bubble Tea,azul no 1 fd&c,SIN133,E133,sintetico,falso_negativo_real,False
+7501253665532,Margarina Light Untable con sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0001205129961,Sopa preparada de fideos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506306314023,Sopa preparada de Estrellas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506306321014,Sopa del Sheriff,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+2000000147062,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+2000000147062,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501055914630,Yoghurt Alpura Bebible Fresa y Zarzamora,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+2000000123898,Mantequilla Alpura sin sal,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+2000000123898,Mantequilla Alpura sin sal,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+2000000123899,Mantequilla sin sal Gloria en barra,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501020563405,Zero piña coco,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+2000000147300,"Granola Quaker 3 Minutos avena, amaranto, pasas y cacahuates",extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+2000000147348,Cereal Post Honey Bunches Of Oats de almendras,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+2000000147356,Cereal Golden Mix taro y amaranto,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040097577,Yoghurt con fresa para beber,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7500810016787,Pan Tostado Brioche,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7502261268685,Cacahuate japonés,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501055914838,Yogurt Alpura Bebible Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7503002998472,Queso Chihuahua Menonita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7500810022733,Bimbollos Parrilleros,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501002202452,Queso Manchego rebanado premium,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013105537,Jugo de durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+7501013105735,Bebida con durazno y vitaminas,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+7500810016282,Besos de nuez,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+7501669804822,Queso Chihuahua Menonita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040083136,Queso manchego rebanadas rectangulares,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791607858,Aceite de Canola en Aerosol,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040097973,fresa natural,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7506495006242,Barritas de Pescado,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501040084867,Cuida-t Queso Hilado Reducido En Grasa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0750103610581,MANTEQUILLA GOURMET,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0076057110131,crema pars cafe,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501045404691,Cubitos De Atún Con Camarón,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+7501076120850,Chile en Polvo Sabor Tamarindo,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7502259040033,Merengues Light Sabor A Cajeta,rojo curry,SIN129,E129,sintetico,falso_negativo_real,False
+7501055914524,Mango,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501253652402,Helado sabor Napolitano,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7500810001660,Pan Molido Clasico,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0724865042455,Galletas de soda,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+7501045402697,Atun en Agua,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+7501020564082,Imitación queso americano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501020564082,Imitación queso americano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501020564082,Imitación queso americano,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+6508055915903,Yoghurt  super foods fresa con cereales,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7500810026984,Mini Pan Tostado Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501005129961,Sopa de Fideos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040080166,Queso Daisy Rebanado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7502261260771,Mantequilla pasteurizada sin sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7500810038789,Mante chox Con Relleno Elaborado Con Cocoa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7301040083884,Queso manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791603720,Aurrera rebanadas,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501791603720,Aurrera rebanadas,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501791603720,Aurrera rebanadas,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7502233111377,Cereal Banana Shake,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7503020692680,Churritos picorey,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+2904441855435,Gerber Grain & Grow Puffs sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501013106725,Bebida Carbonatada Sabor Naranja -Hierbabuena con 8% de jugo de naranja,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+0724865024369,Galletas sabor vainilla y limón,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+0724865021375,Galletas sabor vainilla y mantequilla,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+0724865021375,Galletas sabor vainilla y mantequilla,rojo fd&c40,SIN129,E129,sintetico,falso_negativo_real,False
+7506443107748,Yogurt griego deslactosado sabor fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501013105056,Bebida sabor mango baja en calorías,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+0753030199995,Roles con canela,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0024865052263,Galletas rellenas sabor chocolate Choco Nieve,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+0024865052263,Galletas rellenas sabor chocolate Choco Nieve,azul fd&c 1,SIN133,E133,sintetico,falso_negativo_real,True
+0094331355502,Harina para Hot Cakes con Avena,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7506475125017,Cereal sabor chocolate con malvaviscos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0681131778138,Bactericida para desinfectar,plata,SIN174,,mineral_inorganico,falso_negativo_real,False
+7501362623034,Nutri,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7502261263925,Galletas saladas sabor mantequilla,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+7501253687718,Queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501040080067,Queso chihuahua,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
+7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
+7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+0810179083694,Peelerz,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501020572391,Yoghurt Griego Bebible Deslactosado Con Mango Bajo En Grasa Reducido En Azúcar,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7502261273221,Cubitos de Atun,rojo remolacha,SIN162,E162,natural_botanico,falso_negativo_real,True
+7500533002258,Rica Burguer Carne para Hamburguesa,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+8719200303508,Margarina Light Pasteurizada con sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7502261266353,Carne preparada para hamburguesas,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False

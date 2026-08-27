@@ -53,44 +53,58 @@
   },
   "formas_legales_que_no_reconocemos": 104,
   "hallazgos_en_datos": {
-    "productos_afectados": 704,
-    "detecciones_nuevas": 1002,
-    "pct_del_subconjunto": 9.05,
+    "formas_por_categoria": {
+      "falso_negativo_real": 70,
+      "ya_cubierta": 32,
+      "mal_clasificada": 2
+    },
+    "productos_afectados": 302,
+    "detecciones_nuevas": 356,
+    "pct_del_subconjunto": 3.88,
+    "por_categoria": {
+      "falso_negativo_real": {
+        "productos": 292,
+        "detecciones": 346
+      },
+      "mal_clasificada": {
+        "productos": 10,
+        "detecciones": 10
+      }
+    },
     "por_forma": {
-      "rojo allura ac": 224,
-      "amarillo ocaso fcf": 192,
       "extracto de annato": 162,
-      "azul brillante fcf": 121,
-      "caramelo clase i": 69,
       "anaranjado alimentos 5": 52,
       "rojo 6": 26,
-      "annato norbixina": 14,
-      "amarillo fd&c 6": 12,
       "anaranjado alimentos 6": 12,
+      "amarillo fd&c 6": 12,
       "beta caroteno sintetico": 10,
-      "rojo natural 4": 9,
       "amarillo fd&c5": 9,
+      "rojo natural 4": 9,
       "rojo betabel": 8,
-      "curcuma turmerico": 8,
       "amarillo alimentos 3": 6,
-      "carotenos naturales": 6,
       "amarillo alimentos 4": 6,
       "rojo alimentos 17": 5,
-      "curcuma en polvo": 4,
-      "caramelo clase ii": 4,
       "azul alimentos 2": 4,
       "rojo d&c 5": 4,
       "rojo fd&c40": 3,
-      "rojo alimentos 3": 3
+      "rojo alimentos 3": 3,
+      "extracto de coccus cacti": 2,
+      "rojo no 40 fd&c": 2,
+      "azul no 1 fd&c": 2,
+      "anaranjado natural 4": 2,
+      "azul fd&c 1": 2,
+      "plata": 2,
+      "pigmento blanco 6": 2,
+      "verde natural 3": 2,
+      "rojo remolacha": 2
     },
     "por_clase": {
       "carmin": 11,
-      "fuera_de_eje": 73,
       "mineral_inorganico": 4,
-      "natural_botanico": 237,
-      "sintetico": 441
+      "natural_botanico": 204,
+      "sintetico": 113
     },
-    "ya_estaban_en_tags": 338
+    "ya_estaban_en_tags": 18
   },
   "beta_caroteno": [
     {
