@@ -31,16 +31,26 @@ Espana la clase funcional se declarara siempre, no deberian fallar. O sea que H1
 en su version simple no basta, y puede que la respuesta sea por sustancia y no
 por pais. El script reporta por codigo para poder verlo.
 
-QUE MIDE. Para cada deteccion, tres marcas sobre el texto, independientes:
+QUE MIDE. Para cada deteccion, dos marcas sobre el texto, independientes:
 
   tiene_codigo   el codigo E o SIN aparece en el texto, en cualquier posicion
   tiene_clase    'colorante'/'color'/'colour'/'pigmento' aparece ANTES del
                  termino y a menos de VENTANA_CLASE caracteres
-  tiene_dos_pt   hay un ':' entre la palabra de clase y el termino, que es la
-                 forma «colorante: carmin» del etiquetado europeo
 
 Y las cruza contra si OFF etiqueto el codigo. La tabla resultante dice cual de
-las tres marcas predice la recuperacion.
+las dos marcas predice la recuperacion.
+
+MARCA RETIRADA (parche 8, opcion B). Hubo una tercera marca, tiene_dos_puntos,
+para detectar la forma europea «colorante: carmin». Salio 0.0 % en los DOS
+paises, y eso no era un resultado: era un fallo de medicion. `normalizar()`
+quita la puntuacion (incluidos los dos puntos) antes de que esta funcion
+reciba el texto, asi que el caracter que la marca buscaba ya no podia existir
+nunca. Se opto por quitarla en vez de repararla sobre el texto crudo, porque
+la pregunta que motivaba la marca -si Espana usa la forma "colorante: X"- ya
+quedo contestada por otro lado: tiene_clase (que si funciona, no depende de
+puntuacion) muestra que declarar la clase funcional no predice la
+recuperacion en ninguno de los dos paises. Una tercera marca mal medida solo
+abria flanco sin cambiar el veredicto.
 
 Salidas: reportes/11_estructura_<pais>.json
          11_estructura_<pais>.csv
@@ -208,7 +218,6 @@ def main() -> None:
                 "sujeto_a_regla": bool(es_mand.get(codigo)),
                 "tiene_codigo": bool(pat_cod[codigo].search(texto)),
                 "tiene_clase": mc is not None,
-                "tiene_dos_puntos": bool(mc and ":" in antes[mc.end():]),
                 "en_tags": codigo in tags,
             })
 
@@ -248,7 +257,6 @@ def main() -> None:
     prevalencia = {
         "pct_detecciones_con_codigo_en_texto": round(100 * p.tiene_codigo.mean(), 1),
         "pct_con_clase_declarada_antes": round(100 * p.tiene_clase.mean(), 1),
-        "pct_con_forma_colorante_dos_puntos": round(100 * p.tiene_dos_puntos.mean(), 1),
     }
 
     veredicto = {}

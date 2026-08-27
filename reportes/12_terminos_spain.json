@@ -1,0 +1,1050 @@
+{
+  "pais": "en:spain",
+  "fuente": "datos\\crudo\\food.parquet",
+  "n_detecciones": 4333,
+  "n_terminos_distintos": 92,
+  "recuperacion_por_cobertura": [
+    {
+      "en_vocab_off": false,
+      "n": 1487,
+      "recuperadas": 103,
+      "pct_recuperado": 6.9
+    },
+    {
+      "en_vocab_off": true,
+      "n": 2846,
+      "recuperadas": 1491,
+      "pct_recuperado": 52.4
+    }
+  ],
+  "por_termino": [
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "carotenos",
+      "en_vocab_off": false,
+      "n": 663,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "extracto de pimenton",
+      "en_vocab_off": true,
+      "n": 508,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "curcumina",
+      "en_vocab_off": true,
+      "n": 326,
+      "recuperadas": 297,
+      "pct_recuperado": 91.1
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "carmin",
+      "en_vocab_off": true,
+      "n": 243,
+      "recuperadas": 159,
+      "pct_recuperado": 65.4
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "betacaroteno",
+      "en_vocab_off": true,
+      "n": 184,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "beta caroteno",
+      "en_vocab_off": false,
+      "n": 155,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "SPIRULINA",
+      "clase": "natural_botanico",
+      "termino": "espirulina",
+      "en_vocab_off": false,
+      "n": 139,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "carmines",
+      "en_vocab_off": true,
+      "n": 128,
+      "recuperadas": 88,
+      "pct_recuperado": 68.8
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "tartrazina",
+      "en_vocab_off": true,
+      "n": 126,
+      "recuperadas": 94,
+      "pct_recuperado": 74.6
+    },
+    {
+      "codigo": "E163",
+      "clase": "natural_botanico",
+      "termino": "antocianinas",
+      "en_vocab_off": true,
+      "n": 116,
+      "recuperadas": 108,
+      "pct_recuperado": 93.1
+    },
+    {
+      "codigo": "E133",
+      "clase": "sintetico",
+      "termino": "azul brillante",
+      "en_vocab_off": true,
+      "n": 115,
+      "recuperadas": 97,
+      "pct_recuperado": 84.3
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "curcuma",
+      "en_vocab_off": false,
+      "n": 100,
+      "recuperadas": 11,
+      "pct_recuperado": 11.0
+    },
+    {
+      "codigo": "E101",
+      "clase": "natural_botanico",
+      "termino": "riboflavina",
+      "en_vocab_off": true,
+      "n": 84,
+      "recuperadas": 56,
+      "pct_recuperado": 66.7
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "caroteno",
+      "en_vocab_off": false,
+      "n": 83,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "termino": "rojo allura",
+      "en_vocab_off": true,
+      "n": 75,
+      "recuperadas": 60,
+      "pct_recuperado": 80.0
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "amarillo ocaso",
+      "en_vocab_off": true,
+      "n": 71,
+      "recuperadas": 30,
+      "pct_recuperado": 42.3
+    },
+    {
+      "codigo": "E171",
+      "clase": "mineral_inorganico",
+      "termino": "dioxido de titanio",
+      "en_vocab_off": true,
+      "n": 68,
+      "recuperadas": 62,
+      "pct_recuperado": 91.2
+    },
+    {
+      "codigo": "E161b",
+      "clase": "natural_botanico",
+      "termino": "luteina",
+      "en_vocab_off": true,
+      "n": 61,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E162",
+      "clase": "natural_botanico",
+      "termino": "rojo de remolacha",
+      "en_vocab_off": true,
+      "n": 60,
+      "recuperadas": 48,
+      "pct_recuperado": 80.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "acido carminico",
+      "en_vocab_off": true,
+      "n": 59,
+      "recuperadas": 50,
+      "pct_recuperado": 84.7
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "cochinilla",
+      "en_vocab_off": true,
+      "n": 56,
+      "recuperadas": 39,
+      "pct_recuperado": 69.6
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "termino": "rojo 40",
+      "en_vocab_off": true,
+      "n": 56,
+      "recuperadas": 40,
+      "pct_recuperado": 71.4
+    },
+    {
+      "codigo": "E160b",
+      "clase": "natural_botanico",
+      "termino": "norbixina",
+      "en_vocab_off": true,
+      "n": 53,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "e 102",
+      "en_vocab_off": false,
+      "n": 49,
+      "recuperadas": 44,
+      "pct_recuperado": 89.8
+    },
+    {
+      "codigo": "E160b",
+      "clase": "natural_botanico",
+      "termino": "annatto",
+      "en_vocab_off": false,
+      "n": 47,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "amarillo 6",
+      "en_vocab_off": true,
+      "n": 46,
+      "recuperadas": 34,
+      "pct_recuperado": 73.9
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "amarillo 5",
+      "en_vocab_off": true,
+      "n": 45,
+      "recuperadas": 35,
+      "pct_recuperado": 77.8
+    },
+    {
+      "codigo": "E170",
+      "clase": "mineral_inorganico",
+      "termino": "carbonato de calcio",
+      "en_vocab_off": true,
+      "n": 43,
+      "recuperadas": 22,
+      "pct_recuperado": 51.2
+    },
+    {
+      "codigo": "E140",
+      "clase": "natural_botanico",
+      "termino": "clorofilinas",
+      "en_vocab_off": true,
+      "n": 41,
+      "recuperadas": 7,
+      "pct_recuperado": 17.1
+    },
+    {
+      "codigo": "E140",
+      "clase": "natural_botanico",
+      "termino": "clorofilas",
+      "en_vocab_off": true,
+      "n": 39,
+      "recuperadas": 8,
+      "pct_recuperado": 20.5
+    },
+    {
+      "codigo": "E153",
+      "clase": "natural_botanico",
+      "termino": "carbon vegetal",
+      "en_vocab_off": true,
+      "n": 35,
+      "recuperadas": 32,
+      "pct_recuperado": 91.4
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "termino": "e 129",
+      "en_vocab_off": true,
+      "n": 28,
+      "recuperadas": 27,
+      "pct_recuperado": 96.4
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "paprika",
+      "en_vocab_off": false,
+      "n": 27,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E133",
+      "clase": "sintetico",
+      "termino": "azul 1",
+      "en_vocab_off": false,
+      "n": 26,
+      "recuperadas": 2,
+      "pct_recuperado": 7.7
+    },
+    {
+      "codigo": "E127",
+      "clase": "sintetico",
+      "termino": "rojo 3",
+      "en_vocab_off": false,
+      "n": 21,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160b",
+      "clase": "natural_botanico",
+      "termino": "bixina",
+      "en_vocab_off": true,
+      "n": 20,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "extracto de paprika",
+      "en_vocab_off": true,
+      "n": 20,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "e 110",
+      "en_vocab_off": true,
+      "n": 19,
+      "recuperadas": 18,
+      "pct_recuperado": 94.7
+    },
+    {
+      "codigo": "SPIRULINA",
+      "clase": "natural_botanico",
+      "termino": "extracto de espirulina",
+      "en_vocab_off": false,
+      "n": 17,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E132",
+      "clase": "sintetico",
+      "termino": "indigotina",
+      "en_vocab_off": true,
+      "n": 15,
+      "recuperadas": 13,
+      "pct_recuperado": 86.7
+    },
+    {
+      "codigo": "E172",
+      "clase": "mineral_inorganico",
+      "termino": "oxido de hierro",
+      "en_vocab_off": true,
+      "n": 14,
+      "recuperadas": 13,
+      "pct_recuperado": 92.9
+    },
+    {
+      "codigo": "E131",
+      "clase": "sintetico",
+      "termino": "azul patente",
+      "en_vocab_off": false,
+      "n": 13,
+      "recuperadas": 7,
+      "pct_recuperado": 53.8
+    },
+    {
+      "codigo": "E140",
+      "clase": "natural_botanico",
+      "termino": "clorofila",
+      "en_vocab_off": false,
+      "n": 13,
+      "recuperadas": 6,
+      "pct_recuperado": 46.2
+    },
+    {
+      "codigo": "E122",
+      "clase": "sintetico",
+      "termino": "azorrubina",
+      "en_vocab_off": true,
+      "n": 12,
+      "recuperadas": 7,
+      "pct_recuperado": 58.3
+    },
+    {
+      "codigo": "E160d",
+      "clase": "natural_botanico",
+      "termino": "licopeno",
+      "en_vocab_off": true,
+      "n": 11,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E127",
+      "clase": "sintetico",
+      "termino": "eritrosina",
+      "en_vocab_off": true,
+      "n": 11,
+      "recuperadas": 10,
+      "pct_recuperado": 90.9
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "termino": "allura red",
+      "en_vocab_off": false,
+      "n": 11,
+      "recuperadas": 10,
+      "pct_recuperado": 90.9
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "amarillo crepusculo",
+      "en_vocab_off": true,
+      "n": 10,
+      "recuperadas": 9,
+      "pct_recuperado": 90.0
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "sunset yellow",
+      "en_vocab_off": false,
+      "n": 8,
+      "recuperadas": 3,
+      "pct_recuperado": 37.5
+    },
+    {
+      "codigo": "E163",
+      "clase": "natural_botanico",
+      "termino": "hibisco",
+      "en_vocab_off": false,
+      "n": 8,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E101",
+      "clase": "natural_botanico",
+      "termino": "vitamina b2",
+      "en_vocab_off": true,
+      "n": 8,
+      "recuperadas": 2,
+      "pct_recuperado": 25.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "carmin de cochinilla",
+      "en_vocab_off": false,
+      "n": 8,
+      "recuperadas": 2,
+      "pct_recuperado": 25.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "extracto de zanahoria",
+      "en_vocab_off": false,
+      "n": 7,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E140",
+      "clase": "natural_botanico",
+      "termino": "clorofilina",
+      "en_vocab_off": false,
+      "n": 7,
+      "recuperadas": 3,
+      "pct_recuperado": 42.9
+    },
+    {
+      "codigo": "E132",
+      "clase": "sintetico",
+      "termino": "azul 2",
+      "en_vocab_off": false,
+      "n": 7,
+      "recuperadas": 2,
+      "pct_recuperado": 28.6
+    },
+    {
+      "codigo": "E162",
+      "clase": "natural_botanico",
+      "termino": "betanina",
+      "en_vocab_off": true,
+      "n": 7,
+      "recuperadas": 5,
+      "pct_recuperado": 71.4
+    },
+    {
+      "codigo": "E143",
+      "clase": "sintetico",
+      "termino": "verde 3",
+      "en_vocab_off": false,
+      "n": 7,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "amarillo no. 5",
+      "en_vocab_off": false,
+      "n": 6,
+      "recuperadas": 2,
+      "pct_recuperado": 33.3
+    },
+    {
+      "codigo": "E163",
+      "clase": "natural_botanico",
+      "termino": "antocianina",
+      "en_vocab_off": true,
+      "n": 6,
+      "recuperadas": 6,
+      "pct_recuperado": 100.0
+    },
+    {
+      "codigo": "E160b",
+      "clase": "natural_botanico",
+      "termino": "achiote",
+      "en_vocab_off": true,
+      "n": 6,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E124",
+      "clase": "sintetico",
+      "termino": "ponceau 4r",
+      "en_vocab_off": true,
+      "n": 6,
+      "recuperadas": 6,
+      "pct_recuperado": 100.0
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "ci 19140",
+      "en_vocab_off": false,
+      "n": 5,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E141",
+      "clase": "natural_botanico",
+      "termino": "clorofilina cuprica",
+      "en_vocab_off": false,
+      "n": 5,
+      "recuperadas": 2,
+      "pct_recuperado": 40.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "oleorresina de paprika",
+      "en_vocab_off": false,
+      "n": 5,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "rojo carmin",
+      "en_vocab_off": false,
+      "n": 5,
+      "recuperadas": 1,
+      "pct_recuperado": 20.0
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "extracto de curcuma",
+      "en_vocab_off": true,
+      "n": 5,
+      "recuperadas": 4,
+      "pct_recuperado": 80.0
+    },
+    {
+      "codigo": "E133",
+      "clase": "sintetico",
+      "termino": "ci 42090",
+      "en_vocab_off": false,
+      "n": 4,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "amarillo no. 6",
+      "en_vocab_off": false,
+      "n": 4,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "capsantina",
+      "en_vocab_off": true,
+      "n": 4,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "termino": "ci 16035",
+      "en_vocab_off": false,
+      "n": 4,
+      "recuperadas": 1,
+      "pct_recuperado": 25.0
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "termino": "rojo no. 40",
+      "en_vocab_off": false,
+      "n": 4,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E151",
+      "clase": "sintetico",
+      "termino": "negro brillante",
+      "en_vocab_off": false,
+      "n": 4,
+      "recuperadas": 1,
+      "pct_recuperado": 25.0
+    },
+    {
+      "codigo": "E122",
+      "clase": "sintetico",
+      "termino": "carmoisina",
+      "en_vocab_off": true,
+      "n": 3,
+      "recuperadas": 2,
+      "pct_recuperado": 66.7
+    },
+    {
+      "codigo": "E163",
+      "clase": "natural_botanico",
+      "termino": "concentrado de sauco",
+      "en_vocab_off": false,
+      "n": 3,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E104",
+      "clase": "sintetico",
+      "termino": "amarillo de quinoleina",
+      "en_vocab_off": true,
+      "n": 2,
+      "recuperadas": 2,
+      "pct_recuperado": 100.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "caroteno natural",
+      "en_vocab_off": false,
+      "n": 2,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E172",
+      "clase": "mineral_inorganico",
+      "termino": "oxidos de hierro",
+      "en_vocab_off": false,
+      "n": 2,
+      "recuperadas": 1,
+      "pct_recuperado": 50.0
+    },
+    {
+      "codigo": "E153",
+      "clase": "natural_botanico",
+      "termino": "carbon activado",
+      "en_vocab_off": false,
+      "n": 2,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E141",
+      "clase": "natural_botanico",
+      "termino": "complejos cupricos de clorofila",
+      "en_vocab_off": false,
+      "n": 2,
+      "recuperadas": 2,
+      "pct_recuperado": 100.0
+    },
+    {
+      "codigo": "E163",
+      "clase": "natural_botanico",
+      "termino": "extracto de uva",
+      "en_vocab_off": false,
+      "n": 2,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E124",
+      "clase": "sintetico",
+      "termino": "rojo ponceau",
+      "en_vocab_off": false,
+      "n": 2,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "fd&c amarillo no. 6",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "oleorresina de curcuma",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "fd&c amarillo no. 5",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 1,
+      "pct_recuperado": 100.0
+    },
+    {
+      "codigo": "E110",
+      "clase": "sintetico",
+      "termino": "ci 15985",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E124",
+      "clase": "sintetico",
+      "termino": "rojo cochinilla a",
+      "en_vocab_off": true,
+      "n": 1,
+      "recuperadas": 1,
+      "pct_recuperado": 100.0
+    },
+    {
+      "codigo": "E124",
+      "clase": "sintetico",
+      "termino": "ci 16255",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E129",
+      "clase": "sintetico",
+      "termino": "fd&c rojo 40",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 1,
+      "pct_recuperado": 100.0
+    },
+    {
+      "codigo": "E132",
+      "clase": "sintetico",
+      "termino": "azul no. 2",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "carotenos mixtos",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160b",
+      "clase": "natural_botanico",
+      "termino": "extracto de achiote",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E163",
+      "clase": "natural_botanico",
+      "termino": "extracto de rabano",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 1,
+      "pct_recuperado": 100.0
+    }
+  ],
+  "terminos_clave": [
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "carotenos",
+      "en_vocab_off": false,
+      "n": 663,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "extracto de pimenton",
+      "en_vocab_off": true,
+      "n": 508,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "curcumina",
+      "en_vocab_off": true,
+      "n": 326,
+      "recuperadas": 297,
+      "pct_recuperado": 91.1
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "carmin",
+      "en_vocab_off": true,
+      "n": 243,
+      "recuperadas": 159,
+      "pct_recuperado": 65.4
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "betacaroteno",
+      "en_vocab_off": true,
+      "n": 184,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "beta caroteno",
+      "en_vocab_off": false,
+      "n": 155,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "carmines",
+      "en_vocab_off": true,
+      "n": 128,
+      "recuperadas": 88,
+      "pct_recuperado": 68.8
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "curcuma",
+      "en_vocab_off": false,
+      "n": 100,
+      "recuperadas": 11,
+      "pct_recuperado": 11.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "caroteno",
+      "en_vocab_off": false,
+      "n": 83,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "acido carminico",
+      "en_vocab_off": true,
+      "n": 59,
+      "recuperadas": 50,
+      "pct_recuperado": 84.7
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "cochinilla",
+      "en_vocab_off": true,
+      "n": 56,
+      "recuperadas": 39,
+      "pct_recuperado": 69.6
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "paprika",
+      "en_vocab_off": false,
+      "n": 27,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "extracto de paprika",
+      "en_vocab_off": true,
+      "n": 20,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "carmin de cochinilla",
+      "en_vocab_off": false,
+      "n": 8,
+      "recuperadas": 2,
+      "pct_recuperado": 25.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "extracto de zanahoria",
+      "en_vocab_off": false,
+      "n": 7,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "oleorresina de paprika",
+      "en_vocab_off": false,
+      "n": 5,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E120",
+      "clase": "carmin",
+      "termino": "rojo carmin",
+      "en_vocab_off": false,
+      "n": 5,
+      "recuperadas": 1,
+      "pct_recuperado": 20.0
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "extracto de curcuma",
+      "en_vocab_off": true,
+      "n": 5,
+      "recuperadas": 4,
+      "pct_recuperado": 80.0
+    },
+    {
+      "codigo": "E160c",
+      "clase": "natural_botanico",
+      "termino": "capsantina",
+      "en_vocab_off": true,
+      "n": 4,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "caroteno natural",
+      "en_vocab_off": false,
+      "n": 2,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E100",
+      "clase": "natural_botanico",
+      "termino": "oleorresina de curcuma",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E160a",
+      "clase": "natural_botanico",
+      "termino": "carotenos mixtos",
+      "en_vocab_off": false,
+      "n": 1,
+      "recuperadas": 0,
+      "pct_recuperado": 0.0
+    }
+  ]
+}

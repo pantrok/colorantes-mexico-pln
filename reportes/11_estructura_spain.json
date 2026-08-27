@@ -4,8 +4,7 @@
   "n_detecciones": 3963,
   "prevalencia_de_las_marcas": {
     "pct_detecciones_con_codigo_en_texto": 9.4,
-    "pct_con_clase_declarada_antes": 82.9,
-    "pct_con_forma_colorante_dos_puntos": 0.0
+    "pct_con_clase_declarada_antes": 82.9
   },
   "tabla_decisoria": [
     {
