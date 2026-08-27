@@ -1,102 +1,197 @@
 {
-  "taxonomia": {
-    "ruta": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\externo\\additives.txt",
-    "entradas_con_es": 629,
-    "entradas_mandatory": 45
+  "taxonomias": {
+    "additives_entradas_es": 629,
+    "additives_mandatory": 45,
+    "vitamins_disponible": true,
+    "minerals_disponible": true
   },
-  "M1_cobertura_diccionario": {
-    "terminos_nuestros": 148,
-    "cubiertos_por_off": 49,
-    "no_cubiertos": 99,
+  "M1_cobertura": {
+    "terminos": 148,
+    "cubiertos": 56,
+    "sin_sinonimo": 89,
+    "sin_entrada": 3,
     "por_clase": {
+      "carmin": {
+        "size": 9,
+        "sum": 4
+      },
       "fuera_de_eje": {
         "size": 12,
-        "sum": 1
+        "sum": 8
       },
-      "naturales": {
-        "size": 79,
-        "sum": 29
+      "mineral_inorganico": {
+        "size": 4,
+        "sum": 3
       },
-      "sinteticos": {
+      "natural_botanico": {
+        "size": 66,
+        "sum": 22
+      },
+      "sintetico": {
         "size": 57,
         "sum": 19
       }
     }
   },
-  "M2_mandatory_class": [
+  "M2_mandatory": [
     "E120",
     "E150",
     "E160a",
     "E170"
   ],
   "M3_otras_taxonomias": {
-    "columnas_disponibles": [
+    "columnas": [
       "vitaminas_tags",
       "minerales_tags"
     ],
-    "detecciones_recuperadas": 0
+    "recuperadas": 17,
+    "por_codigo": {
+      "E101": 17
+    }
   },
-  "brecha_global": {
-    "n": 3262,
-    "sin_tag": 1453,
-    "brecha_pct": 44.5
-  },
-  "brecha_global_contando_otras_taxonomias": 44.5,
-  "tabla_mecanismos": [
+  "brecha_global_pct": 44.5,
+  "brecha_global_con_otras_taxonomias_pct": 44.0,
+  "mecanismos": [
     {
-      "clase": "sinteticos",
-      "termino_en_vocabulario_off": true,
-      "sujeto_a_mandatory_class": false,
-      "n": 2192,
-      "sin_tag": 526,
-      "brecha_pct": 24.0,
-      "brecha_pct_si_se_cuentan_otras_taxonomias": 24.0
+      "clase": "carmin",
+      "en_vocab_off": false,
+      "off_mandatory": true,
+      "n": 8,
+      "sin_tag": 8,
+      "sin_ninguna": 8,
+      "brecha_pct": 100.0,
+      "brecha_pct_con_otras_taxonomias": 100.0
     },
     {
-      "clase": "sinteticos",
-      "termino_en_vocabulario_off": false,
-      "sujeto_a_mandatory_class": false,
-      "n": 381,
-      "sin_tag": 340,
-      "brecha_pct": 89.2,
-      "brecha_pct_si_se_cuentan_otras_taxonomias": 89.2
+      "clase": "carmin",
+      "en_vocab_off": true,
+      "off_mandatory": true,
+      "n": 216,
+      "sin_tag": 206,
+      "sin_ninguna": 206,
+      "brecha_pct": 95.4,
+      "brecha_pct_con_otras_taxonomias": 95.4
     },
     {
-      "clase": "naturales",
-      "termino_en_vocabulario_off": true,
-      "sujeto_a_mandatory_class": true,
-      "n": 257,
-      "sin_tag": 239,
-      "brecha_pct": 93.0,
-      "brecha_pct_si_se_cuentan_otras_taxonomias": 93.0
+      "clase": "mineral_inorganico",
+      "en_vocab_off": true,
+      "off_mandatory": false,
+      "n": 46,
+      "sin_tag": 10,
+      "sin_ninguna": 10,
+      "brecha_pct": 21.7,
+      "brecha_pct_con_otras_taxonomias": 21.7
     },
     {
-      "clase": "naturales",
-      "termino_en_vocabulario_off": true,
-      "sujeto_a_mandatory_class": false,
-      "n": 191,
-      "sin_tag": 114,
-      "brecha_pct": 59.7,
-      "brecha_pct_si_se_cuentan_otras_taxonomias": 59.7
+      "clase": "mineral_inorganico",
+      "en_vocab_off": true,
+      "off_mandatory": true,
+      "n": 30,
+      "sin_tag": 22,
+      "sin_ninguna": 22,
+      "brecha_pct": 73.3,
+      "brecha_pct_con_otras_taxonomias": 73.3
     },
     {
-      "clase": "naturales",
-      "termino_en_vocabulario_off": false,
-      "sujeto_a_mandatory_class": false,
+      "clase": "natural_botanico",
+      "en_vocab_off": false,
+      "off_mandatory": false,
       "n": 170,
       "sin_tag": 163,
+      "sin_ninguna": 163,
       "brecha_pct": 95.9,
-      "brecha_pct_si_se_cuentan_otras_taxonomias": 95.9
+      "brecha_pct_con_otras_taxonomias": 95.9
     },
     {
-      "clase": "naturales",
-      "termino_en_vocabulario_off": false,
-      "sujeto_a_mandatory_class": true,
-      "n": 71,
-      "sin_tag": 71,
+      "clase": "natural_botanico",
+      "en_vocab_off": false,
+      "off_mandatory": true,
+      "n": 63,
+      "sin_tag": 63,
+      "sin_ninguna": 63,
       "brecha_pct": 100.0,
-      "brecha_pct_si_se_cuentan_otras_taxonomias": 100.0
+      "brecha_pct_con_otras_taxonomias": 100.0
+    },
+    {
+      "clase": "natural_botanico",
+      "en_vocab_off": true,
+      "off_mandatory": false,
+      "n": 145,
+      "sin_tag": 104,
+      "sin_ninguna": 87,
+      "brecha_pct": 71.7,
+      "brecha_pct_con_otras_taxonomias": 60.0
+    },
+    {
+      "clase": "natural_botanico",
+      "en_vocab_off": true,
+      "off_mandatory": true,
+      "n": 11,
+      "sin_tag": 11,
+      "sin_ninguna": 11,
+      "brecha_pct": 100.0,
+      "brecha_pct_con_otras_taxonomias": 100.0
+    },
+    {
+      "clase": "sintetico",
+      "en_vocab_off": false,
+      "off_mandatory": false,
+      "n": 381,
+      "sin_tag": 340,
+      "sin_ninguna": 340,
+      "brecha_pct": 89.2,
+      "brecha_pct_con_otras_taxonomias": 89.2
+    },
+    {
+      "clase": "sintetico",
+      "en_vocab_off": true,
+      "off_mandatory": false,
+      "n": 2192,
+      "sin_tag": 526,
+      "sin_ninguna": 526,
+      "brecha_pct": 24.0,
+      "brecha_pct_con_otras_taxonomias": 24.0
     }
   ],
-  "LECTURA": "Si la brecha cae fuerte al condicionar por en_vocab_off, el mecanismo es cobertura de vocabulario y no ceguera al origen. Si cae al contar otras taxonomias, parte de la brecha era error de medicion nuestro. Lo que quede sin explicar es el hallazgo."
+  "modelo_logistico": [
+    {
+      "termino": "intercepto",
+      "OR": 0.32,
+      "IC_bajo": 0.29,
+      "IC_alto": 0.35,
+      "nota": ""
+    },
+    {
+      "termino": "natural",
+      "OR": 7.01,
+      "IC_bajo": 4.95,
+      "IC_alto": 9.93,
+      "nota": ""
+    },
+    {
+      "termino": "fuera_vocab",
+      "OR": 23.53,
+      "IC_bajo": 17.18,
+      "IC_alto": 32.22,
+      "nota": ""
+    },
+    {
+      "termino": "mandatory",
+      "OR": NaN,
+      "IC_bajo": NaN,
+      "IC_alto": NaN,
+      "nota": "no estimable: separacion perfecta (brecha 0% o 100% en todas las celdas con mandatory=1; n=63, n=11)"
+    }
+  ],
+  "modelo_desviacion": 4.408545447636213,
+  "modelo_gl": 2,
+  "estandarizacion": {
+    "brecha_sintetico_pct": 33.7,
+    "brecha_natural_cruda_pct": 87.7,
+    "brecha_natural_estandarizada_pct": 75.3,
+    "diferencia_cruda_pp": 54.0,
+    "diferencia_atribuible_al_origen_pp": 41.6,
+    "pct_de_la_diferencia_que_es_origen": 77.1
+  },
+  "PENDIENTE": "MINERALES = {E170, E171, E172} se sacaron del eje por decision propia. Requiere veredicto de la Dra. antes de fijarse."
 }

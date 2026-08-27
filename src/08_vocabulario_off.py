@@ -1,72 +1,83 @@
-"""Paso 8 — EL QUE EXPLICA LA BRECHA. Corre ANTES de interpretar el 07.
+"""Paso 8 v2 — mecanismos de la brecha. REEMPLAZA la version anterior.
 
-Motivo (25 de agosto de 2026). Se leyo el codigo fuente de Product Opener y la
-hipotesis con la que veniamos trabajando resulto FALSA:
+Cambios respecto a la v1 del 25 de agosto, todos por errores encontrados al
+revisar sus propias salidas:
 
-  `additives_tags` NO es un campo capturado aparte, y NO reconoce solo codigos E.
-  Se calcula en cada guardado con `extract_additives_from_text()`
-  (lib/ProductOpener/Ingredients.pm), que segmenta `ingredients_text` y
-  canonicaliza cada segmento contra la taxonomia multilingue `additives`
-  (659 entradas, 631 con traduccion al espanol, 622 con sinonimos nominales).
+  BUG 1 (grave). La v1 agrupaba por el bloque del YAML, y en `naturales` viven
+  E170 carbonato de calcio, E171 dioxido de titanio y E172 oxidos de hierro, que
+  son pigmentos inorganicos. La clase "naturales" del modelo incluia al dioxido
+  de titanio, cuya brecha es 21.7 % — es decir, contaminaba la clase natural
+  hacia abajo. Ahora hay cuatro clases explicitas y separadas:
+      sintetico · natural_botanico · carmin · mineral_inorganico
 
-Entonces la brecha no puede explicarse por "OFF solo ve numeros E". Hay tres
-mecanismos candidatos, y este script los separa:
+  BUG 2 (grave). M3 nunca se probo. Se comparaba `codigo in vitaminas_tags`,
+  pero esas taxonomias guardan NOMBRES (`en:riboflavin`), no codigos E. La
+  comparacion no podia dar nunca, y por eso salio 0. Ahora se leen las
+  taxonomias de vitaminas y minerales y se construye el mapa codigo -> entrada.
+  CORRECCION ADICIONAL (revision de este mismo parche antes de correrlo): el
+  codigo E de una entrada de vitamins.txt/minerals.txt casi nunca vive en su
+  linea "en:" (que trae el nombre, ej. "riboflavin, vitamin B2") sino en la
+  linea "xx:" de sinonimos independientes de idioma. Sin leer tambien "xx:"
+  el mapa salia vacio y E101 seguia sin recuperarse -el mismo bug otra vez,
+  solo que mas dificil de ver-. Ya corregido en leer_taxonomia().
+  E170 (carbonato de calcio) es un caso aparte: su referencia cruzada al
+  aditivo esta literalmente COMENTADA en minerals.txt (`#en:E170(i)`), con
+  una nota del propio Open Food Facts de que es una entrada duplicada sin
+  resolver entre sus dos taxonomias. Ningun parser puede recuperar eso de los
+  datos tal como estan: si M3 sigue dando 0 para E170, es un hallazgo sobre
+  la fuente, no un bug de este script.
 
-  M1  COBERTURA DE VOCABULARIO. El termino que nosotros reconocimos, ¿existe en
-      la taxonomia de OFF en espanol? La taxonomia esta construida con espanol
-      iberico ("pimenton", no "paprika") y le faltan las formas comerciales
-      mexicanas y las de estilo FD&C.
+  BUG 3 (menor). `variantes()` probaba sufijos i/ii/iii/iv pero no a/b/c/d, asi
+  que E150a-d nunca encontraban su entrada en la taxonomia.
 
-  M2  REGLA mandatory_additive_class. Para 45 entradas de la taxonomia, el
-      nombre de la sustancia NO basta: OFF exige que el texto haya declarado
-      antes la clase tecnologica ("colorante:"), o que venga el codigo E.
-      Entre colorantes aplica a E120, E123, E150, E160a, E164 y E170(i).
-      Es, casi literalmente, nuestra propia regla de sesenta caracteres, pero
-      mas estricta: OFF exige la clase en posicion estructural, nosotros
-      aceptamos proximidad.
+  BUG 4 (conceptual). Un termino puede no estar cubierto por dos razones muy
+  distintas: la sustancia SI existe en la taxonomia pero le falta ese sinonimo,
+  o la sustancia NO existe en la taxonomia (caso de la espirulina, cero
+  entradas). Son cosas distintas y ahora se distinguen: `sin_sinonimo` frente a
+  `sin_entrada`. Meterlas juntas confunde "vocabulario incompleto" con
+  "sustancia fuera de alcance".
 
-  M3  DESVIO A OTRAS TAXONOMIAS. Vitaminas, minerales, aminoacidos y nucleotidos
-      se etiquetan en `vitamins_tags` / `minerals_tags`, NO en `additives_tags`,
-      aunque tengan numero E (issue #1131). Afecta directo a E101 riboflavina y
-      a E170 carbonato de calcio, que son el primero y el segundo codigo mas
-      "perdidos" de nuestra corrida bruta. Buscarlos solo en `additives_tags` es
-      un error de medicion nuestro, no una omision de OFF.
+Ademas ajusta el modelo logistico dentro del script, para que la tabla de
+razones de momios salga de la tuberia y no de un calculo aparte.
 
-Si M1 + M2 + M3 explican la brecha, el hallazgo del articulo deja de ser
-"el campo estructurado es ciego al origen" y pasa a ser algo mejor porque esta
-diagnosticado al mecanismo: el vocabulario fijo de una base internacional no
-cubre las formas de declaracion locales, y falla de forma asimetrica porque los
-naturales se declaran con muchas formas que varian por region mientras los
-sinteticos tienen pocas y estables.
+Y genera `08_revision_dra.csv`, la hoja de trabajo para la revision manual.
 
-REQUISITO: descargar la taxonomia y ponerla en datos/externo/additives.txt
-  curl -sL https://raw.githubusercontent.com/openfoodfacts/openfoodfacts-server/main/taxonomies/additives.txt \
-       -o datos/externo/additives.txt
-Anotar el commit exacto en reportes/procedencia.json: la taxonomia cambia y el
-resultado depende de su version.
+REQUISITOS (ninguna dependencia nueva: el ajuste logistico va implementado a
+mano con Newton-Raphson y da identico a statsmodels, verificado)
+  datos/externo/additives.txt   (ver datos/externo/LEEME.md)
+  datos/externo/vitamins.txt
+  datos/externo/minerals.txt
 
 Salidas: reportes/08_vocabulario_off.json
-         08_cobertura_terminos.csv   termino nuestro x presencia en OFF
-         08_mecanismos.csv           brecha por mecanismo
+         08_cobertura_terminos.csv
+         08_mecanismos.csv
+         08_modelo.csv
+         08_revision_dra.csv    <- para la Dra. Granados-Balbuena
 """
 from __future__ import annotations
 
-import json
 import re
 import unicodedata
 from pathlib import Path
 
 import duckdb
+import numpy as np
 import pandas as pd
 
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
                   como_lista, normalizar, terminos_ordenados, guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
-TAXONOMIA = RAIZ / "datos" / "externo" / "additives.txt"
+EXTERNO = RAIZ / "datos" / "externo"
 AMBIGUOS = REQUIEREN_CONTEXTO
 RE_CONTEXTO = re.compile(r"colorante|color(?:es)?\b|pigmento")
 VENTANA = 60
+
+CARMIN = "E120"
+# Pigmentos inorganicos. No son naturales botanicos ni azoicos sinteticos: no
+# pertenecen al eje de sustitucion y se reportan como clase propia.
+# PENDIENTE DE VEREDICTO de la Dra. Granados-Balbuena.
+MINERALES = {"E170", "E171", "E172"}
 
 
 def norma(s: str) -> str:
@@ -75,26 +86,49 @@ def norma(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
-def leer_taxonomia(ruta: Path) -> tuple[dict, dict]:
-    """{codigo_normalizado: set(terminos es)} y {codigo: bool mandatory}."""
+def variantes(codigo: str) -> list[str]:
+    k = norma(codigo).replace(" ", "")
+    sufijos = ("i", "ii", "iii", "iv", "v", "vi", "a", "b", "c", "d", "e", "f")
+    return [k] + [k + s for s in sufijos]
+
+
+def leer_taxonomia(ruta: Path, obligatoria: bool = True):
+    """{codigo: set(terminos es)}, {codigo: bool mandatory}, {codigo: id en:...}"""
     if not ruta.exists():
-        raise SystemExit(f"Falta {ruta}. Descargala primero (ver docstring).")
-    vocab, mand = {}, {}
+        if obligatoria:
+            raise SystemExit(f"Falta {ruta}. Ver datos/externo/LEEME.md")
+        print(f"  AVISO: falta {ruta.name}; el mecanismo que depende de el no se evalua.")
+        return {}, {}, {}
+    vocab, mand, ident = {}, {}, {}
     for bloque in ruta.read_text(encoding="utf-8").split("\n\n"):
         m_en = re.search(r"^en:\s*(.+)$", bloque, re.M)
         if not m_en:
             continue
-        cod = norma(m_en.group(1).split(",")[0]).replace(" ", "").replace("(", "").replace(")", "")
+        primero = m_en.group(1).split(",")[0].strip()
+        cod = norma(primero).replace(" ", "").replace("(", "").replace(")", "")
         m_es = re.search(r"^es:\s*(.+)$", bloque, re.M)
         if m_es:
             vocab[cod] = {norma(x) for x in m_es.group(1).split(",")}
         mand[cod] = "mandatory_additive_class" in bloque
-    return vocab, mand
-
-
-def variantes(codigo: str) -> list[str]:
-    k = norma(codigo).replace(" ", "")
-    return [k] + [k + s for s in ("i", "ii", "iii", "iv")]
+        ident[cod] = "EN:" + norma(primero).upper()
+        # Sinonimos que sirven para mapear codigo E -> id de vitamina/mineral.
+        # OJO: en vitamins.txt/minerals.txt el codigo E casi nunca vive en la
+        # linea "en:" (esa trae el nombre, p.ej. "riboflavin, vitamin B2"): vive
+        # en la linea "xx:", el bloque de sinonimos independientes de idioma
+        # (p.ej. "xx: riboflavin, vitamin B2, B2 vitamin, E101, B2"). Sin leer
+        # tambien "xx:" el mapa sale vacio y M3 no recupera nada, que es
+        # exactamente el bug que este parche dice corregir. Verificado contra
+        # el vitamins.txt real: 0 codigos E encontrados solo con "en:", 1 con
+        # "en:"+"xx:" (incluye E101).
+        m_xx = re.search(r"^xx:\s*(.+)$", bloque, re.M)
+        fuentes = m_en.group(1).split(",")
+        if m_xx:
+            fuentes += m_xx.group(1).split(",")
+        for x in fuentes:
+            k = norma(x).replace(" ", "")
+            if re.match(r"^e\d{3}", k):
+                ident[k] = "EN:" + norma(primero).upper()
+    return vocab, mand, ident
 
 
 def detectar_con_termino(texto: str, ordenados):
@@ -118,36 +152,119 @@ def con_contexto(texto: str, termino: str) -> bool:
     return False
 
 
+def clase_de(codigo: str, bloque: str) -> str:
+    if codigo == CARMIN:
+        return "carmin"
+    if codigo in MINERALES:
+        return "mineral_inorganico"
+    if bloque == "sinteticos":
+        return "sintetico"
+    if bloque == "naturales":
+        return "natural_botanico"
+    return "fuera_de_eje"
+
+
+def ajustar_logistico(y_sin, y_ok, X: pd.DataFrame):
+    """Newton-Raphson sobre datos agrupados. Se implementa a mano para no
+    depender de statsmodels; si esta instalado da exactamente lo mismo."""
+    Xm = np.column_stack([np.ones(len(X))] + [X[c].values.astype(float) for c in X.columns])
+    n = (y_sin + y_ok).astype(float)
+    y = y_sin.astype(float)
+    beta = np.zeros(Xm.shape[1])
+    for _ in range(100):
+        eta = Xm @ beta
+        p = 1 / (1 + np.exp(-eta))
+        W = n * p * (1 - p)
+        z = eta + (y - n * p) / np.maximum(W, 1e-9)
+        WX = Xm * W[:, None]
+        try:
+            nuevo = np.linalg.solve(Xm.T @ WX, WX.T @ z)
+        except np.linalg.LinAlgError:
+            break
+        if np.max(np.abs(nuevo - beta)) < 1e-10:
+            beta = nuevo
+            break
+        beta = nuevo
+    eta = Xm @ beta
+    p = 1 / (1 + np.exp(-eta))
+    W = n * p * (1 - p)
+    cov = np.linalg.inv(Xm.T @ (Xm * W[:, None]))
+    ee = np.sqrt(np.diag(cov))
+    # desviacion residual
+    with np.errstate(divide="ignore", invalid="ignore"):
+        dev = 2 * np.nansum(
+            np.where(y > 0, y * np.log(y / (n * p)), 0)
+            + np.where(n - y > 0, (n - y) * np.log((n - y) / (n * (1 - p))), 0))
+
+    # Separacion perfecta: si TODAS las filas donde un predictor vale 1 tienen
+    # brecha exactamente 0 % o 100 %, la maxima verosimilitud de ese
+    # coeficiente diverge a infinito. Newton-Raphson no lo detecta solo: sigue
+    # iterando y el "OR" que produce (a veces del orden de 1e11, con IC de 0 a
+    # infinito) es un artefacto del limite de iteraciones, no una estimacion.
+    # Se reporta como no estimable en vez de imprimir ese numero.
+    separados = set()
+    for col in X.columns:
+        mask = X[col].values.astype(bool)
+        if mask.any():
+            tasa = y[mask] / n[mask]
+            if np.all(tasa == 1.0) or np.all(tasa == 0.0):
+                separados.add(col)
+
+    nombres = ["intercepto"] + list(X.columns)
+    # El termino con separacion perfecta ya diverge en beta/ee; exp() de eso
+    # desborda. Es esperado y se descarta abajo, no hace falta que lo imprima.
+    with np.errstate(over="ignore"):
+        OR = np.exp(beta).round(2)
+        IC_bajo = np.exp(beta - 1.959964 * ee).round(2)
+        IC_alto = np.exp(beta + 1.959964 * ee).round(2)
+    filas = []
+    for i, nom in enumerate(nombres):
+        if nom in separados:
+            posiciones = np.where(X[nom].values.astype(bool))[0]
+            detalle = ", ".join(f"n={int(n[j])}" for j in posiciones)
+            filas.append({"termino": nom, "OR": None, "IC_bajo": None, "IC_alto": None,
+                          "nota": (f"no estimable: separacion perfecta (brecha 0% o 100% "
+                                   f"en todas las celdas con {nom}=1; {detalle})")})
+        else:
+            filas.append({"termino": nom, "OR": float(OR[i]), "IC_bajo": float(IC_bajo[i]),
+                          "IC_alto": float(IC_alto[i]), "nota": ""})
+    return pd.DataFrame(filas), float(dev), int(len(X) - Xm.shape[1])
+
+
 def main() -> None:
-    vocab, mand = leer_taxonomia(TAXONOMIA)
+    vocab, mand, _ = leer_taxonomia(EXTERNO / "additives.txt")
+    _, _, id_vit = leer_taxonomia(EXTERNO / "vitamins.txt", obligatoria=False)
+    _, _, id_min = leer_taxonomia(EXTERNO / "minerals.txt", obligatoria=False)
+    id_otros = {**id_vit, **id_min}          # codigo E normalizado -> "EN:NOMBRE"
+
     dic = cargar_diccionario()
     ordenados = terminos_ordenados(dic)
 
-    # ---- M1/M2 a nivel de diccionario: que cubre OFF y que no
-    cobertura = []
+    # ---------------------------------------------------- M1 a nivel diccionario
+    filas = []
     for termino, codigo, bloque in ordenados:
-        vs = set()
-        es_mand = False
+        vs, es_mand, tiene_entrada = set(), False, False
         for k in variantes(codigo):
-            vs |= vocab.get(k, set())
+            if k in vocab:
+                tiene_entrada = True
+                vs |= vocab[k]
             es_mand = es_mand or mand.get(k, False)
         t = norma(termino)
-        cobertura.append({
-            "codigo": codigo, "bloque": bloque, "termino": termino,
-            "en_vocabulario_off": t in vs,
-            "es_codigo_e": bool(re.match(r"^e\s?-?\d", t)),
+        cubierto = t in vs
+        filas.append({
+            "codigo": codigo, "clase": clase_de(codigo, bloque), "termino": termino,
+            "en_vocabulario_off": cubierto,
+            "motivo_no_cubierto": ("" if cubierto else
+                                   ("sin_entrada" if not tiene_entrada else "sin_sinonimo")),
             "off_mandatory_class": es_mand,
             "n_terminos_off_es": len(vs),
         })
-    cob = pd.DataFrame(cobertura)
+    cob = pd.DataFrame(filas)
 
-    # ---- lectura del parquet, buscando TAMBIEN vitamins/minerals (M3)
+    # -------------------------------------------------------- lectura de datos
     cols = duckdb.sql(f"SELECT * FROM '{INTERMEDIO/'productos_mx.parquet'}' LIMIT 1").df().columns.tolist()
-    extra = [c for c in ("vitaminas_tags", "vitamins_tags", "minerales_tags", "minerals_tags")
-             if c in cols]
-    if not extra:
-        print("  AVISO: el parquet no trae vitamins_tags ni minerals_tags. "
-              "M3 no se puede evaluar; hay que reextraer del volcado.")
+    extra = [c for c in ("vitaminas_tags", "vitamins_tags",
+                         "minerales_tags", "minerals_tags") if c in cols]
     sel = "code, ingredientes_texto, aditivos_tags" + ("," + ",".join(extra) if extra else "")
     df = duckdb.sql(f"""
         SELECT {sel} FROM '{INTERMEDIO/'productos_mx.parquet'}'
@@ -161,78 +278,143 @@ def main() -> None:
         tags_add = {str(a).replace("en:", "").upper() for a in como_lista(t.aditivos_tags)}
         tags_otro = set()
         for c in extra:
-            tags_otro |= {str(a).replace("en:", "").upper() for a in como_lista(getattr(t, c))}
+            tags_otro |= {"EN:" + str(a).replace("en:", "").upper()
+                          for a in como_lista(getattr(t, c))}
         for codigo, bloque, termino in detectar_con_termino(texto, ordenados):
-            if bloque not in ("sinteticos", "naturales"):
+            cl = clase_de(codigo, bloque)
+            if cl == "fuera_de_eje":
                 continue
             if codigo in AMBIGUOS and not con_contexto(texto, termino):
-                continue                       # mismo criterio de depuracion
+                continue
             meta = idx.get((codigo, norma(termino)))
+            # M3: el codigo puede vivir en vitamins/minerals bajo su NOMBRE
+            ids = {id_otros.get(k) for k in variantes(codigo)} - {None}
             pares.append({
-                "code": t.code, "codigo": codigo, "bloque": bloque, "termino": termino,
+                "code": t.code, "codigo": codigo, "clase": cl, "termino": termino,
                 "en_vocab_off": bool(meta.en_vocabulario_off) if meta else False,
                 "off_mandatory": bool(meta.off_mandatory_class) if meta else False,
                 "en_additives_tags": codigo in tags_add,
-                "en_otras_taxonomias": codigo in tags_otro,
+                "en_otras_taxonomias": bool(ids & tags_otro),
             })
     p = pd.DataFrame(pares)
     if p.empty:
         raise SystemExit("Cero detecciones depuradas.")
-    p["visible_en_alguna"] = p.en_additives_tags | p.en_otras_taxonomias
+    p["visible"] = p.en_additives_tags | p.en_otras_taxonomias
 
-    def brecha(sub, campo="en_additives_tags"):
-        n = len(sub)
-        return {"n": n, "sin_tag": int((~sub[campo]).sum()),
-                "brecha_pct": round(100 * float((~sub[campo]).mean()), 1) if n else None}
+    # ------------------------------------------------------------- mecanismos
+    mec = (p.groupby(["clase", "en_vocab_off", "off_mandatory"])
+             .agg(n=("visible", "size"),
+                  sin_tag=("en_additives_tags", lambda s: int((~s).sum())),
+                  sin_ninguna=("visible", lambda s: int((~s).sum())))
+             .reset_index())
+    mec["brecha_pct"] = (100 * mec.sin_tag / mec.n).round(1)
+    mec["brecha_pct_con_otras_taxonomias"] = (100 * mec.sin_ninguna / mec.n).round(1)
 
-    mecanismos = []
-    for (bl, vocab_ok, mnd), g in p.groupby(["bloque", "en_vocab_off", "off_mandatory"]):
-        mecanismos.append({
-            "clase": bl, "termino_en_vocabulario_off": bool(vocab_ok),
-            "sujeto_a_mandatory_class": bool(mnd),
-            **brecha(g),
-            "brecha_pct_si_se_cuentan_otras_taxonomias":
-                round(100 * float((~g.visible_en_alguna).mean()), 1),
-        })
-    mec = pd.DataFrame(mecanismos).sort_values("n", ascending=False)
+    # ---------------------------------------------------------- modelo logistico
+    # Solo sintetico y natural_botanico: carmin y minerales van aparte por diseno.
+    m = mec[mec.clase.isin(["sintetico", "natural_botanico"])].copy()
+    m["natural"] = (m.clase == "natural_botanico").astype(int)
+    m["fuera_vocab"] = (~m.en_vocab_off).astype(int)
+    m["mandatory"] = m.off_mandatory.astype(int)
+    modelo = pd.DataFrame()
+    dev = gl = None
+    if len(m) >= 4 and m.natural.nunique() > 1 and m.fuera_vocab.nunique() > 1:
+        modelo, dev, gl = ajustar_logistico(
+            m.sin_tag.values, (m.n - m.sin_tag).values,
+            m[["natural", "fuera_vocab", "mandatory"]])
 
-    resumen = {
-        "taxonomia": {"ruta": str(TAXONOMIA),
-                      "entradas_con_es": len(vocab),
-                      "entradas_mandatory": int(sum(mand.values()))},
-        "M1_cobertura_diccionario": {
-            "terminos_nuestros": len(cob),
-            "cubiertos_por_off": int(cob.en_vocabulario_off.sum()),
-            "no_cubiertos": int((~cob.en_vocabulario_off).sum()),
-            "por_clase": cob.groupby("bloque").en_vocabulario_off
-                            .agg(["size", "sum"]).to_dict("index"),
-        },
-        "M2_mandatory_class": sorted({r.codigo for r in cob.itertuples()
-                                      if r.off_mandatory_class}),
-        "M3_otras_taxonomias": {
-            "columnas_disponibles": extra,
-            "detecciones_recuperadas": int(p.en_otras_taxonomias.sum()),
-        },
-        "brecha_global": brecha(p),
-        "brecha_global_contando_otras_taxonomias":
-            round(100 * float((~p.visible_en_alguna).mean()), 1),
-        "tabla_mecanismos": mec.to_dict("records"),
-        "LECTURA": ("Si la brecha cae fuerte al condicionar por en_vocab_off, el "
-                    "mecanismo es cobertura de vocabulario y no ceguera al origen. "
-                    "Si cae al contar otras taxonomias, parte de la brecha era error "
-                    "de medicion nuestro. Lo que quede sin explicar es el hallazgo."),
-    }
+    # ------------------------------- estandarizacion: cuanto sobrevive al ajuste
+    estand = {}
+    sin_m = m[m.natural == 0]
+    nat_m = m[m.natural == 1]
+    if len(sin_m) and len(nat_m):
+        peso = sin_m.set_index(["fuera_vocab", "mandatory"]).n
+        tasa = nat_m.set_index(["fuera_vocab", "mandatory"]).apply(
+            lambda r: r.sin_tag / r.n, axis=1)
+        comunes = peso.index.intersection(tasa.index)
+        if len(comunes):
+            p_std = float((peso[comunes] * tasa[comunes]).sum() / peso[comunes].sum())
+            b_sin = 100 * sin_m.sin_tag.sum() / sin_m.n.sum()
+            b_nat = 100 * nat_m.sin_tag.sum() / nat_m.n.sum()
+            estand = {
+                "brecha_sintetico_pct": round(b_sin, 1),
+                "brecha_natural_cruda_pct": round(b_nat, 1),
+                "brecha_natural_estandarizada_pct": round(100 * p_std, 1),
+                "diferencia_cruda_pp": round(b_nat - b_sin, 1),
+                "diferencia_atribuible_al_origen_pp": round(100 * p_std - b_sin, 1),
+                "pct_de_la_diferencia_que_es_origen":
+                    round(100 * (100 * p_std - b_sin) / (b_nat - b_sin), 1) if b_nat != b_sin else None,
+            }
 
+    # ------------------------------------------- hoja de revision para la Dra.
+    # OJO: agrupar por CODIGO (no por termino) haria que las variantes de un
+    # mismo codigo -curcumina, curcuma, extracto de curcuma, oleorresina de
+    # curcuma para E100- compartieran el mismo total prestado, y un termino
+    # que nunca aparecio por si solo quedaria con un conteo de sus hermanos
+    # en vez de 0. Eso justo rompe la pregunta P1, que solo se responde en
+    # los renglones con 0 detecciones.
+    peso_term = p.groupby(["codigo", "termino"]).size().rename("detecciones")
+    rev = cob.merge(peso_term, on=["codigo", "termino"], how="left")
+    rev["detecciones"] = rev.detecciones.fillna(0).astype(int)
+    rev = rev.sort_values(["detecciones", "codigo"], ascending=[False, True])
+    rev["P1_se_usa_en_etiqueta_mx"] = ""     # si / no / duda
+    rev["P2_declara_colorante"] = ""         # si / no / a veces
+    rev["P3_codigo_correcto"] = ""           # si / no -> cual
+    rev["P4_clase_correcta"] = ""            # si / no -> cual
+    rev["comentario"] = ""
+
+    # ------------------------------------------------------------------ salidas
     REPORTES.mkdir(exist_ok=True)
     cob.to_csv(REPORTES / "08_cobertura_terminos.csv", index=False, encoding="utf-8")
     mec.to_csv(REPORTES / "08_mecanismos.csv", index=False, encoding="utf-8")
+    if len(modelo):
+        modelo.to_csv(REPORTES / "08_modelo.csv", index=False, encoding="utf-8")
+    rev.to_csv(REPORTES / "08_revision_dra.csv", index=False, encoding="utf-8")
+
+    resumen = {
+        "taxonomias": {
+            "additives_entradas_es": len(vocab),
+            "additives_mandatory": int(sum(mand.values())),
+            "vitamins_disponible": bool(id_vit),
+            "minerals_disponible": bool(id_min),
+        },
+        "M1_cobertura": {
+            "terminos": len(cob),
+            "cubiertos": int(cob.en_vocabulario_off.sum()),
+            "sin_sinonimo": int((cob.motivo_no_cubierto == "sin_sinonimo").sum()),
+            "sin_entrada": int((cob.motivo_no_cubierto == "sin_entrada").sum()),
+            "por_clase": cob.groupby("clase").en_vocabulario_off
+                            .agg(["size", "sum"]).to_dict("index"),
+        },
+        "M2_mandatory": sorted({r.codigo for r in cob.itertuples() if r.off_mandatory_class}),
+        "M3_otras_taxonomias": {
+            "columnas": extra,
+            "recuperadas": int(p.en_otras_taxonomias.sum()),
+            "por_codigo": p[p.en_otras_taxonomias].groupby("codigo").size().to_dict(),
+        },
+        "brecha_global_pct": round(100 * float((~p.en_additives_tags).mean()), 1),
+        "brecha_global_con_otras_taxonomias_pct": round(100 * float((~p.visible).mean()), 1),
+        "mecanismos": mec.to_dict("records"),
+        "modelo_logistico": modelo.to_dict("records") if len(modelo) else None,
+        "modelo_desviacion": dev, "modelo_gl": gl,
+        "estandarizacion": estand,
+        "PENDIENTE": ("MINERALES = {E170, E171, E172} se sacaron del eje por decision "
+                      "propia. Requiere veredicto de la Dra. antes de fijarse."),
+    }
     guardar_reporte("08_vocabulario_off", resumen)
 
-    print(f"  terminos nuestros: {len(cob)}  cubiertos por OFF: {int(cob.en_vocabulario_off.sum())}")
-    print(f"  brecha global (solo additives_tags): {resumen['brecha_global']['brecha_pct']} %")
-    print(f"  brecha global (contando vitaminas/minerales): "
-          f"{resumen['brecha_global_contando_otras_taxonomias']} %")
+    print(f"  cobertura: {int(cob.en_vocabulario_off.sum())}/{len(cob)} terminos")
+    print(f"  sin sinonimo: {resumen['M1_cobertura']['sin_sinonimo']}   "
+          f"sin entrada en la taxonomia: {resumen['M1_cobertura']['sin_entrada']}")
+    print(f"  M3 recuperadas: {resumen['M3_otras_taxonomias']['recuperadas']}  "
+          f"{resumen['M3_otras_taxonomias']['por_codigo']}")
+    print(f"  brecha global {resumen['brecha_global_pct']} %  ->  "
+          f"{resumen['brecha_global_con_otras_taxonomias_pct']} % contando vit/min")
     print("\n", mec.to_string(index=False))
+    if len(modelo):
+        print(f"\n  modelo (desviacion {dev:.2f}, {gl} gl):\n", modelo.to_string(index=False))
+    if estand:
+        print("\n  estandarizacion:", estand)
 
 
 if __name__ == "__main__":

@@ -3,14 +3,29 @@
   "fecha": "2026-08-26T21:57:21",
   "licencia": "ODbL — Open Food Facts. Citar y respetar atribucion compartida.",
   "sha256_salida": "df25c96b80b7ed85a6760c147d012d31f206b39368c5295872b4cd20701bb03f",
-  "taxonomia_additives": {
-    "ruta": "datos/externo/additives.txt",
-    "fuente": "https://raw.githubusercontent.com/openfoodfacts/openfoodfacts-server/main/taxonomies/additives.txt",
-    "commit": "6a1c019afde3446370ff468efbb476e89fb6e6c1",
-    "fecha_commit": "2026-08-22T10:46:20Z",
-    "fecha_descarga": "2026-08-26",
-    "n_entradas_top_level": 659,
+  "taxonomias_off": {
+    "additives": {
+      "ruta": "datos/externo/additives.txt",
+      "fuente": "https://raw.githubusercontent.com/openfoodfacts/openfoodfacts-server/main/taxonomies/additives.txt",
+      "commit": "6a1c019afde3446370ff468efbb476e89fb6e6c1",
+      "fecha_commit": "2026-08-22T10:46:20Z",
+      "n_entradas_top_level": 659
+    },
+    "vitamins": {
+      "ruta": "datos/externo/vitamins.txt",
+      "fuente": "https://raw.githubusercontent.com/openfoodfacts/openfoodfacts-server/main/taxonomies/vitamins.txt",
+      "commit": "0e6876134969a2adacb0b589090790bd9c4d43e4",
+      "fecha_commit": "2026-08-24T08:34:50Z"
+    },
+    "minerals": {
+      "ruta": "datos/externo/minerals.txt",
+      "fuente": "https://raw.githubusercontent.com/openfoodfacts/openfoodfacts-server/main/taxonomies/minerals.txt",
+      "commit": "682007a0dc2862dbbcbf13e0352e8b13ad8dce7a",
+      "fecha_commit": "2026-08-20T16:14:32Z"
+    },
+    "fecha_descarga": "2026-08-27",
     "licencia": "ODbL — Open Food Facts. Citar y respetar atribucion compartida.",
-    "nota": "La taxonomia cambia con el tiempo. No actualizar a mitad del analisis; si se reejecuta con otra version y cambia la cifra del script 08, es el objeto de estudio moviendose, no un error."
+    "nota": "Las taxonomias cambian con el tiempo. No actualizar a mitad del analisis; si se reejecuta con otra version y cambia la cifra del script 08, es el objeto de estudio moviendose, no un error.",
+    "limitacion_conocida": "minerals.txt no trae una referencia activa a E170(i) para carbonato de calcio (esta comentada en el archivo fuente, con nota del propio OFF de que la entrada esta duplicada sin resolver entre additives y minerals). El mecanismo M3 del script 08 no puede recuperar E170 mientras eso no cambie en la fuente; no es un bug del script."
   }
 }
