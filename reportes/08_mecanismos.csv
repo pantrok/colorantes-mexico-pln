@@ -1,0 +1,7 @@
+clase,termino_en_vocabulario_off,sujeto_a_mandatory_class,n,sin_tag,brecha_pct,brecha_pct_si_se_cuentan_otras_taxonomias
+sinteticos,True,False,2192,526,24.0,24.0
+sinteticos,False,False,381,340,89.2,89.2
+naturales,True,True,257,239,93.0,93.0
+naturales,True,False,191,114,59.7,59.7
+naturales,False,False,170,163,95.9,95.9
+naturales,False,True,71,71,100.0,100.0

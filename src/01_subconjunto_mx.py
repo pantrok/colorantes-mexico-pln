@@ -68,6 +68,11 @@ def main() -> None:
       len(countries_tags) = 1 AS solo_mexico,
       additives_tags       AS aditivos_tags,
       additives_n          AS aditivos_n,
+      -- OFF desvia vitaminas y minerales fuera de additives_tags por diseno
+      -- (issue #1131), aunque tengan numero E. Sin esto, E101 y E170 se
+      -- miden como "perdidos" por buscarlos en el campo equivocado.
+      vitamins_tags        AS vitaminas_tags,
+      minerals_tags        AS minerales_tags,
       labels_tags          AS etiquetas,
       nova_group           AS nova,
       nutriscore_grade     AS nutriscore,
@@ -88,6 +93,10 @@ def main() -> None:
                               AND length(trim(ingredientes_texto)) > 0) n_con_texto,
              count(*) FILTER (WHERE aditivos_tags IS NOT NULL
                               AND len(aditivos_tags) > 0) n_con_aditivos,
+             count(*) FILTER (WHERE vitaminas_tags IS NOT NULL
+                              AND len(vitaminas_tags) > 0) n_con_vitaminas,
+             count(*) FILTER (WHERE minerales_tags IS NOT NULL
+                              AND len(minerales_tags) > 0) n_con_minerales,
              count(DISTINCT contribuidor) n_contribuidores,
              count(DISTINCT marcas) n_marcas
       FROM '{salida}'
@@ -103,8 +112,10 @@ def main() -> None:
         "pct_con_ingredients_text": round(100 * r[2] / r[0], 1) if r[0] else 0,
         "n_con_additives_tags": r[3],
         "pct_con_additives_tags": round(100 * r[3] / r[0], 1) if r[0] else 0,
-        "n_contribuidores_distintos": r[4],
-        "n_marcas_distintas": r[5],
+        "n_con_vitamins_tags": r[4],
+        "n_con_minerals_tags": r[5],
+        "n_contribuidores_distintos": r[6],
+        "n_marcas_distintas": r[7],
         "archivo": str(salida),
         "bytes": salida.stat().st_size,
     }

@@ -1,0 +1,102 @@
+{
+  "taxonomia": {
+    "ruta": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\externo\\additives.txt",
+    "entradas_con_es": 629,
+    "entradas_mandatory": 45
+  },
+  "M1_cobertura_diccionario": {
+    "terminos_nuestros": 148,
+    "cubiertos_por_off": 49,
+    "no_cubiertos": 99,
+    "por_clase": {
+      "fuera_de_eje": {
+        "size": 12,
+        "sum": 1
+      },
+      "naturales": {
+        "size": 79,
+        "sum": 29
+      },
+      "sinteticos": {
+        "size": 57,
+        "sum": 19
+      }
+    }
+  },
+  "M2_mandatory_class": [
+    "E120",
+    "E150",
+    "E160a",
+    "E170"
+  ],
+  "M3_otras_taxonomias": {
+    "columnas_disponibles": [
+      "vitaminas_tags",
+      "minerales_tags"
+    ],
+    "detecciones_recuperadas": 0
+  },
+  "brecha_global": {
+    "n": 3262,
+    "sin_tag": 1453,
+    "brecha_pct": 44.5
+  },
+  "brecha_global_contando_otras_taxonomias": 44.5,
+  "tabla_mecanismos": [
+    {
+      "clase": "sinteticos",
+      "termino_en_vocabulario_off": true,
+      "sujeto_a_mandatory_class": false,
+      "n": 2192,
+      "sin_tag": 526,
+      "brecha_pct": 24.0,
+      "brecha_pct_si_se_cuentan_otras_taxonomias": 24.0
+    },
+    {
+      "clase": "sinteticos",
+      "termino_en_vocabulario_off": false,
+      "sujeto_a_mandatory_class": false,
+      "n": 381,
+      "sin_tag": 340,
+      "brecha_pct": 89.2,
+      "brecha_pct_si_se_cuentan_otras_taxonomias": 89.2
+    },
+    {
+      "clase": "naturales",
+      "termino_en_vocabulario_off": true,
+      "sujeto_a_mandatory_class": true,
+      "n": 257,
+      "sin_tag": 239,
+      "brecha_pct": 93.0,
+      "brecha_pct_si_se_cuentan_otras_taxonomias": 93.0
+    },
+    {
+      "clase": "naturales",
+      "termino_en_vocabulario_off": true,
+      "sujeto_a_mandatory_class": false,
+      "n": 191,
+      "sin_tag": 114,
+      "brecha_pct": 59.7,
+      "brecha_pct_si_se_cuentan_otras_taxonomias": 59.7
+    },
+    {
+      "clase": "naturales",
+      "termino_en_vocabulario_off": false,
+      "sujeto_a_mandatory_class": false,
+      "n": 170,
+      "sin_tag": 163,
+      "brecha_pct": 95.9,
+      "brecha_pct_si_se_cuentan_otras_taxonomias": 95.9
+    },
+    {
+      "clase": "naturales",
+      "termino_en_vocabulario_off": false,
+      "sujeto_a_mandatory_class": true,
+      "n": 71,
+      "sin_tag": 71,
+      "brecha_pct": 100.0,
+      "brecha_pct_si_se_cuentan_otras_taxonomias": 100.0
+    }
+  ],
+  "LECTURA": "Si la brecha cae fuerte al condicionar por en_vocab_off, el mecanismo es cobertura de vocabulario y no ceguera al origen. Si cae al contar otras taxonomias, parte de la brecha era error de medicion nuestro. Lo que quede sin explicar es el hallazgo."
+}

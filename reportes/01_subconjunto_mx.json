@@ -1,5 +1,5 @@
 {
-  "fecha_extraccion": "2026-08-23T11:39:12",
+  "fecha_extraccion": "2026-08-26T21:57:21",
   "origen": "datos/crudo/food.parquet",
   "n_productos_mx": 17330,
   "n_solo_mexico": 15920,
@@ -8,8 +8,10 @@
   "pct_con_ingredients_text": 44.9,
   "n_con_additives_tags": 4800,
   "pct_con_additives_tags": 27.7,
+  "n_con_vitamins_tags": 1624,
+  "n_con_minerals_tags": 1599,
   "n_contribuidores_distintos": 538,
   "n_marcas_distintas": 5113,
   "archivo": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\intermedio\\productos_mx.parquet",
-  "bytes": 1176476
+  "bytes": 1192766
 }

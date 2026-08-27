@@ -1,6 +1,16 @@
 {
   "origen": "datos/crudo/food.parquet",
-  "fecha": "2026-08-23T11:39:12",
+  "fecha": "2026-08-26T21:57:21",
   "licencia": "ODbL — Open Food Facts. Citar y respetar atribucion compartida.",
-  "sha256_salida": "d3b739bfce2ff9b9195861903c204df4050efcf411e005b83e7fd007333b4fb9"
+  "sha256_salida": "df25c96b80b7ed85a6760c147d012d31f206b39368c5295872b4cd20701bb03f",
+  "taxonomia_additives": {
+    "ruta": "datos/externo/additives.txt",
+    "fuente": "https://raw.githubusercontent.com/openfoodfacts/openfoodfacts-server/main/taxonomies/additives.txt",
+    "commit": "6a1c019afde3446370ff468efbb476e89fb6e6c1",
+    "fecha_commit": "2026-08-22T10:46:20Z",
+    "fecha_descarga": "2026-08-26",
+    "n_entradas_top_level": 659,
+    "licencia": "ODbL — Open Food Facts. Citar y respetar atribucion compartida.",
+    "nota": "La taxonomia cambia con el tiempo. No actualizar a mitad del analisis; si se reejecuta con otra version y cambia la cifra del script 08, es el objeto de estudio moviendose, no un error."
+  }
 }

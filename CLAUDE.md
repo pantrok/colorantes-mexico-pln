@@ -35,7 +35,13 @@ Colaboración entre **Daniel** (ciencia de datos, IA) y la **Dra. Sulem Yali Gra
 2. Primer recurso léxico anotado de colorantes alimentarios **en español** — no existe ninguno.
 3. Cuantificación de lo que `additives_tags` no captura.
 
-La Dra. confirmó que en México **las etiquetas declaran por nombre de compuesto** («extracto de betalaína», «ácido carmínico») y no por código E. Esa es la razón por la que el campo estructurado pierde información, y medir esa pérdida es el número de portada.
+### El mecanismo de la brecha estaba mal enunciado (corregido el 25/08)
+
+El enunciado original de este documento decía que los sintéticos se declaran por número y los naturales por nombre, y que por eso el campo estructurado los distingue. **Eso es falso**, verificado contra el código fuente de Open Food Facts (commit `76f4f43b6052835eeff822efddb0b0f37dd9a13f`; ver `HALLAZGO_openfoodfacts.md` en la raíz). `additives_tags` no es un campo capturado: `extract_additives_from_text()` lo recalcula en cada guardado segmentando `ingredients_text` contra la taxonomía multilingüe `additives` (659 entradas, 631 con traducción al español), que reconoce nombres de sustancia además de códigos E. Por lo tanto **la comparación no es campo estructurado contra texto libre: es un analizador contra otro sobre el mismo insumo**, y hay que decirlo así en Métodos.
+
+Además, Open Food Facts desvía vitaminas, minerales, aminoácidos y nucleótidos a `vitamins_tags`/`minerals_tags` (issue #1131), aunque tengan número E. E101 (riboflavina) y E170 (carbonato de calcio) caen ahí; buscarlos solo en `additives_tags` es un error de medición nuestro, no una omisión de la base. `01_subconjunto_mx.py` ya extrae ambos campos (`vitaminas_tags`, `minerales_tags`).
+
+**Enunciado corregido:** el vocabulario de la taxonomía `additives` está construido en español ibérico y no cubre las formas de declaración locales; falla de forma asimétrica porque los colorantes naturales se declaran con muchas formas que varían por región (extracto de betalaína, achiote, jamaica) mientras los sintéticos tienen pocas y estables (tartrazina, rojo allura). Esa asimetría —no la ceguera al origen— es el eje del artículo.
 
 ## Las cuatro comprobaciones de esta fase
 
@@ -45,6 +51,8 @@ Cada script produce un número y un archivo en `reportes/`. En orden de importan
 2. **`03_cobertura_sesgo.py` — cobertura y sesgo.** Conteo por categoría contra el censo del INSP (38 872 productos, Contreras-Manzano et al. 2022) y contra Zancheta et al. 2025 (15 846 productos mexicanos, 2017). Concentración por marca y por contribuyente.
 3. **`04_calidad_texto.py` — calidad de `ingredients_text`.** Vacío, truncado, idioma, indicios de OCR. Determina si el pipeline de PLN es viable.
 4. **`01_subconjunto_mx.py` — tamaño y forma del subconjunto.** Es prerrequisito de todo lo demás.
+
+Ampliado el 25/08 con `05_auditoria_brecha.py` (brecha depurada), `06_sustitucion_por_categoria.py` (P1/P2 por categoría), `08_vocabulario_off.py` (mecanismo) y `07_forma_y_clase.py` (la corrida que decide la tesis; corre después de 08). Ver `HALLAZGO_openfoodfacts.md` y la sección de estructura más abajo.
 
 ## Tres predicciones fijadas antes de ver los datos
 
@@ -76,17 +84,26 @@ Alternativa si el Parquet falla: el CSV comprimido de `static.openfoodfacts.org/
 ## Estructura
 
 ```
-config/colorantes.yaml    diccionario semilla y matriz tono × solubilidad
+config/colorantes.yaml       diccionario semilla y matriz tono × solubilidad
+config/categorias.yaml       taxonomia OFF -> 12 categorias analiticas
 src/00_explorar_esquema.py
 src/01_subconjunto_mx.py
-src/02_brecha_tags.py     <- el importante
+src/02_brecha_tags.py        <- brecha bruta
 src/03_cobertura_sesgo.py
 src/04_calidad_texto.py
-src/util.py
-datos/crudo/              volcado (en .gitignore)
-datos/intermedio/         subconjunto mexicano en parquet
-reportes/                 salidas en json y md
+src/05_auditoria_brecha.py   <- brecha depurada (66.1 %), esta es la que se cita
+src/06_sustitucion_por_categoria.py   evalua P1/P2 por categoria
+src/07_forma_y_clase.py      <- LA CORRIDA QUE DECIDE. Corre DESPUES de 08.
+src/08_vocabulario_off.py    <- explica el mecanismo. Corre ANTES de 07.
+src/util.py                  REQUIEREN_CONTEXTO, como_lista(), terminos_ordenados()
+datos/crudo/                 volcado (en .gitignore)
+datos/intermedio/            subconjunto mexicano en parquet
+datos/externo/               taxonomia additives.txt de OFF (no es nuestra; ver LEEME.md)
+reportes/                    salidas en json y md
+HALLAZGO_openfoodfacts.md    por que el mecanismo original estaba mal enunciado
 ```
+
+**Orden de ejecución de 07 y 08: `08` siempre antes que `07`.** `08` diagnostica por qué existe la brecha (cobertura de vocabulario, `mandatory_additive_class`, desvío a otras taxonomías); `07` la mide en detalle, con el falsador 1 que decide si el eje es origen o forma de declaración. Correr `07` primero produce tablas convincentes de una cifra cuyo mecanismo aún no se conoce — ya pasó una vez que la tabla del `02` se mezcló con el porcentaje del `05` sin que nadie lo notara.
 
 ## Trampas del dominio que hay que respetar
 
@@ -99,15 +116,31 @@ El diccionario en `config/colorantes.yaml` incluye casos que rompen el emparejam
 
 Estas ambigüedades son la justificación del brazo de reconocimiento de entidades frente al de diccionario: el diccionario no desambigua por contexto.
 
-## Diseño de la validación del PLN (para más adelante, no ahora)
+## Diseño de la validación del PLN
 
-Tres brazos, con el umbral fijado antes de correr nada:
+Dos brazos, con el umbral fijado antes de correr nada:
 
 1. `additives_tags` tal cual.
 2. Diccionario en español con normalización y emparejamiento difuso.
-3. Transformador en español afinado (BETO, RoBERTa-BNE) sobre el conjunto anotado.
 
-Si el brazo 3 no supera al 2, es un hallazgo legítimo y se reporta. No se decide la hipótesis después.
+**El brazo 3 (transformador afinado, BETO/RoBERTa-BNE) queda fuera del artículo.** Decisión cerrada el 25/08. Motivo: presupuesto de espacio —25 cuartillas incluyendo figuras, tablas y anexos— y no falta de mérito. El conjunto anotado se construye igual, porque era necesario para validar los brazos 1 y 2, no para el 3.
+
+### El conjunto anotado
+
+600 productos en cuatro estratos: 150 con sintético detectado, 250 con natural detectado, 100 con detección ambigua descartada por la regla de contexto, 100 sin ninguna detección. Doble anotación; la Dra. adjudica discordias. Semilla fija, pesos de reponderación declarados (`07_forma_y_clase.py`, bloque E). Se deposita en Zenodo con DOI bajo ODbL.
+
+**κ se reporta partido: κ_detección y κ_clase, nunca un solo número agregado.** El desacuerdo entre anotadores vive en la clasificación de función y origen, no en la delimitación del tramo; un promedio esconde dónde está el problema.
+
+**Etiqueta `origen_indeterminado`** (E160a, E101, E140): el anotador **no** debe adivinar entre sintético y natural. Existe una tercera categoría explícita. Forzar la dicotomía hunde κ artificialmente.
+
+**El manuscrito no lleva anexo.** Las 25 cuartillas ya lo incluyen; un anexo sería texto disfrazado. Todo material de respaldo (diccionario anotado, muestra de 600, tablas por código) va a Zenodo.
+
+## Correcciones de dato (25/08)
+
+- El diccionario tiene **153 términos**, no 148: 60 sintéticos, 80 naturales, 13 de caramelo. Más 13 genéricos aparte. 31 sustancias, sin duplicados. Verificado contra `config/colorantes.yaml`; no se modificó el archivo, solo el conteo documentado.
+- Bisikalo et al. es **2025**, no 2026. Revista de la propia institución de los autores, sin indexación en Scopus ni Web of Science. Su cifra aparece de tres formas incompatibles en el mismo artículo. No citar como referencia de desempeño.
+- El carmín cargando en F6 junto con nitritos y eritorbato está en la **Tabla Suplementaria 6** de Zancheta et al. (2025), la de México — no en la Tabla 4, que es la muestra global.
+- La comparación con Dunford et al. (2025) es **solo de sintéticos**: su 19 % no incluye colorantes naturales. La comparación con Chiu et al. (2025) requiere incluir el caramelo E150, que su 19.8 % sí cuenta (`07_forma_y_clase.py`, bloque D).
 
 ## Restricciones de la revista
 
@@ -120,3 +153,12 @@ Si el brazo 3 no supera al 2, es un hallazgo legítimo y se reporta. No se decid
 - No construir el pipeline de NER completo.
 - No hacer gráficas bonitas todavía: primero los números.
 - No tocar el diccionario semilla sin registrar por qué.
+
+## Qué NO hacer, ampliado (25/08)
+
+- **No mezclar universos.** La tabla de brecha por código del script `02` es del universo **sin depurar**; el 66.1 % del script `05` es del **depurado**. Ya se presentaron juntos una vez en el mismo documento. No repetirlo.
+- **No comparar nuestro agregado ponderado contra el 37.9 % de Tseng.** Él reporta la **mediana del porcentaje por aditivo**. Son estadísticos distintos. `07_forma_y_clase.py` calcula la mediana precisamente para que exista la cifra comparable.
+- **No interpretar el índice de cárnicos.** ~92 % con ~38 % de carmín se reporta con su composición al lado y no se comenta. Cualquier párrafo interpretativo ahí se leerá como afirmación de sustitución cuando en realidad es una categoría que nunca usó sintéticos.
+- **No reportar comidas preparadas** (natural alto en `06`) hasta que el estrato de descartados del conjunto anotado resuelva si es señal o filtrado insuficiente de páprika y achiote en sazonadores.
+- **No afirmar capacidad de sustitución.** No hay literatura de fuerza tintórea ni de costo para páprika y achiote en aplicación seca dentro de las 142 referencias. Se plantea como hipótesis declarada o no se plantea.
+- **No actualizar `datos/externo/additives.txt` a mitad del análisis.** La taxonomía cambia; el commit usado va en `reportes/procedencia.json`.
