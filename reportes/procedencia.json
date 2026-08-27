@@ -27,5 +27,24 @@
     "licencia": "ODbL — Open Food Facts. Citar y respetar atribucion compartida.",
     "nota": "Las taxonomias cambian con el tiempo. No actualizar a mitad del analisis; si se reejecuta con otra version y cambia la cifra del script 08, es el objeto de estudio moviendose, no un error.",
     "limitacion_conocida": "minerals.txt no trae una referencia activa a E170(i) para carbonato de calcio (esta comentada en el archivo fuente, con nota del propio OFF de que la entrada esta duplicada sin resolver entre additives y minerals). El mecanismo M3 del script 08 no puede recuperar E170 mientras eso no cambie en la fuente; no es un bug del script."
+  },
+  "acuerdo_mexicano_aditivos": {
+    "fuente": "Acuerdo por el que se determinan las sustancias permitidas como aditivos y coadyuvantes en alimentos, bebidas y suplementos alimenticios (Secretaria de Salud, DOF 16/07/2012, con modificaciones)",
+    "anexo_iii": {
+      "titulo": "Colorantes con una IDA establecida",
+      "url": "https://www.gob.mx/cms/uploads/attachment/file/1090701/ANEXO_III.pdf",
+      "url_original_del_parche_ya_no_resuelve": "https://www.gob.mx/cms/uploads/attachment/file/926080/ANEXO_III.pdf",
+      "actualizado_segun_cofepris": "2026-05-11",
+      "ruta_local": "datos/externo/ANEXO_III.pdf"
+    },
+    "anexo_iv": {
+      "titulo": "Colorantes que pueden ser utilizados de acuerdo a las BPF",
+      "url": "https://www.gob.mx/cms/uploads/attachment/file/1078651/ANEXO_IV.pdf",
+      "actualizado_segun_cofepris": "2025-11-03",
+      "ruta_local": "datos/externo/ANEXO_IV.pdf"
+    },
+    "fecha_descarga": "2026-08-27",
+    "verificado_contra_config_acuerdo_colorantes_yaml": true,
+    "nota": "gob.mx resube estos archivos con un id de adjunto nuevo cada vez que los actualiza; la URL del parche original ya no resolvia (404). Se guarda copia local en datos/externo/ para no depender de que la URL siga viva."
   }
 }

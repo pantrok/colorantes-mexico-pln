@@ -3,8 +3,8 @@ E141,natural_botanico,complejos cupricos de clorofila,False,sin_sinonimo,False,1
 E150,fuera_de_eje,caramelo al sulfito de amonio,False,sin_sinonimo,True,23
 E163,natural_botanico,extracto de zanahoria morada,False,sin_sinonimo,False,15
 E163,natural_botanico,extracto de camote morado,False,sin_sinonimo,False,15
-E163,natural_botanico,extracto de piel de uva,False,sin_sinonimo,False,15
 E163,natural_botanico,extracto de maiz morado,False,sin_sinonimo,False,15
+E163,natural_botanico,extracto de piel de uva,False,sin_sinonimo,False,15
 E104,sintetico,amarillo de quinoleina,True,,False,4
 E100,natural_botanico,oleorresina de curcuma,False,sin_sinonimo,False,3
 E120,carmin,extracto de cochinilla,False,sin_sinonimo,True,6
@@ -20,8 +20,8 @@ E160c,natural_botanico,extracto de pimenton,True,,False,10
 E163,natural_botanico,concentrado de sauco,False,sin_sinonimo,False,15
 E102,sintetico,fd&c amarillo no. 5,False,sin_sinonimo,False,8
 E104,sintetico,amarillo quinoleina,False,sin_sinonimo,False,4
-E110,sintetico,fd&c amarillo no. 6,False,sin_sinonimo,False,10
 E110,sintetico,amarillo crepusculo,True,,False,10
+E110,sintetico,fd&c amarillo no. 6,False,sin_sinonimo,False,10
 E100,natural_botanico,extracto de curcuma,True,,False,3
 E141,natural_botanico,clorofilina cuprica,False,sin_sinonimo,False,10
 E160b,natural_botanico,extracto de achiote,False,sin_sinonimo,False,6
@@ -42,8 +42,8 @@ E132,sintetico,carmin de indigo,True,,False,5
 E143,sintetico,fd&c verde no. 3,False,sin_sinonimo,False,3
 E120,carmin,grana cochinilla,False,sin_sinonimo,True,6
 E153,natural_botanico,carbon medicinal,False,sin_sinonimo,False,2
-E160a,natural_botanico,carotenos mixtos,False,sin_sinonimo,True,19
 E160a,natural_botanico,caroteno natural,False,sin_sinonimo,True,19
+E160a,natural_botanico,carotenos mixtos,False,sin_sinonimo,True,19
 E162,natural_botanico,polvo de betabel,False,sin_sinonimo,False,6
 E172,mineral_inorganico,oxidos de hierro,False,sin_sinonimo,False,15
 E150,fuera_de_eje,caramelo amonico,True,,True,23
@@ -71,14 +71,14 @@ E124,sintetico,rojo ponceau,False,sin_sinonimo,False,3
 E129,sintetico,fd&c rojo 40,False,sin_sinonimo,False,7
 E131,sintetico,azul patente,False,sin_sinonimo,False,4
 E143,sintetico,verde rapido,False,sin_sinonimo,False,3
-E101,natural_botanico,lactoflavina,True,,False,10
 E101,natural_botanico,vitamina b 2,False,sin_sinonimo,False,10
+E101,natural_botanico,lactoflavina,True,,False,10
 E140,natural_botanico,clorofilinas,True,,False,10
 E160a,natural_botanico,betacaroteno,True,,True,19
 E160c,natural_botanico,capsorrubina,True,,False,10
 E163,natural_botanico,antocianinas,True,,False,15
-E129,sintetico,rojo allura,True,,False,7
 E129,sintetico,rojo no. 40,False,sin_sinonimo,False,7
+E129,sintetico,rojo allura,True,,False,7
 E143,sintetico,verde no. 3,False,sin_sinonimo,False,3
 E101,natural_botanico,riboflavina,True,,False,10
 E101,natural_botanico,vitamina b2,True,,False,10
@@ -117,8 +117,8 @@ E127,sintetico,ci 45430,False,sin_sinonimo,False,3
 E129,sintetico,ci 16035,False,sin_sinonimo,False,7
 E132,sintetico,ci 73015,False,sin_sinonimo,False,5
 E133,sintetico,ci 42090,False,sin_sinonimo,False,7
-E120,carmin,carmines,True,,True,6
 E120,carmin,ci 75470,False,sin_sinonimo,True,6
+E120,carmin,carmines,True,,True,6
 E160a,natural_botanico,caroteno,False,sin_sinonimo,True,19
 E160d,natural_botanico,licopeno,True,,False,4
 E162,natural_botanico,betanina,True,,False,6
@@ -127,8 +127,8 @@ E129,sintetico,rojo 40,True,,False,7
 E142,sintetico,verde s,True,,False,6
 E143,sintetico,verde 3,False,sin_sinonimo,False,3
 E100,natural_botanico,curcuma,False,sin_sinonimo,False,3
-E160b,natural_botanico,atsuete,False,sin_sinonimo,False,6
 E160b,natural_botanico,annatto,False,sin_sinonimo,False,6
+E160b,natural_botanico,atsuete,False,sin_sinonimo,False,6
 E160b,natural_botanico,achiote,True,,False,6
 E160c,natural_botanico,paprika,False,sin_sinonimo,False,10
 E161b,natural_botanico,luteina,True,,False,3
@@ -142,8 +142,8 @@ E102,sintetico,e 102,False,sin_sinonimo,False,8
 E110,sintetico,e 110,True,,False,10
 E129,sintetico,e 129,True,,False,7
 E160b,natural_botanico,urucu,False,sin_sinonimo,False,6
-E150,fuera_de_eje,e150a,True,,True,23
-E150,fuera_de_eje,e150c,True,,True,23
 E150,fuera_de_eje,e150b,True,,True,23
 E150,fuera_de_eje,e150d,True,,True,23
 E150,fuera_de_eje,e 150,False,sin_sinonimo,True,23
+E150,fuera_de_eje,e150a,True,,True,23
+E150,fuera_de_eje,e150c,True,,True,23

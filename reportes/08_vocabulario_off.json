@@ -153,38 +153,46 @@
       "brecha_pct_con_otras_taxonomias": 24.0
     }
   ],
-  "modelo_logistico": [
+  "modelo_firth": [
     {
       "termino": "intercepto",
+      "coef": -1.1426,
       "OR": 0.32,
       "IC_bajo": 0.29,
-      "IC_alto": 0.35,
-      "nota": ""
+      "IC_alto": 0.35
     },
     {
       "termino": "natural",
-      "OR": 7.01,
+      "coef": 1.9404,
+      "OR": 6.96,
       "IC_bajo": 4.95,
-      "IC_alto": 9.93,
-      "nota": ""
+      "IC_alto": 9.93
     },
     {
       "termino": "fuera_vocab",
-      "OR": 23.53,
-      "IC_bajo": 17.18,
-      "IC_alto": 32.22,
-      "nota": ""
+      "coef": 3.1477,
+      "OR": 23.28,
+      "IC_bajo": 17.19,
+      "IC_alto": 32.2
     },
     {
       "termino": "mandatory",
-      "OR": NaN,
-      "IC_bajo": NaN,
-      "IC_alto": NaN,
-      "nota": "no estimable: separacion perfecta (brecha 0% o 100% en todas las celdas con mandatory=1; n=63, n=11)"
+      "coef": 2.5395,
+      "OR": 12.67,
+      "IC_bajo": 1.66,
+      "IC_alto": 1627.59
     }
   ],
-  "modelo_desviacion": 4.408545447636213,
-  "modelo_gl": 2,
+  "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
+  "separacion_detectada": [
+    {
+      "variable": "mandatory",
+      "valor": 1,
+      "tasa": 1.0,
+      "n": 74,
+      "nota": "separacion perfecta"
+    }
+  ],
   "estandarizacion": {
     "brecha_sintetico_pct": 33.7,
     "brecha_natural_cruda_pct": 87.7,

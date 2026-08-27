@@ -1,5 +1,5 @@
-termino,OR,IC_bajo,IC_alto,nota
-intercepto,0.32,0.29,0.35,
-natural,7.01,4.95,9.93,
-fuera_vocab,23.53,17.18,32.22,
-mandatory,,,,"no estimable: separacion perfecta (brecha 0% o 100% en todas las celdas con mandatory=1; n=63, n=11)"
+termino,coef,OR,IC_bajo,IC_alto
+intercepto,-1.1426,0.32,0.29,0.35
+natural,1.9404,6.96,4.95,9.93
+fuera_vocab,3.1477,23.28,17.19,32.2
+mandatory,2.5395,12.67,1.66,1627.59

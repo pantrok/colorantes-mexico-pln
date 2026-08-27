@@ -1,0 +1,154 @@
+{
+  "fuente_oficial": {
+    "fuente": "Acuerdo por el que se determinan los aditivos y coadyuvantes en alimentos, bebidas y suplementos alimenticios. DOF 16/07/2012, Anexos III y IV. Mas listas incrementales de COFEPRIS 2015-2026 (Anexos III y IV de aditivos no publicados en el DOF).",
+    "extraido": "2026-08-27",
+    "nota": "Nomenclatura OFICIAL. El articulo DECIMOSEGUNDO del Acuerdo obliga a declarar cada aditivo por su nombre comun o por alguno de estos sinonimos. No es una lista nuestra: es la que la ley reconoce como declaracion valida en etiqueta.",
+    "advertencia": "El Acuerdo asigna CI 42900 al azul brillante FCF; el Colour Index internacional es 42090. La transposicion aparece en las tres ocurrencias del documento oficial. Una etiqueta que siga la norma mexicana escribiria 42900."
+  },
+  "n_codigos_sin": 48,
+  "n_formas_oficiales": 148,
+  "cobertura_global": {
+    "formas": 148,
+    "en_off": 45,
+    "pct_en_off": 30.4,
+    "en_nuestro": 44,
+    "pct_en_nuestro": 29.7
+  },
+  "cobertura_por_clase": {
+    "carmin": {
+      "formas": 6,
+      "en_off": 3,
+      "pct_en_off": 50.0,
+      "en_nuestro": 3,
+      "pct_en_nuestro": 50.0
+    },
+    "fuera_de_eje": {
+      "formas": 8,
+      "en_off": 3,
+      "pct_en_off": 37.5,
+      "en_nuestro": 4,
+      "pct_en_nuestro": 50.0
+    },
+    "mineral_inorganico": {
+      "formas": 15,
+      "en_off": 4,
+      "pct_en_off": 26.7,
+      "en_nuestro": 1,
+      "pct_en_nuestro": 6.7
+    },
+    "natural_botanico": {
+      "formas": 65,
+      "en_off": 16,
+      "pct_en_off": 24.6,
+      "en_nuestro": 21,
+      "pct_en_nuestro": 32.3
+    },
+    "sintetico": {
+      "formas": 54,
+      "en_off": 19,
+      "pct_en_off": 35.2,
+      "en_nuestro": 15,
+      "pct_en_nuestro": 27.8
+    }
+  },
+  "formas_legales_que_no_reconocemos": 104,
+  "hallazgos_en_datos": {
+    "productos_afectados": 704,
+    "detecciones_nuevas": 1002,
+    "pct_del_subconjunto": 9.05,
+    "por_forma": {
+      "rojo allura ac": 224,
+      "amarillo ocaso fcf": 192,
+      "extracto de annato": 162,
+      "azul brillante fcf": 121,
+      "caramelo clase i": 69,
+      "anaranjado alimentos 5": 52,
+      "rojo 6": 26,
+      "annato norbixina": 14,
+      "amarillo fd&c 6": 12,
+      "anaranjado alimentos 6": 12,
+      "beta caroteno sintetico": 10,
+      "rojo natural 4": 9,
+      "amarillo fd&c5": 9,
+      "rojo betabel": 8,
+      "curcuma turmerico": 8,
+      "amarillo alimentos 3": 6,
+      "carotenos naturales": 6,
+      "amarillo alimentos 4": 6,
+      "rojo alimentos 17": 5,
+      "curcuma en polvo": 4,
+      "caramelo clase ii": 4,
+      "azul alimentos 2": 4,
+      "rojo d&c 5": 4,
+      "rojo fd&c40": 3,
+      "rojo alimentos 3": 3
+    },
+    "por_clase": {
+      "carmin": 11,
+      "fuera_de_eje": 73,
+      "mineral_inorganico": 4,
+      "natural_botanico": 237,
+      "sintetico": 441
+    },
+    "ya_estaban_en_tags": 338
+  },
+  "beta_caroteno": [
+    {
+      "sin": "SIN160a(i)",
+      "clase": "sintetico",
+      "forma_oficial": "beta caroteno sintetico",
+      "en_off_bajo_su_codigo": false,
+      "en_nuestro_diccionario": false
+    },
+    {
+      "sin": "SIN160a(i)",
+      "clase": "sintetico",
+      "forma_oficial": "anaranjado alimentos 5",
+      "en_off_bajo_su_codigo": false,
+      "en_nuestro_diccionario": false
+    },
+    {
+      "sin": "SIN160a(ii)",
+      "clase": "natural_botanico",
+      "forma_oficial": "beta caroteno",
+      "en_off_bajo_su_codigo": false,
+      "en_nuestro_diccionario": true
+    },
+    {
+      "sin": "SIN160a(ii)",
+      "clase": "natural_botanico",
+      "forma_oficial": "carotenos naturales",
+      "en_off_bajo_su_codigo": false,
+      "en_nuestro_diccionario": false
+    },
+    {
+      "sin": "SIN160a(ii)",
+      "clase": "natural_botanico",
+      "forma_oficial": "anaranjado alimentos 5",
+      "en_off_bajo_su_codigo": false,
+      "en_nuestro_diccionario": false
+    },
+    {
+      "sin": "SIN160a(ii)",
+      "clase": "natural_botanico",
+      "forma_oficial": "alfa-caroteno",
+      "en_off_bajo_su_codigo": true,
+      "en_nuestro_diccionario": false
+    },
+    {
+      "sin": "SIN160a(ii)",
+      "clase": "natural_botanico",
+      "forma_oficial": "gama-caroteno",
+      "en_off_bajo_su_codigo": false,
+      "en_nuestro_diccionario": false
+    },
+    {
+      "sin": "SIN160a(iii)",
+      "clase": "natural_botanico",
+      "forma_oficial": "beta caroteno blakeslea trispora",
+      "en_off_bajo_su_codigo": false,
+      "en_nuestro_diccionario": false
+    }
+  ],
+  "LECTURA": "El bloque A ya no depende de nuestro criterio: mide la taxonomia de Open Food Facts contra el vocabulario que la ley mexicana obliga a usar en etiqueta. El bloque B dice cuanto de esa ley no reconocemos todavia nosotros, que es una limitacion propia y hay que declararla."
+}

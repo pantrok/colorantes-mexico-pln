@@ -1,0 +1,415 @@
+meta:
+  fuente: Acuerdo por el que se determinan los aditivos y coadyuvantes en alimentos, bebidas y suplementos
+    alimenticios. DOF 16/07/2012, Anexos III y IV. Mas listas incrementales de COFEPRIS 2015-2026 (Anexos
+    III y IV de aditivos no publicados en el DOF).
+  extraido: '2026-08-27'
+  nota: 'Nomenclatura OFICIAL. El articulo DECIMOSEGUNDO del Acuerdo obliga a declarar cada aditivo por
+    su nombre comun o por alguno de estos sinonimos. No es una lista nuestra: es la que la ley reconoce
+    como declaracion valida en etiqueta.'
+  advertencia: El Acuerdo asigna CI 42900 al azul brillante FCF; el Colour Index internacional es 42090.
+    La transposicion aparece en las tres ocurrencias del documento oficial. Una etiqueta que siga la norma
+    mexicana escribiria 42900.
+colorantes:
+  SIN100(i):
+    e: E100
+    ci: '75300'
+    clase: natural_botanico
+    terminos:
+    - curcumina
+    - curcuma
+    - curcuma en polvo
+    - curcuma turmerico
+    - azafran indio
+    - azafran de indias
+    - curcuma (raiz de curcuma longa l.)
+    - temo e-lamag
+  SIN101(i):
+    e: E101
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - riboflavina
+    - lactoflavina
+  SIN101(ii):
+    e: E101
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - riboflavina-5'-fosfato de sodio
+    - riboflavina 5 fosfato de sodio
+  SIN102:
+    e: E102
+    ci: '19140'
+    clase: sintetico
+    terminos:
+    - tartrazina
+    - amarillo alimentos 4
+    - amarillo 5
+    - amarillo fd&c5
+  SIN110:
+    e: E110
+    ci: '15985'
+    clase: sintetico
+    terminos:
+    - amarillo ocaso fcf
+    - amarillo alimentos 3
+    - amarillo 6
+    - amarillo fd&c 6
+  SIN120:
+    e: E120
+    ci: '75470'
+    clase: carmin
+    terminos:
+    - extracto de cochinilla
+    - extracto de coccus cacti
+    - rojo natural 4
+    - carmin
+    - carmin cochinilla
+    - acido carminico
+  SIN122:
+    e: E122
+    ci: '14720'
+    clase: sintetico
+    terminos:
+    - azorrubina
+    - rojo alimentos 3
+    - carmoisina
+    - rojo d&c 5
+  SIN124:
+    e: E124
+    ci: '16255'
+    clase: sintetico
+    terminos:
+    - ponceau 4r
+    - rojo alimentos 7
+    - rojo cochinilla a
+    - rojo 6
+    - rojo d&c6
+  SIN127:
+    e: E127
+    ci: '45430'
+    clase: sintetico
+    terminos:
+    - eritrosina
+    - rojo alimentos 14
+    - rojo 3 fd&c
+    - rojo 3
+    - rojo fd&c3
+    nota: Numeral dejado insubsistente por acuerdo del 28/05/2026, 24 meses de plazo.
+  SIN129:
+    e: E129
+    ci: '16035'
+    clase: sintetico
+    terminos:
+    - rojo allura ac
+    - rojo alimentos 17
+    - rojo no 40 fd&c
+    - rojo 40
+    - rojo fd&c40
+    - rojo coccin
+    - rojo curry
+  SIN132:
+    e: E132
+    ci: '73015'
+    clase: sintetico
+    terminos:
+    - indigotina
+    - azul alimentos 1
+    - azul no. 2 fd&c
+    - azul 2
+    - azul fd&c 2
+    - carmin de indigo
+    TRAMPA: azul alimentos 1 es INDIGOTINA, no azul brillante. La numeracion mexicana va invertida respecto
+      de la FD&C.
+  SIN133:
+    e: E133
+    ci: '42900'
+    clase: sintetico
+    terminos:
+    - azul brillante fcf
+    - azul alimentos 2
+    - azul no 1 fd&c
+    - azul 1
+    - azul fd&c 1
+    TRAMPA: azul alimentos 2 es AZUL BRILLANTE. Ver SIN132.
+  SIN140:
+    e: E140
+    ci: '75810'
+    clase: natural_botanico
+    terminos:
+    - clorofilinas
+    - clorofilas
+    - verde natural 3
+  SIN141(i):
+    e: E141
+    ci: '75810'
+    clase: natural_botanico
+    terminos:
+    - complejos cupricos de clorofilas
+    - clorofila de cobre
+    - feofitina de cobre a
+  SIN141(ii):
+    e: E141
+    ci: '75815'
+    clase: natural_botanico
+    terminos:
+    - sales de sodio y potasio de complejos cupricos de clorofilinas
+    - clorofilina de cobre a
+    - clorofilina de cobre b
+  SIN143:
+    e: E143
+    ci: '42053'
+    clase: sintetico
+    terminos:
+    - verde rapido fcf
+    - verde alimentos 3
+    - verde 3
+    - verde fd&c3
+    - verde japon
+  SIN150(a):
+    e: E150
+    ci: null
+    clase: fuera_de_eje
+    terminos:
+    - caramelo clase i
+    - caramelo
+  SIN150(b):
+    e: E150
+    ci: null
+    clase: fuera_de_eje
+    terminos:
+    - caramelo clase ii
+    - caramelo sulfito caustico
+  SIN150(c):
+    e: E150
+    ci: null
+    clase: fuera_de_eje
+    terminos:
+    - caramelo clase iii
+    - caramelo amonico
+  SIN150(d):
+    e: E150
+    ci: null
+    clase: fuera_de_eje
+    terminos:
+    - caramelo clase iv
+    - caramelo sulfito amonico
+  SIN153:
+    e: E153
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - carbon vegetal
+  SIN160a(i):
+    e: E160a
+    ci: '40800'
+    clase: sintetico
+    terminos:
+    - beta caroteno sintetico
+    - anaranjado alimentos 5
+    CLAVE: La ley mexicana SEPARA el beta caroteno sintetico del natural, con codigo y CI distintos. El
+      Codex los agrupa, Zancheta los fusiona y Hong Kong define el sintetico como natural. Mexico es la
+      jurisdiccion que conserva el eje.
+  SIN160a(ii):
+    e: E160a
+    ci: '75130'
+    clase: natural_botanico
+    terminos:
+    - beta caroteno
+    - carotenos naturales
+    - anaranjado alimentos 5
+    - alfa-caroteno
+    - gama-caroteno
+    AMBIGUO: 'anaranjado alimentos 5 aparece en 160a(i) y en 160a(ii): la propia ley lo deja ambiguo.'
+  SIN160a(iii):
+    e: E160a
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - beta caroteno blakeslea trispora
+  SIN160(b):
+    e: E160b
+    ci: '75120'
+    clase: natural_botanico
+    terminos:
+    - extracto de annato
+    - extracto de semillas de bixa orellana
+    - anaranjado natural 4
+    - achiote
+    - annato norbixina
+    - bixina
+    - norbixina
+    - anaranjado 3
+  SIN160(c):
+    e: E160c
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - oleorresina de paprika
+    - extracto de paprika
+  SIN160(d):
+    e: E160d
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - licopeno
+  SIN160(e):
+    e: E160e
+    ci: '40820'
+    clase: sintetico
+    terminos:
+    - beta-apo-8'-carotenal
+    - anaranjado alimentos 6
+  SIN160f:
+    e: E160f
+    ci: '40825'
+    clase: sintetico
+    terminos:
+    - esteres metilico y etilico del acido beta-apo-8'-carotenoico
+    - anaranjado alimentos 7
+  SIN161(b):
+    e: E161b
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - luteina
+    - extracto de cempazuchitl
+    - xantofilas
+  SIN161(g):
+    e: E161g
+    ci: '40850'
+    clase: sintetico
+    terminos:
+    - cantaxantina
+  SIN162:
+    e: E162
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - rojo betabel
+    - rojo remolacha
+    - rojo raiz de betabel
+  SIN163(ii):
+    e: E163
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - extracto de piel de uva
+    - extracto de tegumento de uva
+    - enocianinas
+    - enocianina
+    - eno
+    - antocianinas
+  SIN163(vi):
+    e: E163
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - extracto de zanahoria negra
+    nota: COFEPRIS 23/10/2018, BPF
+  SIN163(vii):
+    e: E163
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - extracto de papa dulce morada
+    nota: COFEPRIS 21/10/2020, BPF
+  SIN163(viii):
+    e: E163
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - extracto de rabano rojo
+    nota: COFEPRIS 23/10/2018, BPF
+  SIN163(xi):
+    e: E163
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - extracto de campanilla azul
+    - clitoria ternatea
+    - conchita azul
+    - guisante mariposa
+    - flor mariposa de chicharo
+    nota: 'COFEPRIS 03/11/2025, BPF. Fuente AZUL natural: toca la prediccion P1.'
+  SIN171:
+    e: E171
+    ci: '77891'
+    clase: mineral_inorganico
+    terminos:
+    - dioxido de titanio
+    - pigmento blanco 6
+  SIN172(i):
+    e: E172
+    ci: '77499'
+    clase: mineral_inorganico
+    terminos:
+    - oxido de hierro negro
+    - pigmento negro 11
+  SIN172(ii):
+    e: E172
+    ci: '77491'
+    clase: mineral_inorganico
+    terminos:
+    - oxido de hierro rojo
+    - pigmento rojo 101
+  SIN172(iii):
+    e: E172
+    ci: '77492'
+    clase: mineral_inorganico
+    terminos:
+    - oxido de hierro amarillo
+    - pigmento amarillo 42
+  SIN173:
+    e: null
+    ci: '77000'
+    clase: mineral_inorganico
+    terminos:
+    - polvo de aluminio
+    - pigmento metal 1
+  SIN174:
+    e: null
+    ci: '77820'
+    clase: mineral_inorganico
+    terminos:
+    - plata
+    - argentum
+  SIN175:
+    e: null
+    ci: '77480'
+    clase: mineral_inorganico
+    terminos:
+    - oro
+    - aurum
+    - pigmento metal 3
+  SIN183:
+    e: null
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - azul de jagua
+    nota: COFEPRIS. No existe en la taxonomia de Open Food Facts.
+  SIN134:
+    e: null
+    ci: null
+    clase: natural_botanico
+    terminos:
+    - extracto de espirulina
+    - espirulina
+    - ficocianina
+    nota: COFEPRIS 10/02/2017, BPF. No podra utilizarse en cereales extruidos. NO EXISTE en la taxonomia
+      de Open Food Facts.
+  SINnr_amarillo2g:
+    e: null
+    ci: '18965'
+    clase: sintetico
+    terminos:
+    - amarillo 2g
+    - amarillo alimentos 5
+  SINnr_azafran:
+    e: null
+    ci: '75100'
+    clase: natural_botanico
+    terminos:
+    - azafran
+    - amarillo natural 6

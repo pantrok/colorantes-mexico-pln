@@ -40,10 +40,18 @@ revisar sus propias salidas:
 Ademas ajusta el modelo logistico dentro del script, para que la tabla de
 razones de momios salga de la tuberia y no de un calculo aparte.
 
+CAMBIO (parche 6, 27/08): el ajuste ya no es el Newton-Raphson propio de este
+script. Ese metodo dejo el termino `mandatory` en separacion perfecta (las
+celdas de natural_botanico con mandatory=1 tienen brecha exactamente 100 %:
+n=63 y n=11) y devolvia un "OR" y un IC de Wald sin sentido bajo esa
+condicion. Ahora usa `modelo.firth()` (penalizacion de Firth, IC de
+verosimilitud perfilada), compartido con `09_replica_pais.py`, para que las
+dos corridas usen el mismo metodo y el termino separado salga finito y
+defendible en vez de descartado.
+
 Y genera `08_revision_dra.csv`, la hoja de trabajo para la revision manual.
 
-REQUISITOS (ninguna dependencia nueva: el ajuste logistico va implementado a
-mano con Newton-Raphson y da identico a statsmodels, verificado)
+REQUISITOS
   datos/externo/additives.txt   (ver datos/externo/LEEME.md)
   datos/externo/vitamins.txt
   datos/externo/minerals.txt
@@ -61,9 +69,9 @@ import unicodedata
 from pathlib import Path
 
 import duckdb
-import numpy as np
 import pandas as pd
 
+from modelo import firth, separacion
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
                   como_lista, normalizar, terminos_ordenados, guardar_reporte)
 
@@ -164,73 +172,6 @@ def clase_de(codigo: str, bloque: str) -> str:
     return "fuera_de_eje"
 
 
-def ajustar_logistico(y_sin, y_ok, X: pd.DataFrame):
-    """Newton-Raphson sobre datos agrupados. Se implementa a mano para no
-    depender de statsmodels; si esta instalado da exactamente lo mismo."""
-    Xm = np.column_stack([np.ones(len(X))] + [X[c].values.astype(float) for c in X.columns])
-    n = (y_sin + y_ok).astype(float)
-    y = y_sin.astype(float)
-    beta = np.zeros(Xm.shape[1])
-    for _ in range(100):
-        eta = Xm @ beta
-        p = 1 / (1 + np.exp(-eta))
-        W = n * p * (1 - p)
-        z = eta + (y - n * p) / np.maximum(W, 1e-9)
-        WX = Xm * W[:, None]
-        try:
-            nuevo = np.linalg.solve(Xm.T @ WX, WX.T @ z)
-        except np.linalg.LinAlgError:
-            break
-        if np.max(np.abs(nuevo - beta)) < 1e-10:
-            beta = nuevo
-            break
-        beta = nuevo
-    eta = Xm @ beta
-    p = 1 / (1 + np.exp(-eta))
-    W = n * p * (1 - p)
-    cov = np.linalg.inv(Xm.T @ (Xm * W[:, None]))
-    ee = np.sqrt(np.diag(cov))
-    # desviacion residual
-    with np.errstate(divide="ignore", invalid="ignore"):
-        dev = 2 * np.nansum(
-            np.where(y > 0, y * np.log(y / (n * p)), 0)
-            + np.where(n - y > 0, (n - y) * np.log((n - y) / (n * (1 - p))), 0))
-
-    # Separacion perfecta: si TODAS las filas donde un predictor vale 1 tienen
-    # brecha exactamente 0 % o 100 %, la maxima verosimilitud de ese
-    # coeficiente diverge a infinito. Newton-Raphson no lo detecta solo: sigue
-    # iterando y el "OR" que produce (a veces del orden de 1e11, con IC de 0 a
-    # infinito) es un artefacto del limite de iteraciones, no una estimacion.
-    # Se reporta como no estimable en vez de imprimir ese numero.
-    separados = set()
-    for col in X.columns:
-        mask = X[col].values.astype(bool)
-        if mask.any():
-            tasa = y[mask] / n[mask]
-            if np.all(tasa == 1.0) or np.all(tasa == 0.0):
-                separados.add(col)
-
-    nombres = ["intercepto"] + list(X.columns)
-    # El termino con separacion perfecta ya diverge en beta/ee; exp() de eso
-    # desborda. Es esperado y se descarta abajo, no hace falta que lo imprima.
-    with np.errstate(over="ignore"):
-        OR = np.exp(beta).round(2)
-        IC_bajo = np.exp(beta - 1.959964 * ee).round(2)
-        IC_alto = np.exp(beta + 1.959964 * ee).round(2)
-    filas = []
-    for i, nom in enumerate(nombres):
-        if nom in separados:
-            posiciones = np.where(X[nom].values.astype(bool))[0]
-            detalle = ", ".join(f"n={int(n[j])}" for j in posiciones)
-            filas.append({"termino": nom, "OR": None, "IC_bajo": None, "IC_alto": None,
-                          "nota": (f"no estimable: separacion perfecta (brecha 0% o 100% "
-                                   f"en todas las celdas con {nom}=1; {detalle})")})
-        else:
-            filas.append({"termino": nom, "OR": float(OR[i]), "IC_bajo": float(IC_bajo[i]),
-                          "IC_alto": float(IC_alto[i]), "nota": ""})
-    return pd.DataFrame(filas), float(dev), int(len(X) - Xm.shape[1])
-
-
 def main() -> None:
     vocab, mand, _ = leer_taxonomia(EXTERNO / "additives.txt")
     _, _, id_vit = leer_taxonomia(EXTERNO / "vitamins.txt", obligatoria=False)
@@ -317,11 +258,14 @@ def main() -> None:
     m["fuera_vocab"] = (~m.en_vocab_off).astype(int)
     m["mandatory"] = m.off_mandatory.astype(int)
     modelo = pd.DataFrame()
-    dev = gl = None
+    metodo = None
+    avisos_separacion = []
     if len(m) >= 4 and m.natural.nunique() > 1 and m.fuera_vocab.nunique() > 1:
-        modelo, dev, gl = ajustar_logistico(
-            m.sin_tag.values, (m.n - m.sin_tag).values,
-            m[["natural", "fuera_vocab", "mandatory"]])
+        modelo = firth(m[["natural", "fuera_vocab", "mandatory"]],
+                       m.sin_tag.values, m.n.values)
+        metodo = modelo.attrs.get("metodo")
+        avisos_separacion = separacion(m, "sin_tag", "n",
+                                       ["natural", "fuera_vocab", "mandatory"])
 
     # ------------------------------- estandarizacion: cuanto sobrevive al ajuste
     estand = {}
@@ -395,8 +339,9 @@ def main() -> None:
         "brecha_global_pct": round(100 * float((~p.en_additives_tags).mean()), 1),
         "brecha_global_con_otras_taxonomias_pct": round(100 * float((~p.visible).mean()), 1),
         "mecanismos": mec.to_dict("records"),
-        "modelo_logistico": modelo.to_dict("records") if len(modelo) else None,
-        "modelo_desviacion": dev, "modelo_gl": gl,
+        "modelo_firth": modelo.to_dict("records") if len(modelo) else None,
+        "modelo_metodo": metodo,
+        "separacion_detectada": avisos_separacion,
         "estandarizacion": estand,
         "PENDIENTE": ("MINERALES = {E170, E171, E172} se sacaron del eje por decision "
                       "propia. Requiere veredicto de la Dra. antes de fijarse."),
@@ -412,7 +357,9 @@ def main() -> None:
           f"{resumen['brecha_global_con_otras_taxonomias_pct']} % contando vit/min")
     print("\n", mec.to_string(index=False))
     if len(modelo):
-        print(f"\n  modelo (desviacion {dev:.2f}, {gl} gl):\n", modelo.to_string(index=False))
+        print(f"\n  modelo ({metodo}):\n", modelo.to_string(index=False))
+    if avisos_separacion:
+        print("\n  separacion detectada:", avisos_separacion)
     if estand:
         print("\n  estandarizacion:", estand)
 
