@@ -1,0 +1,70 @@
+# Estrategia de busqueda de antecedentes. Se declara aqui y NO en el codigo,
+# para que pueda citarse tal cual en Metodos y para que cualquiera la reejecute.
+#
+# ADVERTENCIA METODOLOGICA. Una busqueda no demuestra inexistencia. Lo unico que
+# se puede afirmar en el manuscrito es «no se identificaron trabajos que...»,
+# acompanado de la estrategia, las fuentes y la fecha. Por eso el script escribe
+# una bitacora: sin ella la afirmacion no se sostiene ante un arbitro.
+
+meta:
+  fecha_objetivo: "2026-08-28"
+  correo_contacto: "pantrok@gmail.com"   # OpenAlex y Crossref piden identificarse
+  desde_anio: 2010
+
+# Cada bloque contesta una pregunta distinta del manuscrito.
+bloques:
+
+  A_colorantes_mercado_mx:
+    pregunta: "Alguien caracterizo colorantes en el anaquel mexicano?"
+    consultas:
+      - "colorantes alimentos procesados Mexico"
+      - "food colorants packaged food Mexico"
+      - "food dyes prevalence Mexican packaged foods"
+      - "colorantes artificiales productos empacados Mexico etiquetado"
+      - "aditivos colorantes oferta alimentaria Mexico"
+
+  B_aditivos_envasados_mx:
+    pregunta: "Que hay de aditivos en general en el mercado mexicano?"
+    consultas:
+      - "food additives packaged foods Mexico"
+      - "aditivos alimentarios alimentos preenvasados Mexico"
+      - "additives Latin America packaged food supply"
+      - "NOM-051 etiquetado frontal aditivos"
+
+  C_extraccion_desde_ingredientes:
+    pregunta: "Quien ha extraido aditivos desde el texto de la lista de ingredientes?"
+    consultas:
+      - "extract food additives from ingredient lists text"
+      - "ingredient list parsing food label database"
+      - "named entity recognition food ingredients label"
+      - "extraccion automatica ingredientes etiquetas alimentos"
+
+  D_calidad_open_food_facts:
+    pregunta: "Alguien ha auditado la confiabilidad de Open Food Facts?"
+    consultas:
+      - "Open Food Facts data quality validation"
+      - "Open Food Facts additives accuracy"
+      - "crowdsourced food database completeness bias"
+      - "Open Food Facts Mexico"
+
+  E_sustitucion_natural_sintetico:
+    pregunta: "Que hay sobre reemplazo de colorantes sinteticos por naturales?"
+    consultas:
+      - "natural colorant replacement synthetic dye food industry"
+      - "sustitucion colorantes sinteticos naturales alimentos"
+      - "clean label natural colors reformulation"
+
+# Marca como relevante lo que cumpla estas reglas. NO descarta nada: solo ordena
+# el CSV para que la revision manual empiece por lo que importa.
+relevancia:
+  terminos_fuertes: [colorante, colorant, dye, additive, aditivo,
+                     "open food facts", "ingredient list", "lista de ingredientes"]
+  terminos_pais: [mexico, mexican, mexicano, "latin america", latinoamerica]
+  idiomas_interes: [es, en, pt]
+
+# Fuentes que NO tienen API de busqueda por texto libre. El script genera las
+# URLs para pegarlas en el navegador y revisar a mano.
+manual:
+  scielo_mexico: "https://search.scielo.org/?q={q}&lang=es&filter[in][]=scl"
+  redalyc: "https://www.redalyc.org/busquedaArticuloFiltros.oa?q={q}"
+  dialnet: "https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO={q}"
