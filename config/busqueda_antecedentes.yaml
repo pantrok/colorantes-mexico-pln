@@ -1,40 +1,58 @@
-# Estrategia de busqueda de antecedentes, VERSION 2.
+# Estrategia de busqueda de antecedentes, VERSION 3.
 #
-# POR QUE HUBO QUE REHACERLA. La corrida del 27 de agosto devolvio numeros
-# absurdos: «extract food additives from ingredient lists text» declaro 4 772 066
-# resultados en Crossref, y «Open Food Facts Mexico» declaro 174 724 en OpenAlex.
-# Ninguna de las dos interfaces busca frases: hacen OR con expansion de raices
-# sobre titulo y resumen. El bloque D quedo inservible — 164 de sus 195 filas
-# venian de esa ultima consulta, y los buscadores ignoraron «Open Food Facts» y
-# engancharon «Mexico» mas comida: plantas medicinales, pulque, COVID.
+# POR QUE HUBO QUE VOLVER A TOCARLA. La corrida del 29 de agosto arreglo el
+# bloque D —de 109 confirmados, 90 mencionan Open Food Facts de verdad— pero
+# dejo intacto un agujero en el otro extremo de la tabla.
 #
-# Esa tabla no puede ir a Metodos. Un arbitro que lea «4.7 millones de
-# resultados» sabe que la consulta estaba mal formada.
+# La verificacion posterior SI se aplico. El problema es que las reglas que
+# declaraba este archivo eran raices sueltas, no las frases de la consulta:
 #
-# TRES CAMBIOS.
+#     q: '"aditivos alimentarios" preenvasados'   ->  requiere_todos: [aditivo]
 #
-#   1. OpenAlex ahora se consulta con `filter=title_and_abstract.search:"..."`,
-#      que SI respeta comillas para frase exacta, en vez de `search=`, que hace
-#      OR. Es la diferencia entre buscar y adivinar.
+# ...asi que pasaron «aditivos fitogenicos para leitoes desmamados» y «aditivos
+# quimicos para paineis cimento-madeira». Lo mismo con '"synthetic dyes"
+# "packaged foods"' -> [dye], que dejo entrar celdas solares y remediacion de
+# aguas textiles.
 #
-#   2. Cada consulta declara que terminos DEBEN aparecer literalmente en el
-#      titulo o el resumen recuperado. Lo que no los traiga se descarta. Asi la
-#      cifra que va a Metodos es de resultados CONFIRMADOS, no de «declarados».
+# Al exigir que las frases entrecomilladas de la propia consulta aparecieran en
+# el texto recuperado, de las 191 filas confirmadas por Crossref sobrevivio UNA.
+# De las 195 de OpenAlex sobrevivieron 172. La tasa global de 9.6 % promediaba
+# dos brazos incomparables y por eso no significaba nada.
 #
-#   3. El bloque D ya no dice «Mexico». Esa palabra secuestraba el
-#      emparejamiento: en un corpus mundial pesa mas que cualquier termino
-#      tecnico.
+# TRES CAMBIOS EN LA V3.
 #
-# Crossref queda degradado a red de seguridad. No tiene busqueda de frase real,
-# asi que sus resultados solo cuentan si pasan la verificacion posterior.
+#   1. LAS FRASES DE LA CONSULTA SON LA REGLA. El script deriva las exigencias
+#      de las comillas de `q`, sin que haya que repetirlas aqui. Lo que este
+#      archivo declara en `requiere_todos` / `requiere_alguno` se SUMA a eso,
+#      nunca lo sustituye. Es la regla que la bitacora v2 ya decia aplicar; ahora
+#      es cierta.
+#
+#   2. TRES CAJONES EN VEZ DE DOS. Antes era pasa/no pasa y se perdian vecinos
+#      buenos que el buscador trajo por otro campo. Ahora:
+#        - estricto -> trae las frases. Es el corpus citable.
+#        - laxo     -> cumple las reglas de abajo pero no las frases. Va a
+#                      13_por_revisar.csv, para cribar a mano. NO cuenta.
+#        - fuera    -> ni una cosa ni la otra. 13_descartados.csv.
+#
+#   3. CONTROL DE RECUPERACION. Al final se comprueba si la estrategia recupera
+#      cinco trabajos que ya sabemos que son los vecinos mas cercanos. La v2
+#      recuperaba dos de cuatro y no lo decia. Un arbitro respeta mas un control
+#      reportado con 2/5 que una tabla sin control.
+#
+# Crossref sigue siendo red de seguridad y nada mas: no tiene busqueda de frase
+# y no devuelve resumen en dos de cada tres registros, asi que casi todo lo suyo
+# muere en la verificacion. Se deja en la tabla como nulo declarado, que es
+# transparencia y no debilidad.
 
 meta:
-  version: 2
-  fecha_objetivo: "2026-08-30"
+  version: 3
+  fecha_objetivo: "2026-08-31"
   correo_contacto: "pantrok@gmail.com"
   desde_anio: 2010
-  # Con busqueda de frase ya no hacen falta 500 por consulta.
   max_por_consulta: 200
+  # Si se pone en false se vuelve al comportamiento de la v2. Esta aqui para
+  # poder demostrar el contraste en Metodos, no para usarse.
+  exigir_frases_de_la_consulta: true
 
 bloques:
 
@@ -53,6 +71,11 @@ bloques:
       - q: '"food dyes" prevalence'
         requiere_todos: [dye]
         requiere_alguno: [prevalence, prevalencia, supply, market]
+      # NUEVA. Blanco declarado: Chiu et al. 2025, British Food Journal. La v2
+      # no lo recuperaba. Si esta consulta no lo trae, el problema es la
+      # cobertura de OpenAlex, no la cadena.
+      - q: '"food colors" "pre-packaged foods"'
+        requiere_alguno: [color, colour]
 
   B_aditivos_envasados_mx:
     pregunta: "Que hay de aditivos en general en el mercado mexicano?"
@@ -66,6 +89,12 @@ bloques:
         requiere_alguno: ["latin america", latinoamerica, mexico, brazil, chile]
       - q: '"NOM-051" etiquetado'
         requiere_alguno: ["nom-051", "nom 051"]
+      # NUEVA. Blanco declarado: Tseng et al. 2022, Frontiers in Nutrition. Es
+      # el antecedente mas cercano del brazo instrumental y la v2 no lo traia.
+      - q: '"sensory-related industrial additives"'
+        requiere_alguno: [additive]
+      - q: '"industrial additives" "packaged food supply"'
+        requiere_alguno: [additive]
 
   C_extraccion_desde_ingredientes:
     pregunta: "Quien ha extraido aditivos desde el texto de la lista de ingredientes?"
@@ -79,9 +108,12 @@ bloques:
         requiere_alguno: ["text mining", "natural language", "information extraction"]
       - q: '"named entity recognition" food ingredients'
         requiere_todos: ["entity recognition"]
+      # NUEVA. El informe de India (Zenodo 2026) aparecio por casualidad en el
+      # bloque D. Esta consulta busca a proposito ese vecino: quien mas ha
+      # documentado que la misma sustancia se declara con nombres distintos.
+      - q: '"ingredient" "nomenclature" food labels'
+        requiere_alguno: [nomenclature, nomenclatura, synonym, variant, vocabulary]
 
-  # REESCRITO POR COMPLETO. Sin «Mexico», y con la cadena sin espacios que usan
-  # los articulos que citan la base por su nombre de dominio.
   D_calidad_open_food_facts:
     pregunta: "Alguien ha auditado la confiabilidad de Open Food Facts?"
     consultas:
@@ -93,9 +125,15 @@ bloques:
         requiere_alguno: [crowdsourc, "food composition"]
       - q: '"food composition database" "data quality"'
         requiere_alguno: ["data quality", completeness, accuracy, validation]
-      - q: '"citizen science" food database completeness
-        '
+      - q: '"citizen science" food database completeness'
         requiere_alguno: ["citizen science", crowdsourc, volunteered]
+      # NUEVAS. Interoperabilidad terminologica, que seguia pendiente en la
+      # lista de literatura faltante. LanguaL e INFOODS son los dos sistemas de
+      # referencia y ninguna consulta de la v2 los tocaba.
+      - q: '"LanguaL"'
+        requiere_alguno: [langual]
+      - q: '"INFOODS"'
+        requiere_alguno: [infoods]
 
   E_sustitucion_natural_sintetico:
     pregunta: "Que hay sobre reemplazo de sinteticos por naturales?"
@@ -107,6 +145,25 @@ bloques:
         requiere_alguno: ["clean label"]
       - q: 'sustitucion colorantes sinteticos naturales'
         requiere_todos: [colorante]
+
+# Se comprueba por DOI contra el corpus final. El resultado va a la bitacora
+# tal como salga: si recupera tres de cinco, la bitacora dice tres de cinco.
+#
+# La distincion que importa no es «lo trajo o no», sino DONDE murio:
+#   - no recuperado          -> la cadena no lo alcanza (problema de consulta)
+#   - recuperado y descartado -> la cadena lo alcanza y el filtro lo mato
+#                                (problema de regla, y es grave)
+control_recuperacion:
+  - etiqueta: "Zancheta et al. 2025 — aditivos en 5 paises de LatAm, incluye Mexico"
+    doi: "10.1186/s12992-025-01130-7"
+  - etiqueta: "Dunford et al. 2025 — colorantes sinteticos en el anaquel de EE.UU."
+    doi: "10.1016/j.jand.2025.05.007"
+  - etiqueta: "Chiu et al. 2025 — colorantes en preenvasados de Hong Kong"
+    doi: "10.1108/BFJ-12-2023-1130"
+  - etiqueta: "Tseng et al. 2022 — aditivos sensoriales desde listas de ingredientes, EE.UU."
+    doi: "10.3389/fnut.2021.762814"
+  - etiqueta: "Chazelas et al. 2020 — precedente metodologico directo, usa Open Food Facts"
+    doi: "10.1038/s41598-020-60948-w"
 
 relevancia:
   terminos_fuertes: [colorante, colorant, dye, additive, aditivo,
