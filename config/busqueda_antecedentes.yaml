@@ -1,69 +1,120 @@
-# Estrategia de busqueda de antecedentes. Se declara aqui y NO en el codigo,
-# para que pueda citarse tal cual en Metodos y para que cualquiera la reejecute.
+# Estrategia de busqueda de antecedentes, VERSION 2.
 #
-# ADVERTENCIA METODOLOGICA. Una busqueda no demuestra inexistencia. Lo unico que
-# se puede afirmar en el manuscrito es «no se identificaron trabajos que...»,
-# acompanado de la estrategia, las fuentes y la fecha. Por eso el script escribe
-# una bitacora: sin ella la afirmacion no se sostiene ante un arbitro.
+# POR QUE HUBO QUE REHACERLA. La corrida del 27 de agosto devolvio numeros
+# absurdos: «extract food additives from ingredient lists text» declaro 4 772 066
+# resultados en Crossref, y «Open Food Facts Mexico» declaro 174 724 en OpenAlex.
+# Ninguna de las dos interfaces busca frases: hacen OR con expansion de raices
+# sobre titulo y resumen. El bloque D quedo inservible — 164 de sus 195 filas
+# venian de esa ultima consulta, y los buscadores ignoraron «Open Food Facts» y
+# engancharon «Mexico» mas comida: plantas medicinales, pulque, COVID.
+#
+# Esa tabla no puede ir a Metodos. Un arbitro que lea «4.7 millones de
+# resultados» sabe que la consulta estaba mal formada.
+#
+# TRES CAMBIOS.
+#
+#   1. OpenAlex ahora se consulta con `filter=title_and_abstract.search:"..."`,
+#      que SI respeta comillas para frase exacta, en vez de `search=`, que hace
+#      OR. Es la diferencia entre buscar y adivinar.
+#
+#   2. Cada consulta declara que terminos DEBEN aparecer literalmente en el
+#      titulo o el resumen recuperado. Lo que no los traiga se descarta. Asi la
+#      cifra que va a Metodos es de resultados CONFIRMADOS, no de «declarados».
+#
+#   3. El bloque D ya no dice «Mexico». Esa palabra secuestraba el
+#      emparejamiento: en un corpus mundial pesa mas que cualquier termino
+#      tecnico.
+#
+# Crossref queda degradado a red de seguridad. No tiene busqueda de frase real,
+# asi que sus resultados solo cuentan si pasan la verificacion posterior.
 
 meta:
-  fecha_objetivo: "2026-08-28"
-  correo_contacto: "pantrok@gmail.com"   # OpenAlex y Crossref piden identificarse
+  version: 2
+  fecha_objetivo: "2026-08-30"
+  correo_contacto: "pantrok@gmail.com"
   desde_anio: 2010
+  # Con busqueda de frase ya no hacen falta 500 por consulta.
+  max_por_consulta: 200
 
-# Cada bloque contesta una pregunta distinta del manuscrito.
 bloques:
 
   A_colorantes_mercado_mx:
     pregunta: "Alguien caracterizo colorantes en el anaquel mexicano?"
     consultas:
-      - "colorantes alimentos procesados Mexico"
-      - "food colorants packaged food Mexico"
-      - "food dyes prevalence Mexican packaged foods"
-      - "colorantes artificiales productos empacados Mexico etiquetado"
-      - "aditivos colorantes oferta alimentaria Mexico"
+      - q: '"food colorants" "packaged food"'
+        requiere_todos: [colorant]
+      - q: '"synthetic dyes" "packaged foods"'
+        requiere_todos: [dye]
+      - q: 'colorantes "alimentos procesados"'
+        requiere_todos: [colorante]
+      - q: 'colorantes etiquetado Mexico'
+        requiere_todos: [colorante]
+        requiere_alguno: [mexico, mexicano, mexicana]
+      - q: '"food dyes" prevalence'
+        requiere_todos: [dye]
+        requiere_alguno: [prevalence, prevalencia, supply, market]
 
   B_aditivos_envasados_mx:
     pregunta: "Que hay de aditivos en general en el mercado mexicano?"
     consultas:
-      - "food additives packaged foods Mexico"
-      - "aditivos alimentarios alimentos preenvasados Mexico"
-      - "additives Latin America packaged food supply"
-      - "NOM-051 etiquetado frontal aditivos"
+      - q: '"food additives" "packaged food supply"'
+        requiere_todos: [additive]
+      - q: '"aditivos alimentarios" preenvasados'
+        requiere_todos: [aditivo]
+      - q: '"food additives" "Latin America"'
+        requiere_todos: [additive]
+        requiere_alguno: ["latin america", latinoamerica, mexico, brazil, chile]
+      - q: '"NOM-051" etiquetado'
+        requiere_alguno: ["nom-051", "nom 051"]
 
   C_extraccion_desde_ingredientes:
     pregunta: "Quien ha extraido aditivos desde el texto de la lista de ingredientes?"
     consultas:
-      - "extract food additives from ingredient lists text"
-      - "ingredient list parsing food label database"
-      - "named entity recognition food ingredients label"
-      - "extraccion automatica ingredientes etiquetas alimentos"
+      - q: '"ingredient list" "food additives" extraction'
+        requiere_todos: ["ingredient"]
+        requiere_alguno: [extract, parsing, mining, "text"]
+      - q: '"ingredient statements" parsing'
+        requiere_todos: [ingredient]
+      - q: '"food labels" "text mining"'
+        requiere_alguno: ["text mining", "natural language", "information extraction"]
+      - q: '"named entity recognition" food ingredients'
+        requiere_todos: ["entity recognition"]
 
+  # REESCRITO POR COMPLETO. Sin «Mexico», y con la cadena sin espacios que usan
+  # los articulos que citan la base por su nombre de dominio.
   D_calidad_open_food_facts:
     pregunta: "Alguien ha auditado la confiabilidad de Open Food Facts?"
     consultas:
-      - "Open Food Facts data quality validation"
-      - "Open Food Facts additives accuracy"
-      - "crowdsourced food database completeness bias"
-      - "Open Food Facts Mexico"
+      - q: '"Open Food Facts"'
+        requiere_alguno: ["open food facts", openfoodfacts]
+      - q: 'openfoodfacts'
+        requiere_alguno: [openfoodfacts, "open food facts"]
+      - q: '"crowdsourced" "food composition database"'
+        requiere_alguno: [crowdsourc, "food composition"]
+      - q: '"food composition database" "data quality"'
+        requiere_alguno: ["data quality", completeness, accuracy, validation]
+      - q: '"citizen science" food database completeness
+        '
+        requiere_alguno: ["citizen science", crowdsourc, volunteered]
 
   E_sustitucion_natural_sintetico:
-    pregunta: "Que hay sobre reemplazo de colorantes sinteticos por naturales?"
+    pregunta: "Que hay sobre reemplazo de sinteticos por naturales?"
     consultas:
-      - "natural colorant replacement synthetic dye food industry"
-      - "sustitucion colorantes sinteticos naturales alimentos"
-      - "clean label natural colors reformulation"
+      - q: '"natural colorants" "synthetic dyes" replacement'
+        requiere_todos: [colorant]
+        requiere_alguno: [replac, substitut, alternative]
+      - q: '"clean label" colorants reformulation'
+        requiere_alguno: ["clean label"]
+      - q: 'sustitucion colorantes sinteticos naturales'
+        requiere_todos: [colorante]
 
-# Marca como relevante lo que cumpla estas reglas. NO descarta nada: solo ordena
-# el CSV para que la revision manual empiece por lo que importa.
 relevancia:
   terminos_fuertes: [colorante, colorant, dye, additive, aditivo,
-                     "open food facts", "ingredient list", "lista de ingredientes"]
+                     "open food facts", openfoodfacts,
+                     "ingredient list", "lista de ingredientes"]
   terminos_pais: [mexico, mexican, mexicano, "latin america", latinoamerica]
   idiomas_interes: [es, en, pt]
 
-# Fuentes que NO tienen API de busqueda por texto libre. El script genera las
-# URLs para pegarlas en el navegador y revisar a mano.
 manual:
   scielo_mexico: "https://search.scielo.org/?q={q}&lang=es&filter[in][]=scl"
   redalyc: "https://www.redalyc.org/busquedaArticuloFiltros.oa?q={q}"

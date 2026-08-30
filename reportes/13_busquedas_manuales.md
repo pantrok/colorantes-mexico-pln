@@ -1,43 +1,41 @@
-# Búsquedas que hay que hacer a mano
-
-Pega cada liga en el navegador y revisa la primera página de resultados. Anota lo pertinente en la hoja del CSV.
+# Búsquedas manuales
 
 ## A_colorantes_mercado_mx
-- **scielo_mexico** · «colorantes alimentos procesados Mexico» → https://search.scielo.org/?q=colorantes+alimentos+procesados+Mexico&lang=es&filter[in][]=scl
-- **redalyc** · «colorantes alimentos procesados Mexico» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=colorantes+alimentos+procesados+Mexico
-- **dialnet** · «colorantes alimentos procesados Mexico» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=colorantes+alimentos+procesados+Mexico
-- **scielo_mexico** · «food colorants packaged food Mexico» → https://search.scielo.org/?q=food+colorants+packaged+food+Mexico&lang=es&filter[in][]=scl
-- **redalyc** · «food colorants packaged food Mexico» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=food+colorants+packaged+food+Mexico
-- **dialnet** · «food colorants packaged food Mexico» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=food+colorants+packaged+food+Mexico
+- **scielo_mexico** → https://search.scielo.org/?q=food+colorants+packaged+food&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=food+colorants+packaged+food
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=food+colorants+packaged+food
+- **scielo_mexico** → https://search.scielo.org/?q=synthetic+dyes+packaged+foods&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=synthetic+dyes+packaged+foods
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=synthetic+dyes+packaged+foods
 
 ## B_aditivos_envasados_mx
-- **scielo_mexico** · «food additives packaged foods Mexico» → https://search.scielo.org/?q=food+additives+packaged+foods+Mexico&lang=es&filter[in][]=scl
-- **redalyc** · «food additives packaged foods Mexico» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=food+additives+packaged+foods+Mexico
-- **dialnet** · «food additives packaged foods Mexico» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=food+additives+packaged+foods+Mexico
-- **scielo_mexico** · «aditivos alimentarios alimentos preenvasados Mexico» → https://search.scielo.org/?q=aditivos+alimentarios+alimentos+preenvasados+Mexico&lang=es&filter[in][]=scl
-- **redalyc** · «aditivos alimentarios alimentos preenvasados Mexico» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=aditivos+alimentarios+alimentos+preenvasados+Mexico
-- **dialnet** · «aditivos alimentarios alimentos preenvasados Mexico» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=aditivos+alimentarios+alimentos+preenvasados+Mexico
+- **scielo_mexico** → https://search.scielo.org/?q=food+additives+packaged+food+supply&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=food+additives+packaged+food+supply
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=food+additives+packaged+food+supply
+- **scielo_mexico** → https://search.scielo.org/?q=aditivos+alimentarios+preenvasados&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=aditivos+alimentarios+preenvasados
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=aditivos+alimentarios+preenvasados
 
 ## C_extraccion_desde_ingredientes
-- **scielo_mexico** · «extract food additives from ingredient lists text» → https://search.scielo.org/?q=extract+food+additives+from+ingredient+lists+text&lang=es&filter[in][]=scl
-- **redalyc** · «extract food additives from ingredient lists text» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=extract+food+additives+from+ingredient+lists+text
-- **dialnet** · «extract food additives from ingredient lists text» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=extract+food+additives+from+ingredient+lists+text
-- **scielo_mexico** · «ingredient list parsing food label database» → https://search.scielo.org/?q=ingredient+list+parsing+food+label+database&lang=es&filter[in][]=scl
-- **redalyc** · «ingredient list parsing food label database» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=ingredient+list+parsing+food+label+database
-- **dialnet** · «ingredient list parsing food label database» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=ingredient+list+parsing+food+label+database
+- **scielo_mexico** → https://search.scielo.org/?q=ingredient+list+food+additives+extraction&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=ingredient+list+food+additives+extraction
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=ingredient+list+food+additives+extraction
+- **scielo_mexico** → https://search.scielo.org/?q=ingredient+statements+parsing&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=ingredient+statements+parsing
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=ingredient+statements+parsing
 
 ## D_calidad_open_food_facts
-- **scielo_mexico** · «Open Food Facts data quality validation» → https://search.scielo.org/?q=Open+Food+Facts+data+quality+validation&lang=es&filter[in][]=scl
-- **redalyc** · «Open Food Facts data quality validation» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=Open+Food+Facts+data+quality+validation
-- **dialnet** · «Open Food Facts data quality validation» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=Open+Food+Facts+data+quality+validation
-- **scielo_mexico** · «Open Food Facts additives accuracy» → https://search.scielo.org/?q=Open+Food+Facts+additives+accuracy&lang=es&filter[in][]=scl
-- **redalyc** · «Open Food Facts additives accuracy» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=Open+Food+Facts+additives+accuracy
-- **dialnet** · «Open Food Facts additives accuracy» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=Open+Food+Facts+additives+accuracy
+- **scielo_mexico** → https://search.scielo.org/?q=Open+Food+Facts&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=Open+Food+Facts
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=Open+Food+Facts
+- **scielo_mexico** → https://search.scielo.org/?q=openfoodfacts&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=openfoodfacts
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=openfoodfacts
 
 ## E_sustitucion_natural_sintetico
-- **scielo_mexico** · «natural colorant replacement synthetic dye food industry» → https://search.scielo.org/?q=natural+colorant+replacement+synthetic+dye+food+industry&lang=es&filter[in][]=scl
-- **redalyc** · «natural colorant replacement synthetic dye food industry» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=natural+colorant+replacement+synthetic+dye+food+industry
-- **dialnet** · «natural colorant replacement synthetic dye food industry» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=natural+colorant+replacement+synthetic+dye+food+industry
-- **scielo_mexico** · «sustitucion colorantes sinteticos naturales alimentos» → https://search.scielo.org/?q=sustitucion+colorantes+sinteticos+naturales+alimentos&lang=es&filter[in][]=scl
-- **redalyc** · «sustitucion colorantes sinteticos naturales alimentos» → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=sustitucion+colorantes+sinteticos+naturales+alimentos
-- **dialnet** · «sustitucion colorantes sinteticos naturales alimentos» → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=sustitucion+colorantes+sinteticos+naturales+alimentos
+- **scielo_mexico** → https://search.scielo.org/?q=natural+colorants+synthetic+dyes+replacement&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=natural+colorants+synthetic+dyes+replacement
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=natural+colorants+synthetic+dyes+replacement
+- **scielo_mexico** → https://search.scielo.org/?q=clean+label+colorants+reformulation&lang=es&filter[in][]=scl
+- **redalyc** → https://www.redalyc.org/busquedaArticuloFiltros.oa?q=clean+label+colorants+reformulation
+- **dialnet** → https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=clean+label+colorants+reformulation
