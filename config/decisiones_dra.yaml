@@ -1,0 +1,124 @@
+# Veredicto de la Dra. Sulem Yali Granados-Balbuena, 1 de septiembre de 2026.
+#
+# Es la entrada del congelamiento. El script 14 lee este archivo, lo aplica y
+# despues verifica que se haya aplicado. No se edita a mano despues de congelar:
+# si hay que cambiarlo, se cambia aqui, se vuelve a congelar y sube la version.
+#
+# REGLA DE DECISION, que va declarada en Metodos:
+#
+#   P2 (funcion: «cuando aparece asi, esta para dar color?») -> MANDA LA EXPERTA.
+#       Es lo que el corpus no puede contestar y por eso se le pregunto.
+#
+#   P1 (atestiguacion: «se escribe asi en una etiqueta mexicana?») -> MANDA EL
+#       CORPUS. Una forma con detecciones no se borra porque la revisora no la
+#       haya visto. Podar por P1 solo cuando el termino tiene CERO detecciones.
+#
+# El desacuerdo se conserva y se reporta. Borrar formas atestiguadas porque no
+# son habituales encogeria la clase natural, que es justo la que sostiene el
+# resultado: un arbitro lo llamaria poda conveniente y tendria razon.
+
+meta:
+  fecha_veredicto: "2026-09-01"
+  revisora: "Sulem Yali Granados-Balbuena"
+  terminos_revisados: 103        # 38 del diccionario original + 65 del anexo
+  sin_respuesta: 0
+  renglones_libres_usados: 0     # no anadio terminos; el autor lo lee como «completo»
+
+# --------------------------------------------------------------- P2 = no
+# No son colorantes cuando aparecen asi en una etiqueta mexicana. Salen del eje
+# de color. Siguen existiendo en el vocabulario legal de referencia, que es otra
+# lista y no se toca: que la ley los liste es parte del argumento del articulo.
+fuera_del_eje:
+  - codigo: E101
+    terminos: ["riboflavina", "vitamina b2"]
+    motivo: "Fortificacion, no color. La revisora anoto «Suplemento» en ambos."
+    detecciones_que_salen: 23
+  - codigo: E170
+    terminos: ["carbonato de calcio"]
+    motivo: "Mineral, no color. Anotado «Mineral»."
+    detecciones_que_salen: 30
+  - codigo: E153
+    terminos: ["carbon activado", "carbon vegetal"]
+    motivo: "Suplemento en dietas, no color."
+    detecciones_que_salen: 3
+  - codigo: E140
+    terminos: ["clorofilina"]
+    motivo: >
+      P1 = no y P2 = no. Unico punto donde el veredicto discrepa del Acuerdo, que
+      si lista SIN 140 y 141 como colorantes. Tres detecciones; se declara en el
+      manuscrito en vez de resolverse en silencio.
+    detecciones_que_salen: 3
+    discrepa_de_la_ley: true
+
+# ---------------------------------------------------- P2 = a veces
+# Solo cuentan si «colorante» aparece a menos de sesenta caracteres del termino,
+# igual que los diez codigos que ya estaban bajo esa regla.
+#
+# NOTA: cinco de los siete terminos pertenecen a codigos que YA estaban gateados
+# (E100, E140, E163). El veredicto confirma la regla existente mas de lo que la
+# amplia. Solo hacen falta dos codigos nuevos.
+requieren_contexto:
+  terminos:
+    - {termino: "extracto de piel de uva", codigo: E163, ya_cubierto_por_su_codigo: true}
+    - {termino: "clorofila",               codigo: E140, ya_cubierto_por_su_codigo: true}
+    - {termino: "curcuma en polvo",        codigo: E100, ya_cubierto_por_su_codigo: true,
+       nota: "La revisora anoto «como suplemento»."}
+    - {termino: "extracto de espirulina",  codigo: SPIRULINA, ya_cubierto_por_su_codigo: false,
+       nota: "La revisora anoto «como suplemento»."}
+    - {termino: "oxido de hierro amarillo", codigo: E172, ya_cubierto_por_su_codigo: false}
+    - {termino: "oxido de hierro negro",    codigo: E172, ya_cubierto_por_su_codigo: false}
+    - {termino: "oxido de hierro rojo",     codigo: E172, ya_cubierto_por_su_codigo: false}
+  # Lo que hay que agregar a REQUIEREN_CONTEXTO en src/util.py
+  codigos_a_agregar: [E172, SPIRULINA, E164]
+  # E164 venia pendiente desde el parche 8. La revisora confirma «azafran»
+  # P1 = si, P2 = si: el termino se queda, pero la palabra tambien es especia y
+  # la regla de contexto sigue haciendo falta.
+
+# --------------------------------------------- P1 = no Y cero detecciones
+# Variantes ortograficas que pusimos nosotros, sin respaldo en el DOF y sin
+# respaldo en el corpus. El script las poda SOLO si confirma cero detecciones
+# contra el archivo de conteos. Si alguna aparece, se queda y pasa al desacuerdo.
+podar_si_cero_detecciones:
+  - "beta-caroteno sintetico"
+  - "betacaroteno sintetico"
+  - "caroteno sintetico"
+  - "carotenos sinteticos"
+  - "beta apo 8 carotenal"
+
+# ------------------------------------- P1 = no PERO atestiguado en el corpus
+# NO SE BORRAN. Esta lista existe para que una prueba verifique que siguen ahi.
+# Si alguien las poda mas adelante, la prueba falla y dice por que.
+desacuerdo_experta_vs_corpus:
+  total_detecciones: 61
+  terminos:
+    - {termino: "caroteno",                     codigo: E160a,   detecciones: 17}
+    - {termino: "norbixina",                    codigo: E160b,   detecciones: 13}
+    - {termino: "beta caroteno sintetico",      codigo: E160a-i, detecciones: 10}
+    - {termino: "extracto de zanahoria",        codigo: E160a,   detecciones: 5}
+    - {termino: "extracto de pimenton",         codigo: E160c,   detecciones: 5}
+    - {termino: "carotenos",                    codigo: E160a,   detecciones: 4}
+    - {termino: "carmin de cochinilla",         codigo: E120,    detecciones: 2}
+    - {termino: "carmines",                     codigo: E120,    detecciones: 1}
+    - {termino: "extracto de zanahoria morada", codigo: E163,    detecciones: 1}
+
+# ------------------------------------------------------------- invariantes
+# Las siete trampas que ya nos costaron una corrida cada una. El script se
+# niega a congelar si alguna no se cumple.
+invariantes:
+  ordenamiento_mas_largo_primero: true
+  sin_termino_en_dos_clases: true
+  pares_obligatorios:
+    - {termino: "azul alimentos 1", codigo: E132,
+       porque: "Es INDIGOTINA. La numeracion mexicana va invertida respecto de la FD&C."}
+    - {termino: "azul alimentos 2", codigo: E133,
+       porque: "Es AZUL BRILLANTE. En la nomenclatura FD&C «Azul 1» es el brillante."}
+  resuelve_antes:
+    - {largo: "beta caroteno sintetico", corto: "beta caroteno",
+       porque: "Si «beta caroteno» gana, los 10 sinteticos se cuentan como naturales."}
+  terminos_prohibidos:
+    - termino: "anaranjado alimentos 5"
+      porque: >
+        El Acuerdo lo da como sinonimo de 160a(i) sintetico Y de 160a(ii) natural.
+        La norma misma lo deja ambiguo y no se resuelve ni con contexto.
+        52 detecciones. Va al manuscrito como caso irresoluble; asignarlo a
+        cualquiera de los dos lados seria inventar.

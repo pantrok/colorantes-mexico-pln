@@ -102,9 +102,19 @@ def detectar(texto_norm: str, matchers) -> dict[str, str]:
 #              betabel aparece como jugo o extracto en calidad de ingrediente.
 #              La correccion es del instrumento, no del umbral: se aplica de
 #              forma uniforme y se reportan las dos versiones.
+#   v3 (01/09) + E172, SPIRULINA, E164 -veredicto de la Dra. Granados-Balbuena,
+#              config/decisiones_dra.yaml, codigos_a_agregar-. Oxido de hierro
+#              y espirulina se declaran a veces como suplemento, no colorante;
+#              azafran es especia antes que colorante y "azafran indio/de
+#              indias" (curcuma) ganan primero por ser mas largos.
+#              E101 y E170 salieron del diccionario por completo al congelar
+#              (fuera del eje: fortificacion y mineral, no color). Se dejan
+#              aqui listados porque no estorban -ya no hay termino que mapee a
+#              esos codigos- y quitarlos borraria el historial de por que
+#              entraron.
 REQUIEREN_CONTEXTO = frozenset({
     "E100", "E101", "E140", "E160a", "E160b", "E160c", "E162", "E163",
-    "E170", "E171",
+    "E170", "E171", "E172", "SPIRULINA", "E164",
 })
 
 

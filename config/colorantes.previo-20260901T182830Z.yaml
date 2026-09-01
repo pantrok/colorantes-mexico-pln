@@ -1,30 +1,26 @@
 meta:
-  version: '1.0'
+  version: '0.1'
   fecha: '2026-08-23'
   nota: Semilla construida a partir de literatura y conocimiento de dominio, sin ver los datos.
   fusion_acuerdo: '2026-08-28'
-  congelado: true
-  fecha_congelamiento: 20260901T182830Z
-  sha256: 30ee4ee19059402c4840ee61c3a38bebdc57e76bf5de5a00e41c12f6d3ed8312
-  veredicto: '2026-09-01'
 sinteticos:
   E102:
     nombre: tartrazina
     tono: amarillo
     base: hidrosoluble
     terminos:
-    - amarillo alimentos 4
-    - fd&c amarillo no. 5
-    - amarillo fd&c 5
-    - fd&c amarillo 5
-    - amarillo fd&c5
-    - amarillo num. 5
-    - amarillo no. 5
-    - amarillo 5
     - tartrazina
+    - amarillo 5
+    - amarillo no. 5
+    - amarillo num. 5
+    - fd&c amarillo no. 5
+    - fd&c amarillo 5
     - ci 19140
-    - e 102
     - e-102
+    - e 102
+    - amarillo alimentos 4
+    - amarillo fd&c5
+    - amarillo fd&c 5
   E104:
     nombre: amarillo de quinoleina
     tono: amarillo
@@ -37,68 +33,68 @@ sinteticos:
     tono: naranja
     base: hidrosoluble
     terminos:
-    - amarillo alimentos 3
-    - amarillo crepusculo
-    - fd&c amarillo no. 6
-    - amarillo fd&c 6
     - amarillo ocaso
-    - amarillo no. 6
-    - sunset yellow
+    - amarillo crepusculo
     - amarillo 6
+    - amarillo no. 6
+    - fd&c amarillo no. 6
+    - sunset yellow
     - ci 15985
-    - e 110
     - e-110
+    - e 110
+    - amarillo alimentos 3
+    - amarillo fd&c 6
   E122:
     nombre: azorrubina / carmoisina
     tono: rojo
     base: hidrosoluble
     terminos:
-    - rojo alimentos 3
-    - azorrubina
     - carmoisina
-    - rojo d&c 5
+    - azorrubina
     - ci 14720
+    - rojo alimentos 3
+    - rojo d&c 5
   E124:
     nombre: rojo ponceau 4R
     tono: rojo
     base: hidrosoluble
     terminos:
-    - rojo cochinilla a
-    - rojo alimentos 7
     - rojo ponceau
     - ponceau 4r
-    - rojo d&c6
+    - rojo cochinilla a
     - ci 16255
+    - rojo alimentos 7
     - rojo 6
+    - rojo d&c6
   E127:
     nombre: eritrosina
     tono: rosa
     base: hidrosoluble
     terminos:
-    - rojo alimentos 14
-    - fd&c rojo no. 3
     - eritrosina
-    - rojo no. 3
-    - ci 45430
     - rojo 3
+    - rojo no. 3
+    - fd&c rojo no. 3
+    - ci 45430
+    - rojo alimentos 14
   E129:
     nombre: rojo allura AC
     tono: rojo
     base: hidrosoluble
     terminos:
-    - rojo alimentos 17
+    - rojo allura
+    - allura red
+    - rojo 40
+    - rojo no. 40
     - fd&c rojo no. 40
     - fd&c rojo 40
-    - rojo allura
-    - rojo coccin
-    - rojo fd&c40
-    - allura red
-    - rojo curry
-    - rojo no. 40
     - ci 16035
-    - rojo 40
-    - e 129
     - e-129
+    - e 129
+    - rojo alimentos 17
+    - rojo fd&c40
+    - rojo curry
+    - rojo coccin
   E131:
     nombre: azul patente V
     tono: azul
@@ -110,43 +106,43 @@ sinteticos:
     tono: azul
     base: hidrosoluble
     terminos:
-    - azul alimentos 1
-    - carmin de indigo
-    - fd&c azul no. 2
     - indigotina
-    - azul no. 2
-    - ci 73015
+    - carmin de indigo
     - azul 2
+    - azul no. 2
+    - fd&c azul no. 2
+    - ci 73015
+    - azul alimentos 1
   E133:
     nombre: azul brillante FCF
     tono: azul
     base: hidrosoluble
     terminos:
-    - azul alimentos 2
     - azul brillante
-    - fd&c azul no. 1
-    - azul no. 1
-    - ci 42090
     - azul 1
+    - azul no. 1
+    - fd&c azul no. 1
+    - ci 42090
+    - azul alimentos 2
   E142:
     nombre: verde S
     tono: verde
     base: hidrosoluble
     terminos:
-    - verde acido brillante
     - verde s
+    - verde acido brillante
   E143:
     nombre: verde rapido FCF
     tono: verde
     base: hidrosoluble
     terminos:
-    - verde alimentos 3
-    - fd&c verde no. 3
     - verde rapido
+    - verde 3
+    - verde no. 3
+    - fd&c verde no. 3
+    - verde alimentos 3
     - verde fd&c3
     - verde japon
-    - verde no. 3
-    - verde 3
   E151:
     nombre: negro brillante BN
     tono: negro
@@ -158,12 +154,17 @@ sinteticos:
     base: liposoluble
     terminos:
     - beta caroteno sintetico
+    - betacaroteno sintetico
+    - beta-caroteno sintetico
+    - caroteno sintetico
+    - carotenos sinteticos
   E160e:
     tono: naranja
     base: liposoluble
     terminos:
-    - anaranjado alimentos 6
     - beta-apo-8'-carotenal
+    - beta apo 8 carotenal
+    - anaranjado alimentos 6
   E160f:
     tono: naranja
     base: liposoluble
@@ -178,29 +179,31 @@ sinteticos:
     tono: amarillo
     base: hidrosoluble
     terminos:
-    - amarillo alimentos 5
     - amarillo 2g
+    - amarillo alimentos 5
 naturales:
   E100:
     nombre: curcumina
     tono: amarillo
     base: liposoluble
     terminos:
-    - oleorresina de curcuma
+    - curcumina
+    - curcuma
     - extracto de curcuma
-    - azafran de indias
+    - oleorresina de curcuma
     - curcuma turmerico
     - curcuma en polvo
     - azafran indio
-    - curcumina
-    - curcuma
+    - azafran de indias
     ambiguo_uso: true
   E101:
     nombre: riboflavina
     tono: amarillo
     base: hidrosoluble
     terminos:
+    - riboflavina
     - lactoflavina
+    - vitamina b2
     - vitamina b-2
     origen_indeterminado: true
     ambiguo_uso: true
@@ -209,17 +212,17 @@ naturales:
     tono: rojo
     base: hidrosoluble
     terminos:
-    - extracto de coccus cacti
-    - extracto de cochinilla
-    - carmin de cochinilla
-    - grana cochinilla
-    - acido carminico
-    - rojo natural 4
-    - rojo carmin
-    - cochinilla
-    - carmines
-    - ci 75470
     - carmin
+    - carmines
+    - acido carminico
+    - cochinilla
+    - grana cochinilla
+    - carmin de cochinilla
+    - rojo carmin
+    - ci 75470
+    - extracto de cochinilla
+    - rojo natural 4
+    - extracto de coccus cacti
     reportar_aparte: true
     barrera: certificacion
   E140:
@@ -227,10 +230,11 @@ naturales:
     tono: verde
     base: liposoluble
     terminos:
-    - verde natural 3
-    - clorofilinas
-    - clorofilas
     - clorofila
+    - clorofilas
+    - clorofilina
+    - clorofilinas
+    - verde natural 3
     origen_indeterminado: true
   E141:
     nombre: complejos cupricos de clorofilas
@@ -244,48 +248,50 @@ naturales:
     tono: negro
     base: dispersable
     terminos:
+    - carbon vegetal
+    - carbon activado
     - carbon medicinal
   E160a:
     nombre: carotenos
     tono: amarillo
     base: liposoluble
     terminos:
-    - extracto de zanahoria
-    - caroteno natural
-    - carotenos mixtos
+    - betacaroteno
     - beta caroteno
     - beta-caroteno
-    - betacaroteno
     - carotenos
     - caroteno
+    - caroteno natural
+    - extracto de zanahoria
+    - carotenos mixtos
     origen_indeterminado: true
   E160b:
     nombre: annatto / achiote
     tono: naranja
     base: liposoluble
     terminos:
-    - extracto de semillas de bixa orellana
-    - anaranjado natural 4
-    - extracto de achiote
-    - extracto de annato
-    - anaranjado 3
-    - norbixina
     - achiote
     - annatto
     - atsuete
     - bixina
+    - norbixina
+    - extracto de achiote
     - urucu
+    - extracto de annato
+    - anaranjado natural 4
+    - anaranjado 3
+    - extracto de semillas de bixa orellana
   E160c:
     nombre: extracto de paprika
     tono: naranja
     base: liposoluble
     terminos:
-    - oleorresina de paprika
-    - extracto de pimenton
-    - extracto de paprika
-    - capsorrubina
-    - capsantina
     - paprika
+    - oleorresina de paprika
+    - extracto de paprika
+    - extracto de pimenton
+    - capsantina
+    - capsorrubina
   E160d:
     nombre: licopeno
     tono: rojo
@@ -297,52 +303,58 @@ naturales:
     tono: amarillo
     base: liposoluble
     terminos:
+    - luteina
     - extracto de cempazuchitl
     - extracto de cempasuchil
-    - luteina
   E162:
     nombre: rojo de betabel / betanina
     tono: rojo
     base: hidrosoluble
     terminos:
-    - concentrado de betabel
-    - extracto de betalaina
-    - rojo raiz de betabel
-    - extracto de betabel
-    - rojo de remolacha
-    - polvo de betabel
-    - jugo de betabel
-    - rojo de betabel
-    - rojo remolacha
-    - rojo betabel
-    - betalainas
-    - betalaina
     - betanina
+    - betalaina
+    - betalainas
+    - extracto de betalaina
+    - rojo de betabel
+    - rojo de remolacha
+    - extracto de betabel
+    - jugo de betabel
+    - concentrado de betabel
+    - polvo de betabel
+    - rojo betabel
+    - rojo remolacha
+    - rojo raiz de betabel
   E163:
     nombre: antocianinas
     tono: rojo
     base: hidrosoluble
     terminos:
-    - extracto de papa dulce morada
-    - extracto de tegumento de uva
-    - extracto de zanahoria morada
-    - extracto de campanilla azul
-    - extracto de zanahoria negra
-    - extracto de camote morado
-    - extracto de maiz morado
-    - extracto de piel de uva
-    - extracto de rabano rojo
-    - extracto de col morada
-    - concentrado de sauco
-    - extracto de hibisco
-    - extracto de jamaica
-    - extracto de rabano
-    - extracto de uva
-    - conchita azul
-    - antocianinas
     - antocianina
+    - antocianinas
     - enocianina
+    - extracto de col morada
+    - extracto de uva
+    - extracto de piel de uva
+    - extracto de jamaica
     - hibisco
+    - extracto de hibisco
+    - extracto de zanahoria morada
+    - extracto de maiz morado
+    - extracto de camote morado
+    - extracto de rabano
+    - concentrado de sauco
+    - extracto de zanahoria negra
+    - extracto de papa dulce morada
+    - extracto de rabano rojo
+    - extracto de campanilla azul
+    - conchita azul
+    - extracto de tegumento de uva
+  E170:
+    nombre: carbonato de calcio
+    tono: blanco
+    base: mineral
+    terminos:
+    - carbonato de calcio
   E171:
     nombre: dioxido de titanio
     tono: blanco
@@ -355,24 +367,22 @@ naturales:
     tono: pardo
     base: mineral
     terminos:
-    - oxido de hierro amarillo
+    - oxido de hierro
+    - oxidos de hierro
     - oxido de hierro negro
     - oxido de hierro rojo
-    - pigmento amarillo 42
+    - oxido de hierro amarillo
     - pigmento negro 11
     - pigmento rojo 101
-    - oxidos de hierro
-    - oxido de hierro
-    requiere_contexto: true
+    - pigmento amarillo 42
   SPIRULINA:
     nombre: extracto de espirulina / ficocianina
     tono: azul
     base: hidrosoluble
     terminos:
+    - espirulina
     - extracto de espirulina
     - ficocianina
-    - espirulina
-    requiere_contexto: true
   E183:
     tono: azul
     base: hidrosoluble
@@ -383,23 +393,23 @@ naturales:
     base: hidrosoluble
     requiere_contexto: true
     terminos:
-    - amarillo natural 6
     - azafran
+    - amarillo natural 6
 fuera_de_eje:
   E150:
     nombre: colorantes caramelo
     tono: pardo
     base: hidrosoluble
     terminos:
-    - caramelo al sulfito de amonio
-    - caramelo clase iii
+    - color caramelo
     - colorante caramelo
+    - caramelo
+    - caramelo clase iii
     - caramelo clase iv
     - caramelo amonico
-    - color caramelo
-    - caramelo
-    - e 150
+    - caramelo al sulfito de amonio
     - e-150
+    - e 150
     - e150a
     - e150b
     - e150c
