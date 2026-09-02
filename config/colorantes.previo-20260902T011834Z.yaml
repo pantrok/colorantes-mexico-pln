@@ -1,11 +1,11 @@
 meta:
-  version: '1.1'
+  version: '1.0'
   fecha: '2026-08-23'
   nota: Semilla construida a partir de literatura y conocimiento de dominio, sin ver los datos.
   fusion_acuerdo: '2026-08-28'
   congelado: true
-  fecha_congelamiento: 20260902T011834Z
-  sha256: 8c7c8790221bf161dc1353282d1da34595a7176f9a4cf16046c22486e88e9640
+  fecha_congelamiento: 20260901T182830Z
+  sha256: 30ee4ee19059402c4840ee61c3a38bebdc57e76bf5de5a00e41c12f6d3ed8312
   veredicto: '2026-09-01'
 sinteticos:
   E102:
@@ -195,6 +195,15 @@ naturales:
     - curcumina
     - curcuma
     ambiguo_uso: true
+  E101:
+    nombre: riboflavina
+    tono: amarillo
+    base: hidrosoluble
+    terminos:
+    - lactoflavina
+    - vitamina b-2
+    origen_indeterminado: true
+    ambiguo_uso: true
   E120:
     nombre: carmin / acido carminico
     tono: rojo
@@ -219,6 +228,7 @@ naturales:
     base: liposoluble
     terminos:
     - verde natural 3
+    - clorofilinas
     - clorofilas
     - clorofila
     origen_indeterminado: true
@@ -229,6 +239,12 @@ naturales:
     terminos:
     - complejos cupricos de clorofila
     - clorofilina cuprica
+  E153:
+    nombre: carbon vegetal
+    tono: negro
+    base: dispersable
+    terminos:
+    - carbon medicinal
   E160a:
     nombre: carotenos
     tono: amarillo

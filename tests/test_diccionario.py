@@ -61,9 +61,17 @@ def test_orden_es_por_termino_no_por_sustancia():
 
 
 def test_ambiguos_marcados():
-    """Los codigos de origen indeterminado deben estar declarados como tales."""
-    for codigo in ("E160a", "E101", "E140"):
+    """Los codigos de origen indeterminado deben estar declarados como tales.
+
+    E101 salio de esta lista al congelar el diccionario (parche 12/13, veredicto
+    de la Dra. Granados-Balbuena del 01/09/2026): no es que su origen siga
+    indeterminado, es que dejo de ser colorante -fortificacion con vitamina B2,
+    no color- y salio del diccionario por completo. Ver
+    config/decisiones_dra.yaml y config/DICCIONARIO_CONGELADO.md.
+    """
+    for codigo in ("E160a", "E140"):
         assert DIC["naturales"][codigo].get("origen_indeterminado") is True, codigo
+    assert "E101" not in DIC["naturales"], "E140 y E160a siguen ambiguos; E101 ya no esta"
 
 
 def test_carmin_se_reporta_aparte():

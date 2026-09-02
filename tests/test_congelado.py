@@ -182,3 +182,51 @@ def test_el_veredicto_declara_la_regla_de_decision():
 def test_el_veredicto_cubre_los_tres_codigos_que_salen():
     codigos = {g["codigo"] for g in dec()["fuera_del_eje"]}
     assert {"E101", "E170", "E153"} <= codigos
+
+
+# ------------------------------------------- regresiones de la version 1.0
+
+def test_los_codigos_que_salen_completos_ya_no_existen():
+    """En la v1.0 la poda fue termino por termino y sobrevivieron sinonimos que
+    la revisora nunca vio: E101 se quedo con «lactoflavina» y «vitamina b-2»,
+    E153 con «carbon medicinal». Son las mismas sustancias que ella saco."""
+    presentes = {c for _, c, _ in p14.recorre(dicc())}
+    for g in dec().get("fuera_del_eje") or []:
+        if g.get("codigo_completo"):
+            assert g["codigo"] not in presentes, (
+                f"{g['codigo']} sigue vivo. {g['motivo'].strip()}")
+
+
+def test_no_queda_ninguna_forma_de_clorofilina():
+    """Se borro el singular y sobrevivio el plural."""
+    idx = p14.indice_terminos(dicc())
+    assert p14.norma("clorofilina") not in idx
+    assert p14.norma("clorofilinas") not in idx
+
+
+def test_clorofila_si_se_queda():
+    """E140 no sale completo: la revisora dijo «a veces» para clorofila."""
+    idx = p14.indice_terminos(dicc())
+    assert p14.norma("clorofila") in idx or p14.norma("clorofilas") in idx
+
+
+def test_los_bloques_que_no_son_codigos_no_rompen_el_conteo():
+    """`genericos` cuelga una lista de terminos del bloque y `sustituibilidad`
+    trae reglas y notas. La v1.0 tropezaba con el segundo."""
+    d = {
+        "meta": {"version": "1.1"},
+        "naturales": {"E100": ["curcuma"]},
+        "genericos": {"terminos": ["colorante natural", "colorante artificial"]},
+        "sustituibilidad": {"regla": "coincidencia de tono Y de base",
+                            "candidatos": {"E102": ["E100"]},
+                            "notas": {"P1": "azul: solo espirulina"}},
+    }
+    assert p14.cuenta(d) == (1, 1)
+    assert p14.huella(d)          # no levanta
+
+
+def test_genericos_no_entra_en_la_huella():
+    a = {"naturales": {"E100": ["curcuma"]}}
+    b = {"naturales": {"E100": ["curcuma"]},
+         "genericos": {"terminos": ["colorante natural"]}}
+    assert p14.huella(a) == p14.huella(b)

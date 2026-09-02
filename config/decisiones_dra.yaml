@@ -28,25 +28,42 @@ meta:
 # No son colorantes cuando aparecen asi en una etiqueta mexicana. Salen del eje
 # de color. Siguen existiendo en el vocabulario legal de referencia, que es otra
 # lista y no se toca: que la ley los liste es parte del argumento del articulo.
+# `codigo_completo: true` saca el CODIGO entero, no solo los terminos listados.
+# Hace falta porque la revisora juzgo SUSTANCIAS, y el archivo que reviso solo
+# traia los terminos con detecciones. Los sinonimos con cero detecciones nunca
+# se le mostraron, y en la version 1.0 sobrevivieron a una poda termino por
+# termino: E101 se quedo con «lactoflavina» y «vitamina b-2», E153 con «carbon
+# medicinal». Los tres son las mismas sustancias que ella saco del eje.
 fuera_del_eje:
   - codigo: E101
-    terminos: ["riboflavina", "vitamina b2"]
-    motivo: "Fortificacion, no color. La revisora anoto «Suplemento» en ambos."
+    codigo_completo: true
+    terminos: ["riboflavina", "vitamina b2", "lactoflavina", "vitamina b-2"]
+    motivo: >
+      Fortificacion, no color. La revisora anoto «Suplemento» en los dos terminos
+      que reviso. «lactoflavina» y «vitamina b-2» son la misma sustancia y no se
+      le mostraron por no tener detecciones.
     detecciones_que_salen: 23
   - codigo: E170
+    codigo_completo: true
     terminos: ["carbonato de calcio"]
     motivo: "Mineral, no color. Anotado «Mineral»."
     detecciones_que_salen: 30
   - codigo: E153
-    terminos: ["carbon activado", "carbon vegetal"]
-    motivo: "Suplemento en dietas, no color."
+    codigo_completo: true
+    terminos: ["carbon activado", "carbon vegetal", "carbon medicinal"]
+    motivo: >
+      Suplemento en dietas, no color. «carbon medicinal» es la misma sustancia y
+      no se le mostro por no tener detecciones.
     detecciones_que_salen: 3
   - codigo: E140
-    terminos: ["clorofilina"]
+    terminos: ["clorofilina", "clorofilinas"]
     motivo: >
       P1 = no y P2 = no. Unico punto donde el veredicto discrepa del Acuerdo, que
       si lista SIN 140 y 141 como colorantes. Tres detecciones; se declara en el
-      manuscrito en vez de resolverse en silencio.
+      manuscrito en vez de resolverse en silencio. Se anade el plural
+      «clorofilinas», que sobrevivio en la version 1.0 por no estar en el
+      archivo revisado. El codigo NO sale completo: «clorofilas», «clorofila» y
+      «verde natural 3» se quedan, con la regla de contexto que ya tenian.
     detecciones_que_salen: 3
     discrepa_de_la_ley: true
 
@@ -115,6 +132,7 @@ invariantes:
   resuelve_antes:
     - {largo: "beta caroteno sintetico", corto: "beta caroteno",
        porque: "Si «beta caroteno» gana, los 10 sinteticos se cuentan como naturales."}
+  codigos_ausentes: [E101, E153, E170]
   terminos_prohibidos:
     - termino: "anaranjado alimentos 5"
       porque: >

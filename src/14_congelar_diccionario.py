@@ -58,15 +58,8 @@ LOCK = CFG / "colorantes.lock.json"
 MANIF = CFG / "DICCIONARIO_CONGELADO.md"
 REPORTES = RAIZ / "reportes"
 
-VERSION = "1.0"
-# colorantes.yaml trae bloques de nivel superior que NO son codigo->terminos:
-# `genericos` (frases sin sustancia, un solo campo `terminos`) y
-# `sustituibilidad` (la matriz tono x base, con `regla`/`candidatos`/`notas`,
-# donde `candidatos` mapea codigo a OTROS codigos, no a terminos). Sin
-# excluirlos, recorre() los confunde con bloques de clase y truena al toparse
-# con un valor que no es ni lista ni dict de terminos (p.ej. `regla`, un
-# string suelto).
-BLOQUES_NO_CODIGO = ("meta", "genericos", "sustituibilidad")
+VERSION = "1.1"
+BLOQUES_CLASE = ("sinteticos", "naturales", "minerales", "carmin")
 
 
 def norma(s: str) -> str:
@@ -96,10 +89,34 @@ def set_terminos(val, nuevos: list):
     return nuevos
 
 
+def es_entrada_de_codigo(val) -> bool:
+    """Una entrada de codigo es una lista de terminos, o un dict con `terminos`."""
+    if isinstance(val, list):
+        return all(isinstance(x, str) for x in val)
+    return isinstance(val, dict) and isinstance(val.get("terminos"), list)
+
+
+def es_mapa_de_codigos(bloque: str, val) -> bool:
+    """El YAML tiene bloques que NO son mapas de codigo y la version 1.0
+    tropezaba con ellos:
+
+      genericos:        cuelga una lista de terminos DIRECTAMENTE del bloque.
+                        Estructuralmente es identico a un mapa de codigos con un
+                        solo codigo llamado «terminos», asi que la clave
+                        reservada `terminos` a nivel de bloque es el corte.
+      sustituibilidad:  trae reglas, candidatos y notas, no terminos.
+    """
+    if bloque == "meta" or not isinstance(val, dict) or not val:
+        return False
+    if "terminos" in val:          # el bloque ES una lista de terminos
+        return False
+    return all(es_entrada_de_codigo(v) for v in val.values())
+
+
 def recorre(dicc: dict):
     """Devuelve (bloque, codigo, valor) por cada codigo del diccionario."""
     for bloque, codigos in dicc.items():
-        if bloque in BLOQUES_NO_CODIGO or not isinstance(codigos, dict):
+        if not es_mapa_de_codigos(bloque, codigos):
             continue
         for codigo, val in codigos.items():
             yield bloque, codigo, val
@@ -193,6 +210,13 @@ def verifica(dicc: dict, dec: dict, avisos: list) -> None:
         if norma(pr["termino"]) in idx:
             raise Falla(f"«{pr['termino']}» sigue en el diccionario. {pr['porque']}")
 
+    # 5a. codigos que deben haber desaparecido por completo
+    presentes = {c for _, c, _ in recorre(dicc)}
+    for g in dec.get("fuera_del_eje") or []:
+        if g.get("codigo_completo") and g["codigo"] in presentes:
+            raise Falla(f"{g['codigo']} sigue en el diccionario y debia salir "
+                        f"completo: {g['motivo']}")
+
     # 5. lo que la experta saco del eje, salio
     for grupo in dec.get("fuera_del_eje") or []:
         for t in grupo["terminos"]:
@@ -216,6 +240,14 @@ def verifica(dicc: dict, dec: dict, avisos: list) -> None:
             if ts != sorted(ts, key=len, reverse=True):
                 avisos.append(f"{bloque}/{codigo}: terminos reordenados por longitud")
 
+    # aviso, no falla: el nombre del bloque ya no describe la clase analitica
+    for bloque, codigo, val in recorre(dicc):
+        if isinstance(val, dict) and val.get("base") == "mineral" and bloque != "minerales":
+            avisos.append(f"{codigo} vive en el bloque «{bloque}» y declara "
+                          f"base: mineral. La clase analitica se asigna en "
+                          f"src/util.py, no aqui: confirma que ese mapa lo trata "
+                          f"como pigmento inorganico y no como natural.")
+
     # aviso, no falla: subcadenas entre codigos distintos
     largos = sorted(idx, key=len, reverse=True)
     for i, a in enumerate(largos):
@@ -232,6 +264,22 @@ def verifica(dicc: dict, dec: dict, avisos: list) -> None:
 
 def aplica(dicc: dict, dec: dict, conteos: dict, cambios: list) -> dict:
     # a) sacar del eje
+    #    `codigo_completo: true` elimina el codigo entero. Hace falta porque la
+    #    revisora juzgo SUSTANCIAS y el archivo que reviso solo traia los
+    #    terminos con detecciones: los sinonimos sin detecciones nunca se le
+    #    mostraron y sobrevivian a una poda termino por termino.
+    completos = {g["codigo"] for g in (dec.get("fuera_del_eje") or [])
+                 if g.get("codigo_completo")}
+    for bloque in list(dicc):
+        if not es_mapa_de_codigos(bloque, dicc[bloque]):
+            continue
+        for codigo in list(dicc[bloque]):
+            if codigo in completos:
+                ts = terminos_de(dicc[bloque][codigo])
+                cambios.append(f"codigo completo {bloque}/{codigo}: se elimina "
+                               f"({len(ts)} terminos: {', '.join(ts)})")
+                del dicc[bloque][codigo]
+
     fuera = {norma(t) for g in (dec.get("fuera_del_eje") or []) for t in g["terminos"]}
     for bloque, codigo, val in recorre(dicc):
         ts = terminos_de(val)
@@ -244,7 +292,7 @@ def aplica(dicc: dict, dec: dict, conteos: dict, cambios: list) -> dict:
 
     # quitar codigos que se quedaron sin terminos
     for bloque in list(dicc):
-        if bloque in BLOQUES_NO_CODIGO or not isinstance(dicc[bloque], dict):
+        if not es_mapa_de_codigos(bloque, dicc[bloque]):
             continue
         for codigo in list(dicc[bloque]):
             if not terminos_de(dicc[bloque][codigo]):
@@ -362,6 +410,15 @@ def main() -> None:
 
     if ADIC.exists():
         ad = yaml.safe_load(ADIC.read_text(encoding="utf-8"))
+        # Una forma de colorantes_adiciones.yaml puede faltar en el diccionario
+        # por dos razones muy distintas: (a) nunca se fusiono, o (b) se
+        # fusiono y una corrida anterior de ESTE script ya la podo por cero
+        # detecciones confirmadas (poda legitima, ver `podar_si_cero_detecciones`
+        # en decisiones_dra.yaml). Sin distinguirlas, el aviso trata la version
+        # ya congelada y correctamente depurada como si la fusion siguiera
+        # pendiente, y --aplicar se niega a congelar sobre datos que en
+        # realidad ya estan al dia.
+        podadas = {norma(t) for t in (dec.get("podar_si_cero_detecciones") or [])}
         pendientes = []
         idx = indice_terminos(dicc)
         for bloque, codigos in ad.items():
@@ -369,7 +426,7 @@ def main() -> None:
                 continue
             for _, val in codigos.items():
                 for t in terminos_de(val):
-                    if norma(t) not in idx:
+                    if norma(t) not in idx and norma(t) not in podadas:
                         pendientes.append(t)
         if pendientes:
             print(f"\n  AVISO: {len(pendientes)} formas oficiales de "
@@ -379,7 +436,7 @@ def main() -> None:
             if args.aplicar:
                 raise SystemExit("  No se congela con la fusion pendiente.")
         else:
-            print("  fusion del DOF: ya aplicada")
+            print("  fusion del DOF: ya aplicada (o podada a proposito)")
 
     print("\n  conteos para la poda:")
     conteos = carga_conteos()

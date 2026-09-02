@@ -2,6 +2,12 @@
 
 Contexto operativo para Claude Code. Léelo completo antes de tocar nada.
 
+**Antes de generar o aplicar un parche nuevo, lee también `BITACORA_PARCHES.md`.**
+Registra, parche por parche, qué se aplicó tal cual y qué se corrigió o se
+decidió al aplicarlo en local — sin eso, un parche nuevo puede reabrir un bug
+o una decisión que ya se resolvió en la corrida anterior, tal como pasó entre
+los parches 12 y 13.
+
 ## Qué es esto
 
 Artículo destinado a **CienciaUAT** (revista mexicana, Web of Science con JCR, español obligatorio, gratuita). Pregunta: qué categorías del mercado alimentario mexicano ya sustituyeron colorantes sintéticos por naturales, cuáles no, y qué las distingue.
@@ -83,7 +89,12 @@ Alternativa si el Parquet falla: el CSV comprimido de `static.openfoodfacts.org/
 
 ## Estructura
 
+*(Nota: esta lista se quedó fija en el estado del 25/08 y no se ha actualizado
+con los scripts 09–14 ni los archivos de congelamiento. Ver `BITACORA_PARCHES.md`
+para el estado real y completo.)*
+
 ```
+BITACORA_PARCHES.md          que se aplico y que se corrigio, parche por parche
 config/colorantes.yaml       diccionario semilla y matriz tono × solubilidad
 config/categorias.yaml       taxonomia OFF -> 12 categorias analiticas
 src/00_explorar_esquema.py
