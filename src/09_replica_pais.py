@@ -255,9 +255,14 @@ def main() -> None:
     porclase["brecha_pct"] = (100 * porclase.sin_tag / porclase.n).round(1)
 
     # cifras de Mexico de la corrida del 27 de agosto, para comparar
-    MEXICO = {"sintetico": {"brecha_pct": 33.7, "pct_en_vocab": 85.2, "n": 2573},
-              "natural_botanico": {"brecha_pct": 87.7, "pct_en_vocab": 40.1, "n": 389},
-              "carmin": {"brecha_pct": 95.5, "pct_en_vocab": 96.4, "n": 224}}
+    # Actualizado 02/09/2026 contra el diccionario congelado v1.1 (antes traia
+    # la corrida del 27 de agosto, previa al veredicto de la Dra. y a la
+    # fusion del DOF). Recalcular con:
+    #   python src/09_replica_pais.py --pais en:mexico
+    # y leer la tabla `por_clase` de reportes/09_replica_mexico.json.
+    MEXICO = {"sintetico": {"brecha_pct": 35.7, "pct_en_vocab": 82.3, "n": 2693},
+              "natural_botanico": {"brecha_pct": 90.5, "pct_en_vocab": 30.4, "n": 441},
+              "carmin": {"brecha_pct": 95.7, "pct_en_vocab": 91.9, "n": 235}}
 
     comp = []
     for fila in porclase.itertuples():

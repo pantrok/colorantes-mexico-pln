@@ -4,14 +4,12 @@ E160c,natural_botanico,extracto de pimenton,True,508,0,0.0
 E100,natural_botanico,curcumina,True,326,297,91.1
 E120,carmin,carmin,True,243,159,65.4
 E160a,natural_botanico,betacaroteno,True,184,0,0.0
-E160a,natural_botanico,beta caroteno,False,155,0,0.0
-SPIRULINA,natural_botanico,espirulina,False,139,0,0.0
+E160a,natural_botanico,beta caroteno,False,153,0,0.0
 E120,carmin,carmines,True,128,88,68.8
 E102,sintetico,tartrazina,True,126,94,74.6
 E163,natural_botanico,antocianinas,True,116,108,93.1
 E133,sintetico,azul brillante,True,115,97,84.3
-E100,natural_botanico,curcuma,False,100,11,11.0
-E101,natural_botanico,riboflavina,True,84,56,66.7
+E100,natural_botanico,curcuma,False,99,11,11.1
 E160a,natural_botanico,caroteno,False,83,0,0.0
 E129,sintetico,rojo allura,True,75,60,80.0
 E110,sintetico,amarillo ocaso,True,71,30,42.3
@@ -19,75 +17,87 @@ E171,mineral_inorganico,dioxido de titanio,True,68,62,91.2
 E161b,natural_botanico,luteina,True,61,0,0.0
 E162,natural_botanico,rojo de remolacha,True,60,48,80.0
 E120,carmin,acido carminico,True,59,50,84.7
-E120,carmin,cochinilla,True,56,39,69.6
 E129,sintetico,rojo 40,True,56,40,71.4
+E120,carmin,cochinilla,True,56,39,69.6
 E160b,natural_botanico,norbixina,True,53,0,0.0
 E102,sintetico,e 102,False,49,44,89.8
 E160b,natural_botanico,annatto,False,47,0,0.0
 E110,sintetico,amarillo 6,True,46,34,73.9
 E102,sintetico,amarillo 5,True,45,35,77.8
-E170,mineral_inorganico,carbonato de calcio,True,43,22,51.2
-E140,natural_botanico,clorofilinas,True,41,7,17.1
 E140,natural_botanico,clorofilas,True,39,8,20.5
-E153,natural_botanico,carbon vegetal,True,35,32,91.4
 E129,sintetico,e 129,True,28,27,96.4
+SPIRULINA,natural_botanico,espirulina,False,28,0,0.0
 E160c,natural_botanico,paprika,False,27,0,0.0
 E133,sintetico,azul 1,False,26,2,7.7
 E127,sintetico,rojo 3,False,21,0,0.0
 E160b,natural_botanico,bixina,True,20,0,0.0
 E160c,natural_botanico,extracto de paprika,True,20,0,0.0
 E110,sintetico,e 110,True,19,18,94.7
-SPIRULINA,natural_botanico,extracto de espirulina,False,17,0,0.0
 E132,sintetico,indigotina,True,15,13,86.7
-E172,mineral_inorganico,oxido de hierro,True,14,13,92.9
-E131,sintetico,azul patente,False,13,7,53.8
 E140,natural_botanico,clorofila,False,13,6,46.2
+E131,sintetico,azul patente,False,13,7,53.8
 E122,sintetico,azorrubina,True,12,7,58.3
+E164,natural_botanico,azafran,True,11,6,54.5
 E160d,natural_botanico,licopeno,True,11,0,0.0
-E127,sintetico,eritrosina,True,11,10,90.9
 E129,sintetico,allura red,False,11,10,90.9
+E127,sintetico,eritrosina,True,11,10,90.9
 E110,sintetico,amarillo crepusculo,True,10,9,90.0
+SPIRULINA,natural_botanico,extracto de espirulina,False,9,0,0.0
+E120,carmin,carmin de cochinilla,False,8,2,25.0
 E110,sintetico,sunset yellow,False,8,3,37.5
 E163,natural_botanico,hibisco,False,8,0,0.0
-E101,natural_botanico,vitamina b2,True,8,2,25.0
-E120,carmin,carmin de cochinilla,False,8,2,25.0
-E160a,natural_botanico,extracto de zanahoria,False,7,0,0.0
-E140,natural_botanico,clorofilina,False,7,3,42.9
+E172,mineral_inorganico,oxido de hierro,True,8,7,87.5
 E132,sintetico,azul 2,False,7,2,28.6
+E124,sintetico,rojo 6,False,7,0,0.0
 E162,natural_botanico,betanina,True,7,5,71.4
 E143,sintetico,verde 3,False,7,0,0.0
-E102,sintetico,amarillo no. 5,False,6,2,33.3
 E163,natural_botanico,antocianina,True,6,6,100.0
 E160b,natural_botanico,achiote,True,6,0,0.0
 E124,sintetico,ponceau 4r,True,6,6,100.0
-E102,sintetico,ci 19140,False,5,0,0.0
-E141,natural_botanico,clorofilina cuprica,False,5,2,40.0
-E160c,natural_botanico,oleorresina de paprika,False,5,0,0.0
-E120,carmin,rojo carmin,False,5,1,20.0
+E102,sintetico,amarillo no. 5,False,6,2,33.3
 E100,natural_botanico,extracto de curcuma,True,5,4,80.0
-E133,sintetico,ci 42090,False,4,0,0.0
-E110,sintetico,amarillo no. 6,False,4,0,0.0
-E160c,natural_botanico,capsantina,True,4,0,0.0
-E129,sintetico,ci 16035,False,4,1,25.0
+E172,mineral_inorganico,oxido de hierro rojo,True,5,5,100.0
+E160a,natural_botanico,extracto de zanahoria,False,5,0,0.0
+E160c,natural_botanico,oleorresina de paprika,False,5,0,0.0
+E141,natural_botanico,clorofilina cuprica,False,5,2,40.0
+E102,sintetico,ci 19140,False,5,0,0.0
+E120,carmin,rojo carmin,False,5,1,20.0
 E129,sintetico,rojo no. 40,False,4,0,0.0
+E133,sintetico,ci 42090,False,4,0,0.0
+E160c,natural_botanico,capsantina,True,4,0,0.0
 E151,sintetico,negro brillante,False,4,1,25.0
+E110,sintetico,amarillo no. 6,False,4,0,0.0
+E129,sintetico,ci 16035,False,4,1,25.0
+E160b,natural_botanico,extracto de annato,False,4,0,0.0
 E122,sintetico,carmoisina,True,3,2,66.7
+E162,natural_botanico,rojo remolacha,True,3,3,100.0
+E160e,sintetico,beta apo 8 carotenal,False,3,0,0.0
 E163,natural_botanico,concentrado de sauco,False,3,0,0.0
+E172,mineral_inorganico,oxido de hierro negro,True,2,2,100.0
+E162,natural_botanico,rojo betabel,False,2,0,0.0
+E163,natural_botanico,extracto de zanahoria negra,False,2,1,50.0
+E163,natural_botanico,extracto de uva,False,2,0,0.0
+E172,mineral_inorganico,oxido de hierro amarillo,True,2,2,100.0
+E160a-i,sintetico,beta caroteno sintetico,False,2,0,0.0
+E124,sintetico,rojo ponceau,False,2,0,0.0
 E104,sintetico,amarillo de quinoleina,True,2,2,100.0
 E160a,natural_botanico,caroteno natural,False,2,0,0.0
-E172,mineral_inorganico,oxidos de hierro,False,2,1,50.0
-E153,natural_botanico,carbon activado,False,2,0,0.0
+E161g,sintetico,cantaxantina,True,2,0,0.0
 E141,natural_botanico,complejos cupricos de clorofila,False,2,2,100.0
-E163,natural_botanico,extracto de uva,False,2,0,0.0
-E124,sintetico,rojo ponceau,False,2,0,0.0
-E110,sintetico,fd&c amarillo no. 6,False,1,0,0.0
 E100,natural_botanico,oleorresina de curcuma,False,1,0,0.0
-E102,sintetico,fd&c amarillo no. 5,False,1,1,100.0
-E110,sintetico,ci 15985,False,1,0,0.0
 E124,sintetico,rojo cochinilla a,True,1,1,100.0
+E122,sintetico,rojo alimentos 3,False,1,0,0.0
 E124,sintetico,ci 16255,False,1,0,0.0
+E120,carmin,rojo natural 4,False,1,0,0.0
+E102,sintetico,fd&c amarillo no. 5,False,1,1,100.0
+E102,sintetico,amarillo fd&c5,False,1,0,0.0
+E110,sintetico,ci 15985,False,1,0,0.0
+E110,sintetico,fd&c amarillo no. 6,False,1,0,0.0
+E100,natural_botanico,curcuma en polvo,False,1,0,0.0
 E129,sintetico,fd&c rojo 40,False,1,1,100.0
+E129,sintetico,rojo fd&c40,False,1,0,0.0
 E132,sintetico,azul no. 2,False,1,0,0.0
 E160a,natural_botanico,carotenos mixtos,False,1,0,0.0
 E160b,natural_botanico,extracto de achiote,False,1,0,0.0
 E163,natural_botanico,extracto de rabano,False,1,1,100.0
+E172,mineral_inorganico,oxidos de hierro,False,1,1,100.0

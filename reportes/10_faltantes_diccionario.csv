@@ -1,96 +1,49 @@
 sin,codigo_e,clase,forma_oficial,en_off_bajo_su_codigo,en_off_en_cualquier_entrada,en_nuestro_diccionario,n_formas_off_para_ese_codigo,nota,categoria,cubierta_por
-SIN100(i),E100,natural_botanico,curcuma en polvo,False,False,False,3,,ya_cubierta,curcuma
-SIN100(i),E100,natural_botanico,curcuma turmerico,False,False,False,3,,ya_cubierta,curcuma
-SIN100(i),E100,natural_botanico,azafran indio,False,False,False,3,,falso_negativo_real,
-SIN100(i),E100,natural_botanico,azafran de indias,False,False,False,3,,falso_negativo_real,
 SIN100(i),E100,natural_botanico,curcuma (raiz de curcuma longa l.),False,False,False,3,,ya_cubierta,curcuma
 SIN100(i),E100,natural_botanico,temo e-lamag,False,False,False,3,,falso_negativo_real,
-SIN101(ii),E101,natural_botanico,riboflavina-5'-fosfato de sodio,False,False,False,10,,ya_cubierta,riboflavina
-SIN101(ii),E101,natural_botanico,riboflavina 5 fosfato de sodio,False,False,False,10,,ya_cubierta,riboflavina
-SIN102,E102,sintetico,amarillo alimentos 4,False,False,False,8,,falso_negativo_real,
-SIN102,E102,sintetico,amarillo fd&c5,False,False,False,8,,falso_negativo_real,
+SIN101(i),E101,natural_botanico,riboflavina,True,True,False,10,,falso_negativo_real,
+SIN101(i),E101,natural_botanico,lactoflavina,True,True,False,10,,falso_negativo_real,
+SIN101(ii),E101,natural_botanico,riboflavina-5'-fosfato de sodio,False,False,False,10,,falso_negativo_real,
+SIN101(ii),E101,natural_botanico,riboflavina 5 fosfato de sodio,False,False,False,10,,falso_negativo_real,
 SIN110,E110,sintetico,amarillo ocaso fcf,False,True,False,10,,ya_cubierta,amarillo ocaso
-SIN110,E110,sintetico,amarillo alimentos 3,False,False,False,10,,falso_negativo_real,
-SIN110,E110,sintetico,amarillo fd&c 6,True,True,False,10,,falso_negativo_real,
-SIN120,E120,carmin,extracto de coccus cacti,False,False,False,6,,falso_negativo_real,
-SIN120,E120,carmin,rojo natural 4,False,False,False,6,,falso_negativo_real,
 SIN120,E120,carmin,carmin cochinilla,True,True,False,6,,ya_cubierta,cochinilla
-SIN122,E122,sintetico,rojo alimentos 3,False,False,False,10,,falso_negativo_real,
-SIN122,E122,sintetico,rojo d&c 5,False,False,False,10,,falso_negativo_real,
-SIN124,E124,sintetico,rojo alimentos 7,False,False,False,3,,falso_negativo_real,
-SIN124,E124,sintetico,rojo 6,False,False,False,3,,falso_negativo_real,
-SIN124,E124,sintetico,rojo d&c6,False,False,False,3,,falso_negativo_real,
-SIN127,E127,sintetico,rojo alimentos 14,False,False,False,3,"Numeral dejado insubsistente por acuerdo del 28/05/2026, 24 meses de plazo.",falso_negativo_real,
 SIN127,E127,sintetico,rojo 3 fd&c,False,False,False,3,"Numeral dejado insubsistente por acuerdo del 28/05/2026, 24 meses de plazo.",ya_cubierta,rojo 3
 SIN127,E127,sintetico,rojo fd&c3,False,False,False,3,"Numeral dejado insubsistente por acuerdo del 28/05/2026, 24 meses de plazo.",falso_negativo_real,
 SIN129,E129,sintetico,rojo allura ac,True,True,False,7,,ya_cubierta,rojo allura
-SIN129,E129,sintetico,rojo alimentos 17,False,False,False,7,,falso_negativo_real,
 SIN129,E129,sintetico,rojo no 40 fd&c,False,False,False,7,,falso_negativo_real,
-SIN129,E129,sintetico,rojo fd&c40,False,False,False,7,,falso_negativo_real,
-SIN129,E129,sintetico,rojo coccin,False,False,False,7,,falso_negativo_real,
-SIN129,E129,sintetico,rojo curry,False,False,False,7,,falso_negativo_real,
-SIN132,E132,sintetico,azul alimentos 1,False,False,False,5,"azul alimentos 1 es INDIGOTINA, no azul brillante. La numeracion mexicana va invertida respecto de la FD&C.",falso_negativo_real,
 SIN132,E132,sintetico,azul no. 2 fd&c,False,False,False,5,"azul alimentos 1 es INDIGOTINA, no azul brillante. La numeracion mexicana va invertida respecto de la FD&C.",ya_cubierta,azul no. 2
 SIN132,E132,sintetico,azul fd&c 2,True,True,False,5,"azul alimentos 1 es INDIGOTINA, no azul brillante. La numeracion mexicana va invertida respecto de la FD&C.",falso_negativo_real,
 SIN133,E133,sintetico,azul brillante fcf,True,True,False,7,azul alimentos 2 es AZUL BRILLANTE. Ver SIN132.,ya_cubierta,azul brillante
-SIN133,E133,sintetico,azul alimentos 2,False,False,False,7,azul alimentos 2 es AZUL BRILLANTE. Ver SIN132.,falso_negativo_real,
 SIN133,E133,sintetico,azul no 1 fd&c,False,False,False,7,azul alimentos 2 es AZUL BRILLANTE. Ver SIN132.,falso_negativo_real,
 SIN133,E133,sintetico,azul fd&c 1,True,True,False,7,azul alimentos 2 es AZUL BRILLANTE. Ver SIN132.,falso_negativo_real,
-SIN140,E140,natural_botanico,verde natural 3,False,False,False,10,,falso_negativo_real,
+SIN140,E140,natural_botanico,clorofilinas,True,True,False,10,,falso_negativo_real,
 SIN141(i),E141,natural_botanico,complejos cupricos de clorofilas,True,True,False,10,,ya_cubierta,complejos cupricos de clorofila
 SIN141(i),E141,natural_botanico,clorofila de cobre,False,False,False,10,,ya_cubierta,clorofila
 SIN141(i),E141,natural_botanico,feofitina de cobre a,False,False,False,10,,falso_negativo_real,
-SIN141(ii),E141,natural_botanico,sales de sodio y potasio de complejos cupricos de clorofilinas,False,False,False,10,,ya_cubierta,clorofilinas
-SIN141(ii),E141,natural_botanico,clorofilina de cobre a,False,False,False,10,,ya_cubierta,clorofilina
-SIN141(ii),E141,natural_botanico,clorofilina de cobre b,False,False,False,10,,ya_cubierta,clorofilina
+SIN141(ii),E141,natural_botanico,sales de sodio y potasio de complejos cupricos de clorofilinas,False,False,False,10,,falso_negativo_real,
+SIN141(ii),E141,natural_botanico,clorofilina de cobre a,False,False,False,10,,falso_negativo_real,
+SIN141(ii),E141,natural_botanico,clorofilina de cobre b,False,False,False,10,,falso_negativo_real,
 SIN143,E143,sintetico,verde rapido fcf,True,True,False,3,,ya_cubierta,verde rapido
-SIN143,E143,sintetico,verde alimentos 3,False,False,False,3,,falso_negativo_real,
-SIN143,E143,sintetico,verde fd&c3,False,False,False,3,,falso_negativo_real,
-SIN143,E143,sintetico,verde japon,False,False,False,3,,falso_negativo_real,
 SIN150(a),E150,fuera_de_eje,caramelo clase i,False,False,False,23,,ya_cubierta,caramelo
 SIN150(b),E150,fuera_de_eje,caramelo clase ii,False,False,False,23,,ya_cubierta,caramelo
 SIN150(b),E150,fuera_de_eje,caramelo sulfito caustico,False,False,False,23,,ya_cubierta,caramelo
 SIN150(d),E150,fuera_de_eje,caramelo sulfito amonico,False,False,False,23,,ya_cubierta,caramelo
-SIN160a(i),E160a,sintetico,beta caroteno sintetico,False,False,False,19,"La ley mexicana SEPARA el beta caroteno sintetico del natural, con codigo y CI distintos. El Codex los agrupa, Zancheta los fusiona y Hong Kong define el sintetico como natural. Mexico es la jurisdiccion que conserva el eje.",mal_clasificada,beta caroteno
+SIN153,E153,natural_botanico,carbon vegetal,True,True,False,2,,falso_negativo_real,
 SIN160a(i),E160a,sintetico,anaranjado alimentos 5,False,False,False,19,"La ley mexicana SEPARA el beta caroteno sintetico del natural, con codigo y CI distintos. El Codex los agrupa, Zancheta los fusiona y Hong Kong define el sintetico como natural. Mexico es la jurisdiccion que conserva el eje.",falso_negativo_real,
 SIN160a(ii),E160a,natural_botanico,carotenos naturales,False,False,False,19,anaranjado alimentos 5 aparece en 160a(i) y en 160a(ii): la propia ley lo deja ambiguo.,ya_cubierta,carotenos
 SIN160a(ii),E160a,natural_botanico,anaranjado alimentos 5,False,False,False,19,anaranjado alimentos 5 aparece en 160a(i) y en 160a(ii): la propia ley lo deja ambiguo.,falso_negativo_real,
 SIN160a(ii),E160a,natural_botanico,alfa-caroteno,True,True,False,19,anaranjado alimentos 5 aparece en 160a(i) y en 160a(ii): la propia ley lo deja ambiguo.,ya_cubierta,caroteno
 SIN160a(ii),E160a,natural_botanico,gama-caroteno,False,False,False,19,anaranjado alimentos 5 aparece en 160a(i) y en 160a(ii): la propia ley lo deja ambiguo.,ya_cubierta,caroteno
 SIN160a(iii),E160a,natural_botanico,beta caroteno blakeslea trispora,False,False,False,19,,ya_cubierta,beta caroteno
-SIN160(b),E160b,natural_botanico,extracto de annato,False,False,False,6,,falso_negativo_real,
-SIN160(b),E160b,natural_botanico,extracto de semillas de bixa orellana,False,False,False,6,,falso_negativo_real,
-SIN160(b),E160b,natural_botanico,anaranjado natural 4,False,False,False,6,,falso_negativo_real,
 SIN160(b),E160b,natural_botanico,annato norbixina,False,False,False,6,,ya_cubierta,norbixina
-SIN160(b),E160b,natural_botanico,anaranjado 3,False,False,False,6,,falso_negativo_real,
 SIN160(e),E160e,sintetico,beta-apo-8'-carotenal,True,True,False,5,,falso_negativo_real,
-SIN160(e),E160e,sintetico,anaranjado alimentos 6,False,False,False,5,,falso_negativo_real,
 SIN160f,E160f,sintetico,esteres metilico y etilico del acido beta-apo-8'-carotenoico,False,False,False,3,,mal_clasificada,caroteno
-SIN160f,E160f,sintetico,anaranjado alimentos 7,False,False,False,3,,falso_negativo_real,
-SIN161(b),E161b,natural_botanico,extracto de cempazuchitl,False,False,False,3,,falso_negativo_real,
 SIN161(b),E161b,natural_botanico,xantofilas,False,False,False,3,,falso_negativo_real,
-SIN161(g),E161g,sintetico,cantaxantina,True,True,False,2,,falso_negativo_real,
-SIN162,E162,natural_botanico,rojo betabel,False,False,False,6,,falso_negativo_real,
-SIN162,E162,natural_botanico,rojo remolacha,True,True,False,6,,falso_negativo_real,
-SIN162,E162,natural_botanico,rojo raiz de betabel,False,False,False,6,,falso_negativo_real,
-SIN163(ii),E163,natural_botanico,extracto de tegumento de uva,False,False,False,15,,falso_negativo_real,
 SIN163(ii),E163,natural_botanico,enocianinas,False,False,False,15,,ya_cubierta,enocianina
 SIN163(ii),E163,natural_botanico,eno,False,False,False,15,,falso_negativo_real,
-SIN163(vi),E163,natural_botanico,extracto de zanahoria negra,False,False,False,15,"COFEPRIS 23/10/2018, BPF",ya_cubierta,extracto de zanahoria
-SIN163(vii),E163,natural_botanico,extracto de papa dulce morada,False,False,False,15,"COFEPRIS 21/10/2020, BPF",falso_negativo_real,
-SIN163(viii),E163,natural_botanico,extracto de rabano rojo,False,False,False,15,"COFEPRIS 23/10/2018, BPF",ya_cubierta,extracto de rabano
-SIN163(xi),E163,natural_botanico,extracto de campanilla azul,False,False,False,15,"COFEPRIS 03/11/2025, BPF. Fuente AZUL natural: toca la prediccion P1.",falso_negativo_real,
 SIN163(xi),E163,natural_botanico,clitoria ternatea,False,False,False,15,"COFEPRIS 03/11/2025, BPF. Fuente AZUL natural: toca la prediccion P1.",falso_negativo_real,
-SIN163(xi),E163,natural_botanico,conchita azul,False,False,False,15,"COFEPRIS 03/11/2025, BPF. Fuente AZUL natural: toca la prediccion P1.",falso_negativo_real,
 SIN163(xi),E163,natural_botanico,guisante mariposa,False,False,False,15,"COFEPRIS 03/11/2025, BPF. Fuente AZUL natural: toca la prediccion P1.",falso_negativo_real,
 SIN163(xi),E163,natural_botanico,flor mariposa de chicharo,False,False,False,15,"COFEPRIS 03/11/2025, BPF. Fuente AZUL natural: toca la prediccion P1.",falso_negativo_real,
-SIN171,E171,mineral_inorganico,pigmento blanco 6,False,False,False,4,,falso_negativo_real,
-SIN172(i),E172,mineral_inorganico,oxido de hierro negro,True,True,False,15,,ya_cubierta,oxido de hierro
-SIN172(i),E172,mineral_inorganico,pigmento negro 11,False,False,False,15,,falso_negativo_real,
-SIN172(ii),E172,mineral_inorganico,oxido de hierro rojo,True,True,False,15,,ya_cubierta,oxido de hierro
-SIN172(ii),E172,mineral_inorganico,pigmento rojo 101,False,False,False,15,,falso_negativo_real,
-SIN172(iii),E172,mineral_inorganico,oxido de hierro amarillo,True,True,False,15,,ya_cubierta,oxido de hierro
-SIN172(iii),E172,mineral_inorganico,pigmento amarillo 42,False,False,False,15,,falso_negativo_real,
 SIN173,,mineral_inorganico,polvo de aluminio,False,False,False,0,,falso_negativo_real,
 SIN173,,mineral_inorganico,pigmento metal 1,False,False,False,0,,falso_negativo_real,
 SIN174,,mineral_inorganico,plata,False,True,False,0,,falso_negativo_real,
@@ -98,8 +51,3 @@ SIN174,,mineral_inorganico,argentum,False,False,False,0,,falso_negativo_real,
 SIN175,,mineral_inorganico,oro,False,True,False,0,,falso_negativo_real,
 SIN175,,mineral_inorganico,aurum,False,False,False,0,,falso_negativo_real,
 SIN175,,mineral_inorganico,pigmento metal 3,False,False,False,0,,falso_negativo_real,
-SIN183,,natural_botanico,azul de jagua,False,False,False,0,COFEPRIS. No existe en la taxonomia de Open Food Facts.,falso_negativo_real,
-SINnr_amarillo2g,,sintetico,amarillo 2g,False,True,False,0,,falso_negativo_real,
-SINnr_amarillo2g,,sintetico,amarillo alimentos 5,False,False,False,0,,falso_negativo_real,
-SINnr_azafran,,natural_botanico,azafran,False,True,False,0,,falso_negativo_real,
-SINnr_azafran,,natural_botanico,amarillo natural 6,False,False,False,0,,falso_negativo_real,

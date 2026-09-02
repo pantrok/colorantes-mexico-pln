@@ -1,5 +1,5 @@
 termino,coef,OR,IC_bajo,IC_alto
-intercepto,-1.1426,0.32,0.29,0.35
-natural,1.9404,6.96,4.95,9.93
-fuera_vocab,3.1477,23.28,17.19,32.2
-mandatory,2.5395,12.67,1.66,1627.59
+intercepto,-1.1622,0.31,0.28,0.34
+natural,1.9415,6.97,4.86,10.17
+fuera_vocab,3.4287,30.84,22.86,42.51
+mandatory,2.5116,12.32,1.6,1586.39

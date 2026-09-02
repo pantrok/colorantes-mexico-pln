@@ -6,13 +6,13 @@
     "minerals_disponible": true
   },
   "M1_cobertura": {
-    "terminos": 148,
-    "cubiertos": 56,
-    "sin_sinonimo": 89,
-    "sin_entrada": 3,
+    "terminos": 197,
+    "cubiertos": 59,
+    "sin_sinonimo": 133,
+    "sin_entrada": 5,
     "por_clase": {
       "carmin": {
-        "size": 9,
+        "size": 11,
         "sum": 4
       },
       "fuera_de_eje": {
@@ -20,16 +20,16 @@
         "sum": 8
       },
       "mineral_inorganico": {
-        "size": 4,
-        "sum": 3
+        "size": 10,
+        "sum": 5
       },
       "natural_botanico": {
-        "size": 66,
-        "sum": 22
+        "size": 80,
+        "sum": 19
       },
       "sintetico": {
-        "size": 57,
-        "sum": 19
+        "size": 84,
+        "sum": 23
       }
     }
   },
@@ -37,28 +37,26 @@
     "E120",
     "E150",
     "E160a",
-    "E170"
+    "E164"
   ],
   "M3_otras_taxonomias": {
     "columnas": [
       "vitaminas_tags",
       "minerales_tags"
     ],
-    "recuperadas": 17,
-    "por_codigo": {
-      "E101": 17
-    }
+    "recuperadas": 0,
+    "por_codigo": {}
   },
-  "brecha_global_pct": 44.5,
-  "brecha_global_con_otras_taxonomias_pct": 44.0,
+  "brecha_global_pct": 46.7,
+  "brecha_global_con_otras_taxonomias_pct": 46.7,
   "mecanismos": [
     {
       "clase": "carmin",
       "en_vocab_off": false,
       "off_mandatory": true,
-      "n": 8,
-      "sin_tag": 8,
-      "sin_ninguna": 8,
+      "n": 19,
+      "sin_tag": 19,
+      "sin_ninguna": 19,
       "brecha_pct": 100.0,
       "brecha_pct_con_otras_taxonomias": 100.0
     },
@@ -74,6 +72,16 @@
     },
     {
       "clase": "mineral_inorganico",
+      "en_vocab_off": false,
+      "off_mandatory": false,
+      "n": 2,
+      "sin_tag": 2,
+      "sin_ninguna": 2,
+      "brecha_pct": 100.0,
+      "brecha_pct_con_otras_taxonomias": 100.0
+    },
+    {
+      "clase": "mineral_inorganico",
       "en_vocab_off": true,
       "off_mandatory": false,
       "n": 46,
@@ -83,24 +91,14 @@
       "brecha_pct_con_otras_taxonomias": 21.7
     },
     {
-      "clase": "mineral_inorganico",
-      "en_vocab_off": true,
-      "off_mandatory": true,
-      "n": 30,
-      "sin_tag": 22,
-      "sin_ninguna": 22,
-      "brecha_pct": 73.3,
-      "brecha_pct_con_otras_taxonomias": 73.3
-    },
-    {
       "clase": "natural_botanico",
       "en_vocab_off": false,
       "off_mandatory": false,
-      "n": 170,
-      "sin_tag": 163,
-      "sin_ninguna": 163,
-      "brecha_pct": 95.9,
-      "brecha_pct_con_otras_taxonomias": 95.9
+      "n": 244,
+      "sin_tag": 239,
+      "sin_ninguna": 239,
+      "brecha_pct": 98.0,
+      "brecha_pct_con_otras_taxonomias": 98.0
     },
     {
       "clase": "natural_botanico",
@@ -116,11 +114,11 @@
       "clase": "natural_botanico",
       "en_vocab_off": true,
       "off_mandatory": false,
-      "n": 145,
-      "sin_tag": 104,
-      "sin_ninguna": 87,
-      "brecha_pct": 71.7,
-      "brecha_pct_con_otras_taxonomias": 60.0
+      "n": 123,
+      "sin_tag": 86,
+      "sin_ninguna": 86,
+      "brecha_pct": 69.9,
+      "brecha_pct_con_otras_taxonomias": 69.9
     },
     {
       "clase": "natural_botanico",
@@ -136,51 +134,51 @@
       "clase": "sintetico",
       "en_vocab_off": false,
       "off_mandatory": false,
-      "n": 381,
-      "sin_tag": 340,
-      "sin_ninguna": 340,
-      "brecha_pct": 89.2,
-      "brecha_pct_con_otras_taxonomias": 89.2
+      "n": 478,
+      "sin_tag": 435,
+      "sin_ninguna": 435,
+      "brecha_pct": 91.0,
+      "brecha_pct_con_otras_taxonomias": 91.0
     },
     {
       "clase": "sintetico",
       "en_vocab_off": true,
       "off_mandatory": false,
-      "n": 2192,
+      "n": 2215,
       "sin_tag": 526,
       "sin_ninguna": 526,
-      "brecha_pct": 24.0,
-      "brecha_pct_con_otras_taxonomias": 24.0
+      "brecha_pct": 23.7,
+      "brecha_pct_con_otras_taxonomias": 23.7
     }
   ],
   "modelo_firth": [
     {
       "termino": "intercepto",
-      "coef": -1.1426,
-      "OR": 0.32,
-      "IC_bajo": 0.29,
-      "IC_alto": 0.35
+      "coef": -1.1622,
+      "OR": 0.31,
+      "IC_bajo": 0.28,
+      "IC_alto": 0.34
     },
     {
       "termino": "natural",
-      "coef": 1.9404,
-      "OR": 6.96,
-      "IC_bajo": 4.95,
-      "IC_alto": 9.93
+      "coef": 1.9415,
+      "OR": 6.97,
+      "IC_bajo": 4.86,
+      "IC_alto": 10.17
     },
     {
       "termino": "fuera_vocab",
-      "coef": 3.1477,
-      "OR": 23.28,
-      "IC_bajo": 17.19,
-      "IC_alto": 32.2
+      "coef": 3.4287,
+      "OR": 30.84,
+      "IC_bajo": 22.86,
+      "IC_alto": 42.51
     },
     {
       "termino": "mandatory",
-      "coef": 2.5395,
-      "OR": 12.67,
-      "IC_bajo": 1.66,
-      "IC_alto": 1627.59
+      "coef": 2.5116,
+      "OR": 12.32,
+      "IC_bajo": 1.6,
+      "IC_alto": 1586.39
     }
   ],
   "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
@@ -194,12 +192,12 @@
     }
   ],
   "estandarizacion": {
-    "brecha_sintetico_pct": 33.7,
-    "brecha_natural_cruda_pct": 87.7,
-    "brecha_natural_estandarizada_pct": 75.3,
-    "diferencia_cruda_pp": 54.0,
-    "diferencia_atribuible_al_origen_pp": 41.6,
-    "pct_de_la_diferencia_que_es_origen": 77.1
+    "brecha_sintetico_pct": 35.7,
+    "brecha_natural_cruda_pct": 90.5,
+    "brecha_natural_estandarizada_pct": 74.9,
+    "diferencia_cruda_pp": 54.8,
+    "diferencia_atribuible_al_origen_pp": 39.2,
+    "pct_de_la_diferencia_que_es_origen": 71.6
   },
   "PENDIENTE": "MINERALES = {E170, E171, E172} se sacaron del eje por decision propia. Requiere veredicto de la Dra. antes de fijarse."
 }

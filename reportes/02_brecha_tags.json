@@ -1,30 +1,26 @@
 {
   "n_con_texto_ingredientes": 7775,
-  "n_con_colorante_en_texto": 2502,
-  "n_con_brecha": 1942,
-  "PCT_BRECHA": 77.6,
-  "n_solo_en_tags": 112,
-  "n_generico_sin_sustancia": 164,
+  "n_con_colorante_en_texto": 2085,
+  "n_con_brecha": 1545,
+  "PCT_BRECHA": 74.1,
+  "n_solo_en_tags": 107,
+  "n_generico_sin_sustancia": 131,
   "codigos_mas_perdidos": [
     [
-      "E101",
-      605
+      "E160b",
+      335
     ],
     [
       "E110",
-      246
+      252
     ],
     [
       "E133",
-      224
+      228
     ],
     [
       "E120",
-      214
-    ],
-    [
-      "E170",
-      206
+      223
     ],
     [
       "E160c",
@@ -35,20 +31,16 @@
       178
     ],
     [
-      "E160a",
-      176
-    ],
-    [
-      "E160b",
-      170
-    ],
-    [
       "E102",
-      151
+      165
+    ],
+    [
+      "E160a",
+      165
     ],
     [
       "E129",
-      142
+      151
     ],
     [
       "E132",
@@ -56,7 +48,11 @@
     ],
     [
       "E171",
-      31
+      33
+    ],
+    [
+      "E124",
+      27
     ],
     [
       "E127",
@@ -64,27 +60,32 @@
     ],
     [
       "E163",
-      17
+      18
+    ],
+    [
+      "E160e",
+      18
     ]
   ],
   "brecha_relativa_por_codigo_pct": {
     "E160c": 100.0,
-    "E160a": 100.0,
     "E160b": 100.0,
-    "E101": 98.5,
-    "E120": 95.5,
+    "E160a": 100.0,
+    "E160e": 100.0,
+    "E160a-i": 100.0,
+    "E120": 95.7,
+    "E124": 90.0,
     "E127": 89.7,
+    "E162": 86.7,
     "E100": 78.4,
-    "E170": 78.0,
-    "E133": 63.6,
+    "E133": 64.0,
     "E132": 60.0,
-    "E163": 51.5,
-    "E110": 46.6,
-    "E122": 35.7,
-    "E140": 30.0,
-    "E171": 22.8,
-    "E129": 21.5,
-    "E102": 20.4
+    "E163": 52.9,
+    "E122": 52.6,
+    "E110": 46.5,
+    "E171": 23.9,
+    "E129": 22.6,
+    "E102": 21.7
   },
   "nota": "PCT_BRECHA es la proporcion de productos con colorante nombrado en el texto que no lo tienen en additives_tags. Es el numero de portada. 'solo_en_tags' es el caso inverso y sirve de control: si es alto, el diccionario semilla esta incompleto, no additives_tags."
 }

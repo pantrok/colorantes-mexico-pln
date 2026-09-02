@@ -1,64 +1,128 @@
 code,producto,forma_oficial,sin,codigo_e,clase,categoria,ya_en_tags
-0014100085478,GOLDFISH,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0076150601336,ACT II sabor Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0850697002456,Abanico Mac'Ma,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-0850697002661,CRISPY WAFER FAN,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-0884912112217,HONEY BUNCHES OF OATS STRAWBERRIES,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501000142705,Cuernitos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501002612114,Cheez Whiz,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501002612213,Cheez Whiz Jalapeño,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0014100074120,Milano Dark Chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0014100079477,MILANO MINT CHOCOLATE,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0014100079521,CHESSMEN COOKIES,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0014100085478,GOLDFISH,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0014100093626,Goldfish grahams s'mores,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0016000490888,Harina para preparar pastel sabor a chocolate estilo red velvet,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0016000490895,Harina para preparar brownie saboe a chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0016000490949,Harina para preparar pastel sabor a jarabe de chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0016000490956,Harina para preparar pastel sabor a chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0016000490987,Super moist french vanilla cake mix,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0038000291760,Special K 12g protein Meals Bars Strawberry,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0038000311109,Pop Tarts Frosted Brown Sugar Cinnamon,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0038000313103,POP TARTS FROSTED CHOCOLATE FUDGE,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0038000318108,POP TARTS FROSTED CHERRY NATURALLY FLAVORED,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041387412246,4C SEASONED,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041449001104,Complete pancake mix buttermilk,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041449003153,Harina preparada completamente para hacer Hot Cakes,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041449471549,Harina preparada para pastelitos con arándano y naranja,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0049508006008,Snack Factory Pretzel Crisps Original,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0051500601761,Moist Supreme Dark Chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0055653632108,Vinta,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0070847003632,Monster Energy Lo-carb,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0070847003656,Monster Energy,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0070847017332,Monster Punch,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0072180634290,Pizza 4 Quesos Red Baron,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0072180634719,Supreme Pizza Red Baron,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0072180634733,Classic Crust Pizza de Peperoni,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0077975034095,Pretzel Sticks,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0077975034101,Mini Pretzels,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0078742011028,Caramel coconut & fudge cookies,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0605388188021,Fudge Marshmallow Cookies,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0644209307579,Duncan hines,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0644209411252,Signature perfectly moist swiss chocolate cake mix,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0681131861472,Corteza de pan para pay,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0738912022413,Country Fried Beef Steak,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0739907000010,Harina de maíz blanco,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0785391703166,Turtle Cheesecake,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912103703,WAFFLE CRISP,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912112217,HONEY BUNCHES OF OATS STRAWBERRIES,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912126016,Crunchy Pecan Cereal,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912126115,GREAT GRAINS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912129512,COCOA PEBBLES,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912259363,HONEY BUNCHES OF OATS PECAN & MAPLE BROWN SUGAR,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912273116,Oreo O's Cereal,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2548290100539,Premium Golden Grain Campestre,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+6137112940703,Serpentina,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500326286117,Pretzels Galletas Horneadas Saladas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501005102667,Soya + jugo de naranja,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005102667,Soya + jugo de naranja,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501017006762,Tamal de dulce,rojo fd&c40,SIN129,E129,sintetico,falso_negativo_real,False
-7501020537390,Queso Manchego LALA,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-7501020537482,Queso Manchego LALA,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7501008094273,Extra chocolate con almendras,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020533897,Nutri leche,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501020537543,Queso tipo americano light 8 rebanadas,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-7501020537550,Americano Nutri Leche,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-7501020555226,Gouda rebanadas de queso,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501030454786,PANQUÉ CASERO Y MANTEQUILLA TÍA ROSA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501030457428,Explosión de tartas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501031111039,Surtido Castilla,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-7501031111039,Surtido Castilla,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
-7501031111190,Galletas Cuenta Conmigo,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-7501031111190,Galletas Cuenta Conmigo,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
-7501037217063,CEREZAS EN ALMÍBAR LOLTUN,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501040081422,Queso tipo Manchego rebanado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501020548327,Leche Siluette plus,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020548419,Nutri leche deslactosada,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501022010921,Rock star Energy Drink,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501024577262,Jarabe para preparar bebidas sabor chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501040081477,Queso Americano La Villita,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501040081477,Queso Americano La Villita,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501040081477,Queso Americano La Villita,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-7501040082016,Queso Machego FUD,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040090745,Yoplait contiene trozos de fresa natural y probióticos,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501092109143,Queso Fundido Lyncott,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501295600621,Lechita 100% pura de vaca sabor helado de fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
-7501413540778,Itto Salsa con Habanero,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501413549733,Itto Salsa con chile,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501413549740,Itto Salsa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501669804198,Aderezo para nachos El ciervo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501669880109,Queso tipo Americano Esmeralda,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501761865394,Multibran con pasas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791616553,Queso tipo americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791624640,Queso tipo Americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791650236,Queso tipo Americano Aurrera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791668569,Barras de coco,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
+7501058614278,Fitness Fruits,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058629586,CHEERIOS MIEL,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501059289802,FITNESS FRUITS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501200483110,Harina preparada Pronto para hot cakes ligeros,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501200483134,Harina para preparar hot cakes,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100119,PUMPERNICKEL,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100126,WHOLE WHEAT DELI BAGEL,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100218,BAGEL CHIPS AJO,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100225,BAGEL CHIPS GRANOS Y SEMILLAS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100508,Premium Golden Grain Granos y Semillas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100515,Premium Golden Grain Integral,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501404603116,Harina de trigo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791628068,Pan con 12 granos,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791628075,Pan con Arándano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791628082,Extra Special Pan marmoleado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791635233,WORLD TABLE,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791635240,WORLD TABLE,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791635257,CROSTINI TOMATE Y ROMERO,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791635271,CROSTINI SABOR PESTO,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791635288,CROSTINI ACEITUNA NEGRA,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791644051,Harina de trigo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791656467,Galletas marías,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791664615,Pan Pita Tomate y Albahaca,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791665018,Chocolate en polvo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791668927,Chocolate en polvo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502209115118,Pan pita Receta tradicional,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502209115194,Pan pita Taquero,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502209115224,Pan pita de trigo integral,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7502244270155,Dip alcachofa con parmesano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7502244270155,Dip alcachofa con parmesano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
 7502244270193,Dip elote,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7502244270193,Dip elote,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501791632362,World table Galletas de hojaldre tipo banderillascon queso gouda y edam,amarillo natural 6,SINnr_azafran,,natural_botanico,falso_negativo_real,False
-0724865045210,Soles,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
-0850697002425,Galletas Mac Ma fresa,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,True
-0850697002425,Galletas Mac Ma fresa,rojo fd&c40,SIN129,E129,sintetico,falso_negativo_real,False
-7501791670555,Queso tipo Manchego Great Value,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501020547207,Queso manchego rallado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0016000467583,Cinnamon Toast Crunch Treats,anaranjado 3,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501000137237,Bran Frut Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501000137763,Bran Frut Piña,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501030459620,Multigrano arandanos y sabor fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501025511326,Soful Lt,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
-7501689026402,Capistrano Salchicha de Pavo,extracto de coccus cacti,SIN120,E120,carmin,falso_negativo_real,False
-7501147515035,Kir Salchicha para asar,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
+7506205807366,Chocolate en polvo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506205807640,Chocolate en polvo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7622300117184,Hony Bran,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7622300117207,Hony Bran,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7622300724764,Oreo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7622300724788,Oreo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8436048462630,Dinosaurus,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+9002490200220,Red Bull Sugarfree,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+9002490207717,Red bull,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+9002490211486,Red Bull Energy Drink,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+90424441,RedBull The Tropical Edition,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506205802157,Choco Milk,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506205802171,Choco Milk,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503013040160,Chocolate en polvo Cal C Tose fortificado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0014100096054,GRAHAMS FUDGE BROWNIE,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0014100085539,Flavor blasted xplosive pizza baked snack crackers,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+56189209,Mini Bagel,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008002049,Zucaritas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008006450,Rice Krispies Treats,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+0016000467590,Golden Grahams Treats,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008010242,Rice Krispies Treats Chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008010105,Rice Krispies Treats Sabor Original,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0016000467576,Marshmallow flavored bars,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0014100074649,STRAWBERRY COOKIES,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501000137237,Bran Frut Fresa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0038000531101,Special K protein meal bars chocolate caramel,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+6508000860807,Special K Chocolate y Fresa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501000137763,Bran Frut Piña,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+77940131,Turrón & Maní,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+00790055,Zucaritas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008070642,Special K pay de queso y frambuesa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501055360093,Del Valle Nutri forte Mango,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501055360079,Del Valle Nutri forte Naranja,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501005114523,Ades Max sabor Mango,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005114523,Ades Max sabor Mango,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
 7501005108065,Ades Max,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
@@ -67,292 +131,358 @@ code,producto,forma_oficial,sin,codigo_e,clase,categoria,ya_en_tags
 7501005114516,Soya + Jugo de naranja,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
 7506306305724,Ades cero sabor mango,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7506306305724,Ades cero sabor mango,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7622210852052,GALLETA OREO PAY DE LIMON,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
+0041820071092,Cremora,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+0041820071085,Cremora,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+0049508250630,DESSERT THINS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0049508250647,DESSERT THINS CHOCOLATE CHIPS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0049508250777,DESSERT THINS LEMON,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0030100033196,FUDGE STRIPES COOKIES,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501020537499,Queso americano Lala,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501020537499,Queso americano Lala,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501020537499,Queso americano Lala,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-7501077510599,Noche buena queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040083761,Fud queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501077510575,Noche buena queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501077510377,Noche buena Queso Manchego reducido en grasa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501002202179,caperucita queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501077513156,Noche buena queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040083570,Queso tipo manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040083884,Queso tipo manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
 7501020537383,Queso procesado americano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501020537383,Queso procesado americano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501020537383,Queso procesado americano,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-0046100010990,Queso mozzarella pizza double cheese,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040083587,Queso manchego rallado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791725439,Queso mozzarella picado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501689021001,Capistrano Vida Deli,extracto de coccus cacti,SIN120,E120,carmin,falso_negativo_real,False
-7501761856743,Quaker Granola de Avena y Trigo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791636018,Sustituto de crema,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-7501791640954,Extra Special Queso semicurado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0884912020505,Cereal Hojuelas De Maiz Con Almendr,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501761865424,Avena flakes quaker sabor vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791645119,BRAN FIBRA FLAKES,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-7501791657518,Mermelada de Guayaba,anaranjado natural 4,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791647175,Mermelada de Fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
-7501791647175,Mermelada de Fresa,anaranjado natural 4,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0605388716163,Mermelada de Fresa reducida en calorias,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
-0051500361702,Smucker´s Mermelaa de zarzamora,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
-0051500038178,Smucker´s Mermelada de Naranja,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
-7501791647182,Mermelada de zarzamora,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
-0071828003108,Stone Ground Mustard,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0071828002385,Mostaza American Picnic  Beaver Brand,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501003107848,CREMA DE CHILE POBLANO,verde natural 3,SIN140,E140,natural_botanico,falso_negativo_real,False
-0051500054864,Mermelada de zarzamora Smucker´s,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
-0051500054864,Mermelada de zarzamora Smucker´s,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
-0051500054888,Mermelada de chabacano Smucker´s,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
-0051500054888,Mermelada de chabacano Smucker´s,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
-7503005273354,Palm Tree Cookies D´meals,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501761882391,Granola 3 Minutos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7502254497016,Mumbaí,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058615305,La lechera,carbon vegetal,SIN153,E153,natural_botanico,falso_negativo_real,True
+7501791641753,Cereale slim fit,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501059284784,NESQUIK,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008042267,Zucaritas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501059241060,Cookie Crisp,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008019634,NESQUIK,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0016000272019,LUCKY CHARMS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008042953,Zucaritas Kellogs 490G,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501059243897,CHEERIOS 4 GRANOS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501059288928,CHEERIOS CHOCOLATE,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501059243880,Cheerios Manzana Canela,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0042400212737,FROSTED MINI SPOONERS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0042400212744,FROSTED MINI SPOONERS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912020505,Cereal Hojuelas De Maiz Con Almendr,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0042400212621,FROSTED MINI SPOONERS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791659727,Sticks con crema de avellanas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058633446,FITNESS ORIGINAL,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791667043,BRAN FIBRA,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791645119,BRAN FIBRA FLAKES,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0002544317101,POP TARTS FROSTED STRAWBERRY,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058630186,Fitness breakfast cereal bars,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020555929,Nutri Leche Licuado Sabor chocolate y plátano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008025543,Producto Lácteo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791637404,Soya orgánica sin lactosa y gluten,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501032399238,SILK - Alimento líquido con almendra sabor chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079017010,FUSILLI,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502233117782,Golden Fit,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502233117768,Golden Fit chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0042400036173,Honey Buzzers,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0042400075080,Apple Zings,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502233116808,GLACS,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501055905546,Alpura Mujer,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0724194505034,Tosty Cones,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791628211,Worldtable Spaghetti,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079011971,Lasagne Festonata,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809571227,Penne Rigate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809571210,Tortiglioni,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809513067,Codo No. 2,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809570497,Mini tortigloni,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809515313,Barilla Estrellita,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809513029,Barilla Fideo No. 0,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809531351,Fetuccine,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018319335,De Luigi Penne Rigate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079011735,Italpasta Pasta con Verduras serpentina,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501075010112,Italpasta almejas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079016457,Italpasta Codo Rayada,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079011667,Italpasta Tornillo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000082657,Fusilli Arrabbiata,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0010248765135,Yemina Semilla de melón,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018312312,La Moderna Buen comer,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018312138,La Moderna Spaghetti con salsa de tomate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018310028,La Moderna Fideo 1,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018310523,Pasta de codo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2548018310264,La Moderna Munición,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501014310233,La Moderna Lengua,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502254497009,INSTANT CHAI,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502254497023,INSTANT CHAI VAINILLA,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+75017916691884,CAFE DULCE Y CREMOSO,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791657426,CAFE MOKACCINO,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791657402,CAFE CAPUCCINO,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041820071078,Cremora,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
 7501005102681,Adès Soja Mangue,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005102681,Adès Soja Mangue,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7503006575143,Piña colada,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
-7501005181365,Caldo de Pollo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-75012182,Mayonesa tipo casero Kraft,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501018315399,Speciale,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501018315443,sopa de coditos abanero,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501018315207,sopa munición con tomate y sabor a pollo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501018315436,Sopa de fideo chipotle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501018315344,Sopa moñitos  serrano,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501791669405,Choco Bowl,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008020562,Zucaritas Canela,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+00228169,sopa de fideo de pollo Disney,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315337,"Sopa kids, figuras sport",riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315269,Sopa Kids figuras marinas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315252,Kids sopa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315399,Speciale,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315405,Speciale vegetales y pollo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315443,sopa de coditos abanero,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315207,sopa munición con tomate y sabor a pollo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315436,Sopa de fideo chipotle,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315344,Sopa moñitos  serrano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315238,Sopa estrellitas con tomate y sabor pollo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315245,sopa coditos con tomate y sabor pollo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501005107662,sopa Mexicana,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506306307599,Sopa Mexicana de Res,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501005126304,Pasta seca fideo seco con tomate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501005129923,Sopa fideos,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501005134712,Sopa coditos,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501005134002,Sopa Municiones,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506306307605,Chile Poblano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506306307698,Sopa crema elote,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7506306307698,Sopa crema elote,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7506306307698,Sopa crema elote,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501006505689,Hungs wings,pigmento blanco 6,SIN171,E171,mineral_inorganico,falso_negativo_real,False
-7501209701314,LICUATTO DE NUEZ,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
-7501209701314,LICUATTO DE NUEZ,azul alimentos 2,SIN133,E133,sintetico,falso_negativo_real,False
-7501209701352,Delighurt Durazno,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
-7501209701345,Delighurt Fresa,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
-7501025511289,Soful sabor Fresa,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
-7501209701284,Delighurt Durazno,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
-7501209701277,Delighurt Fresa,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
-7501055904792,Yoghurt Deslactosado para beber sabor Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501055361199,Yogurt fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
+7506306307636,Crema de brócoli con queso,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506306307629,Crema champiñones,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506306307544,Crema queso,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+04122876,sopa  letras,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501005114196,Mayonesa Light Hellmann's,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005114196,Mayonesa Light Hellmann's,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501040093197,Licuado con Fresa y Granola,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501055905997,Frutal delactosado sabor fresa,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
-7501055903795,Frutal con leche y fruta sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501055905843,Frutal con leche y fruta sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040090158,Yoplait Yoghurt con Frutas Rojas,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501040090356,"Yoplait Yohurt con Cereales, Durazno y Nueces",rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501040090080,fresa natural y probioticos,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501040090349,Yoplait Yoghurt con cereales Fresas y almendras,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501055902255,Yoghurt con Mango,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501055900220,Yoghurt con Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501055900206,Yoghurt con Fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501055909278,Alpura Yoghurt con Fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501055909285,Alpura Yoghurt con Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501055909292,Alpura Yoghurt con Mango,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013610055,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501059296756,Eskimal Napolitano,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
-7501059296756,Eskimal Napolitano,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013611267,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013610048,MANTEQUILLA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7506390200653,Pela Pop Kaskaraleta vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501020555516,Gelatina Yomi 8 Pack Lala,rojo alimentos 3,SIN122,E122,sintetico,falso_negativo_real,False
-7506390200745,TV Pack Nestle,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
-7506390200745,TV Pack Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7506390200745,TV Pack Nestle,extracto de cempazuchitl,SIN161(b),E161b,natural_botanico,falso_negativo_real,False
-7501058616609,Paletas Lápiz de color Nestle,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
-7501058616609,Paletas Lápiz de color Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501059218987,Sandwich Eskimal de Nestle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501209701321,Licuatto,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
-7501209701239,Sheik Piña coco,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
-7501209701215,Sheik Durazno,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
-7501209701215,Sheik Durazno,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
-7501055902125,"Alpura, Yoghurt para beber con mango",extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013611113,MANTEQUILLA UNTABLE SIN GRASA,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013610413,MANTEQUILLA UNTABLE CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501055900404,Alpura Yoghurt para beber con durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501209701338,Licuatto,amarillo alimentos 4,SIN102,E102,sintetico,falso_negativo_real,False
-7501209701338,Licuatto,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
-7501013610031,MANTEQUILLA CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013620283,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013610154,Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013610024,Mantequilla Gloria sin sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013610017,MANTEQUILLA CON SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013610161,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013620276,MANTEQUILLA SIN SAL,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040092596,Yoplait Mini,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501032332020,Danone Mix Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501032395230,Danone Mix Manzana con Frutiaroz,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501328126029,Jugó verde delli,verde fd&c3,SIN143,E143,sintetico,falso_negativo_real,True
-7501020539646,Frutas Fresa Lala,rojo alimentos 17,SIN129,E129,sintetico,falso_negativo_real,False
-5514223807766,Botana de Queso Gouda,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501101546334,Nuggets de Pechuga,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501101545702,Alitas Picositas Bachoco,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501020555783,Yomi Sabores Lala,rojo alimentos 3,SIN122,E122,sintetico,falso_negativo_real,False
-7501040091254,Yoplait doble cero,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-75034009,Danette vainilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0787359100567,Crutones Queso y Ajo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0787359100574,Crutones Ranch Fresh Gourmet,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0787359100598,Crutones César Fresh Gourmet,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0787359101502,Crutones Fresh Gourmet estilo mediterráneo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020539653,Leche Lala frutas sabor mango,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501032332013,Danone Mix,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020552782,Yogur Delicias Pay de Limón Lala,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020552799,Lala Delicias Sabor Pay de Fresa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020552829,Yogur Delicias Red Velvet Lala,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020539646,Frutas Fresa Lala,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020537918,Nutri Leche,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503002028162,Banderillas Corn Dog Jumbo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0078139735179,Orange Chicken,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0078139710961,Vegetable Gyoza Potstickers,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503023807159,Botana de Queso Jalapeño,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0072714110849,Mozzarella cheese sticks,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0072714110832,Aros de Cebolla,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501100697808,Chick´n Bites,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502004716619,Nuggets de pechuga de pollo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502004719788,Alitas Buffalo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502004719801,Boneless Bufalo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503008278943,Donettes Old Fashion Sabor chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503021313560,Cheesecake Oreo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100027,Bagels Natural,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501290100096,Mini Bagel,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0059635005003,Texas Toast,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791670364,Waffles estilo caseros,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 75042813,Danette Cajeta Danone,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 75042813,Danette Cajeta Danone,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501020555486,Yomi Fresa Lala,rojo alimentos 3,SIN122,E122,sintetico,falso_negativo_real,False
-7501032600648,Margarina Sin Sal 4 en 1 Iberia,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7506306312494,Margarina Con Sal oliva Primavera,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7502004719764,Arrachera de pollo adobada Pilgrim's,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-7501041418661,Dedos de atun,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-2548791659284,"Nuggets de Pescado, Great Value",rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501791650922,"Barritas de pescado, Great Value,",pigmento blanco 6,SIN171,E171,mineral_inorganico,falso_negativo_real,False
+7502004716633,Filete de Pollo empanizado Pilgrim's,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502004719269,Pop Corn de pechuga de pollo Pilgrim's,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+0072714110825,"Jalapeños con queso crema, Mc Cain",riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0055773001679,Papas Savoury Wedges Mc Cain,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501047932024,Papas Ajos Sazonados La Huerta,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0889729000184,Hot Doggis RBS Rancho Buen Sabor,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503016956314,"Pizza Pockets Pepperoni, Pocket to go",riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503016956215,"Filete de Abadejo empanizado, Premium sea food Bonisimo del mar,",riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501041418654,"Nuggets de atún, Tuny,",riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501639308411,Bebida orgánica sabor almendra,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041789001918,Maruchan Instant Lunch Sabor a Pollo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041789001925,Maruchan,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041789001956,Instant Lunch Con Camarón,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041789001987,Instant Lunch Con Camarón y Chile Piquín,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501639308817,Bebida orgánica con soja,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501005104715,Mayonesa Hellmann's,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005104715,Mayonesa Hellmann's,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501011194465,Dip Tostitos sabor queso y jalapeño,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501003114785,Palomitas Cinepolis Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0076150200249,Act II Minis Sabor Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501006559071,Act II sabor Mantequilla 3 Pack,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501006559088,Act II sabor Mantequilla Extra 3 Pack,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501006559309,Act II sabor Infierno ultra picante,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501006559323,Act II sabor Queso Xtremo,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501006559026,Act II sabor Mantequilla Extra,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501003109095,Palomitas Cinepolis,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501003109088,Palomitas Cinepolis,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501006551075,Act II sabor Mantequilla Light,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0757528026936,Snaps sabor Esquites,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0020515100000,Queso estilo asadero La Villita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506205802164,Choco Milk,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502270310320,Meta B Protein,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501001625337,cereal chocolatoso,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502209113183,Pita Crisp Natural tostado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 0760412179519,Tequila Mix,plata,SIN174,,mineral_inorganico,falso_negativo_real,False
-7501032485177,Caribe cooler tinto,rojo d&c 5,SIN122,E122,sintetico,falso_negativo_real,False
+7502257730479,,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058633361,Cereal Fitness,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791601900,Leche de Soya Great Value,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0208205059001,Pastelitos con chispas de chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501954910238,Chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0208299069009,Pastelitos sabor con chocolate con chispas de chocolate estilo muffin,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501005152006,Aderezo Hellmann's light,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005152006,Aderezo Hellmann's light,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501209701420,Naranjada,amarillo alimentos 3,SIN110,E110,sintetico,falso_negativo_real,False
-7501791655439,Mozzarella Picado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040090875,Strawberry Yogurt,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
+7501018314507,Spaghetti,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501005129947,Sopa Estrellas sabor casero,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502500298428,Vegetales Penne Rigate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008039175,Cereales,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501795828426,Sabor a Chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008070833,Cosecha Roja,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058617453,Corn flakes sin gluten,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502217040600,Mileche,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041220251858,Fudge Grahams,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809515306,Spaghetti Barilla,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501005151979,Mayonesa Hellmann's Clásica,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005151979,Mayonesa Hellmann's Clásica,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501008754030,Galletas Surtido Diario,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+0041789001864,Maruchan habanero,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020545210,Leche,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506205810039,Enfamil comfort,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020552935,Bebida Lala Vita 3 Nueces,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501008754030,Galletas Surtido Diario,rojo no 40 fd&c,SIN129,E129,sintetico,falso_negativo_real,False
 7501008754030,Galletas Surtido Diario,azul no 1 fd&c,SIN133,E133,sintetico,falso_negativo_real,False
-7501058639639,"Coffee mate.
-Coffee mate.",extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-2000000106974,Leche sabor helado menta con chocolate,verde natural 3,SIN140,E140,natural_botanico,falso_negativo_real,False
-7501000112388,Panquecitos con chispas sabar a chocolate,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501005113373,Soya + Jugo de fruta (durazno),extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040090950,Yoplait con fresas naturales,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501023500773,Chorizo de Soya,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501200482366,Pronto light sabor uva,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-11857877,Fusión picante sabor : mantequilla + chile,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7622210541192,Oreo; Pat de Limón,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-7501792400403,Mini Orejas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501008733417,galletas gaufrette napolitanas,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+7501079019564,Fettucine con espinacas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503003488514,Charriitos Limón,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809571869,Surtido Pastas Cortas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0096619441921,Alimento liquido de soya organica ultrapasteurizado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041789008030,Pasta sabor a Quesos,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501200483103,Hot Cakes Tradicionales,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506205804700,Jumbopack Cal-C-Tose,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7802225688024,Limón,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079016488,Pluma Chica,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502500291405,Traditional fusilli,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502500292310,Vegetales Caracol Z,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501092604532,Codito,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501795813828,Pluma grande,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7790580111755,Cofler Graffiti,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058651273,Carlos V cereal,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018310103,spaghetti la moderna,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018310578,Caracol 3,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791626293,Spaghetti pasta de semolina de trigo duro,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500478000722,Multibran,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500478000722,Multibran,riboflavina 5 fosfato de sodio,SIN101(ii),E101,natural_botanico,falso_negativo_real,False
+7500478000722,Multibran,clorofilinas,SIN140,E140,natural_botanico,falso_negativo_real,False
+7500478000722,Multibran,sales de sodio y potasio de complejos cupricos de clorofilinas,SIN141(ii),E141,natural_botanico,falso_negativo_real,False
+7501791603171,Fusilli,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058652676,Nesquik,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7622210728869,Trident x layers,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+7501079019526,Pasta para sopa codo rayado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809575799,fettuccine,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501020556001,nutri 2 litro,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0606541931843,Original Multi-Grain Baked Crackers,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+0010248765159,Fideo mediano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079011261,Tornillo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502500291504,Tradicional Spaghetti,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502233117065,Golden Fit,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502233117195,Golden Fit Berrie,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500093673073,Codo Mediano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809515191,Pasta,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501792403152,Multigrano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502254497047,Instant chai,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0072320129945,Galletas de avena stauffers,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079017157,Fusilli Arrabbiata,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501008733417,galletas gaufrette napolitanas,azul fd&c 1,SIN133,E133,sintetico,falso_negativo_real,True
-7500093712604,valley foods cereal de trigo integral,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040006197,chimex,rojo curry,SIN129,E129,sintetico,falso_negativo_real,False
-0064144030330,Pam,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7500093712611,cereal de avena integral con pasas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501954907078,Bitz galletas rellenas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501030423522,Bran Fruit con Fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501055912391,Yogurt cereal,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7506302800247,Tortillas de harins taqueroa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501006559101,palomitas ACT II mantequilla 3 pack,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7503028643424,Tartinas sabor piña Tia Rosa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501002202261,queso tipo manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0608875001209,mayonesa con limón Heinz,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501079341023,Harina de trigo integral,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501126700292,Harina de trigo Inmaculada,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079016235,Tallarin italpasta,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018310264,sopa la morena,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500093712628,cereal de avena integral,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+39410801,cheerios miel,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502254497122,instant chai té chai con vainilla,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0070210001180,mybrand pan integral,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501058646866,BOOST,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0096619441914,Bebida de Soya Orgánica,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501014302164,Chocolate en polvo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079011810,Italpasta,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503024543100,Galletas con avena sabor cacao nibs y arándano,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500462043254,mixsure,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041220021994,tortilla de harina con salvado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501033954061,Fórmula para alimentación Ensure Clásico enteral especializada sabor vainilla,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502227427064,KL-Full cápsulas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7802225640770,bon o bon cookie's,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018310530,SPAGHETTI,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501005116992,sopa de letras 20%mas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018319014,La moderna integral,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7790580127336,Cofler Blanco con Chocolinas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008020142,Special K chocolate y fresa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501008020159,Special K Cosecha roja,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501005151955,HELLMANN'S clásica,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501005151955,HELLMANN'S clásica,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501018312039,Spaghetti con queso cheddar,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501030474722,Barritas fresa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+0070847035916,Bebida energética Monster,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018312039,Spaghetti con queso cheddar,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7802225688758,Rocklets Galletas sabor Vainilla,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7506306317628,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7506306317628,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-2548006559101,Act II,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501761863062,Avena integral fresas con crema,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
-7501030474739,Tostadas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0096619224098,Mezcla de 4 quesos rallados,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0096619224098,Mezcla de 4 quesos rallados,extracto de semillas de bixa orellana,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013103359,Jumex Durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-7501013103212,Bebida Jumex con durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-80941385,tic tac,rojo remolacha,SIN162,E162,natural_botanico,falso_negativo_real,True
-7501076117645,Dip escosa chipotle,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013103144,Bebida Jumex con durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-7501040091124,Yogurt yoplait de fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501761802504,Avena integral Quaker instant sabor fresas con crema,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
-0724865022327,Bicochitos,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
-7503006791062,Queso menonita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040097768,Yoplait Pina Coco natural,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0750176188239,Granola Quaker 3 minutos Natural,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501079221073,Marias,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0070847036074,monster Energy zero sugar,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502261257474,Tres Soles Harina de trigo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018321000,la moderna spaghe,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501033953361,Ensure,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502001164857,Forze VF Gold,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+77975737,Turrón & Maní sabor a Chocolatada,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079016211,Italiana spaghetti 200g,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501071304347,granola branli 5 semillas doypack,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079334391,Hot Cakes Tradicionales,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7802225511513,Bon o Bon,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+02411767,Seltz Multivitaminas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501253673797,Mono Chedraui,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0884912365200,Cereal Oreo’s,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501586300018,minsa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018319441,Rigatoni De Luigi,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079002856,Spaguetti Italpasta,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506205813405,chocolate en polvo reducido en azúcar,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+8076809513050,Spaguetti No.5,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0028029139976,Abadejo silvestre de Alaska Barritas de Abadejo empanizado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500093784557,Valley Foods,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501639308428,Bebida orgánica sabor almendra,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7790580109646,XL,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506353200232,vivasse,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7506495000783,Waffles con moras azules,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2548630203432,hojuelas de trigo integral con pasas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501791663151,Pan hamburguesa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501639309814,Bebida de avena orgánica,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501518476057,Imitación Queso Americano Rebanado,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
+7790580387006,Saladix sabor Pizza,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7502264764917,Bubble Tea,rojo no 40 fd&c,SIN129,E129,sintetico,falso_negativo_real,False
 7502264764917,Bubble Tea,azul no 1 fd&c,SIN133,E133,sintetico,falso_negativo_real,False
-7501253665532,Margarina Light Untable con sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0001205129961,Sopa preparada de fideos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7506306314023,Sopa preparada de Estrellas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7506306321014,Sopa del Sheriff,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501058647634,Nido Pre-Escolar,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018314552,Letra - Pasta de sémola de trigo durum,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7802225511537,bon o bon blanco,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7802225688048,Choc Kiss,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000146978,Bebida Vita Coco,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 2000000147062,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 2000000147062,Mayonesa Hellmann's clásica reducida en grasa,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501055914630,Yoghurt Alpura Bebible Fresa y Zarzamora,rojo natural 4,SIN120,E120,carmin,falso_negativo_real,False
 2000000123898,Mantequilla Alpura sin sal,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 2000000123898,Mantequilla Alpura sin sal,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-2000000123899,Mantequilla sin sal Gloria en barra,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501020563405,Zero piña coco,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-2000000147300,"Granola Quaker 3 Minutos avena, amaranto, pasas y cacahuates",extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-2000000147348,Cereal Post Honey Bunches Of Oats de almendras,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-2000000147356,Cereal Golden Mix taro y amaranto,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040097577,Yoghurt con fresa para beber,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7500810016787,Pan Tostado Brioche,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7502261268685,Cacahuate japonés,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-7501055914838,Yogurt Alpura Bebible Durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7503002998472,Queso Chihuahua Menonita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7500810022733,Bimbollos Parrilleros,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501002202452,Queso Manchego rebanado premium,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013105537,Jugo de durazno,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-7501013105735,Bebida con durazno y vitaminas,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-7500810016282,Besos de nuez,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-7501669804822,Queso Chihuahua Menonita,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040083136,Queso manchego rebanadas rectangulares,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501791607858,Aceite de Canola en Aerosol,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040097973,fresa natural,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7506495006242,Barritas de Pescado,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501040084867,Cuida-t Queso Hilado Reducido En Grasa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0750103610581,MANTEQUILLA GOURMET,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0076057110131,crema pars cafe,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501045404691,Cubitos De Atún Con Camarón,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
-7501076120850,Chile en Polvo Sabor Tamarindo,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7502259040033,Merengues Light Sabor A Cajeta,rojo curry,SIN129,E129,sintetico,falso_negativo_real,False
-7501055914524,Mango,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501253652402,Helado sabor Napolitano,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7500810001660,Pan Molido Clasico,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0724865042455,Galletas de soda,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
-7501045402697,Atun en Agua,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+2000000147301,Granola Branli 5 semillas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147304,Granola Branli almendra y coco tostado,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147315,Granola Branli granos y semillas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7790580131586,Cofler Chocolinas XL,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147335,Cereal Great Value Bran Fibra con pasas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147337,Cereal Great Value Slim Fit trigo y arroz,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147339,Cereal Great Value Bran Fibra Flakes,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147342,Cereal de avena Quaker Multibran con pasas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+2000000147342,Cereal de avena Quaker Multibran con pasas,clorofilinas,SIN140,E140,natural_botanico,falso_negativo_real,False
+2000000147348,Cereal Post Honey Bunches Of Oats de almendras,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147352,Cereal Post Great Grains con nueces almendras y plátanos,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147353,Cereal Post Great Grains con moras azules y almendras,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147354,Cereal Post Great Grains con uvas pasa dátiles y nueces,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2000000147356,Cereal Golden Mix taro y amaranto,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7394376620867,No Sugars Oat Drink,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501590286377,multimixFX,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501590286377,multimixFX,riboflavina 5 fosfato de sodio,SIN101(ii),E101,natural_botanico,falso_negativo_real,False
+7501639308398,Bebida de coco,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0208237022004,Pan para Hamburguesa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500443001181,Cacahuate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7065726286117,,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501478315496,,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,True
+7506475108676,Boost Menos Azúcar sabor fresa.,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501404621301,HARINA DE TRIGO INTEGRAL SELECTA,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503028351305,Proteína Bebible de chocolate/ vainilla,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018322038,Spaghetti - Pasta de sémola de trigo durum,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+2357321002490000011,pan selecto chedraui,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0001600049096,Harina para preparar pastel amarillo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+02075722,Biocros,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0787355100581,Crutones Italiano Fresh Gourmet,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501033955709,Pediasure,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501018315504,Sopa De Fideo Con Tomate Y Pollo,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503028351329,Proteína Bebible Sabor Vainilla,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501709451047,Zero Carbs Protein Isolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501020564082,Imitación queso americano,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501020564082,Imitación queso americano,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501020564082,Imitación queso americano,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-6508055915903,Yoghurt  super foods fresa con cereales,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7500810026984,Mini Pan Tostado Mantequilla,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501005129961,Sopa de Fideos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040080166,Queso Daisy Rebanado,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7502261260771,Mantequilla pasteurizada sin sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7500810038789,Mante chox Con Relleno Elaborado Con Cocoa,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7301040083884,Queso manchego rebanadas redondas,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7506205815621,ChocoMilk sabor a chocolate con cocoa,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0000654193184,Milton's Galletas Saladas Multigrano 4 pzas de 238 g,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0005565360208,Breton Ajonjoli,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0094331001171,Galletas integrales de trigo con avena sabor nuez,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7500463767821,Mini Waffles,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501033963483,Similac Total Comfort,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501791603720,Aurrera rebanadas,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501791603720,Aurrera rebanadas,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501791603720,Aurrera rebanadas,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-7502233111377,Cereal Banana Shake,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7503020692680,Churritos picorey,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-2904441855435,Gerber Grain & Grow Puffs sabor durazno,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501013106725,Bebida Carbonatada Sabor Naranja -Hierbabuena con 8% de jugo de naranja,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-0724865024369,Galletas sabor vainilla y limón,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
-0724865021375,Galletas sabor vainilla y mantequilla,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
-0724865021375,Galletas sabor vainilla y mantequilla,rojo fd&c40,SIN129,E129,sintetico,falso_negativo_real,False
-7506443107748,Yogurt griego deslactosado sabor fresa,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7501013105056,Bebida sabor mango baja en calorías,beta caroteno sintetico,SIN160a(i),E160a,sintetico,mal_clasificada,False
-0753030199995,Roles con canela,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-0024865052263,Galletas rellenas sabor chocolate Choco Nieve,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
+0074892706659,Gold standard sabor chocolate,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501639308374,Bebida orgánica de arroz con vitaminas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 0024865052263,Galletas rellenas sabor chocolate Choco Nieve,azul fd&c 1,SIN133,E133,sintetico,falso_negativo_real,True
-0094331355502,Harina para Hot Cakes con Avena,rojo 6,SIN124,E124,sintetico,falso_negativo_real,False
-7506475125017,Cereal sabor chocolate con malvaviscos,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501033952913,Glucerna,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7503017964363,,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 0681131778138,Bactericida para desinfectar,plata,SIN174,,mineral_inorganico,falso_negativo_real,False
-7501362623034,Nutri,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7502261263925,Galletas saladas sabor mantequilla,amarillo fd&c5,SIN102,E102,sintetico,falso_negativo_real,False
-7501253687718,Queso manchego,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7501040080067,Queso chihuahua,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
+7501253655090,Sopa de estrella,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+0041512155628,Pasta con salsa sabor a queso,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501253655113,Sopa de estrella,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7502261268487,Harina de Maíz Blanco,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079000821,Italpasta Fusilli Arrabbiata,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501079011773,ITALPASTA Puma al Pesto,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
 7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 5,SIN160a(i),E160a,sintetico,falso_negativo_real,False
 7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 5,SIN160a(ii),E160a,natural_botanico,falso_negativo_real,False
-7501518476019,Imitación Queso BURR Americano Rebanado,anaranjado alimentos 6,SIN160(e),E160e,sintetico,falso_negativo_real,False
-0810179083694,Peelerz,amarillo fd&c 6,SIN110,E110,sintetico,falso_negativo_real,True
-7501020572391,Yoghurt Griego Bebible Deslactosado Con Mango Bajo En Grasa Reducido En Azúcar,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7502261273221,Cubitos de Atun,rojo remolacha,SIN162,E162,natural_botanico,falso_negativo_real,True
-7500533002258,Rica Burguer Carne para Hamburguesa,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
-8719200303508,Margarina Light Pasteurizada con sal,extracto de annato,SIN160(b),E160b,natural_botanico,falso_negativo_real,False
-7502261266353,Carne preparada para hamburguesas,rojo betabel,SIN162,E162,natural_botanico,falso_negativo_real,False
+0808072000214,Spaghetti,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False
+7501557120935,Simi VF cápsulas,riboflavina,SIN101(i),E101,natural_botanico,falso_negativo_real,False

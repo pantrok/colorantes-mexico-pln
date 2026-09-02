@@ -26,10 +26,12 @@ del `git log`.
   Granados-Balbuena, 01/09/2026.
 - **Fusión del Acuerdo (DOF):** aplicada (`config/colorantes_adiciones.yaml`
   vía `src/fusionar_diccionario.py --aplicar`).
-- **Pendiente, sin empezar:** rehacer el flujo completo (01→12) contra el
-  diccionario v1.1, decidir el tratamiento del dióxido de titanio (E171) antes
-  del modelo de Firth, escribir el manual de anotación, sortear los 600 y
-  anotar contra el hash de v1.1.
+- **Flujo completo (01→12):** re-ejecutado el 02/09/2026 contra el
+  diccionario v1.1. Ver la sección «Corrida completa 01→12» más abajo para
+  las cifras nuevas y los dos bugs que se encontraron y corrigieron.
+- **Pendiente, sin empezar:** decidir el tratamiento del dióxido de titanio
+  (E171) antes del modelo de Firth, escribir el manual de anotación, sortear
+  los 600 y anotar contra el hash de v1.1.
 - **`config/acuerdo_colorantes.yaml`** (vocabulario legal de referencia): sin
   tocar desde el parche 6. No se congela ni se fusiona con el diccionario de
   detección; son cosas distintas a propósito.
@@ -91,6 +93,58 @@ Cifra de contraste con lo que anticipaba el parche 13: predijo 34 códigos;
 salieron **35**. La aritmética del propio parche tiene un desliz (37 − 2 = 35,
 no 34); los 202 términos sí coincidieron exactamente. No hay nada mal en el
 repo por esa diferencia.
+
+---
+
+## Corrida completa 01→12 contra el diccionario v1.1 (02/09/2026)
+
+No es un parche numerado — el usuario pidió correr todo el flujo con el
+diccionario ya congelado. Se documenta aquí por la misma razón que todo lo
+demás: dos bugs reales aparecieron al correrlo, y quien lea el repo después
+tiene que saber que ya se corrigieron.
+
+**Bug 1 — `01_subconjunto_mx.py` sobrescribía `reportes/procedencia.json`
+entero.** El script escribía un `dict` nuevo con solo
+`origen/fecha/licencia/sha256_salida`, borrando las secciones
+`taxonomias_off` y `acuerdo_mexicano_aditivos` que se habían agregado a mano
+en parches anteriores (documentación de commits y URLs de las taxonomías de
+OFF y de los Anexos del DOF). Se recuperó el contenido perdido desde
+`git show HEAD:reportes/procedencia.json` y se corrigió el script para que
+**fusione** (lee el archivo existente, actualiza solo esas cuatro claves) en
+vez de sobrescribir. Verificado con una segunda corrida: las claves manuales
+sobreviven.
+
+**Bug 2 — `07_forma_y_clase.py` tenía `MINERALES = {"E170", "E171"}`, sin
+E172**, mientras que `08`, `09`, `10`, `11` y `12` sí traen las tres. Con el
+bloque nombrado `naturales` en el YAML, un E172 sin marcar caía a
+`natural_botanico` por el nombre del bloque en vez de por su código real —
+exactamente el aviso genérico que `14_congelar_diccionario.py` imprime en
+cada corrida sobre este mismo riesgo. Corregido agregando E172 al set. **No
+cambió ningún número en esta corrida** porque E172 tuvo cero detecciones en
+este corte de datos; el arreglo previene el problema para cuando sí las
+tenga.
+
+**Además:** el diccionario `MEXICO` hardcodeado dentro de
+`09_replica_pais.py` (usado para comparar contra España) traía los números de
+la corrida del 27 de agosto, previa al congelamiento. Se actualizó con los
+valores de la v1.1 (correr `--pais en:mexico` primero para obtenerlos).
+
+### Cifras que cambiaron respecto a la última corrida citada en el repo
+
+| Número | Antes (pre-v1.1) | Ahora (v1.1) |
+|---|---|---|
+| Brecha depurada (`05`, la que se cita) | 66.1 % | **67.5 %** |
+| Brecha bruta (`02`) | 77.6 % | 74.1 % |
+| P1 azul (sintético vs. espirulina) | 328 vs. 4 | 332 vs. **0** (espirulina ahora exige contexto) |
+| P4 réplica España (natural, diferencia vs. México) | -8.4 pp (falla) | **-10.0 pp (sigue fallando)** — no era artefacto del diccionario sin depurar |
+| P7 términos estables entre países | 80.0 % | **85.7 %** |
+| M3 (vitaminas/minerales recuperadas en `08`) | 17 (E101) | **0** — E101 ya no existe en el eje, no hay nada que M3 pueda recuperar |
+| `10`, formas oficiales ya en nuestro diccionario | 44 (29.7 %) | **96 (64.9 %)** — por la fusión del DOF |
+
+**Aviso para leer `10_acuerdo_vs_off.json` de esta corrida:** de los 453
+productos que aparecen como «forma legal no reconocida», **421 son
+riboflavina**. Eso no es una brecha nueva: es la consecuencia esperada de que
+la Dra. la sacara del eje de color. No reportar esa cifra sin esa aclaración.
 
 ---
 

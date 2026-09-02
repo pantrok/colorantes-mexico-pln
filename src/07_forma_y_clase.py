@@ -60,7 +60,14 @@ VENTANA = 60
 SEMILLA = 20260825
 
 CARMIN = "E120"
-MINERALES = {"E170", "E171"}      # ni botanicos ni azoicos: se reportan aparte
+MINERALES = {"E170", "E171", "E172"}      # ni botanicos ni azoicos: se reportan aparte
+# Historicamente solo traia E170/E171. E172 (oxidos de hierro) faltaba, asi
+# que caia por defecto a "natural_botanico" via bloque -exactamente el aviso
+# que 14_congelar_diccionario.py hace en cada corrida: la clase analitica la
+# asigna este mapa, no el nombre del bloque del YAML, y aqui no se le habia
+# hecho caso. E170 ya no tiene termino alguno tras el congelamiento v1.1
+# (fuera del eje), asi que dejarlo en el set no cambia nada, pero se deja por
+# historial.
 
 # --- Estratos del conjunto anotado ---
 ESTRATOS = {"sintetico": 150, "natural": 250, "ambiguo_descartado": 100, "sin_deteccion": 100}

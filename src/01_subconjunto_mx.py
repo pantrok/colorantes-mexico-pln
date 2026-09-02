@@ -123,12 +123,17 @@ def main() -> None:
         print(f"  {k}: {v}")
 
     # Procedencia: hay que poder decir en Metodos exactamente que volcado se uso.
-    proc = {"origen": origen, "fecha": resumen["fecha_extraccion"],
-            "licencia": "ODbL — Open Food Facts. Citar y respetar atribucion compartida.",
-            "sha256_salida": hashlib.sha256(salida.read_bytes()).hexdigest()}
-    (Path(__file__).resolve().parents[1] / "reportes").mkdir(exist_ok=True)
-    (Path(__file__).resolve().parents[1] / "reportes" / "procedencia.json").write_text(
-        json.dumps(proc, ensure_ascii=False, indent=2), encoding="utf-8")
+    # FUSIONA en vez de sobrescribir: reportes/procedencia.json tambien guarda
+    # a mano la procedencia de las taxonomias de OFF y del Acuerdo mexicano
+    # (commits, URLs, fecha de descarga -ver parches 6 y posteriores-), y un
+    # write_text de un dict nuevo las borraba en cada corrida de este script.
+    ruta_proc = Path(__file__).resolve().parents[1] / "reportes" / "procedencia.json"
+    proc = json.loads(ruta_proc.read_text(encoding="utf-8")) if ruta_proc.exists() else {}
+    proc.update({"origen": origen, "fecha": resumen["fecha_extraccion"],
+                "licencia": "ODbL — Open Food Facts. Citar y respetar atribucion compartida.",
+                "sha256_salida": hashlib.sha256(salida.read_bytes()).hexdigest()})
+    ruta_proc.parent.mkdir(exist_ok=True)
+    ruta_proc.write_text(json.dumps(proc, ensure_ascii=False, indent=2), encoding="utf-8")
 
     guardar_reporte("01_subconjunto_mx", resumen)
 
