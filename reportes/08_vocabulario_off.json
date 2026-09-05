@@ -47,16 +47,16 @@
     "recuperadas": 0,
     "por_codigo": {}
   },
-  "brecha_global_pct": 46.7,
-  "brecha_global_con_otras_taxonomias_pct": 46.7,
+  "brecha_global_pct": 48.4,
+  "brecha_global_con_otras_taxonomias_pct": 48.4,
   "mecanismos": [
     {
       "clase": "carmin",
       "en_vocab_off": false,
       "off_mandatory": true,
-      "n": 19,
-      "sin_tag": 19,
-      "sin_ninguna": 19,
+      "n": 17,
+      "sin_tag": 17,
+      "sin_ninguna": 17,
       "brecha_pct": 100.0,
       "brecha_pct_con_otras_taxonomias": 100.0
     },
@@ -94,11 +94,11 @@
       "clase": "natural_botanico",
       "en_vocab_off": false,
       "off_mandatory": false,
-      "n": 244,
-      "sin_tag": 239,
-      "sin_ninguna": 239,
-      "brecha_pct": 98.0,
-      "brecha_pct_con_otras_taxonomias": 98.0
+      "n": 240,
+      "sin_tag": 235,
+      "sin_ninguna": 235,
+      "brecha_pct": 97.9,
+      "brecha_pct_con_otras_taxonomias": 97.9
     },
     {
       "clase": "natural_botanico",
@@ -114,11 +114,11 @@
       "clase": "natural_botanico",
       "en_vocab_off": true,
       "off_mandatory": false,
-      "n": 123,
-      "sin_tag": 86,
-      "sin_ninguna": 86,
-      "brecha_pct": 69.9,
-      "brecha_pct_con_otras_taxonomias": 69.9
+      "n": 124,
+      "sin_tag": 87,
+      "sin_ninguna": 87,
+      "brecha_pct": 70.2,
+      "brecha_pct_con_otras_taxonomias": 70.2
     },
     {
       "clase": "natural_botanico",
@@ -134,51 +134,51 @@
       "clase": "sintetico",
       "en_vocab_off": false,
       "off_mandatory": false,
-      "n": 478,
-      "sin_tag": 435,
-      "sin_ninguna": 435,
-      "brecha_pct": 91.0,
-      "brecha_pct_con_otras_taxonomias": 91.0
+      "n": 431,
+      "sin_tag": 417,
+      "sin_ninguna": 417,
+      "brecha_pct": 96.8,
+      "brecha_pct_con_otras_taxonomias": 96.8
     },
     {
       "clase": "sintetico",
       "en_vocab_off": true,
       "off_mandatory": false,
-      "n": 2215,
-      "sin_tag": 526,
-      "sin_ninguna": 526,
-      "brecha_pct": 23.7,
-      "brecha_pct_con_otras_taxonomias": 23.7
+      "n": 2078,
+      "sin_tag": 515,
+      "sin_ninguna": 515,
+      "brecha_pct": 24.8,
+      "brecha_pct_con_otras_taxonomias": 24.8
     }
   ],
   "modelo_firth": [
     {
       "termino": "intercepto",
-      "coef": -1.1622,
-      "OR": 0.31,
-      "IC_bajo": 0.28,
-      "IC_alto": 0.34
+      "coef": -1.1008,
+      "OR": 0.33,
+      "IC_bajo": 0.3,
+      "IC_alto": 0.37
     },
     {
       "termino": "natural",
-      "coef": 1.9415,
-      "OR": 6.97,
-      "IC_bajo": 4.86,
-      "IC_alto": 10.17
+      "coef": 1.8218,
+      "OR": 6.18,
+      "IC_bajo": 4.27,
+      "IC_alto": 9.09
     },
     {
       "termino": "fuera_vocab",
-      "coef": 3.4287,
-      "OR": 30.84,
-      "IC_bajo": 22.86,
-      "IC_alto": 42.51
+      "coef": 4.2438,
+      "OR": 69.67,
+      "IC_bajo": 45.1,
+      "IC_alto": 114.36
     },
     {
       "termino": "mandatory",
-      "coef": 2.5116,
-      "OR": 12.32,
-      "IC_bajo": 1.6,
-      "IC_alto": 1586.39
+      "coef": 2.4847,
+      "OR": 12.0,
+      "IC_bajo": 1.53,
+      "IC_alto": 1548.91
     }
   ],
   "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
@@ -192,12 +192,12 @@
     }
   ],
   "estandarizacion": {
-    "brecha_sintetico_pct": 35.7,
-    "brecha_natural_cruda_pct": 90.5,
+    "brecha_sintetico_pct": 37.1,
+    "brecha_natural_cruda_pct": 90.4,
     "brecha_natural_estandarizada_pct": 74.9,
-    "diferencia_cruda_pp": 54.8,
-    "diferencia_atribuible_al_origen_pp": 39.2,
-    "pct_de_la_diferencia_que_es_origen": 71.6
+    "diferencia_cruda_pp": 53.3,
+    "diferencia_atribuible_al_origen_pp": 37.8,
+    "pct_de_la_diferencia_que_es_origen": 70.9
   },
   "PENDIENTE": "MINERALES = {E170, E171, E172} se sacaron del eje por decision propia. Requiere veredicto de la Dra. antes de fijarse."
 }

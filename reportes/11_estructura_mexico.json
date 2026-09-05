@@ -1,31 +1,31 @@
 {
   "pais": "en:mexico",
   "fuente": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\intermedio\\productos_mx.parquet",
-  "n_detecciones": 3271,
+  "n_detecciones": 3085,
   "prevalencia_de_las_marcas": {
-    "pct_detecciones_con_codigo_en_texto": 1.8,
-    "pct_con_clase_declarada_antes": 41.3
+    "pct_detecciones_con_codigo_en_texto": 1.9,
+    "pct_con_clase_declarada_antes": 41.9
   },
   "tabla_decisoria": [
     {
       "tiene_codigo": false,
       "tiene_clase": false,
-      "n": 1899,
-      "recuperadas": 1085,
-      "pct_recuperado": 57.1
+      "n": 1772,
+      "recuperadas": 983,
+      "pct_recuperado": 55.5
     },
     {
       "tiene_codigo": false,
       "tiene_clase": true,
-      "n": 1313,
-      "recuperadas": 664,
-      "pct_recuperado": 50.6
+      "n": 1255,
+      "recuperadas": 612,
+      "pct_recuperado": 48.8
     },
     {
       "tiene_codigo": true,
       "tiene_clase": false,
-      "n": 21,
-      "recuperadas": 21,
+      "n": 20,
+      "recuperadas": 20,
       "pct_recuperado": 100.0
     },
     {
@@ -40,7 +40,7 @@
     {
       "tiene_codigo": false,
       "tiene_clase": false,
-      "n": 161,
+      "n": 159,
       "recuperadas": 4,
       "pct_recuperado": 2.5
     },
@@ -64,45 +64,45 @@
       "codigo": "E102",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 902,
-      "pct_con_codigo": 1.1,
-      "pct_con_clase": 34.9,
-      "pct_recuperado": 80.0
+      "n": 760,
+      "pct_con_codigo": 1.3,
+      "pct_con_clase": 35.3,
+      "pct_recuperado": 78.3
     },
     {
       "codigo": "E129",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 682,
+      "n": 669,
       "pct_con_codigo": 1.5,
-      "pct_con_clase": 35.8,
-      "pct_recuperado": 77.0
+      "pct_con_clase": 36.0,
+      "pct_recuperado": 77.4
     },
     {
       "codigo": "E110",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 559,
-      "pct_con_codigo": 1.4,
-      "pct_con_clase": 32.2,
-      "pct_recuperado": 54.7
+      "n": 542,
+      "pct_con_codigo": 1.3,
+      "pct_con_clase": 32.3,
+      "pct_recuperado": 53.5
     },
     {
       "codigo": "E133",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 363,
-      "pct_con_codigo": 3.0,
-      "pct_con_clase": 34.4,
-      "pct_recuperado": 36.1
+      "n": 356,
+      "pct_con_codigo": 3.1,
+      "pct_con_clase": 34.6,
+      "pct_recuperado": 36.0
     },
     {
       "codigo": "E120",
       "clase": "carmin",
       "sujeto_a_regla": true,
-      "n": 235,
+      "n": 233,
       "pct_con_codigo": 1.3,
-      "pct_con_clase": 31.5,
+      "pct_con_clase": 31.8,
       "pct_recuperado": 4.3
     },
     {
@@ -127,10 +127,10 @@
       "codigo": "E132",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 78,
-      "pct_con_codigo": 5.1,
-      "pct_con_clase": 46.2,
-      "pct_recuperado": 41.0
+      "n": 75,
+      "pct_con_codigo": 5.3,
+      "pct_con_clase": 46.7,
+      "pct_recuperado": 40.0
     },
     {
       "codigo": "E160a",
@@ -181,10 +181,10 @@
       "codigo": "E122",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 21,
+      "n": 19,
       "pct_con_codigo": 0.0,
-      "pct_con_clase": 33.3,
-      "pct_recuperado": 42.9
+      "pct_con_clase": 36.8,
+      "pct_recuperado": 47.4
     },
     {
       "codigo": "E160e",
@@ -279,7 +279,7 @@
   ],
   "por_clase": {
     "carmin": {
-      "n": 235,
+      "n": 233,
       "recuperadas": 10,
       "pct_recuperado": 4.3
     },
@@ -294,15 +294,15 @@
       "pct_recuperado": 11.6
     },
     "sintetico": {
-      "n": 2693,
-      "recuperadas": 1732,
-      "pct_recuperado": 64.3
+      "n": 2509,
+      "recuperadas": 1577,
+      "pct_recuperado": 62.9
     }
   },
   "VEREDICTO": {
     "solo_codigo_pct": 100.0,
-    "solo_clase_pct": 50.6,
-    "ninguna_pct": 57.1,
+    "solo_clase_pct": 48.8,
+    "ninguna_pct": 55.5,
     "apoya": "H2 el codigo en el texto",
     "nota": "Se compara cuanto sube la recuperacion respecto de las detecciones que no traen ni codigo ni clase. La marca que mas la suba es el mecanismo."
   },

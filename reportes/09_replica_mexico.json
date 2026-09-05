@@ -2,13 +2,13 @@
   "pais": "en:mexico",
   "volcado": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\crudo\\food.parquet",
   "n_productos_con_texto": 7775,
-  "n_detecciones_depuradas": 3417,
+  "n_detecciones_depuradas": 3228,
   "por_clase": [
     {
       "clase": "carmin",
-      "n": 235,
-      "sin_tag": 225,
-      "pct_en_vocab": 91.9,
+      "n": 233,
+      "sin_tag": 223,
+      "pct_en_vocab": 92.7,
       "brecha_pct": 95.7
     },
     {
@@ -20,17 +20,17 @@
     },
     {
       "clase": "natural_botanico",
-      "n": 441,
-      "sin_tag": 399,
-      "pct_en_vocab": 30.4,
-      "brecha_pct": 90.5
+      "n": 438,
+      "sin_tag": 396,
+      "pct_en_vocab": 30.8,
+      "brecha_pct": 90.4
     },
     {
       "clase": "sintetico",
-      "n": 2693,
-      "sin_tag": 961,
-      "pct_en_vocab": 82.3,
-      "brecha_pct": 35.7
+      "n": 2509,
+      "sin_tag": 932,
+      "pct_en_vocab": 82.8,
+      "brecha_pct": 37.1
     }
   ],
   "mecanismos": [
@@ -38,8 +38,8 @@
       "clase": "carmin",
       "en_vocab": false,
       "mandatory": true,
-      "n": 19,
-      "sin_tag": 19,
+      "n": 17,
+      "sin_tag": 17,
       "brecha_pct": 100.0
     },
     {
@@ -70,9 +70,9 @@
       "clase": "natural_botanico",
       "en_vocab": false,
       "mandatory": false,
-      "n": 244,
-      "sin_tag": 239,
-      "brecha_pct": 98.0
+      "n": 240,
+      "sin_tag": 235,
+      "brecha_pct": 97.9
     },
     {
       "clase": "natural_botanico",
@@ -86,9 +86,9 @@
       "clase": "natural_botanico",
       "en_vocab": true,
       "mandatory": false,
-      "n": 123,
-      "sin_tag": 86,
-      "brecha_pct": 69.9
+      "n": 124,
+      "sin_tag": 87,
+      "brecha_pct": 70.2
     },
     {
       "clase": "natural_botanico",
@@ -102,47 +102,47 @@
       "clase": "sintetico",
       "en_vocab": false,
       "mandatory": false,
-      "n": 478,
-      "sin_tag": 435,
-      "brecha_pct": 91.0
+      "n": 431,
+      "sin_tag": 417,
+      "brecha_pct": 96.8
     },
     {
       "clase": "sintetico",
       "en_vocab": true,
       "mandatory": false,
-      "n": 2215,
-      "sin_tag": 526,
-      "brecha_pct": 23.7
+      "n": 2078,
+      "sin_tag": 515,
+      "brecha_pct": 24.8
     }
   ],
   "modelo_firth": [
     {
       "termino": "intercepto",
-      "coef": -1.1622,
-      "OR": 0.31,
-      "IC_bajo": 0.28,
-      "IC_alto": 0.34
+      "coef": -1.1008,
+      "OR": 0.33,
+      "IC_bajo": 0.3,
+      "IC_alto": 0.37
     },
     {
       "termino": "natural",
-      "coef": 1.9415,
-      "OR": 6.97,
-      "IC_bajo": 4.86,
-      "IC_alto": 10.17
+      "coef": 1.8218,
+      "OR": 6.18,
+      "IC_bajo": 4.27,
+      "IC_alto": 9.09
     },
     {
       "termino": "fuera_vocab",
-      "coef": 3.4287,
-      "OR": 30.84,
-      "IC_bajo": 22.86,
-      "IC_alto": 42.51
+      "coef": 4.2438,
+      "OR": 69.67,
+      "IC_bajo": 45.1,
+      "IC_alto": 114.36
     },
     {
       "termino": "mandatory",
-      "coef": 2.5116,
-      "OR": 12.32,
-      "IC_bajo": 1.6,
-      "IC_alto": 1586.39
+      "coef": 2.4847,
+      "OR": 12.0,
+      "IC_bajo": 1.53,
+      "IC_alto": 1548.91
     }
   ],
   "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
@@ -158,31 +158,31 @@
   "comparacion_con_mexico": [
     {
       "clase": "carmin",
-      "n_mexico": 235,
+      "n_mexico": 233,
       "brecha_mexico_pct": 95.7,
-      "diferencia_pp": 0.2,
-      "en_vocab_mexico_pct": 91.9
+      "diferencia_pp": 0.0,
+      "en_vocab_mexico_pct": 92.7
     },
     {
       "clase": "natural_botanico",
-      "n_mexico": 441,
-      "brecha_mexico_pct": 90.5,
-      "diferencia_pp": 2.8,
-      "en_vocab_mexico_pct": 30.4
+      "n_mexico": 438,
+      "brecha_mexico_pct": 90.4,
+      "diferencia_pp": 0.0,
+      "en_vocab_mexico_pct": 30.8
     },
     {
       "clase": "sintetico",
-      "n_mexico": 2693,
-      "brecha_mexico_pct": 35.7,
-      "diferencia_pp": 2.0,
-      "en_vocab_mexico_pct": 82.3
+      "n_mexico": 2509,
+      "brecha_mexico_pct": 37.1,
+      "diferencia_pp": 0.0,
+      "en_vocab_mexico_pct": 82.8
     }
   ],
   "VEREDICTO": {
     "P4_natural_baja_15pp_o_mas": false,
-    "P4_diferencia_observada_pp": 2.8,
+    "P4_diferencia_observada_pp": 0.0,
     "P5_sintetico_cambia_menos_de_10pp": true,
-    "P5_diferencia_observada_pp": 2.0,
+    "P5_diferencia_observada_pp": 0.0,
     "lectura": "Si P4 se cumple y P5 tambien, el mecanismo de cobertura de vocabulario queda demostrado. Si P4 falla, el mecanismo esta mal planteado y hay que rehacerlo ANTES de escribir la Introduccion."
   },
   "advertencia": "Solo se comparan BRECHAS, que condicionan sobre el texto. Las prevalencias NO son comparables entre paises: el tamano y la composicion del subconjunto son muy distintos."

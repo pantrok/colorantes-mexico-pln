@@ -1,55 +1,55 @@
 {
   "pais": "en:spain",
   "fuente": "datos\\crudo\\food.parquet",
-  "n_detecciones": 3742,
+  "n_detecciones": 3669,
   "prevalencia_de_las_marcas": {
-    "pct_detecciones_con_codigo_en_texto": 10.0,
-    "pct_con_clase_declarada_antes": 86.3
+    "pct_detecciones_con_codigo_en_texto": 9.8,
+    "pct_con_clase_declarada_antes": 86.8
   },
   "tabla_decisoria": [
     {
       "tiene_codigo": false,
       "tiene_clase": false,
-      "n": 455,
-      "recuperadas": 213,
-      "pct_recuperado": 46.8
+      "n": 430,
+      "recuperadas": 197,
+      "pct_recuperado": 45.8
     },
     {
       "tiene_codigo": false,
       "tiene_clase": true,
-      "n": 2912,
-      "recuperadas": 946,
-      "pct_recuperado": 32.5
+      "n": 2878,
+      "recuperadas": 932,
+      "pct_recuperado": 32.4
     },
     {
       "tiene_codigo": true,
       "tiene_clase": false,
-      "n": 58,
-      "recuperadas": 56,
-      "pct_recuperado": 96.6
+      "n": 56,
+      "recuperadas": 54,
+      "pct_recuperado": 96.4
     },
     {
       "tiene_codigo": true,
       "tiene_clase": true,
-      "n": 317,
-      "recuperadas": 205,
-      "pct_recuperado": 64.7
+      "n": 305,
+      "recuperadas": 197,
+      "pct_recuperado": 64.6
     }
   ],
   "tabla_decisoria_solo_sujetos_a_la_regla": [
     {
       "tiene_codigo": false,
       "tiene_clase": false,
-      "n": 68,
-      "recuperadas": 19,
-      "pct_recuperado": 27.9
+      "n": 65,
+      "recuperadas": 18,
+      "pct_recuperado": 27.7
     },
     {
       "tiene_codigo": false,
       "tiene_clase": true,
-      "n": 1401,
-      "recuperadas": 306,
-      "pct_recuperado": 21.8
+      "n": 1388,
+      "recuperadas": 300,
+      "pct_recuperado": 21.6
     },
     {
       "tiene_codigo": true,
@@ -71,8 +71,8 @@
       "codigo": "E160a",
       "clase": "natural_botanico",
       "sujeto_a_regla": true,
-      "n": 1043,
-      "pct_con_codigo": 5.9,
+      "n": 1039,
+      "pct_con_codigo": 6.0,
       "pct_con_clase": 100.0,
       "pct_recuperado": 0.0
     },
@@ -80,8 +80,8 @@
       "codigo": "E160c",
       "clase": "natural_botanico",
       "sujeto_a_regla": false,
-      "n": 501,
-      "pct_con_codigo": 5.2,
+      "n": 496,
+      "pct_con_codigo": 4.6,
       "pct_con_clase": 100.0,
       "pct_recuperado": 0.0
     },
@@ -89,10 +89,10 @@
       "codigo": "E120",
       "clase": "carmin",
       "sujeto_a_regla": true,
-      "n": 500,
-      "pct_con_codigo": 4.0,
-      "pct_con_clase": 85.8,
-      "pct_recuperado": 67.8
+      "n": 488,
+      "pct_con_codigo": 4.1,
+      "pct_con_clase": 86.1,
+      "pct_recuperado": 68.0
     },
     {
       "codigo": "E100",
@@ -107,53 +107,53 @@
       "codigo": "E102",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 233,
-      "pct_con_codigo": 31.8,
-      "pct_con_clase": 50.6,
-      "pct_recuperado": 75.5
+      "n": 207,
+      "pct_con_codigo": 33.8,
+      "pct_con_clase": 51.2,
+      "pct_recuperado": 75.8
     },
     {
       "codigo": "E129",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 180,
-      "pct_con_codigo": 27.8,
-      "pct_con_clase": 50.0,
-      "pct_recuperado": 77.2
+      "n": 172,
+      "pct_con_codigo": 27.3,
+      "pct_con_clase": 49.4,
+      "pct_recuperado": 77.9
     },
     {
       "codigo": "E110",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 160,
-      "pct_con_codigo": 23.1,
-      "pct_con_clase": 45.0,
-      "pct_recuperado": 58.8
+      "n": 154,
+      "pct_con_codigo": 24.0,
+      "pct_con_clase": 46.1,
+      "pct_recuperado": 59.7
     },
     {
       "codigo": "E133",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 145,
-      "pct_con_codigo": 16.6,
-      "pct_con_clase": 62.8,
-      "pct_recuperado": 68.3
+      "n": 143,
+      "pct_con_codigo": 16.8,
+      "pct_con_clase": 62.9,
+      "pct_recuperado": 68.5
     },
     {
       "codigo": "E163",
       "clase": "natural_botanico",
       "sujeto_a_regla": false,
-      "n": 124,
-      "pct_con_codigo": 4.8,
+      "n": 123,
+      "pct_con_codigo": 4.1,
       "pct_con_clase": 100.0,
-      "pct_recuperado": 87.9
+      "pct_recuperado": 87.8
     },
     {
       "codigo": "E160b",
       "clase": "natural_botanico",
       "sujeto_a_regla": false,
-      "n": 104,
-      "pct_con_codigo": 10.6,
+      "n": 101,
+      "pct_con_codigo": 10.9,
       "pct_con_clase": 100.0,
       "pct_recuperado": 0.0
     },
@@ -206,10 +206,10 @@
       "codigo": "E132",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 23,
-      "pct_con_codigo": 21.7,
-      "pct_con_clase": 30.4,
-      "pct_recuperado": 65.2
+      "n": 22,
+      "pct_con_codigo": 22.7,
+      "pct_con_clase": 31.8,
+      "pct_recuperado": 63.6
     },
     {
       "codigo": "E124",
@@ -221,22 +221,13 @@
       "pct_recuperado": 41.2
     },
     {
-      "codigo": "E172",
-      "clase": "mineral_inorganico",
-      "sujeto_a_regla": false,
-      "n": 17,
-      "pct_con_codigo": 35.3,
-      "pct_con_clase": 100.0,
-      "pct_recuperado": 94.1
-    },
-    {
       "codigo": "E122",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 16,
-      "pct_con_codigo": 18.8,
-      "pct_con_clase": 62.5,
-      "pct_recuperado": 56.2
+      "n": 15,
+      "pct_con_codigo": 20.0,
+      "pct_con_clase": 60.0,
+      "pct_recuperado": 60.0
     },
     {
       "codigo": "E131",
@@ -246,6 +237,15 @@
       "pct_con_codigo": 0.0,
       "pct_con_clase": 76.9,
       "pct_recuperado": 53.8
+    },
+    {
+      "codigo": "E172",
+      "clase": "mineral_inorganico",
+      "sujeto_a_regla": false,
+      "n": 13,
+      "pct_con_codigo": 23.1,
+      "pct_con_clase": 100.0,
+      "pct_recuperado": 92.3
     },
     {
       "codigo": "E160d",
@@ -340,30 +340,30 @@
   ],
   "por_clase": {
     "carmin": {
-      "n": 500,
-      "recuperadas": 339,
-      "pct_recuperado": 67.8
+      "n": 488,
+      "recuperadas": 332,
+      "pct_recuperado": 68.0
     },
     "mineral_inorganico": {
-      "n": 82,
-      "recuperadas": 75,
-      "pct_recuperado": 91.5
+      "n": 78,
+      "recuperadas": 71,
+      "pct_recuperado": 91.0
     },
     "natural_botanico": {
-      "n": 2321,
-      "recuperadas": 447,
+      "n": 2308,
+      "recuperadas": 446,
       "pct_recuperado": 19.3
     },
     "sintetico": {
-      "n": 839,
-      "recuperadas": 559,
-      "pct_recuperado": 66.6
+      "n": 795,
+      "recuperadas": 531,
+      "pct_recuperado": 66.8
     }
   },
   "VEREDICTO": {
-    "solo_codigo_pct": 96.6,
-    "solo_clase_pct": 32.5,
-    "ninguna_pct": 46.8,
+    "solo_codigo_pct": 96.4,
+    "solo_clase_pct": 32.4,
+    "ninguna_pct": 45.8,
     "apoya": "H2 el codigo en el texto",
     "nota": "Se compara cuanto sube la recuperacion respecto de las detecciones que no traen ni codigo ni clase. La marca que mas la suba es el mecanismo."
   },

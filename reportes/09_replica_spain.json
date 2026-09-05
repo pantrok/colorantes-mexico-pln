@@ -2,35 +2,35 @@
   "pais": "en:spain",
   "volcado": "datos\\crudo\\food.parquet",
   "n_productos_con_texto": 52255,
-  "n_detecciones_depuradas": 4032,
+  "n_detecciones_depuradas": 3950,
   "por_clase": [
     {
       "clase": "carmin",
-      "n": 500,
-      "sin_tag": 161,
-      "pct_en_vocab": 97.2,
-      "brecha_pct": 32.2
+      "n": 488,
+      "sin_tag": 156,
+      "pct_en_vocab": 97.1,
+      "brecha_pct": 32.0
     },
     {
       "clase": "mineral_inorganico",
-      "n": 86,
+      "n": 82,
       "sin_tag": 7,
       "pct_en_vocab": 98.8,
-      "brecha_pct": 8.1
+      "brecha_pct": 8.5
     },
     {
       "clase": "natural_botanico",
-      "n": 2607,
-      "sin_tag": 2099,
-      "pct_en_vocab": 55.2,
+      "n": 2585,
+      "sin_tag": 2081,
+      "pct_en_vocab": 55.5,
       "brecha_pct": 80.5
     },
     {
       "clase": "sintetico",
-      "n": 839,
-      "sin_tag": 280,
-      "pct_en_vocab": 76.6,
-      "brecha_pct": 33.4
+      "n": 795,
+      "sin_tag": 264,
+      "pct_en_vocab": 77.6,
+      "brecha_pct": 33.2
     }
   ],
   "mecanismos": [
@@ -46,9 +46,9 @@
       "clase": "carmin",
       "en_vocab": true,
       "mandatory": true,
-      "n": 486,
-      "sin_tag": 150,
-      "brecha_pct": 30.9
+      "n": 474,
+      "sin_tag": 145,
+      "brecha_pct": 30.6
     },
     {
       "clase": "mineral_inorganico",
@@ -62,33 +62,33 @@
       "clase": "mineral_inorganico",
       "en_vocab": true,
       "mandatory": false,
-      "n": 85,
+      "n": 81,
       "sin_tag": 7,
-      "brecha_pct": 8.2
+      "brecha_pct": 8.6
     },
     {
       "clase": "natural_botanico",
       "en_vocab": false,
       "mandatory": false,
-      "n": 260,
-      "sin_tag": 237,
-      "brecha_pct": 91.2
+      "n": 251,
+      "sin_tag": 234,
+      "brecha_pct": 93.2
     },
     {
       "clase": "natural_botanico",
       "en_vocab": false,
       "mandatory": true,
-      "n": 907,
-      "sin_tag": 907,
+      "n": 900,
+      "sin_tag": 900,
       "brecha_pct": 100.0
     },
     {
       "clase": "natural_botanico",
       "en_vocab": true,
       "mandatory": false,
-      "n": 1245,
-      "sin_tag": 766,
-      "brecha_pct": 61.5
+      "n": 1239,
+      "sin_tag": 758,
+      "brecha_pct": 61.2
     },
     {
       "clase": "natural_botanico",
@@ -102,47 +102,47 @@
       "clase": "sintetico",
       "en_vocab": false,
       "mandatory": false,
-      "n": 196,
-      "sin_tag": 122,
-      "brecha_pct": 62.2
+      "n": 178,
+      "sin_tag": 113,
+      "brecha_pct": 63.5
     },
     {
       "clase": "sintetico",
       "en_vocab": true,
       "mandatory": false,
-      "n": 643,
-      "sin_tag": 158,
-      "brecha_pct": 24.6
+      "n": 617,
+      "sin_tag": 151,
+      "brecha_pct": 24.5
     }
   ],
   "modelo_firth": [
     {
       "termino": "intercepto",
-      "coef": -1.159,
+      "coef": -1.1847,
       "OR": 0.31,
       "IC_bajo": 0.26,
-      "IC_alto": 0.37
+      "IC_alto": 0.36
     },
     {
       "termino": "natural",
-      "coef": 1.6347,
-      "OR": 5.13,
-      "IC_bajo": 4.22,
-      "IC_alto": 6.26
+      "coef": 1.6537,
+      "OR": 5.23,
+      "IC_bajo": 4.28,
+      "IC_alto": 6.41
     },
     {
       "termino": "fuera_vocab",
-      "coef": 1.7589,
-      "OR": 5.81,
-      "IC_bajo": 4.48,
-      "IC_alto": 7.6
+      "coef": 1.9019,
+      "OR": 6.7,
+      "IC_bajo": 5.09,
+      "IC_alto": 8.92
     },
     {
       "termino": "mandatory",
-      "coef": 3.5017,
-      "OR": 33.17,
-      "IC_bajo": 16.39,
-      "IC_alto": 81.23
+      "coef": 3.443,
+      "OR": 31.28,
+      "IC_bajo": 15.45,
+      "IC_alto": 76.62
     }
   ],
   "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
@@ -150,40 +150,40 @@
   "comparacion_con_mexico": [
     {
       "clase": "carmin",
-      "n_mexico": 235,
-      "n_spain": 500,
+      "n_mexico": 233,
+      "n_spain": 488,
       "brecha_mexico_pct": 95.7,
-      "brecha_spain_pct": 32.2,
-      "diferencia_pp": -63.5,
-      "en_vocab_mexico_pct": 91.9,
-      "en_vocab_spain_pct": 97.2
+      "brecha_spain_pct": 32.0,
+      "diferencia_pp": -63.7,
+      "en_vocab_mexico_pct": 92.7,
+      "en_vocab_spain_pct": 97.1
     },
     {
       "clase": "natural_botanico",
-      "n_mexico": 441,
-      "n_spain": 2607,
-      "brecha_mexico_pct": 90.5,
+      "n_mexico": 438,
+      "n_spain": 2585,
+      "brecha_mexico_pct": 90.4,
       "brecha_spain_pct": 80.5,
-      "diferencia_pp": -10.0,
-      "en_vocab_mexico_pct": 30.4,
-      "en_vocab_spain_pct": 55.2
+      "diferencia_pp": -9.9,
+      "en_vocab_mexico_pct": 30.8,
+      "en_vocab_spain_pct": 55.5
     },
     {
       "clase": "sintetico",
-      "n_mexico": 2693,
-      "n_spain": 839,
-      "brecha_mexico_pct": 35.7,
-      "brecha_spain_pct": 33.4,
-      "diferencia_pp": -2.3,
-      "en_vocab_mexico_pct": 82.3,
-      "en_vocab_spain_pct": 76.6
+      "n_mexico": 2509,
+      "n_spain": 795,
+      "brecha_mexico_pct": 37.1,
+      "brecha_spain_pct": 33.2,
+      "diferencia_pp": -3.9,
+      "en_vocab_mexico_pct": 82.8,
+      "en_vocab_spain_pct": 77.6
     }
   ],
   "VEREDICTO": {
     "P4_natural_baja_15pp_o_mas": false,
-    "P4_diferencia_observada_pp": -10.0,
+    "P4_diferencia_observada_pp": -9.9,
     "P5_sintetico_cambia_menos_de_10pp": true,
-    "P5_diferencia_observada_pp": -2.3,
+    "P5_diferencia_observada_pp": -3.9,
     "lectura": "Si P4 se cumple y P5 tambien, el mecanismo de cobertura de vocabulario queda demostrado. Si P4 falla, el mecanismo esta mal planteado y hay que rehacerlo ANTES de escribir la Introduccion."
   },
   "advertencia": "Solo se comparan BRECHAS, que condicionan sobre el texto. Las prevalencias NO son comparables entre paises: el tamano y la composicion del subconjunto son muy distintos."

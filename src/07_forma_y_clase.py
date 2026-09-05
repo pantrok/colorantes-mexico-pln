@@ -214,14 +214,33 @@ def main() -> None:
         texto = normalizar(t.ingredientes_texto)
         tags = {str(a).replace("en:", "").upper() for a in como_lista(t.aditivos_tags)}
         dets = detectar_con_forma(texto, ordenados)
+        # Agrupar por codigo, conservando TODOS los terminos que coincidieron
+        # para ese codigo. CORREGIDO 05/09: un producto puede declarar el
+        # mismo colorante con dos sinonimos (p.ej. "achiote" y "annatto",
+        # ambos E160b); detectar_con_forma() los trae como dos entradas, y
+        # antes cada una generaba su propia fila en `pares` -n y sin_tag
+        # salian inflados-. Es una sola deteccion de ese codigo, no dos. El
+        # contexto se evalua con OR entre todos sus terminos -mismo criterio
+        # que 05_auditoria_brecha.py y 08_vocabulario_off.py-: basta que UNO
+        # tenga "colorante" cerca. Se usa el primer termino (el mas largo,
+        # porque `ordenados` va de mas largo a mas corto) para forma_de() y
+        # como termino representativo. Ver BITACORA_PARCHES.md.
+        terminos_por_codigo, orden_codigos = {}, []
+        for codigo, bloque, termino in dets:
+            if codigo not in terminos_por_codigo:
+                orden_codigos.append(codigo)
+                terminos_por_codigo[codigo] = (bloque, [])
+            terminos_por_codigo[codigo][1].append(termino)
         contrib = getattr(t, "contribuyente", None) if col_contrib else None
 
         bruto_eje, depurado_eje, descartados = set(), set(), set()
-        for codigo, bloque, termino in dets:
+        for codigo in orden_codigos:
+            bloque, terminos = terminos_por_codigo[codigo]
             if bloque not in ("sinteticos", "naturales"):
                 continue
             bruto_eje.add(codigo)
-            ok = codigo not in AMBIGUOS or con_contexto(texto, termino)
+            termino = terminos[0]
+            ok = codigo not in AMBIGUOS or any(con_contexto(texto, tm) for tm in terminos)
             if ok:
                 depurado_eje.add(codigo)
             else:
@@ -351,9 +370,22 @@ def main() -> None:
 
     # ------------------------------------------------- D. definiciones de Chiu
     # Chiu et al. (2025) cuentan el caramelo E150 como colorante natural.
+    #
+    # CORREGIDO 05/09: antes "es sintetico"/"es natural" se decidian por
+    # membresia cruda en dic["sinteticos"]/dic["naturales"] -el bloque del
+    # YAML-, no por clase_de(). Como E171/E172 (pigmento inorganico) viven
+    # fisicamente en el bloque "naturales", un producto cuyo unico colorante
+    # fuera E171/E172 se contaba como natural aqui y tambien en el estrato de
+    # la muestra de 600 (bloque E, mas abajo, que reusa estas mismas
+    # variables). Verificado que hoy no cambia ningun numero -0 productos en
+    # todo el corpus tienen E171/E172 como unico colorante-, pero el bug
+    # seguia en el codigo. Ver BITACORA_PARCHES.md.
+    clase_por_codigo = {}
+    for _, codigo, bloque in ordenados:
+        clase_por_codigo.setdefault(codigo, clase_de(codigo, bloque))
     n_tot = len(r)
-    tiene_sint = r.depurado.map(lambda s: any(c in dic["sinteticos"] for c in s))
-    tiene_nat_est = r.depurado.map(lambda s: any(c in dic["naturales"] for c in s))
+    tiene_sint = r.depurado.map(lambda s: any(clase_por_codigo.get(c) == "sintetico" for c in s))
+    tiene_nat_est = r.depurado.map(lambda s: any(clase_por_codigo.get(c) == "natural" for c in s))
     nat_chiu = tiene_nat_est | r.caramelo
     chiu = {
         "n_base": n_tot,

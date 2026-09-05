@@ -1,34 +1,34 @@
 {
   "n_con_texto": 7775,
-  "n_detecciones_brutas": 4066,
-  "n_detecciones_depuradas": 3417,
+  "n_detecciones_brutas": 3872,
+  "n_detecciones_depuradas": 3228,
   "A_FALSADOR_1": {
     "veredicto": {
       "sintetico_con_codigo_E": {
-        "n": 8,
-        "sin_tag": 7,
-        "brecha_pct": 87.5,
+        "n": 7,
+        "sin_tag": 6,
+        "brecha_pct": 85.7,
         "ic95": [
-          52.9,
-          97.8
+          48.7,
+          97.4
         ]
       },
       "sintetico_SIN_codigo_E": {
-        "n": 2685,
-        "sin_tag": 954,
-        "brecha_pct": 35.5,
+        "n": 2502,
+        "sin_tag": 926,
+        "brecha_pct": 37.0,
         "ic95": [
-          33.7,
-          37.4
+          35.1,
+          38.9
         ]
       },
       "natural_todos": {
-        "n": 441,
-        "sin_tag": 399,
-        "brecha_pct": 90.5,
+        "n": 438,
+        "sin_tag": 396,
+        "brecha_pct": 90.4,
         "ic95": [
-          87.4,
-          92.9
+          87.3,
+          92.8
         ]
       },
       "lectura": "Si sintetico_SIN_codigo_E se parece mas a natural_todos que a sintetico_con_codigo_E, la variable es la FORMA DE DECLARACION y no el origen: la tesis se reescribe como mediacion. Si se parece mas a sintetico_con_codigo_E, el origen se sostiene como eje directo."
@@ -37,10 +37,10 @@
       {
         "clase": "carmin",
         "forma": "nombre_fuente",
-        "n": 8,
-        "sin_tag": 8,
+        "n": 6,
+        "sin_tag": 6,
         "brecha_pct": 100.0,
-        "ic_bajo": 67.6,
+        "ic_bajo": 61.0,
         "ic_alto": 100.0
       },
       {
@@ -64,8 +64,8 @@
       {
         "clase": "natural",
         "forma": "nombre_fuente",
-        "n": 298,
-        "sin_tag": 296,
+        "n": 295,
+        "sin_tag": 293,
         "brecha_pct": 99.3,
         "ic_bajo": 97.6,
         "ic_alto": 99.8
@@ -82,20 +82,20 @@
       {
         "clase": "sintetico",
         "forma": "codigo_e",
-        "n": 8,
-        "sin_tag": 7,
-        "brecha_pct": 87.5,
-        "ic_bajo": 52.9,
-        "ic_alto": 97.8
+        "n": 7,
+        "sin_tag": 6,
+        "brecha_pct": 85.7,
+        "ic_bajo": 48.7,
+        "ic_alto": 97.4
       },
       {
         "clase": "sintetico",
         "forma": "nombre_sustancia",
-        "n": 2685,
-        "sin_tag": 954,
-        "brecha_pct": 35.5,
-        "ic_bajo": 33.7,
-        "ic_alto": 37.4
+        "n": 2502,
+        "sin_tag": 926,
+        "brecha_pct": 37.0,
+        "ic_bajo": 35.1,
+        "ic_alto": 38.9
       }
     ]
   },
@@ -104,12 +104,12 @@
       {
         "clase": "sintetico",
         "deteccion": {
-          "n": 2693,
-          "sin_tag": 961,
-          "brecha_pct": 35.7,
+          "n": 2509,
+          "sin_tag": 932,
+          "brecha_pct": 37.1,
           "ic95": [
-            33.9,
-            37.5
+            35.3,
+            39.1
           ]
         },
         "producto": {
@@ -125,12 +125,12 @@
       {
         "clase": "natural",
         "deteccion": {
-          "n": 441,
-          "sin_tag": 399,
-          "brecha_pct": 90.5,
+          "n": 438,
+          "sin_tag": 396,
+          "brecha_pct": 90.4,
           "ic95": [
-            87.4,
-            92.9
+            87.3,
+            92.8
           ]
         },
         "producto": {
@@ -146,8 +146,8 @@
       {
         "clase": "carmin",
         "deteccion": {
-          "n": 235,
-          "sin_tag": 225,
+          "n": 233,
+          "sin_tag": 223,
           "brecha_pct": 95.7,
           "ic95": [
             92.3,
@@ -190,12 +190,12 @@
       {
         "clase": "sintetico",
         "deteccion": {
-          "n": 2693,
-          "sin_tag": 961,
-          "brecha_pct": 35.7,
+          "n": 2509,
+          "sin_tag": 932,
+          "brecha_pct": 37.1,
           "ic95": [
-            33.9,
-            37.5
+            35.3,
+            39.1
           ]
         },
         "producto": {
@@ -211,9 +211,9 @@
       {
         "clase": "natural",
         "deteccion": {
-          "n": 1000,
-          "sin_tag": 929,
-          "brecha_pct": 92.9,
+          "n": 992,
+          "sin_tag": 921,
+          "brecha_pct": 92.8,
           "ic95": [
             91.1,
             94.3
@@ -232,8 +232,8 @@
       {
         "clase": "carmin",
         "deteccion": {
-          "n": 235,
-          "sin_tag": 225,
+          "n": 233,
+          "sin_tag": 223,
           "brecha_pct": 95.7,
           "ic95": [
             92.3,
@@ -274,61 +274,61 @@
     ]
   },
   "B_mediana_por_codigo_comparable_con_Tseng": {
-    "sintetico": 61.5,
+    "sintetico": 62.0,
     "natural": 100.0,
     "nota": "Mediana del porcentaje por codigo, con n>=10. ES el estadistico que reporta Tseng et al. (2022) = 37.9 %. El agregado ponderado NO es comparable con esa cifra."
   },
   "C_estabilidad_por_contribuyente": {
     "app_terceros": {
       "sintetico": {
-        "n": 710,
-        "sin_tag": 252,
-        "brecha_pct": 35.5,
+        "n": 669,
+        "sin_tag": 242,
+        "brecha_pct": 36.2,
         "ic95": [
-          32.1,
-          39.1
+          32.6,
+          39.9
         ]
       },
       "natural": {
-        "n": 89,
-        "sin_tag": 78,
-        "brecha_pct": 87.6,
+        "n": 88,
+        "sin_tag": 77,
+        "brecha_pct": 87.5,
         "ic95": [
-          79.2,
-          93.0
+          79.0,
+          92.9
         ]
       },
-      "n_detecciones": 877
+      "n_detecciones": 835
     },
     "campana_mx": {
       "sintetico": {
-        "n": 1253,
-        "sin_tag": 398,
-        "brecha_pct": 31.8,
+        "n": 1152,
+        "sin_tag": 392,
+        "brecha_pct": 34.0,
         "ic95": [
-          29.2,
-          34.4
+          31.3,
+          36.8
         ]
       },
       "natural": {
-        "n": 269,
-        "sin_tag": 243,
+        "n": 267,
+        "sin_tag": 241,
         "brecha_pct": 90.3,
         "ic95": [
-          86.2,
+          86.1,
           93.3
         ]
       },
-      "n_detecciones": 1673
+      "n_detecciones": 1568
     },
     "importacion_bloque": {
       "sintetico": {
-        "n": 11,
+        "n": 10,
         "sin_tag": 0,
         "brecha_pct": 0.0,
         "ic95": [
           0.0,
-          25.9
+          27.8
         ]
       },
       "natural": {
@@ -340,16 +340,16 @@
           100.0
         ]
       },
-      "n_detecciones": 20
+      "n_detecciones": 19
     },
     "individual": {
       "sintetico": {
-        "n": 719,
-        "sin_tag": 311,
-        "brecha_pct": 43.3,
+        "n": 678,
+        "sin_tag": 298,
+        "brecha_pct": 44.0,
         "ic95": [
-          39.7,
-          46.9
+          40.3,
+          47.7
         ]
       },
       "natural": {
@@ -361,21 +361,21 @@
           97.1
         ]
       },
-      "n_detecciones": 847
+      "n_detecciones": 806
     },
     "lectura": "Si la brecha varia mucho entre grupos, estamos midiendo comportamiento de contribuyente y no del analizador. Va a limitaciones y debilita la generalizacion."
   },
   "D_definiciones_de_Chiu": {
     "n_base": 7775,
     "nuestra_definicion": {
-      "cualquier_colorante_pct": 22.3,
+      "cualquier_colorante_pct": 19.7,
       "sintetico_pct": 16.0,
-      "natural_pct": 7.7
+      "natural_pct": 4.6
     },
     "definicion_chiu_con_E150": {
-      "cualquier_colorante_pct": 26.8,
+      "cualquier_colorante_pct": 24.5,
       "sintetico_pct": 16.0,
-      "natural_pct": 15.2
+      "natural_pct": 12.6
     },
     "referencia_hong_kong": {
       "cualquiera": 19.8,
@@ -388,14 +388,14 @@
     "semilla": 20260825,
     "estratos": {
       "sintetico": {
-        "N_poblacion": 1139,
+        "N_poblacion": 1162,
         "n_muestra": 150,
-        "peso": 7.593
+        "peso": 7.747
       },
       "natural": {
-        "N_poblacion": 595,
+        "N_poblacion": 557,
         "n_muestra": 250,
-        "peso": 2.38
+        "peso": 2.228
       },
       "ambiguo_descartado": {
         "N_poblacion": 351,

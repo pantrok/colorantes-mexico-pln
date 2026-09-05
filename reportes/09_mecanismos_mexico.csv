@@ -1,11 +1,11 @@
 clase,en_vocab,mandatory,n,sin_tag,brecha_pct
-carmin,False,True,19,19,100.0
+carmin,False,True,17,17,100.0
 carmin,True,True,216,206,95.4
 mineral_inorganico,False,False,2,2,100.0
 mineral_inorganico,True,False,46,10,21.7
-natural_botanico,False,False,244,239,98.0
+natural_botanico,False,False,240,235,97.9
 natural_botanico,False,True,63,63,100.0
-natural_botanico,True,False,123,86,69.9
+natural_botanico,True,False,124,87,70.2
 natural_botanico,True,True,11,11,100.0
-sintetico,False,False,478,435,91.0
-sintetico,True,False,2215,526,23.7
+sintetico,False,False,431,417,96.8
+sintetico,True,False,2078,515,24.8

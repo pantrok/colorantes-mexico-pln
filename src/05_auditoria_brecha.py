@@ -23,8 +23,7 @@ import re
 from collections import Counter
 import duckdb, pandas as pd
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, construir_matchers, detectar, normalizar,
-                  guardar_reporte)
+                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
 
 AMBIGUOS = REQUIEREN_CONTEXTO   # definido en util.py, con su historial
 
@@ -33,8 +32,37 @@ RE_CONTEXTO = re.compile(r"colorante|color(?:es)?\b|pigmento")
 VENTANA = 60   # caracteres a cada lado para buscar la palabra 'colorante'
 
 
-def contexto_de_color(texto_norm: str, patron: re.Pattern) -> bool:
-    """True si alguna aparicion del termino tiene 'colorante' cerca."""
+def detectar_con_termino(texto_norm: str, ordenados):
+    """(codigo, bloque, termino) del termino mas largo al mas corto, consumiendo
+    el texto. Se necesita el termino real, no solo el codigo: el chequeo de
+    contexto de mas abajo tiene que buscar 'colorante' alrededor de la forma
+    que de verdad aparecio, no de una forma arbitraria del mismo codigo.
+
+    CORREGIDO 05/09. Antes este script usaba util.py::detectar() -que solo
+    devuelve codigo->clase, sin decir que termino coincidio- y luego
+    `por_codigo = {c: p for c, _, p in matchers}` para el contexto. Ese dict
+    se queda con el PATRON DEL ULTIMO TERMINO PROCESADO por codigo (el mas
+    corto, porque matchers esta ordenado de mas largo a mas corto y el dict
+    sobreescribe). Para E171 quedaba el patron de "pigmento blanco 6" en vez
+    de "dioxido de titanio", que es el que aparece en el 99 % de los casos.
+    Afecta a 11 de los 13 codigos que exigen contexto -todos menos E101 y
+    E170, que ya no tienen terminos-. La brecha depurada pasaba de citarse en
+    67.5 % a la cifra correcta, 69.7 %. Detalle en BITACORA_PARCHES.md."""
+    restante, salida = texto_norm, []
+    for termino, codigo, bloque in ordenados:
+        if not termino:
+            continue
+        patron = re.compile(r"(?<!\w)" + re.escape(termino) + r"(?!\w)")
+        if patron.search(restante):
+            salida.append((codigo, bloque, termino))
+            restante = patron.sub(" ", restante)
+    return salida
+
+
+def contexto_de_color(texto_norm: str, termino: str) -> bool:
+    """True si alguna aparicion del TERMINO que de verdad coincidio tiene
+    'colorante' cerca."""
+    patron = re.compile(r"(?<!\w)" + re.escape(termino) + r"(?!\w)")
     for m in patron.finditer(texto_norm):
         ini, fin = max(0, m.start() - VENTANA), min(len(texto_norm), m.end() + VENTANA)
         if RE_CONTEXTO.search(texto_norm[ini:fin]):
@@ -52,20 +80,22 @@ def main() -> None:
     """).df()
 
     dic = cargar_diccionario()
-    matchers = construir_matchers(dic)
-    por_codigo = {c: p for c, _, p in matchers}
+    ordenados = terminos_ordenados(dic)
     validos = set(dic["sinteticos"]) | set(dic["naturales"])
 
     filas = []
     for t in df.itertuples(index=False):
         crudo = str(t.ingredientes_texto).strip()
         texto = normalizar(crudo)
-        det = {c: k for c, k in detectar(texto, matchers).items()
-               if k in ("sinteticos", "naturales")}
+        dets = [(c, b, term) for c, b, term in detectar_con_termino(texto, ordenados)
+                if b in ("sinteticos", "naturales")]
+        det = {c for c, _, _ in dets}
         tags = {a.replace("en:", "").upper() for a in como_lista(t.aditivos_tags)} & validos
-        # Un codigo ambiguo solo cuenta si el contexto lo avala.
-        depurado = {c for c in det
-                    if c not in AMBIGUOS or contexto_de_color(texto, por_codigo[c])}
+        # Un codigo ambiguo solo cuenta si el contexto avala el TERMINO que de
+        # verdad coincidio para ese codigo (puede haber mas de uno; basta que
+        # alguno tenga "colorante" cerca).
+        depurado = {c for c, _, term in dets
+                    if c not in AMBIGUOS or contexto_de_color(texto, term)}
         filas.append({
             "code": t.code, "texto": crudo,
             "bruto": set(det), "depurado": depurado, "tags": tags,

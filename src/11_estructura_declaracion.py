@@ -190,12 +190,26 @@ def main() -> None:
                for _, cod, _ in ordenados}
     pat_cod = {cod: patron_codigo(cod) for _, cod, _ in ordenados}
 
+    # CORREGIDO 05/09. Antes se emitia una fila por cada TERMINO que coincidia
+    # con `restante`, sin agrupar por codigo. Como `ordenados` recorre todos
+    # los sinonimos y `restante` solo descarta el tramo de texto ya consumido
+    # -no el codigo entero-, un producto que trae dos sinonimos del mismo
+    # colorante en puntos distintos del texto (p. ej. "cochinilla" en un lado
+    # y "carmin" en otro, ambos E120) contaba dos veces para ese codigo. Es
+    # el mismo bug encontrado y corregido en 07_forma_y_clase.py,
+    # 08_vocabulario_off.py y 09_replica_pais.py; aqui era especialmente
+    # delicado porque el guion de este script es precisamente la comparacion
+    # de carmin entre paises. Ahora se agrupa por (producto, codigo) y
+    # `tiene_clase` se combina con OR entre los terminos que coincidieron
+    # -"tiene_codigo" y "en_tags" ya son por codigo, no dependen del termino-.
+    # Detalle en BITACORA_PARCHES.md.
     filas = []
     for t in df.itertuples(index=False):
         texto = normalizar(getattr(t, col["texto"]))
         tags = {str(a).replace("en:", "").upper()
                 for a in como_lista(getattr(t, col["aditivos"]))}
         restante = texto
+        por_codigo = {}
         for termino, codigo, bloque in ordenados:
             if not termino:
                 continue
@@ -213,11 +227,17 @@ def main() -> None:
             mc = None
             for mm in RE_CLASE.finditer(antes):
                 mc = mm
+            entry = por_codigo.setdefault(codigo, {
+                "clase": cl, "termino": termino, "tiene_clase": False})
+            if mc is not None:
+                entry["tiene_clase"] = True
+        for codigo, info in por_codigo.items():
             filas.append({
-                "code": t.code, "codigo": codigo, "clase": cl, "termino": termino,
+                "code": t.code, "codigo": codigo, "clase": info["clase"],
+                "termino": info["termino"],
                 "sujeto_a_regla": bool(es_mand.get(codigo)),
                 "tiene_codigo": bool(pat_cod[codigo].search(texto)),
-                "tiene_clase": mc is not None,
+                "tiene_clase": info["tiene_clase"],
                 "en_tags": codigo in tags,
             })
 

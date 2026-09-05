@@ -221,19 +221,40 @@ def main() -> None:
         for c in extra:
             tags_otro |= {"EN:" + str(a).replace("en:", "").upper()
                           for a in como_lista(getattr(t, c))}
+        # Agrupar por codigo ANTES de decidir si cuenta. CORREGIDO 05/09: un
+        # producto puede declarar el mismo colorante con mas de un sinonimo
+        # (p.ej. "achiote" y "annatto", ambos E160b); eso es UNA deteccion de
+        # ese codigo, no dos -antes cada termino generaba su propia fila en
+        # `pares` y n/sin_tag salian inflados-. Si aparece por mas de un
+        # termino, basta que UNO pase el contexto, y en_vocab_off/
+        # off_mandatory se evaluan por cualquiera de los terminos usados
+        # (OR): importa si el producto es recuperable por alguna de las
+        # formas que declaro, no por una especifica. Ver BITACORA_PARCHES.md.
+        por_codigo = {}
         for codigo, bloque, termino in detectar_con_termino(texto, ordenados):
             cl = clase_de(codigo, bloque)
             if cl == "fuera_de_eje":
                 continue
-            if codigo in AMBIGUOS and not con_contexto(texto, termino):
-                continue
+            entry = por_codigo.setdefault(codigo, {
+                "clase": cl, "termino": termino, "contexto_ok": False,
+                "en_vocab_off": False, "off_mandatory": False})
+            if codigo not in AMBIGUOS or con_contexto(texto, termino):
+                entry["contexto_ok"] = True
             meta = idx.get((codigo, norma(termino)))
+            if meta:
+                entry["en_vocab_off"] = entry["en_vocab_off"] or bool(meta.en_vocabulario_off)
+                entry["off_mandatory"] = entry["off_mandatory"] or bool(meta.off_mandatory_class)
+
+        for codigo, info in por_codigo.items():
+            if not info["contexto_ok"]:
+                continue
             # M3: el codigo puede vivir en vitamins/minerals bajo su NOMBRE
             ids = {id_otros.get(k) for k in variantes(codigo)} - {None}
             pares.append({
-                "code": t.code, "codigo": codigo, "clase": cl, "termino": termino,
-                "en_vocab_off": bool(meta.en_vocabulario_off) if meta else False,
-                "off_mandatory": bool(meta.off_mandatory_class) if meta else False,
+                "code": t.code, "codigo": codigo, "clase": info["clase"],
+                "termino": info["termino"],
+                "en_vocab_off": info["en_vocab_off"],
+                "off_mandatory": info["off_mandatory"],
                 "en_additives_tags": codigo in tags_add,
                 "en_otras_taxonomias": bool(ids & tags_otro),
             })

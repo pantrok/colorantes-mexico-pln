@@ -148,6 +148,19 @@ def clase_de(codigo: str, bloque: str) -> str:
 
 
 def analizar(df: pd.DataFrame, col: dict, dic, ordenados, vocab, mand) -> pd.DataFrame:
+    """Una fila por (producto, codigo) detectado, nunca por termino.
+
+    CORREGIDO 05/09. `detectar()` devuelve una tupla por CADA termino que
+    coincide, y un producto puede traer dos sinonimos del mismo colorante
+    (p. ej. "cochinilla" y "carmin" para E120). Antes este bucle emitia un
+    "par" por cada uno, asi que ese producto contaba dos veces para el mismo
+    codigo dentro de `n` -el mismo bug que se encontro y corrigio en
+    07_forma_y_clase.py y 08_vocabulario_off.py-. Aqui inflaba directamente
+    el tamano de muestra de la comparacion Mexico/pais nuevo: el sintetico
+    de Mexico salia en n=2693 contra los 2509 ya depurados de 07. Ahora se
+    agrupa por codigo antes de emitir, con semantica OR entre sus terminos
+    para el contexto y para "en_vocab"/"mandatory". Detalle en
+    BITACORA_PARCHES.md."""
     cob = {}
     for termino, codigo, _ in ordenados:
         vs, es_mand = set(), False
@@ -161,15 +174,24 @@ def analizar(df: pd.DataFrame, col: dict, dic, ordenados, vocab, mand) -> pd.Dat
         texto = normalizar(getattr(t, col["texto"]))
         tags = {str(a).replace("en:", "").upper()
                 for a in como_lista(getattr(t, col["aditivos"]))}
+        por_codigo = {}
         for codigo, bloque, termino in detectar(texto, ordenados):
             cl = clase_de(codigo, bloque)
             if cl == "fuera_de_eje":
                 continue
-            if codigo in AMBIGUOS and not con_contexto(texto, termino):
-                continue
+            entry = por_codigo.setdefault(codigo, {
+                "clase": cl, "contexto_ok": False,
+                "en_vocab": False, "mandatory": False})
+            if codigo not in AMBIGUOS or con_contexto(texto, termino):
+                entry["contexto_ok"] = True
             en_vocab, es_mand = cob.get((codigo, norma(termino)), (False, False))
-            pares.append({"codigo": codigo, "clase": cl,
-                          "en_vocab": en_vocab, "mandatory": es_mand,
+            entry["en_vocab"] = entry["en_vocab"] or en_vocab
+            entry["mandatory"] = entry["mandatory"] or es_mand
+        for codigo, info in por_codigo.items():
+            if not info["contexto_ok"]:
+                continue
+            pares.append({"codigo": codigo, "clase": info["clase"],
+                          "en_vocab": info["en_vocab"], "mandatory": info["mandatory"],
                           "en_tags": codigo in tags})
     return pd.DataFrame(pares)
 
@@ -254,15 +276,16 @@ def main() -> None:
                   .reset_index())
     porclase["brecha_pct"] = (100 * porclase.sin_tag / porclase.n).round(1)
 
-    # cifras de Mexico de la corrida del 27 de agosto, para comparar
-    # Actualizado 02/09/2026 contra el diccionario congelado v1.1 (antes traia
-    # la corrida del 27 de agosto, previa al veredicto de la Dra. y a la
-    # fusion del DOF). Recalcular con:
+    # cifras de Mexico, para comparar
+    # Actualizado 05/09/2026 tras corregir el bug de no-deduplicacion por
+    # codigo en `analizar()` (contaba dos veces un producto que trae dos
+    # sinonimos del mismo colorante). Los valores anteriores (n=2693/441/235)
+    # venian de la corrida del 02/09, previa a esa correccion. Recalcular con:
     #   python src/09_replica_pais.py --pais en:mexico
     # y leer la tabla `por_clase` de reportes/09_replica_mexico.json.
-    MEXICO = {"sintetico": {"brecha_pct": 35.7, "pct_en_vocab": 82.3, "n": 2693},
-              "natural_botanico": {"brecha_pct": 90.5, "pct_en_vocab": 30.4, "n": 441},
-              "carmin": {"brecha_pct": 95.7, "pct_en_vocab": 91.9, "n": 235}}
+    MEXICO = {"sintetico": {"brecha_pct": 37.1, "pct_en_vocab": 82.8, "n": 2509},
+              "natural_botanico": {"brecha_pct": 90.4, "pct_en_vocab": 30.8, "n": 438},
+              "carmin": {"brecha_pct": 95.7, "pct_en_vocab": 92.7, "n": 233}}
 
     comp = []
     for fila in porclase.itertuples():

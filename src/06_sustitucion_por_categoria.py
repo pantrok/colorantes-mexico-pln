@@ -29,13 +29,17 @@ from collections import Counter, defaultdict
 from pathlib import Path
 import duckdb, pandas as pd, yaml
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, construir_matchers, detectar, normalizar,
-                  guardar_reporte)
+                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
 AMBIGUOS = REQUIEREN_CONTEXTO   # definido en util.py, con su historial
 RE_CONTEXTO = re.compile(r"colorante|color(?:es)?\b|pigmento")
 VENTANA = 60
+# Pigmentos inorganicos: ni botanicos ni azoicos, se reportan aparte, igual
+# que en 07-12. Corregido 05/09: antes este script solo excluia carmin (E120)
+# de "naturales" y contaba E170/E171/E172 como natural por vivir en ese
+# bloque del YAML. Ver BITACORA_PARCHES.md.
+MINERALES = {"E170", "E171", "E172"}
 # El minimo se aplica al DENOMINADOR DEL INDICE, es decir a los productos que
 # declaran algun colorante, no al tamano de la categoria. Conservas tenia 437
 # productos pero solo 21 coloreados: el indice descansaba sobre 21 casos y el
@@ -62,7 +66,23 @@ def clasificar(tags: list[str], cfg: dict) -> str:
     return "_sin_clasificar"
 
 
-def con_contexto(texto: str, patron: re.Pattern) -> bool:
+def detectar_con_termino(texto_norm: str, ordenados):
+    """(codigo, bloque, termino) del termino mas largo al mas corto, consumiendo
+    el texto. Se necesita el termino real para el chequeo de contexto -ver el
+    mismo arreglo y motivo en 05_auditoria_brecha.py y BITACORA_PARCHES.md."""
+    restante, salida = texto_norm, []
+    for termino, codigo, bloque in ordenados:
+        if not termino:
+            continue
+        patron = re.compile(r"(?<!\w)" + re.escape(termino) + r"(?!\w)")
+        if patron.search(restante):
+            salida.append((codigo, bloque, termino))
+            restante = patron.sub(" ", restante)
+    return salida
+
+
+def con_contexto(texto: str, termino: str) -> bool:
+    patron = re.compile(r"(?<!\w)" + re.escape(termino) + r"(?!\w)")
     for m in patron.finditer(texto):
         ini, fin = max(0, m.start() - VENTANA), min(len(texto), m.end() + VENTANA)
         if RE_CONTEXTO.search(texto[ini:fin]):
@@ -73,8 +93,7 @@ def con_contexto(texto: str, patron: re.Pattern) -> bool:
 def main() -> None:
     cfg = cargar_categorias()
     dic = cargar_diccionario()
-    matchers = construir_matchers(dic)
-    patrones = {c: p for c, _, p in matchers}
+    ordenados = terminos_ordenados(dic)
     tono = {**{k: v["tono"] for k, v in dic["sinteticos"].items()},
             **{k: v["tono"] for k, v in dic["naturales"].items()}}
 
@@ -92,15 +111,19 @@ def main() -> None:
             continue
         cat = clasificar(tags, cfg)
         texto = normalizar(t.ingredientes_texto)
-        det = detectar(texto, matchers)
-        eje = {c: k for c, k in det.items() if k in ("sinteticos", "naturales")
-               and (c not in AMBIGUOS or con_contexto(texto, patrones[c]))}
+        dets = [(c, b, term) for c, b, term in detectar_con_termino(texto, ordenados)
+                if b in ("sinteticos", "naturales")]
+        eje = {c: b for c, b, term in dets
+               if c not in AMBIGUOS or con_contexto(texto, term)}
         filas.append({
             "code": t.code, "marca": t.marcas, "categoria": cat,
             "sinteticos": {c for c, k in eje.items() if k == "sinteticos"},
-            # El carmin sale del agregado natural y se cuenta por su cuenta.
-            "naturales": {c for c, k in eje.items() if k == "naturales" and c != "E120"},
+            # El carmin y los minerales salen del agregado natural y se
+            # cuentan por su cuenta.
+            "naturales": {c for c, k in eje.items()
+                          if k == "naturales" and c != "E120" and c not in MINERALES},
             "carmin": "E120" in eje,
+            "mineral": bool(MINERALES & set(eje)),
         })
     r = pd.DataFrame(filas)
     analizables = r[~r.categoria.str.startswith("_")].copy()
@@ -112,8 +135,10 @@ def main() -> None:
         n_sin = int(g.sinteticos.map(bool).sum())
         n_nat = int(g.naturales.map(bool).sum())
         n_car = int(g.carmin.sum())
+        n_min = int(g.mineral.sum())
         n_amb = int((g.sinteticos.map(bool) & (g.naturales.map(bool) | g.carmin)).sum())
-        con_color = int((g.sinteticos.map(bool) | g.naturales.map(bool) | g.carmin).sum())
+        con_color = int((g.sinteticos.map(bool) | g.naturales.map(bool)
+                        | g.carmin | g.mineral).sum())
         filas_mat.append({
             "categoria": cfg["categorias"][cat]["etiqueta"], "clave": cat, "n": n,
             "n_con_colorante": con_color,
@@ -121,6 +146,7 @@ def main() -> None:
             "n_sintetico": n_sin, "pct_sintetico": round(100 * n_sin / n, 1),
             "n_natural_sin_carmin": n_nat, "pct_natural": round(100 * n_nat / n, 1),
             "n_carmin": n_car, "pct_carmin": round(100 * n_car / n, 1),
+            "n_mineral_inorganico": n_min, "pct_mineral": round(100 * n_min / n, 1),
             "n_ambos": n_amb,
             # Indice de sustitucion: entre los que declaran color, que fraccion es
             # solo natural. No mide reformulacion; describe composicion actual.

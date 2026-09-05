@@ -29,9 +29,22 @@ del `git log`.
 - **Flujo completo (01→12):** re-ejecutado el 02/09/2026 contra el
   diccionario v1.1. Ver la sección «Corrida completa 01→12» más abajo para
   las cifras nuevas y los dos bugs que se encontraron y corrigieron.
-- **Pendiente, sin empezar:** decidir el tratamiento del dióxido de titanio
-  (E171) antes del modelo de Firth, escribir el manual de anotación, sortear
-  los 600 y anotar contra el hash de v1.1.
+- **Cuatro bugs de conteo encontrados el 05/09/2026 — APLICADOS y todo el
+  flujo 01→12 recorrido de nuevo ese mismo día.** Ver la sección «Diagnóstico
+  de la coincidencia 1597» más abajo para el reporte completo y «Cifras
+  finales tras aplicar los cuatro arreglos» para el antes/después de cada
+  script. **La cifra citable de la brecha depurada es ahora 69.7 %, no
+  67.5 % ni 66.1 %.** Al aplicar el arreglo de deduplicación por código
+  (bug 2) a todo el pipeline, se encontró el **mismo bug, sin diagnosticar
+  todavía, en `09_replica_pais.py` y en `11_estructura_declaracion.py`** —
+  ambos comparten el patrón de iterar términos y no agrupar por código antes
+  de contar. Quedaron corregidos igual que `07`/`08`. `10_acuerdo_vs_off.py`
+  y `12_termino_disparador.py` se revisaron y **no tienen este bug**: su
+  unidad de conteo es intencionalmente la forma/término, no el código, así
+  que una fila por término es el diseño correcto ahí, no un defecto.
+- **Pendiente, sin empezar (además de lo de arriba):** decidir el tratamiento
+  del dióxido de titanio (E171) antes del modelo de Firth, escribir el manual
+  de anotación, sortear los 600 y anotar contra el hash de v1.1.
 - **`config/acuerdo_colorantes.yaml`** (vocabulario legal de referencia): sin
   tocar desde el parche 6. No se congela ni se fusiona con el diccionario de
   detección; son cosas distintas a propósito.
@@ -148,6 +161,155 @@ la Dra. la sacara del eje de color. No reportar esa cifra sin esa aclaración.
 
 ---
 
+## Diagnóstico de la coincidencia 1597 = 1597 (05/09/2026) — APLICADO
+
+Investigación pedida por `DIAGNOSTICO_1597.md` (recibido de fuera, no un
+parche numerado). **Regla explícita del propio documento: no tocar ningún
+script hasta reportar evidencia.** Se reportó primero (lo que sigue), y solo
+tras la confirmación explícita del usuario («aplica los cuatro y recorre
+todo») se tocó el código. Los cuatro arreglos quedaron aplicados el mismo
+día, con el flujo 01→12 completo recorrido de nuevo contra ellos.
+
+**Lo que se descartó.** `05_auditoria_brecha.py` cuenta bien: `n_con_colorante`
+y `n_con_brecha` ya son conteos de productos distintos (`len()` sobre un
+DataFrame de una fila por producto, filtrado por conjunto no vacío), no filas
+de una tabla de detección. Verificado recalculando desde el parquet intermedio
+sin tocar el script: (1) productos con detección y (4) productos con falta
+coinciden exactamente con lo reportado (1597 y 1078).
+
+**Lo que sí está mal — bug 1, confirmado, con impacto real en la cifra que se
+cita.** `05_auditoria_brecha.py` (línea 56) y `06_sustitucion_por_categoria.py`
+(línea 77) construyen `por_codigo = {c: p for c, _, p in matchers}` para el
+chequeo de contexto. Como `matchers` trae **un patrón por término** y el dict
+se queda con el último procesado, para cualquier código con más de un término
+(11 de los 13 que exigen contexto — todos excepto E101 y E170, que ya no
+tienen términos) el chequeo de «¿aparece "colorante" cerca?» se hace contra
+un término **arbitrario del código, no contra el que de verdad coincidió en
+ese producto**. Para E171 el diccionario se queda con el patrón de "pigmento
+blanco 6" en vez de "dioxido de titanio", que es el que aparece en el 99 % de
+los casos reales.
+
+Recalculada la brecha depurada usando el término que de verdad coincidió por
+detección (mismo criterio que ya usa correctamente `07_forma_y_clase.py`):
+
+| | Reportado ahora | Corregido |
+|---|---|---|
+| n_con_colorante depurado | 1597 | **1734** |
+| n_con_brecha | 1078 | **1208** |
+| brecha depurada (la cifra citable) | 67.5 % | **69.7 %** |
+
+Los scripts 07 a 12 **no** tienen este bug: rastrean el término específico que
+coincidió en cada detección (`detectar_con_forma`/`detectar_con_termino`) y
+llaman `con_contexto(texto, termino)` con ese término real, no con un patrón
+por código.
+
+**Bug 2, confirmado, con impacto real y activo.** `07_forma_y_clase.py` y
+`08_vocabulario_off.py` comparten la misma función de detección por término
+(`detectar_con_forma`/`detectar_con_termino`), que **no deduplica por
+código**: si un producto declara el mismo colorante con dos sinónimos (p. ej.
+"achiote" y "annatto", ambos E160b), lo cuenta dos veces. Por eso 07 y 08
+"coinciden" en 3417 detecciones / 1597 sin etiqueta — no es corroboración
+independiente entre dos scripts, es el mismo bug compartido. El recuento
+correcto (deduplicado por código y producto, como ya hace `util.py::detectar()`
+para 05) da **2949 detecciones, 1356 sin etiqueta**. La distribución resultante
+(moda 1, mediana 2, media 1.85, cola larga) es la que el propio diagnóstico
+dijo que cerraría el caso si aparecía así.
+
+**Bug 3, confirmado pero sin efecto actual (dormido).** La estratificación de
+los 600 en `07_forma_y_clase.py` (línea 356, bloque E) deriva "es natural" de
+`any(c in dic["naturales"] for c in s)` — membresía cruda en el bloque del
+YAML — en vez de llamar a `clase_de()`. Como E171/E172 viven físicamente en
+el bloque `naturales`, esto podría meter pigmentos inorgánicos al estrato
+natural. **Verificado contra los 7775 productos completos: hoy da 0 casos**
+— los dos productos que citaba el diagnóstico externo (`722776005606`,
+`7506174507633`) ya no están ni en el corpus problemático ni en la muestra
+actual, porque son de antes del congelamiento v1.1. El bug sigue en el código
+y podría activarse si el diccionario vuelve a cambiar; no corrompe nada hoy.
+
+**Bug 4, confirmado, con impacto real y activo, pequeño.**
+`06_sustitucion_por_categoria.py` solo excluye carmín (E120) de "naturales";
+a diferencia de 07-12, no excluye E170/E171/E172. Con E171 teniendo detecciones
+reales, 2 productos concretos (`7501006505689`, `7501791650922`) se cuentan
+hoy como "natural" en la Tabla 4/6 cuando deberían reportarse aparte como
+mineral_inorganico.
+
+### Arreglo aplicado (05/09/2026)
+
+1. En `05_auditoria_brecha.py` y `06_sustitucion_por_categoria.py`: se
+   sustituyó `util.py::detectar()` (o el chequeo de contexto por código) por
+   una función local `detectar_con_termino()` que devuelve `(codigo, bloque,
+   termino)` con el término real que coincidió, y el contexto se busca con
+   `contexto_de_color(texto, termino)`/`con_contexto(texto, termino)` sobre
+   ese término, no sobre un patrón arbitrario del código.
+2. En `07_forma_y_clase.py` y `08_vocabulario_off.py`: se agrupan las
+   detecciones por `codigo` antes de emitir fila — un producto aporta como
+   máximo una fila por código, sin importar cuántos sinónimos de ese código
+   contenga. El contexto y la cobertura de vocabulario se combinan con OR
+   entre los sinónimos que matchearon (basta que uno tenga "colorante" cerca,
+   o que uno esté en el vocabulario de OFF).
+3. En `07_forma_y_clase.py`, bloque E (estratificación de los 600) **y**
+   bloque D (recálculo de Chiu): se reemplazó `any(c in dic["naturales"] for
+   c in s)` / `dic["sinteticos"]` por un diccionario `clase_por_codigo` que sí
+   pasa por `clase_de()`, para que E171/E172 nunca puedan colarse al estrato
+   natural por vivir en el bloque `naturales` del YAML.
+4. En `06_sustitucion_por_categoria.py`: se agregó el conjunto `MINERALES =
+   {"E170", "E171", "E172"}` y se excluyen de "naturales" igual que ya se
+   excluía E120; se reportan aparte como campo `mineral` por fila y
+   `n_mineral_inorganico`/`pct_mineral` en la matriz agregada.
+
+**Alcance ampliado al aplicar.** El bug 2 (no deduplicar por código) resultó
+estar también en `09_replica_pais.py` y `11_estructura_declaracion.py` —
+ninguno de los dos estaba mencionado en el diagnóstico original, que solo
+había mirado `07`/`08`. Se corrigieron con el mismo patrón (agrupar por
+código, OR entre sinónimos). Se revisaron `10_acuerdo_vs_off.py` y
+`12_termino_disparador.py`: su granularidad de conteo es intencionalmente
+por forma/término (`10` mide qué formas legales existen en el vocabulario de
+OFF; `12` mide si el término, no el código, es la unidad que decide la
+recuperación), así que una fila por término ahí **no** es este bug — no se
+tocaron.
+
+Se restauró además `reportes/07_muestra_anotacion.csv` desde git: apareció
+como cambio sin commitear al iniciar esta sesión, con la columna `code`
+convertida a notación científica por un redondeo de Excel al abrirlo/guardarlo
+— no lo causó ninguna corrida de este repo. No tenía anotaciones (`anotador_1`
+/`anotador_2`/`notas` vacíos), así que no se perdió trabajo al descartarlo.
+
+### Cifras finales tras aplicar los cuatro arreglos (05/09/2026)
+
+| Script | Métrica | Antes del arreglo | Después |
+|---|---|---|---|
+| `05` | brecha depurada (la que se cita) | 67.5 % (1078/1597) | **69.7 % (1208/1734)** |
+| `05` | brecha bruta | 74.1 % | 74.1 % (sin cambio) |
+| `06` | categorías con n≥30 | 11 | **12** (aparece `mineral_inorganico`) |
+| `07` | sintético (agregado depurado) | n=2693, no medido así antes | **n=2509 (37.1 %)** |
+| `07` | natural_botánico | — | **n=438 (90.4 %)** |
+| `07` | carmín | — | **n=233 (95.7 %)** |
+| `07` | mineral_inorgánico | — | **n=48 (25.0 %)** |
+| `08` | cobertura de vocabulario | — | 59/197; M3 recuperadas 0; brecha global 48.4 % |
+| `09` México | sintético | n=2693, brecha 35.7 % | **n=2509, brecha 37.1 %** |
+| `09` México | natural_botánico | n=441, brecha 90.5 % | **n=438, brecha 90.4 %** |
+| `09` México | carmín | n=235, brecha 95.7 % | **n=233, brecha 95.7 %** |
+| `09` España | sintético | n=839, brecha 33.4 % | **n=795, brecha 33.2 %** |
+| `09` España | natural_botánico | n=2607, brecha 80.5 % | **n=2585, brecha 80.5 %** |
+| `09` España | carmín | n=500, brecha 32.2 % | **n=488, brecha 32.0 %** |
+| `09` | P4 (natural baja ≥15 pp en España) | falla (-10.0 pp aprox.) | **sigue fallando (-9.9 pp)** |
+| `09` | P5 (sintético cambia <10 pp) | cumple | **sigue cumpliendo (-3.9 pp)** |
+| `10` | (sin bug; no cambió) | 96/148 formas oficiales en nuestro diccionario | igual |
+| `11` México | n_detecciones | 3271 | **3085** |
+| `11` España | n_detecciones | 3742 | **3669** |
+| `11` | VEREDICTO (ambos países) | H2 — el código en el texto | sin cambio |
+| `12` | (sin bug; granularidad por término, no cambió) | 14 términos comparables, 85.7 % estables, P7 cumple | igual |
+
+**El diccionario `MEXICO` hardcodeado en `09_replica_pais.py`** (usado como
+referencia fija dentro del propio script para la comparación con España) se
+actualizó a los valores corregidos: `sintetico n=2509/37.1 %/82.8 %`,
+`natural_botanico n=438/90.4 %/30.8 %`, `carmin n=233/95.7 %/92.7 %`.
+
+**No volver a citar 67.5 %, 66.1 %, ni las cifras de `07`/`08`/`09`/`11`
+previas a esta corrida — están reemplazadas por las de esta tabla.**
+
+---
+
 ## Historial completo, parche por parche
 
 Formato: **parche — commit — qué trajo — qué se corrigió o se decidió aquí
@@ -168,6 +330,7 @@ que el parche no traía.**
 | 11 | `c38774c` | `13_buscar_antecedentes.py` v3: exigencias derivadas de las frases de la consulta, tres cajones, control de recuperación | Mismo fix de `UnicodeEncodeError`, reaplicado (el archivo llegó fresco sin él) |
 | 12 | `b7cd1c4` | `14_congelar_diccionario.py` v1.0; `config/decisiones_dra.yaml`; congela v1.0 | `TypeError` en `recorre()`/`aplica()` por los bloques `genericos`/`sustituibilidad` (ver arriba); agregado E172/SPIRULINA/E164 a `REQUIEREN_CONTEXTO` en `util.py` (el parche solo lo mencionaba como paso manual, no traía el archivo); **se detectó pero no se corrigió** que `lactoflavina`/`vitamina b-2`/`carbon medicinal` sobrevivían con el mismo motivo que sus pares — decisión del usuario: congelar tal cual y preguntarle a la Dra. después |
 | 13 | *(este commit)* | `14_congelar_diccionario.py` v1.1: `codigo_completo`, detección estructural de bloques, invariante de códigos ausentes; recongela v1.1 | Falso positivo de «fusión pendiente» contra términos ya podados a propósito (ver arriba); prueba desactualizada en `test_diccionario.py` (E101 ya no existe) |
+| — (sin número, `DIAGNOSTICO_1597.md`) | *(pendiente de commit)* | No trajo código: un diagnóstico externo pidió investigar la coincidencia 1597=1597 entre `05` y `07`/`08` | Encontrados y corregidos los 4 bugs de conteo de la sección de arriba en `05`, `06`, `07`, `08`; el alcance se amplió en local a `09` y `11`, que compartían el mismo bug de no-deduplicación sin que el diagnóstico externo los hubiera señalado. Brecha depurada pasa a citarse en 69.7 % |
 
 ---
 
