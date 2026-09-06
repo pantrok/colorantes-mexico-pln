@@ -1,0 +1,181 @@
+{
+  "archivo_fuente": "reportes/07_anotacion_consolidada.csv",
+  "nota_codigos_de_barras": "La anotacion llego sin ceros a la izquierda en 'code' -herramienta que trato el codigo como numero-. Verificado: normalizando, las 600 filas cruzan exacto contra 07_muestra_anotacion_v1.csv sin un solo desacuerdo de estrato. Se uso el codigo correcto de v1.",
+  "kappa_tres_categorias_SI_NO_DUDOSO": {
+    "kappa": 0.7697,
+    "se": 0.0621,
+    "ic95": [
+      0.6479,
+      0.8914
+    ],
+    "n": 150,
+    "categorias": [
+      "DUDOSO",
+      "NO",
+      "SI"
+    ],
+    "po": 0.92,
+    "pe": 0.6527
+  },
+  "kappa_binaria_SI_vs_resto": {
+    "kappa": 0.7584,
+    "se": 0.0649,
+    "ic95": [
+      0.6312,
+      0.8856
+    ],
+    "n": 150,
+    "categorias": [
+      "NO_O_DUDOSO",
+      "SI"
+    ],
+    "po": 0.92,
+    "pe": 0.6689
+  },
+  "nota_kappa": "El archivo no trae adjudicacion de la Dra. para las filas 'comun' en desacuerdo (en_desempate=SI, 30 de 600). Kappa se calcula sobre el acuerdo CRUDO entre anotador_1 y anotador_2 en las 150 filas de doble anotacion -asi se define kappa, la adjudicacion no participa-.",
+  "por_estrato_con_denominadores": [
+    {
+      "estrato": "ambiguo_descartado",
+      "n": 100,
+      "verdad_SI": 66,
+      "verdad_NO": 5,
+      "verdad_DUDOSO": 22,
+      "verdad_sin_resolver": 7,
+      "texto_no_utilizable": 8,
+      "generica_solamente": 0
+    },
+    {
+      "estrato": "natural",
+      "n": 250,
+      "verdad_SI": 246,
+      "verdad_NO": 2,
+      "verdad_DUDOSO": 1,
+      "verdad_sin_resolver": 1,
+      "texto_no_utilizable": 3,
+      "generica_solamente": 4
+    },
+    {
+      "estrato": "sin_deteccion",
+      "n": 100,
+      "verdad_SI": 6,
+      "verdad_NO": 92,
+      "verdad_DUDOSO": 1,
+      "verdad_sin_resolver": 1,
+      "texto_no_utilizable": 3,
+      "generica_solamente": 1
+    },
+    {
+      "estrato": "sintetico",
+      "n": 150,
+      "verdad_SI": 139,
+      "verdad_NO": 7,
+      "verdad_DUDOSO": 1,
+      "verdad_sin_resolver": 3,
+      "texto_no_utilizable": 10,
+      "generica_solamente": 0
+    }
+  ],
+  "validacion_a_nivel_producto": {
+    "n_excluidos_texto_no_utilizable_o_sin_resolver": 58,
+    "matriz_2x2": {
+      "TP": 374,
+      "FP": 8,
+      "FN": 67,
+      "TN": 93
+    },
+    "VPP_pct": 97.9,
+    "VPP_ic95": [
+      95.9,
+      98.9
+    ],
+    "sensibilidad_pct": 84.8,
+    "sensibilidad_ic95": [
+      81.2,
+      87.9
+    ],
+    "especificidad_pct": 92.1,
+    "especificidad_ic95": [
+      85.1,
+      95.9
+    ]
+  },
+  "validacion_a_nivel_mencion_por_clase": {
+    "carmin": {
+      "n_menciones": 94,
+      "confirmadas": 94,
+      "VPP_pct": 100.0,
+      "VPP_ic95": [
+        96.1,
+        100.0
+      ]
+    },
+    "mineral_inorganico": {
+      "n_menciones": 25,
+      "confirmadas": 25,
+      "VPP_pct": 100.0,
+      "VPP_ic95": [
+        86.7,
+        100.0
+      ]
+    },
+    "natural_botanico": {
+      "n_menciones": 180,
+      "confirmadas": 174,
+      "VPP_pct": 96.7,
+      "VPP_ic95": [
+        92.9,
+        98.5
+      ]
+    },
+    "sintetico": {
+      "n_menciones": 397,
+      "confirmadas": 397,
+      "VPP_pct": 100.0,
+      "VPP_ic95": [
+        99.0,
+        100.0
+      ]
+    }
+  },
+  "terminos_del_anotador_sin_mapear_a_ningun_codigo": {
+    "n": 104,
+    "ejemplos": [
+      "AMARILLO NO 6",
+      "ANARANJADO ALIMENTOS 5",
+      "ANNATO",
+      "AZUL NO1",
+      "Amarilio Ocaso FCF",
+      "Annato",
+      "Azul 11",
+      "Azul No.1",
+      "Azul brillate FCF",
+      "A}UL BRILLANTE FCFL",
+      "Betacarotenol",
+      "Camín",
+      "E102",
+      "E110",
+      "E129",
+      "E132",
+      "E133",
+      "E171",
+      "E180",
+      "FD&C amarillo No.6",
+      "FRUIT AND VEGETABLE JUICE",
+      "INS 1001",
+      "INS 102",
+      "INS 129",
+      "INS 133",
+      "INS 171",
+      "INS100",
+      "INS120",
+      "INS129",
+      "INS133"
+    ],
+    "nota": "Erratas de captura o sinonimos que el diccionario no reconoce. No se cuentan como falso positivo del metodo -son un problema de mapeo de esta validacion, no del detector-, pero limitan la VPP de mencion: revisarlos a mano si se quiere una cifra mas ajustada."
+  },
+  "direccion_de_la_ponderacion": {
+    "como_pondera_el_codigo": "07_forma_y_clase.py calcula peso = N_poblacion / n_muestra -el INVERSO de la fraccion de muestreo (n/N)-, en la variable `pesos` de main(). Es la ponderacion correcta bajo muestreo estratificado sobre el desenlace.",
+    "veredicto": "Si el manuscrito dice 'ponderado por la fraccion de muestreo' en vez de 'por el inverso de la fraccion' o 'por N/n', es un error de REDACCION del texto, no del calculo: el codigo ya pondera correctamente. Corregir la frase, no el numero."
+  },
+  "filas_en_desempate_sin_adjudicar": 12
+}

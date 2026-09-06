@@ -96,3 +96,32 @@ def test_icc_alto_cuando_codigos_muy_distintos():
     det = pd.DataFrame(filas)
     r = p15.icc_por_codigo(det)
     assert r["ICC"] > 0.9
+
+
+# --------------------------------------------------------------- cohen_kappa
+
+def test_kappa_acuerdo_perfecto():
+    y = ["SI", "NO", "SI", "SI", "NO", "DUDOSO"] * 10
+    r = p15.cohen_kappa(y, y)
+    assert abs(r["kappa"] - 1.0) < 1e-9
+    assert r["se"] == 0.0
+
+
+def test_kappa_reproduce_el_valor_reportado():
+    """El kappa calculado sobre la anotacion consolidada real debe reproducir
+    el 0.770 que se reporto de palabra antes de tener el archivo -si esto se
+    rompe, algo cambio en cargar_anotacion_consolidada() o en la formula."""
+    ruta = Path(__file__).resolve().parents[1] / "reportes" / "07_anotacion_consolidada.csv"
+    if not ruta.exists():
+        return  # el archivo es un insumo externo; sin el, se omite esta prueba
+    df = p15.cargar_anotacion_consolidada()
+    comun = df[df.bloque == "comun"]
+    r = p15.cohen_kappa(comun.anotador_1, comun.anotador_2)
+    assert abs(r["kappa"] - 0.770) < 0.01
+
+
+def test_kappa_desacuerdo_total_da_negativo_o_bajo():
+    y1 = ["SI"] * 20 + ["NO"] * 20
+    y2 = ["NO"] * 20 + ["SI"] * 20
+    r = p15.cohen_kappa(y1, y2)
+    assert r["kappa"] < 0

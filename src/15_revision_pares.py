@@ -831,6 +831,227 @@ def tarea11_amarillo6(vocab: dict) -> dict:
     }
 
 
+# =========================================================================
+# TAREA 12 — validacion contra el conjunto anotado (06/09/2026, con la
+# anotacion consolidada real: reportes/07_anotacion_consolidada.csv).
+#
+# La anotacion llego con codigos de barras SIN CEROS A LA IZQUIERDA -se
+# edito en algun punto en una herramienta que trata los codigos como
+# numero, el mismo tipo de problema (mas leve) que la corrupcion de Excel
+# del parche 14-. Verificado: normalizando (quitando ceros a la izquierda)
+# las 600 filas cruzan exacto contra reportes/07_muestra_anotacion_v1.csv,
+# sin un solo desacuerdo de estrato. Se usa el codigo de v1 (con los ceros
+# correctos) como el canonico.
+#
+# El archivo NO trae una columna de veredicto final adjudicado por la Dra.
+# para las filas de doble anotacion en desacuerdo (`en_desempate=SI`, 30
+# filas): se reportan esas filas como "sin_resolver", no se les inventa un
+# veredicto.
+# =========================================================================
+
+def cohen_kappa(y1, y2) -> dict:
+    """Kappa de Cohen con IC95 por la varianza asintotica de Fleiss, Cohen y
+    Everitt (1969) -formula de forma cerrada, no una aproximacion de
+    conveniencia; no hay scipy/statsmodels en el entorno-."""
+    y1, y2 = pd.Series(y1).reset_index(drop=True), pd.Series(y2).reset_index(drop=True)
+    categorias = sorted(set(y1) | set(y2))
+    n = len(y1)
+    tabla = pd.crosstab(y1, y2).reindex(index=categorias, columns=categorias, fill_value=0)
+    p = tabla.values / n
+    k = len(categorias)
+    po = float(np.trace(p))
+    p_fila, p_col = p.sum(axis=1), p.sum(axis=0)
+    pe = float((p_fila * p_col).sum())
+    if pe >= 1:
+        return {"kappa": None, "n": n, "categorias": categorias, "po": po, "pe": pe,
+                "nota": "pe=1, kappa indefinido"}
+    kappa = (po - pe) / (1 - pe)
+    suma1 = sum(p[i, i] * (1 - (p_fila[i] + p_col[i]) * (1 - kappa)) ** 2 for i in range(k))
+    suma2 = (1 - kappa) ** 2 * sum(
+        p[i, j] * (p_col[i] + p_fila[j]) ** 2
+        for i in range(k) for j in range(k) if i != j)
+    var = (suma1 + suma2 - (kappa - pe * (1 - kappa)) ** 2) / (n * (1 - pe) ** 2)
+    se = float(np.sqrt(max(var, 0)))
+    z = 1.959964
+    return {"kappa": round(kappa, 4), "se": round(se, 4),
+           "ic95": [round(kappa - z * se, 4), round(kappa + z * se, 4)],
+           "n": n, "categorias": categorias, "po": round(po, 4), "pe": round(pe, 4)}
+
+
+def wilson_ic(exitos: int, n: int, z: float = 1.959964):
+    if n == 0:
+        return [None, None]
+    p = exitos / n
+    d = 1 + z * z / n
+    centro = (p + z * z / (2 * n)) / d
+    margen = z * np.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
+    return [round(100 * max(0.0, centro - margen), 1), round(100 * min(1.0, centro + margen), 1)]
+
+
+def cargar_anotacion_consolidada() -> pd.DataFrame:
+    anot = pd.read_csv(REPORTES / "07_anotacion_consolidada.csv", dtype=str)
+    v1 = pd.read_csv(REPORTES / "07_muestra_anotacion_v1.csv", dtype=str)
+    anot["clave"] = anot.code.str.lstrip("0")
+    v1["clave"] = v1.code.str.lstrip("0")
+    df = anot.merge(v1[["clave", "code", "estrato", "texto"]], on="clave",
+                    suffixes=("_anotacion", ""), how="inner")
+    if len(df) != 600:
+        raise SystemExit(f"esperaba 600 filas tras cruzar con v1, salieron {len(df)}")
+    if not (df.estrato_anotacion == df.estrato).all():
+        raise SystemExit("desacuerdo de estrato entre la anotacion y v1 -revisar antes de seguir")
+    return df.drop(columns=["estrato_anotacion", "clave"])
+
+
+def resolver_verdad(df: pd.DataFrame) -> pd.DataFrame:
+    """Por producto: SI/NO/DUDOSO segun el o los anotadores; en las filas
+    'comun' con desacuerdo entre anotador_1 y anotador_2, 'sin_resolver' -no
+    se adjudica aqui, el archivo no trae el veredicto de la Dra.-."""
+    def fila(r):
+        if r.bloque == "solo_A":
+            return r.anotador_1, r.texto_utilizable_1 == "SI", r.generica_1 == "SI"
+        if r.bloque == "solo_B":
+            return r.anotador_2, r.texto_utilizable_2 == "SI", r.generica_2 == "SI"
+        util = (r.texto_utilizable_1 == "SI") and (r.texto_utilizable_2 == "SI")
+        gen = (r.generica_1 == "SI") or (r.generica_2 == "SI")
+        if r.anotador_1 == r.anotador_2:
+            return r.anotador_1, util, gen
+        return "sin_resolver", util, gen
+
+    extra = df.apply(lambda r: pd.Series(fila(r), index=["verdad", "texto_utilizable", "generica"]), axis=1)
+    return pd.concat([df.reset_index(drop=True), extra], axis=1)
+
+
+def mapear_terminos_a_codigos(cadena, ordenados) -> set:
+    """Los terminos que escribio el anotador son texto libre, con erratas de
+    captura (\"camin\", \"roo 40\", \"azul1\"...). Se pasan por el MISMO
+    emparejador del diccionario -no una comparacion exacta de cadenas- para
+    aprovechar los sinonimos ya conocidos; las erratas que no coinciden con
+    ningun sinonimo quedan sin mapear y se cuentan aparte, no se descartan
+    en silencio."""
+    if not isinstance(cadena, str) or not cadena.strip():
+        return set()
+    codigos = set()
+    for frag in cadena.split(";"):
+        frag_norm = normalizar(frag)
+        if not frag_norm:
+            continue
+        codigos |= {c for c, b, t in detectar_con_forma(frag_norm, ordenados)}
+    return codigos
+
+
+def tarea12_validacion(ordenados, det: pd.DataFrame) -> dict:
+    df = cargar_anotacion_consolidada()
+    df = resolver_verdad(df)
+    df["predicho_positivo"] = df.estrato.isin(["sintetico", "natural"])
+
+    # --- kappa sobre las 150 filas de doble anotacion (bloque='comun') ---
+    comun = df[df.bloque == "comun"]
+    kappa_3cat = cohen_kappa(comun.anotador_1, comun.anotador_2)
+    comun_bin = comun.assign(
+        a1=comun.anotador_1.map(lambda x: "SI" if x == "SI" else "NO_O_DUDOSO"),
+        a2=comun.anotador_2.map(lambda x: "SI" if x == "SI" else "NO_O_DUDOSO"))
+    kappa_binaria = cohen_kappa(comun_bin.a1, comun_bin.a2)
+
+    # --- 2x2 por estrato, con denominadores ---
+    por_estrato = []
+    for estrato, g in df.groupby("estrato"):
+        por_estrato.append({
+            "estrato": estrato, "n": len(g),
+            "verdad_SI": int((g.verdad == "SI").sum()),
+            "verdad_NO": int((g.verdad == "NO").sum()),
+            "verdad_DUDOSO": int((g.verdad == "DUDOSO").sum()),
+            "verdad_sin_resolver": int((g.verdad == "sin_resolver").sum()),
+            "texto_no_utilizable": int((~g.texto_utilizable).sum()),
+            "generica_solamente": int(g.generica.sum()),
+        })
+
+    # --- VPP y sensibilidad a nivel de PRODUCTO, sobre lo resuelto ---
+    resuelto = df[df.texto_utilizable & df.verdad.isin(["SI", "NO"])].copy()
+    resuelto["verdad_bin"] = resuelto.verdad == "SI"
+    tp = int((resuelto.predicho_positivo & resuelto.verdad_bin).sum())
+    fp = int((resuelto.predicho_positivo & ~resuelto.verdad_bin).sum())
+    fn = int((~resuelto.predicho_positivo & resuelto.verdad_bin).sum())
+    tn = int((~resuelto.predicho_positivo & ~resuelto.verdad_bin).sum())
+    vpp = round(100 * tp / (tp + fp), 1) if (tp + fp) else None
+    sens = round(100 * tp / (tp + fn), 1) if (tp + fn) else None
+    esp = round(100 * tn / (tn + fp), 1) if (tn + fp) else None
+
+    validacion_producto = {
+        "n_excluidos_texto_no_utilizable_o_sin_resolver": len(df) - len(resuelto),
+        "matriz_2x2": {"TP": tp, "FP": fp, "FN": fn, "TN": tn},
+        "VPP_pct": vpp, "VPP_ic95": wilson_ic(tp, tp + fp),
+        "sensibilidad_pct": sens, "sensibilidad_ic95": wilson_ic(tp, tp + fn),
+        "especificidad_pct": esp, "especificidad_ic95": wilson_ic(tn, tn + fp),
+    }
+
+    # --- VPP a nivel de MENCION, estratificada por clase ---
+    positivos = df[df.predicho_positivo & df.texto_utilizable & (df.verdad != "sin_resolver")].copy()
+    det_muestra = det[det.code.isin(positivos.code)]
+    filas_mencion, sin_mapear = [], []
+    for r in positivos.itertuples():
+        automatico = det_muestra[det_muestra.code == r.code]
+        confirmado = mapear_terminos_a_codigos(r.terminos_1, ordenados) | \
+                    mapear_terminos_a_codigos(r.terminos_2, ordenados)
+        for fila_det in automatico.itertuples():
+            filas_mencion.append({
+                "code": r.code, "codigo": fila_det.codigo, "clase": fila_det.clase,
+                "confirmado_por_anotador": fila_det.codigo in confirmado,
+            })
+        for cadena in (r.terminos_1, r.terminos_2):
+            if isinstance(cadena, str) and cadena.strip():
+                for frag in cadena.split(";"):
+                    if normalizar(frag) and not mapear_terminos_a_codigos(frag, ordenados):
+                        sin_mapear.append(frag.strip())
+
+    men = pd.DataFrame(filas_mencion)
+    vpp_por_clase = {}
+    if len(men):
+        for clase, g in men.groupby("clase"):
+            tpm = int(g.confirmado_por_anotador.sum())
+            nm = len(g)
+            vpp_por_clase[clase] = {
+                "n_menciones": nm, "confirmadas": tpm,
+                "VPP_pct": round(100 * tpm / nm, 1) if nm else None,
+                "VPP_ic95": wilson_ic(tpm, nm),
+            }
+
+    # --- direccion de la ponderacion ---
+    ponderacion = {
+        "como_pondera_el_codigo": ("07_forma_y_clase.py calcula peso = N_poblacion / n_muestra "
+            "-el INVERSO de la fraccion de muestreo (n/N)-, en la variable `pesos` de main(). "
+            "Es la ponderacion correcta bajo muestreo estratificado sobre el desenlace."),
+        "veredicto": ("Si el manuscrito dice 'ponderado por la fraccion de muestreo' en vez de "
+            "'por el inverso de la fraccion' o 'por N/n', es un error de REDACCION del texto, "
+            "no del calculo: el codigo ya pondera correctamente. Corregir la frase, no el numero."),
+    }
+
+    return {
+        "archivo_fuente": "reportes/07_anotacion_consolidada.csv",
+        "nota_codigos_de_barras": ("La anotacion llego sin ceros a la izquierda en 'code' "
+            "-herramienta que trato el codigo como numero-. Verificado: normalizando, las 600 "
+            "filas cruzan exacto contra 07_muestra_anotacion_v1.csv sin un solo desacuerdo de "
+            "estrato. Se uso el codigo correcto de v1."),
+        "kappa_tres_categorias_SI_NO_DUDOSO": kappa_3cat,
+        "kappa_binaria_SI_vs_resto": kappa_binaria,
+        "nota_kappa": ("El archivo no trae adjudicacion de la Dra. para las filas 'comun' en "
+            "desacuerdo (en_desempate=SI, 30 de 600). Kappa se calcula sobre el acuerdo CRUDO "
+            "entre anotador_1 y anotador_2 en las 150 filas de doble anotacion -asi se define "
+            "kappa, la adjudicacion no participa-."),
+        "por_estrato_con_denominadores": por_estrato,
+        "validacion_a_nivel_producto": validacion_producto,
+        "validacion_a_nivel_mencion_por_clase": vpp_por_clase,
+        "terminos_del_anotador_sin_mapear_a_ningun_codigo": {
+            "n": len(sin_mapear), "ejemplos": sorted(set(sin_mapear))[:30],
+            "nota": ("Erratas de captura o sinonimos que el diccionario no reconoce. No se "
+                     "cuentan como falso positivo del metodo -son un problema de mapeo de esta "
+                     "validacion, no del detector-, pero limitan la VPP de mencion: revisarlos "
+                     "a mano si se quiere una cifra mas ajustada."),
+        },
+        "direccion_de_la_ponderacion": ponderacion,
+        "filas_en_desempate_sin_adjudicar": int((df.verdad == "sin_resolver").sum()),
+    }
+
+
 if __name__ == "__main__":
     dic = cargar_diccionario()
     ordenados = terminos_ordenados(dic)
@@ -843,6 +1064,19 @@ if __name__ == "__main__":
     chequeo = validar_contra_publicado(det)
     print("  validacion contra Tabla 1:", chequeo)
     assert chequeo["ok"], "el dataset reconstruido no cuadra con 07/08 -revisar antes de seguir-"
+
+    print("\n--- tarea 12: validacion contra el conjunto anotado ---")
+    ruta_anotacion = REPORTES / "07_anotacion_consolidada.csv"
+    if ruta_anotacion.exists():
+        t12 = tarea12_validacion(ordenados, det)
+        print("kappa (3 categorias):", t12["kappa_tres_categorias_SI_NO_DUDOSO"])
+        print("kappa (binaria SI vs resto):", t12["kappa_binaria_SI_vs_resto"])
+        print("validacion a nivel producto:", t12["validacion_a_nivel_producto"])
+        print("VPP por mencion, por clase:", t12["validacion_a_nivel_mencion_por_clase"])
+        print("terminos sin mapear:", t12["terminos_del_anotador_sin_mapear_a_ningun_codigo"]["n"])
+        guardar_reporte("15_tarea12_validacion", t12)
+    else:
+        print("  AVISO: no se encontro reportes/07_anotacion_consolidada.csv; tarea 12 omitida.")
 
     universo = df.code.values
     print("\n--- tarea 3: estandarizacion simetrica con bootstrap ---")

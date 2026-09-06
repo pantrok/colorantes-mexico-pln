@@ -54,19 +54,26 @@ del `git log`.
   **La brecha depurada citable pasa de 69.7 % a 70.3 %** (05, universo
   completo) y el sintético agregado de 07 baja de n=2509/37.1 % a
   n=2405/36.8 %.
-- **Parche 15 (06/09/2026) aplicado, 11 de 12 tareas.** Revisión por pares
-  del manuscrito v11 (5 revisores). Tareas 1-2 (Tabla 2 completa con ceros
-  explícitos; modelo de Firth sin el término de obligatoriedad) resueltas en
-  `08_vocabulario_off.py`. Tareas 3-11 (estandarización simétrica con
-  bootstrap, bootstrap por producto, sobredispersión, forma del nombre,
-  curva de sensibilidad de la ventana, número E en España, concentración por
-  contribuyente, caramelo, amarillo 6) en el script nuevo
-  `15_revision_pares.py`. **Tarea 12 (validación 2×2, VPP, sensibilidad, IC
-  de kappa) NO SE HIZO: no existen en el repo las columnas `anotador_1`/
-  `anotador_2` llenas.** Ver la sección «Parche 15» más abajo — **hallazgo
-  central: el efecto de "origen natural" pierde casi toda su fuerza (RM de
-  ~6.5 a ~1.6-1.8) al controlar por la FORMA del nombre en vez del origen**,
-  apoyando la hipótesis rival de uno de los revisores.
+- **Parche 15 (06/09/2026) aplicado completo, 12 de 12 tareas** (la tarea 12
+  se completó el mismo día al recibir `07_anotacion_consolidada.csv`, ver
+  abajo). Revisión por pares del manuscrito v11 (5 revisores). Tareas 1-2
+  (Tabla 2 completa con ceros explícitos; modelo de Firth sin el término de
+  obligatoriedad) resueltas en `08_vocabulario_off.py`. Tareas 3-12
+  (estandarización simétrica con bootstrap, bootstrap por producto,
+  sobredispersión, forma del nombre, curva de sensibilidad de la ventana,
+  número E en España, concentración por contribuyente, caramelo, amarillo 6,
+  validación 2×2 con la anotación real) en el script nuevo
+  `15_revision_pares.py`. Ver la sección «Parche 15» más abajo. **Dos
+  hallazgos centrales:**
+  1. El efecto de "origen natural" pierde casi toda su fuerza (RM de ~6.5 a
+     ~1.6-1.8) al controlar por la FORMA del nombre en vez del origen
+     (tarea 6) — apoya la hipótesis rival de uno de los revisores.
+  2. **La regla de contexto de 60 caracteres descarta como "sin contexto"
+     productos que SÍ tienen un colorante real: 66 de 100 confirmados, 22
+     más en duda (tarea 12, con la anotación real).** El déficit de
+     sensibilidad del pipeline (84.8 %) viene casi todo de ahí, no del
+     estrato sin detección (6 % de falsos negativos). Kappa recalculado de
+     forma independiente reproduce exacto el 0.770 ya reportado.
 - **Pendiente, sin empezar (además de lo de arriba):** decidir el tratamiento
   del dióxido de titanio (E171) antes del modelo de Firth, escribir el manual
   de anotación, sortear los 600 y anotar contra el hash de v1.1.
@@ -774,30 +781,118 @@ como el caso donde sí está: hay que elegir la lectura correcta, que es "las
 dos están cubiertas, la diferencia de recuperación viene de otro lado" (ver
 tareas 5 y 6).
 
-### Tarea 12 — validación 2×2 del conjunto anotado: NO SE HIZO
+### Tarea 12 — validación 2×2 del conjunto anotado (COMPLETADA el 06/09/2026)
 
-**Bloqueada por falta de datos, no aproximada.** Requiere las columnas
-`anotador_1`/`anotador_2` de `reportes/07_muestra_anotacion_v1.csv` llenas
-con el juicio real de los dos anotadores — están vacías (0 de 600 filas
-tienen algo). El kappa=0.770 que cita el parche 14 es un dato reportado de
-palabra por el usuario, no un archivo verificable en este repositorio. En
-cuanto la anotación real se incorpore (como CSV, con las columnas
-llenas), esta es la primera tarea a resolver: VPP y sensibilidad con IC,
-la tabla 2×2 por estrato con denominadores, VPP a nivel de MENCIÓN
-estratificada por clase (no solo a nivel de producto), la dirección de la
-ponderación (inverso de la fracción de muestreo bajo muestreo
-estratificado sobre el desenlace — el manuscrito dice "ponderado por la
-fracción", que muy probablemente está al revés, pero no se puede confirmar
-sin los datos), e IC para kappa.
+El usuario adjuntó `15_anotacion_consolidada.csv` (600 filas: 225 solo
+anotador 1, 225 solo anotador 2, 150 dobles para kappa) y pidió versionarlo.
+Se guardó como **`reportes/07_anotacion_consolidada.csv`** (nombrado `07_`
+porque es el resultado de anotar la muestra de `07_forma_y_clase.py`, no un
+insumo propio de este parche).
+
+**Nota de datos, menor.** El archivo llegó con los códigos de barras SIN
+ceros a la izquierda —una herramienta lo trató como número al editarlo,
+la misma familia de problema (más leve) que la corrupción de Excel del
+parche 14—. Verificado: normalizando (quitando ceros a la izquierda), las
+600 filas cruzan exacto contra `07_muestra_anotacion_v1.csv`, **sin un solo
+desacuerdo de estrato**. Se usó el código correcto de `v1` como canónico; no
+hubo que descartar ninguna fila.
+
+**El archivo no trae una columna de veredicto final adjudicado por la Dra.**
+para las 30 filas de doble anotación en desacuerdo (`en_desempate=SI`). Esas
+filas se reportan como `sin_resolver` y se excluyen de VPP/sensibilidad —no
+se les asignó un veredicto que no está en los datos.
+
+**Kappa de Cohen, sobre las 150 filas de doble anotación, con IC95 por la
+varianza asintótica de Fleiss/Cohen/Everitt (1969):**
+
+| | κ | IC95 |
+|---|---|---|
+| 3 categorías (SI/NO/DUDOSO) | **0.7697** | [0.648, 0.891] |
+| Binaria (SI contra NO-o-DUDOSO) | 0.7584 | [0.631, 0.886] |
+
+**El cálculo independiente reproduce exacto el 0.770 reportado de palabra
+en el parche 14**, con la categorización de 3 niveles — confirma tanto la
+cifra como que esta implementación está leyendo el archivo correctamente.
+
+**Validación a nivel de PRODUCTO** (excluidos 58 de 600 por texto no
+utilizable o sin resolver):
+
+| | TP | FP | FN | TN |
+|---|---|---|---|---|
+| | 374 | 8 | 67 | 93 |
+
+- **VPP = 97.9 %** [IC95 95.9–98.9] — casi no hay falsos positivos: cuando
+  el pipeline dice que detectó un colorante, casi siempre es real.
+- **Sensibilidad = 84.8 %** [IC95 81.2–87.9] — el pipeline pierde ~15 % de
+  las detecciones reales.
+- Especificidad = 92.1 % [IC95 85.1–95.9].
+
+**El hallazgo más importante de esta tarea, y posiblemente de todo el
+parche 15, está en la tabla por estrato:**
+
+| Estrato | n | verdad=SI | verdad=NO | DUDOSO | sin_resolver |
+|---|---|---|---|---|---|
+| sintético | 150 | 139 | 7 | 1 | 3 |
+| natural | 250 | 246 | 2 | 1 | 1 |
+| **ambiguo_descartado** | **100** | **66** | **5** | **22** | **7** |
+| sin_detección | 100 | 6 | 92 | 1 | 1 |
+
+**66 de los 100 productos que la regla de contexto de 60 caracteres
+descarta como "ambiguo sin contexto" son, según los dos anotadores, una
+detección REAL de colorante** (y 22 más quedan en duda — sumando ambas,
+88/100, prácticamente el mismo 84/89 que ya citaba el propio parche 15 en
+la tarea 7, ahora confirmado con la anotación real). Casi todo el déficit de
+sensibilidad del pipeline (84.8 % en vez de cerca de 100 %) viene de aquí,
+no del estrato `sin_detección` (que solo tiene 6 % de falsos negativos).
+**Esto no es un problema del tamaño de la ventana** —la tarea 7 ya mostró
+que el resultado es plano entre 40 y 120 caracteres—: es que muchas
+etiquetas mexicanas usan un ingrediente ambiguo (cúrcuma, páprika, achiote)
+como colorante real sin poner la palabra "colorante" en ningún lado cerca.
+La regla de contexto, tal como está diseñada hoy, prioriza precisión sobre
+recall en ese estrato, y aquí queda cuantificado cuánto recall se pierde.
+Esto no invalida la brecha depurada (que se calcula sobre lo ya detectado),
+pero sí limita fuertemente cualquier afirmación de PREVALENCIA total de
+colorantes naturales en el mercado mexicano, que el pipeline subestima.
+
+**VPP a nivel de MENCIÓN, estratificada por clase** (solo sobre productos
+predichos positivos, con texto utilizable y verdad resuelta):
+
+| Clase | Menciones | Confirmadas | VPP | IC95 |
+|---|---|---|---|---|
+| sintético | 397 | 397 | 100.0 % | 99.0–100.0 |
+| carmín | 94 | 94 | 100.0 % | 96.1–100.0 |
+| mineral_inorgánico | 25 | 25 | 100.0 % | 86.7–100.0 |
+| natural_botánico | 180 | 174 | 96.7 % | 92.9–98.5 |
+
+Los términos del anotador se mapearon a código con el MISMO emparejador del
+diccionario (no comparación exacta de cadenas), para tolerar sinónimos.
+**104 fragmentos de texto libre del anotador no se pudieron mapear a ningún
+código** —erratas de captura ("Cam�n", "AZUL NO1") o formas sin el punto
+que sí lleva el término del diccionario ("AMARILLO NO 6" contra "amarillo
+no. 6", donde `normalizar()` preserva el punto)—. No se cuentan como falso
+positivo del método: son un límite de esta validación, no del detector. La
+VPP de `natural_botanico` (96.7 %, la más baja de las cuatro) es la más
+afectada por este mapeo imperfecto — la cifra real probablemente es más
+alta.
+
+**Dirección de la ponderación, confirmada.** `07_forma_y_clase.py` calcula
+`peso = N_poblacion / n_muestra` — el INVERSO de la fracción de muestreo,
+que es lo correcto bajo muestreo estratificado sobre el desenlace. **Si el
+manuscrito dice "ponderado por la fracción de muestreo" en vez de "por el
+inverso de la fracción" o "por N/n", es un error de REDACCIÓN del texto, no
+del cálculo** — el código ya pondera bien; hay que corregir la frase, no el
+número.
 
 ### Archivos nuevos
 
-- `src/15_revision_pares.py` — tareas 3 a 11.
-- `tests/test_revision_pares.py` — fija `forma_del_nombre()`, `kitagawa()`
-  e `icc_por_codigo()`.
+- `src/15_revision_pares.py` — tareas 3 a 12.
+- `tests/test_revision_pares.py` — fija `forma_del_nombre()`, `kitagawa()`,
+  `icc_por_codigo()` y `cohen_kappa()` (esta última verificada contra el
+  0.770 real, no solo con casos de juguete).
+- `reportes/07_anotacion_consolidada.csv` — la anotación real, versionada.
 - `reportes/15_forma_del_nombre.csv` — auditoría completa de la
   clasificación de forma (tarea 6), para revisión manual.
-- `reportes/15_tarea{3,4,4b,5,6,6_carmin_paises,7,8,9,10,11}_*.json`.
+- `reportes/15_tarea{3,4,4b,5,6,6_carmin_paises,7,8,9,10,11,12}_*.json`.
 
 ---
 

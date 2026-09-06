@@ -1,0 +1,605 @@
+id,code,estrato,bloque,anotador_1,anotador_2,terminos_1,terminos_2,dudosos_1,dudosos_2,texto_utilizable_1,texto_utilizable_2,generica_1,generica_2,en_desempate
+R0001,7622201735432,natural,solo_A,SI,,carmines,,,,SI,,NO,,NO
+R0002,12388002507,ambiguo_descartado,solo_A,SI,,dióxido de titanio,,,,NO,,NO,,NO
+R0003,20899001605,natural,solo_B,,SI,,BETA CAROTENO; ANNATO; ROJO 40; AZUL 1; AMARILLO 6; AMARILLO 5; TARTRAZINA,,,,SI,,NO,NO
+R0004,7500478004706,natural,comun,SI,SI,carmín; dióxido de titanio,carmín; dióxido de titanio,,,SI,SI,NO,NO,NO
+R0005,7506443108349,natural,solo_B,,SI,,carmín,,enocianina,,SI,,NO,NO
+R0006,7501055904792,ambiguo_descartado,solo_A,SI,,extracto de annato; cúrcuma,,,,SI,,NO,,NO
+R0007,7506174507633,natural,comun,SI,SI,Dióxido de titanio; Azul 1; Amarillo 6; Rojo 40; Amarillo 5; Azul 2,Dióxido de titanio; Azul 1; Amarillo 6; Rojo 40; Amarillo 5; Azul 2,,,SI,SI,NO,NO,NO
+R0008,2000000147161,ambiguo_descartado,comun,SI,DUDOSO,curcumina; extracto de paprika,,,curcumina; extracto de paprika,SI,SI,NO,NO,SI
+R0009,7501011167070,sintetico,solo_B,,SI,,Tartrazina; Rojo Allura AC,,,,SI,,NO,NO
+R0010,19836100778,sintetico,solo_A,SI,,Amarillo 5; Rojo 40; Azul 1,,,,SI,,NO,,NO
+R0011,7503019426593,natural,solo_A,SI,,dióxido de titanio; extracto de annatto,,,,SI,,NO,,NO
+R0012,7501040080166,ambiguo_descartado,solo_A,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,,NO
+R0013,7501032397746,natural,solo_A,SI,,carmin; beta caroteno,,,,SI,,NO,,NO
+R0014,7501052477008,natural,solo_A,SI,,CARMIN,,,,SI,,NO,,NO
+R0015,7501630225199,natural,solo_A,SI,,DIÓXIDO DE TITANIO; BETA CAROTENO,,,,SI,,NO,,NO
+R0016,2000000147310,natural,comun,SI,SI,amarillo 5; rojo 40; azul 2; azul 1; extracto de zanahoria; extracto de paprika,amarillo 5; rojo 40; azul 2; azul 1; extracto de zanahoria; extracto de paprika,,,SI,SI,NO,NO,NO
+R0017,20899001087,sintetico,comun,SI,SI,rojo 40,rojo 40,,,SI,SI,NO,NO,NO
+R0018,7501011133921,sintetico,solo_B,,SI,,Rojo Allura AC; Amarillo Ocaso FCF; Tartrazina; Azul Brillante FCF,,,,SI,,NO,NO
+R0019,7501008843765,ambiguo_descartado,solo_B,,DUDOSO,,,,betacaroteno,,NO,,NO,NO
+R0020,2000000142230,sintetico,solo_B,,SI,,rojo 3,,,,SI,,NO,NO
+R0021,7501032485177,sintetico,solo_A,SI,,rojo 40; rojo D&C 5; azul 1,,,,SI,,NO,,NO
+R0022,7501761802504,natural,comun,SI,SI,ROJO BETABEL; CURCUMINA; CARMÍN; BETA CAROTENO,ROJO BETABEL; CURCUMINA; CARMÍN; BETA CAROTENO,,,SI,SI,NO,NO,NO
+R0023,7501030482437,sintetico,comun,SI,SI,amarillo 5; dióxido de titanio; amarillo 6,amarillo 5; dióxido de titanio; amarillo 6,,,SI,SI,NO,NO,NO
+R0024,75013820,sin_deteccion,solo_B,,SI,,camin,,,,SI,,NO,NO
+R0025,7501024203413,natural,solo_A,SI,,ANNATO; CURCUMA,,,,SI,,NO,,NO
+R0026,7501045402994,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0027,7501013611267,natural,solo_A,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,,NO
+R0028,38000201141,natural,comun,SI,SI,norbixina de annato,norbixina de annato,,,SI,SI,NO,NO,NO
+R0029,8005121000757,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0030,7501005180306,natural,solo_B,,SI,,achiote; amarillo 5; tartrazina; amarillo 6,,,,SI,,NO,NO
+R0031,2000000123904,natural,solo_B,,SI,,beta caroteno,,,,SI,,NO,NO
+R0032,7500478022335,sintetico,solo_A,SI,,ROJO ALLURA AC; AMARILLO OCASO FCF; AZUL BRILLANTE FCF,,CARBONATO DE CALCIO,,SI,,NO,,NO
+R0033,7501005180832,natural,solo_B,,SI,,ACHIOTE; AMARILLO 5; AMARILLO 6,,,,SI,,NO,NO
+R0034,7502004719764,natural,solo_A,SI,,extracto de paprika; amarillo FD&C 6; tartrazina; azorrubina; rojo FD%C 40,,cúrcuma en polvo,,SI,,NO,,NO
+R0035,7501011169821,sintetico,solo_B,,SI,,Rojo allura AC,,,,SI,,NO,NO
+R0036,53517006157,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0037,7501055317653,sintetico,solo_B,,SI,,Azul 1,,,,SI,,NO,NO
+R0038,7501069213446,natural,solo_B,,SI,,annato norbixina,,,,SI,,NO,NO
+R0039,654858704407,natural,comun,SI,SI,achiote,achiote,,,SI,SI,NO,NO,NO
+R0040,7501032398941,natural,solo_A,SI,,jugo de zanahoria; carmín,,,,SI,,NO,,NO
+R0041,7501040034749,ambiguo_descartado,solo_B,,DUDOSO,,,,oleorresina de cúrcuma; paprika,,SI,,NO,NO
+R0042,758104007943,sintetico,comun,SI,SI,rojo 40; amarillo 5; azul 1,rojo 40; amarillo 5; azul 1,,,SI,SI,NO,NO,NO
+R0043,884912014283,natural,comun,SI,SI,annatto extract,annatto extract,riboflavin (vitamin b2),riboflavin; vitamin b2,SI,SI,NO,NO,NO
+R0044,19836100754,natural,solo_A,SI,,"Carmin; Beta, beta-caroteno",,,,SI,,NO,,NO
+R0045,7501055370603,ambiguo_descartado,comun,SI,DUDOSO,CAROTEÑOS,,,CAROTEÑOS,SI,SI,NO,NO,SI
+R0046,7506306417809,natural,solo_B,,SI,,CARMÍN; ROJO 40; TARTRAZINA,,,,SI,,NO,NO
+R0047,608875001209,ambiguo_descartado,solo_B,,SI,,extracto de annato,,,,SI,,NO,NO
+R0048,2548791659284,sintetico,solo_A,SI,,tartrazina; amarillo 6; carmoisina; azul 2; pigmente blanco 6; rojo 6,,,,SI,,NO,,NO
+R0049,7501413540778,natural,comun,SI,SI,extracto de annato; carmin,extracto de annato; carmin,,,SI,SI,NO,NO,NO
+R0050,729090050824,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0051,7501011194465,ambiguo_descartado,comun,SI,SI,Extracto de Annato,Extracto de Annato,,,NO,SI,NO,NO,NO
+R0052,7501052470030,sintetico,solo_B,,SI,,amarillo 6,,,,SI,,NO,NO
+R0053,31200454560,sin_deteccion,solo_A,DUDOSO,,,,jugo de zanahoria concentrado,,SI,,NO,,NO
+R0054,7898142864252,natural,solo_A,SI,,DIÓXIDO DE TITANIO; E171; TARTRAZINA; E102; ROJO ALLURA AC; E129; AMARILLO OCASO FCF; E110; AZUL BRILLANTE FCF; E133; INDIGOTINA; E132,,,,SI,,NO,,NO
+R0055,7501057720390,natural,solo_A,SI,,CARMIN,,,,SI,,NO,,NO
+R0056,7501055912414,natural,comun,SI,SI,beta-caroteno,beta-caroteno,,,SI,SI,NO,NO,NO
+R0057,7506443106475,sintetico,solo_A,SI,,tartrazina,,,,SI,,NO,,NO
+R0058,8410667004303,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0059,812999014421,natural,solo_A,SI,,amarillo 5; amarillo 6; rojo 40; azul 1; azul 2; carmín; tartrazina,,,,SI,,NO,,NO
+R0060,7501011151703,sintetico,solo_A,SI,,ROJO ALLURA AC; TARTRAZINA; AMARILLO OCASO FCF; AZUL BRILLANTE FCF,,,,SI,,NO,,NO
+R0061,7502260420077,natural,comun,SI,SI,dióxido de titanio; extracto de annatto,dióxido de titanio; extracto de annatto,,,SI,SI,NO,NO,NO
+R0062,16000467590,sintetico,solo_B,,SI,,azul 1; dióxido de titanio,,carbonato de calcio; Vitamina B2; riboflavina,,SI,,NO,NO
+R0063,1011145566,sintetico,comun,SI,SI,rojo allura AC; tartrazina; amarillo ocaso FCF; azul brillante FCF,rojo allura AC; tartrazina; amarillo ocaso FCF; azul brillante FCF,,,SI,SI,NO,NO,NO
+R0064,7501030470106,sintetico,solo_B,,SI,,AMARILLO 5; AZUL 1,,,,SI,,NO,NO
+R0065,7501791638012,sintetico,solo_B,,SI,,Rojo 40; Amarillo 6; Azul 1; Amarillo 5; tartrazina,,,,SI,,NO,NO
+R0066,42400212638,natural,solo_B,,SI,,ACHIOTE,,CARBONATO DE CALCIO,,SI,,NO,NO
+R0067,7501020563733,natural,comun,SI,SI,curcumina; carmín,curcumina; carmín,Carbonato de calcio,Carbonato de calcio,SI,SI,SI,SI,NO
+R0068,781718645911,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0069,7502259040415,sintetico,solo_A,SI,,amarillo 6; azul 2; rojo allura AC,,,,SI,,NO,,NO
+R0070,7501040095313,ambiguo_descartado,solo_B,,SI,,Beta caroteno,,,,SI,,NO,NO
+R0071,7501020572278,natural,solo_A,SI,,Carmin,,,,SI,,NO,,NO
+R0072,7501008010259,ambiguo_descartado,comun,SI,SI,curcumina; annato,curcumina; annato,,,SI,SI,NO,NO,NO
+R0073,8716200718882,ambiguo_descartado,solo_A,NO,,,,Beta caroteno; Carotenoides,,SI,,NO,,NO
+R0074,7501020512649,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0075,33844005351,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0076,7501003301475,sintetico,comun,SI,SI,rojo allura AC,rojo allura AC,,concentrado de jugo de uva,SI,SI,NO,NO,NO
+R0077,7501030421313,sintetico,comun,SI,NO,AMARILLO 5,,,,SI,SI,NO,NO,SI
+R0078,7501791655705,ambiguo_descartado,comun,SI,DUDOSO,oleorresina de paprika,,,oleorresina de paprika,SI,SI,NO,NO,SI
+R0079,7501791625012,sin_deteccion,comun,SI,SI,ROJO NO 40,ROJO NO 40,,,SI,SI,NO,NO,NO
+R0080,7501031311682,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0081,41220169542,ambiguo_descartado,solo_B,,SI,,JUGO DE REMOLACHA; CONCENTRADO DE FRUTAS Y VERDURAS; CURCUMINA,,,,SI,,NO,NO
+R0082,41789001925,ambiguo_descartado,comun,SI,DUDOSO,CURCUMA,,RIBOFLAVINA,RIBOFLAVINA; CURCUMA,SI,SI,NO,NO,SI
+R0083,7411000714270,natural,comun,SI,SI,caroteno; curcuma,caroteno; curcuma,,,SI,SI,NO,NO,NO
+R0084,735257003244,natural,comun,SI,SI,dióxido de titanio; tartrazina; amarillo ocaso FCF; rojo allura AC; azul brillante FCF,dióxido de titanio; tartrazina; amarillo ocaso FCF; rojo allura AC; azul brillante FCF,,,SI,SI,NO,NO,NO
+R0085,7501059230880,natural,solo_B,,SI,,Carmín,,,,SI,,NO,NO
+R0086,7501032398330,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0087,7501030420866,natural,comun,SI,SI,carmín,carmín,,,NO,SI,NO,NO,NO
+R0088,7501059233584,sintetico,solo_B,,SI,,Azorrubina; Azul brillate FCF,,,,SI,,NO,NO
+R0089,661440000052,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0090,7501022010921,ambiguo_descartado,solo_A,SI,,betacaroteno,,riboflavina,,SI,,NO,,NO
+R0091,7501003114785,natural,solo_A,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,,NO
+R0092,8076809575799,sin_deteccion,solo_A,NO,,,,riboflavina,,SI,,NO,,NO
+R0093,681131411011,natural,solo_A,SI,,carmín de cochinilla,,,,SI,,NO,,NO
+R0094,7501003335029,ambiguo_descartado,solo_A,SI,,cúrcuma,,,,SI,,NO,,NO
+R0095,7501010403506,sin_deteccion,comun,SI,SI,annato,annato,,,SI,SI,NO,NO,NO
+R0096,7501791628167,natural,solo_B,,SI,,aciote; cúrcuma,,,,SI,,NO,NO
+R0097,7501057720505,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0098,850697002517,sintetico,solo_B,,SI,,amarillo ocaso FCF; amarillo 6; rojo 40; indigotina; azul 2; ta razina; tartrazina; amarillo 5; roo 40,,,,NO,,NO,NO
+R0099,7503024419924,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0100,7503020074080,ambiguo_descartado,solo_A,SI,,cúrcuma,,,,SI,,NO,,NO
+R0101,757528027032,sintetico,comun,SI,SI,laca rojo no. 40; laca amarillo no. 6,laca rojo no. 40; laca amarillo no. 6,,,SI,SI,NO,NO,NO
+R0102,7501008071380,ambiguo_descartado,solo_A,DUDOSO,,,,paprika,,SI,,NO,,NO
+R0103,7501303990881,sintetico,solo_B,,SI,,amarillo 5; azul 1,,carbonato de calcio,,SI,,NO,NO
+R0104,7503004008735,sintetico,solo_B,,SI,,ROJO NO. 40,,,,SI,,NO,NO
+R0105,7501025511326,natural,solo_A,SI,,colorante rojo betabel,,,,SI,,NO,,NO
+R0106,7501073831988,sintetico,solo_A,SI,,Amarillo 6,,,,SI,,NO,,NO
+R0107,7503026409558,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0108,7503205807602,natural,solo_A,SI,,carmín; rojo 40,,vitamina B2,,SI,,NO,,NO
+R0109,602723470537,sin_deteccion,solo_B,,NO,,,,carbon activado,,NO,,NO,NO
+R0110,7501013100556,sintetico,solo_B,,SI,,Rojo 40,,,,SI,,NO,NO
+R0111,7501791666398,sintetico,solo_A,SI,,amarillo 5; Amarillo 6; rojo 5; Azul 2,,,,SI,,NO,,NO
+R0112,7501040001161,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0113,7501032398514,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0114,7506443103351,natural,solo_A,SI,,beta caroteno; carmin,,,,SI,,NO,,NO
+R0115,20899752057,sintetico,comun,SI,SI,amarillo 5; amarillo 6; rojo 40; rojo 3; azul 1,amarillo 5; amarillo 6; rojo 40; rojo 3; azul 1,,,SI,SI,NO,NO,NO
+R0116,7501639309432,natural,solo_A,SI,,annatto,,,,SI,,NO,,NO
+R0117,7501054902973,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0118,7501791661751,natural,solo_A,SI,,carmín,,,,SI,,NO,,NO
+R0119,7501325703018,natural,solo_B,,SI,,CARMÍN,,,,SI,,NO,NO
+R0120,7501011143524,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0121,7501791670562,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0122,757528044992,natural,solo_A,SI,,CARMÍN; ROJO ALLURA AC,,,,SI,,NO,,NO
+R0123,75026196,sintetico,comun,SI,SI,carmioisina; azul 1; amarillo 5; tartrazina,carmioisina; azul 1,,,SI,SI,NO,NO,SI
+R0124,7501006559330,natural,solo_B,,SI,,extracto de paprika; amarillo ocaso FCF; tartrazina,,,,SI,,NO,NO
+R0125,7501040034718,ambiguo_descartado,solo_A,SI,,oleorresina de cúrcuma; páprika,,,,SI,,NO,,NO
+R0126,7501003107817,natural,solo_B,,SI,,beta-caroteno,,,,SI,,NO,NO
+R0127,75030896,natural,comun,SI,SI,carmin; dorofilinad sodio y potasio,carmin,,dorofilinad sodio y potasio,SI,SI,NO,NO,SI
+R0128,7501030468318,sintetico,solo_B,,SI,,ROJO 40; AMARILLO 6; AMARILLO 5,,,,SI,,NO,NO
+R0129,7500525518828,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0130,7501032332020,ambiguo_descartado,comun,SI,SI,extracto de annato,extracto de annato,carbonato de calcio; Vitamina B2,carbonato de calcio; Vitamina B2,SI,SI,NO,NO,NO
+R0131,7500463466281,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0132,7501040080067,ambiguo_descartado,solo_B,,SI,,extracto de annato,,,,SI,,NO,NO
+R0133,8410663000248,natural,solo_B,,SI,,annato norbixina,,,,SI,,NO,NO
+R0134,7501000641482,sintetico,solo_B,,SI,,TARTRAZINA; AMARILLO OCASO FCF,,,,SI,,NO,NO
+R0135,7501182300894,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0136,7501011166554,ambiguo_descartado,solo_B,,DUDOSO,,,,ACHIOTE,,SI,,NO,NO
+R0137,7503028643417,natural,solo_B,,SI,,CARMÍN; BETA CAROTENO,,,,SI,,NO,NO
+R0138,8719200303508,ambiguo_descartado,solo_A,SI,,extracto de annato; cúrcuma,,,,SI,,NO,,NO
+R0139,7501057710506,natural,solo_B,,SI,,CARMIN,,,,SI,,NO,NO
+R0140,561801022399,sin_deteccion,comun,SI,SI,dióxido de titaniol,dióxido de titaniol,,,SI,SI,NO,NO,NO
+R0141,7501092109143,natural,solo_B,,SI,,extracto de annato,,,,SI,,NO,NO
+R0142,2000000147339,sintetico,comun,SI,SI,tartrazina; FD&C amarillo No. 5; amarillo ocaso; FD&C amarillo No.6; rojo allura AC; FD&C rojo 40,tartrazina; FD&C amarillo No. 5; amarillo ocaso; FD&C amarillo No.6; rojo allura AC; FD&C rojo 40,riboflavina (vitamina B2),riboflavina; vitamina B2,SI,SI,NO,NO,NO
+R0143,7506475125017,natural,solo_A,SI,,amarillo 6; azul 1; rojo 40; amarillo 5; extracto de annato,,carbonato de calcio,,SI,,NO,,NO
+R0144,7501008013007,natural,comun,SI,SI,dióxido de titanio,dióxido de titanio,,,SI,SI,NO,NO,NO
+R0145,7501791625500,ambiguo_descartado,solo_A,SI,,oleorresina de paprika,,,,SI,,NO,,NO
+R0146,7501020570861,natural,solo_A,SI,,carmín,,,,SI,,NO,,NO
+R0147,7501040083631,ambiguo_descartado,comun,SI,SI,betacaroteno,betacaroteno,,,SI,SI,NO,NO,NO
+R0148,808806886978,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0149,7501073839304,sintetico,solo_B,,SI,,Rojo 40,,,,SI,,NO,NO
+R0150,76150200249,natural,comun,SI,SI,extracto de annato,extracto de annato,,,SI,SI,NO,NO,NO
+R0151,7501059218987,natural,solo_B,,SI,,curcumina; extracto de annato,,,,SI,,NO,NO
+R0152,7506443105713,sintetico,solo_B,,NO,,,,,,SI,,NO,NO
+R0153,5514223807766,natural,solo_A,SI,,Curcumina; Extracto de Annato; Oleorresina de Paprika,,,,SI,,NO,,NO
+R0154,7501091200339,ambiguo_descartado,solo_B,,SI,,dioxido de titanio,,,,SI,,NO,NO
+R0155,7501791628242,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0156,7501011307476,natural,solo_A,SI,,cloroñla; beta—caroteno,,,,SI,,NO,,NO
+R0157,7500326297861,natural,comun,SI,SI,laca carmín; oleorresina de paprika,laca carmín,,oleorresina de paprika,SI,SI,NO,NO,SI
+R0158,7501791665834,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0159,7501761842241,sintetico,solo_A,SI,,DIOXIDO DE TITANIO; TARTRAZINA,,,,SI,,NO,,NO
+R0160,7503028351329,sin_deteccion,comun,NO,NO,,,Vitamina B2 (Riboflavina),Vitamina B2; Riboflavina,SI,SI,NO,NO,NO
+R0161,75042813,natural,solo_B,,SI,,carmín; anaranjado alimentos 5,,,,SI,,NO,NO
+R0162,7501864105281,sintetico,solo_A,SI,,ROJO 40; AMARILLO 5,,,,SI,,NO,,NO
+R0163,7501032485030,sintetico,solo_B,,SI,,amarillo 5; azul 2; rojo 401,,,,SI,,NO,NO
+R0164,7501025511302,natural,solo_B,,SI,,betacaroteno,,,,SI,,NO,NO
+R0165,75003135,natural,solo_A,SI,,Carmín,,,,SI,,NO,,NO
+R0166,11857877,natural,solo_A,SI,,rojo allura AC; extracto de annato,,,,SI,,NO,,NO
+R0167,4502077980088,natural,solo_A,SI,,beta caroteno,,,,SI,,NO,,NO
+R0168,7501130901050,natural,solo_B,,SI,,carmin; FD&C amarillo 5; tartrazina,,,,SI,,NO,NO
+R0169,7501013611113,natural,comun,SI,SI,EXTRACTO DE ANNATO,EXTRACTO DE ANNATO,,,SI,SI,NO,NO,NO
+R0170,41800490004,sintetico,solo_B,,SI,,ROJO 40,,,,SI,,NO,NO
+R0171,738545010740,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0172,7501040003455,natural,solo_A,SI,,carmin,,,,SI,,NO,,NO
+R0173,7501791669252,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0174,7501055905997,natural,solo_A,SI,,rojo natural 4,,,,SI,,NO,,NO
+R0175,7501002202261,ambiguo_descartado,solo_A,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,,NO
+R0176,7501040092824,natural,solo_A,SI,,ennato; carmín,,,,SI,,NO,,NO
+R0177,7503008708020,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0178,7501020568585,ambiguo_descartado,solo_B,,SI,,Carotenos naturales,,,,SI,,NO,NO
+R0179,7501011123588,sintetico,solo_A,SI,,AMARILLO OCASO FCF; TARTRAZINA; ACHIOTE,,,,SI,,NO,,NO
+R0180,7501902770525,natural,solo_B,,SI,,Dióxido de Titanio; Tartrazina; Rojo Allura AC,,,,SI,,NO,NO
+R0181,7502249130393,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0182,7503022833005,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0183,7501057711060,natural,solo_B,,SI,,CARMÍN,,,,SI,,NO,NO
+R0184,75065065,natural,comun,SI,SI,"carmin; beta, beta-caroteno","carmin; beta, beta-caroteno",,,SI,NO,NO,NO,NO
+R0185,7503030199674,sintetico,solo_A,SI,,rojo 40; amarillo 6; amarillo 5,,,,SI,,NO,,NO
+R0186,21000026272,natural,solo_A,SI,,PAPRIKA; TURMERIC; ANNATTO,,RIBOFLAVIN; CALCIUM CARBONATE,,SI,,NO,,NO
+R0187,7501030457428,sintetico,comun,SI,SI,AMARILLO 6; EXTRACTO DE ANNATO; AZLİ1; ROJO 40; DE ANNATO,AMARILLO 6; EXTRACTO DE ANNATO; ROJO 40,,,SI,NO,NO,NO,SI
+R0188,7501032335052,natural,solo_B,,SI,,carmin; beta caroteno,,,,SI,,NO,NO
+R0189,884912273116,natural,solo_B,,SI,,dióxido de titanio,,vitamina B2; riboflavina,,SI,,NO,NO
+R0190,34856008187,natural,comun,SI,SI,ANNATTO; TURMERIC; FRUIT AND VEGETABLE JUICE,ANNATTO; TURMERIC; FRUIT AND VEGETABLE JUICE,,,SI,SI,NO,NO,NO
+R0191,7802410000198,natural,solo_A,SI,,annato norbixina; curcumina,,,,SI,,NO,,NO
+R0192,7501005151962,natural,solo_B,,SI,,oleorresina de paprika,,,,NO,,SI,NO
+R0193,7501014302355,sintetico,solo_A,SI,,Amarillo 5; Amarillo 6; Rojo 40; Azul 1; tartrazina; azul brillante FCF,,,,SI,,NO,,NO
+R0194,7501059230897,natural,solo_A,SI,,Carmin,,,,SI,,NO,,NO
+R0195,7501040090875,sintetico,solo_B,,SI,,Rojo 6; Rojo 40; Amarillo 6,,,,SI,,NO,NO
+R0196,84114113917,natural,solo_A,SI,,EXTRACTO DE PAPRIKA,,PIMENTON,,SI,,NO,,NO
+R0197,7501325701793,natural,solo_A,SI,,carmín,,,,SI,,NO,,NO
+R0198,636817014253,natural,solo_A,SI,,Dióxido de Titanio; Rojo Allura AC.; Tartrazina,,,,SI,,NO,,NO
+R0199,38000581717,ambiguo_descartado,comun,SI,SI,dióxido de titanio,dióxido de titanio,vitamina B2,vitamina B2,SI,SI,NO,NO,NO
+R0200,26200014623,ambiguo_descartado,comun,DUDOSO,DUDOSO,,,paprika and extractives of paprika,paprika; extractives of paprika,NO,SI,NO,NO,NO
+R0201,7502261260771,ambiguo_descartado,comun,SI,SI,extracto de annato,extracto de annato,,,SI,SI,NO,NO,NO
+R0202,757528031312,sintetico,solo_B,,SI,,AMARILLO 6; ROJO 40; AMARILLO 5,,,,SI,,NO,NO
+R0203,44774056061,sintetico,solo_A,SI,,extracto de anato; amarillo 5; rojo 40y,,,,SI,,NO,,NO
+R0204,12964000064,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0205,7501059296756,natural,comun,SI,SI,rojo natural 4; extracto de annato; curcumlna,rojo natural 4; extracto de annato; curcumlna,,,SI,SI,NO,NO,NO
+R0206,7501008006290,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0207,228169,natural,solo_A,SI,,achiote; cúrcuma,,riboflavina,,SI,,NO,,NO
+R0208,7501008015261,natural,comun,SI,SI,cúrcuma; annato,cúrcuma; annato,,,SI,SI,NO,NO,NO
+R0209,7503018985695,sintetico,solo_A,SI,,amarillo No. 5 FD&C; amarillo No. 6 FD&C,,,,SI,,NO,,NO
+R0210,7501059295322,natural,solo_B,,SI,,antocianinas,,,,SI,,NO,NO
+R0211,7501003789792,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0212,7501029051835,sintetico,solo_B,,SI,,Rojo No. 40; Azul No.1,,,,SI,,NO,NO
+R0213,711410004594,sintetico,solo_B,,SI,,ROJO 40,,,,SI,,NO,NO
+R0214,7503029445126,ambiguo_descartado,solo_A,SI,,DIÓXIDO DE TITANIO,,CARBONATO DE CALCIO,,SI,,NO,,NO
+R0215,760573080129,ambiguo_descartado,solo_A,DUDOSO,,,,cúrcuma,,SI,,NO,,NO
+R0216,7501024203284,natural,solo_A,SI,,anato; cúrcuma,,,,SI,,NO,,NO
+R0217,46900001778,ambiguo_descartado,comun,DUDOSO,DUDOSO,,,PÁPRIKA,PÁPRIKA,SI,SI,NO,NO,NO
+R0218,7501088102721,ambiguo_descartado,solo_A,NO,,,,Cúrcuma,,SI,,NO,,NO
+R0219,7501125103582,sintetico,solo_A,SI,,Amarillo No. 5; Amarillo No. 6,,,,SI,,NO,,NO
+R0220,7501032398316,natural,solo_A,SI,,carmín; amarillo 5; Tartrazina,,,,SI,,NO,,NO
+R0221,76112000030,natural,comun,SI,SI,EXTRACTO DE PIMENTÓN; AMARILLO 5; AMARILLO 6; EXTRACTO DE ACHIOTE,AMARILLO 5; AMARILLO 6; EXTRACTO DE ACHIOTE,,EXTRACTO DE PIMENTÓN,SI,SI,NO,NO,SI
+R0222,7503023660327,ambiguo_descartado,solo_A,DUDOSO,,,,CURCUMA MOLIDA,,SI,,NO,,NO
+R0223,41800326006,sintetico,solo_A,SI,,ROJO 40,,,,SI,,NO,,NO
+R0224,76397801025,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0225,7501030421221,sintetico,comun,SI,NO,AMARILLO 5,,,,SI,SI,NO,NO,SI
+R0226,80941385,natural,solo_B,,SI,,ROJO REMOLACHA,,,,SI,,NO,NO
+R0227,7501518494440,natural,solo_A,SI,,oleorresina de paprika; FD&C laca amarillo 5,,,,SI,,NO,,NO
+R0228,7501008082843,natural,comun,SI,SI,dióxido de titanio,dióxido de titanio,,,SI,SI,NO,NO,NO
+R0229,7501040006197,sintetico,solo_B,,DUDOSO,,,,rojo curry,,NO,,NO,NO
+R0230,7501791650236,ambiguo_descartado,comun,SI,SI,extracto de annato,extracto de annato,,,SI,SI,NO,NO,NO
+R0231,7501011312258,natural,solo_A,SI,,beta—caroteno; rojo 40,,,,SI,,NO,,NO
+R0232,7501058619228,natural,solo_A,SI,,annatto; cúrcuma,,,,SI,,NO,,NO
+R0233,7501059289147,ambiguo_descartado,solo_B,,SI,,DIOXIDO DE TITANIO,,,,SI,,NO,NO
+R0234,7622300722470,natural,solo_B,,SI,,dioxido de titanio,,,,SI,,NO,NO
+R0235,8719200450462,ambiguo_descartado,solo_B,,SI,,annato; curcuma,,,,SI,,NO,NO
+R0236,7501040095528,natural,comun,SI,SI,caroteno,caroteno,,,SI,SI,NO,NO,NO
+R0237,7501032398460,natural,solo_A,SI,,carmin,,,,SI,,NO,,NO
+R0238,7501040005831,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0239,7501055914524,natural,solo_B,,SI,,extracto de annato; cúrcuma,,,,SI,,NO,NO
+R0240,7500810004890,natural,comun,SI,SI,carmín; beta caroteno,carmín; beta caroteno,,,SI,SI,NO,NO,NO
+R0241,7502261257955,natural,solo_A,SI,,amarille 6; caroteno,,,,SI,,NO,,NO
+R0242,7501013101881,ambiguo_descartado,solo_B,,SI,,Beta-caroteno,,,,SI,,NO,NO
+R0243,16000467583,sintetico,solo_A,SI,,amarillo 5; amarillo 6; rojo 40; azul 1; anaranjado 3,,carbonato de calcio,,SI,,NO,,NO
+R0244,7501200480515,sintetico,solo_A,SI,,amarillo 5; tartrazina; amarillo 6; amarillo 5 laca; amarillo 6 laca; rojo 40 laca,,,,SI,,NO,,NO
+R0245,7501000131440,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0246,7501791633772,sintetico,solo_B,,SI,,Amarillo 5; Amarillo 6,,,,SI,,NO,NO
+R0247,8411320334027,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0248,7802800719389,sintetico,comun,SI,SI,dióxido de titanio; amarillo 6; amarillo 5,dióxido de titanio; amarillo 6; amarillo 5,,,SI,SI,NO,NO,NO
+R0249,7501057720345,natural,comun,SI,SI,CARMIN,CARMIN,,,SI,SI,NO,NO,NO
+R0250,7501073841024,sintetico,solo_A,SI,,Amarillo 6; Amarillo 5,,,,SI,,NO,,NO
+R0251,7501030452775,sintetico,solo_B,,NO,,,,,,SI,,NO,NO
+R0252,7503055386042,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0253,7501032398545,natural,solo_B,,SI,,BETA CAROTENO; CARMIN,,,,SI,,NO,NO
+R0254,758104005994,ambiguo_descartado,solo_A,SI,,"beta, beta-caroteno",,,,SI,,NO,,NO
+R0255,7501040090349,natural,solo_A,SI,,Amarillo 6; Rojo 6; Annato; Carmin,,,,SI,,NO,,NO
+R0256,7506306311831,natural,solo_B,,SI,,oleorresina de paprika,,,,SI,,NO,NO
+R0257,757528028398,sintetico,solo_A,SI,,AMARILLO 6; AMARILLO 5,,,,SI,,NO,,NO
+R0258,757528026752,sintetico,solo_A,SI,,amarillo 5; azul 1,,,,SI,,NO,,NO
+R0259,7501005107662,natural,solo_B,,SI,,achiote,,riboflavina,,SI,,NO,NO
+R0260,7501033963483,natural,solo_A,NO,,,,riboflavina; luteína; beta-caroteno,,SI,,NO,,NO
+R0261,49733091015,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0262,7501040007736,natural,solo_B,,SI,,carmin,,,,SI,,NO,NO
+R0263,735257031834,sintetico,comun,SI,SI,tartrazina; rojo allura AC,tartrazina; rojo allura AC,,,SI,SI,NO,NO,NO
+R0264,7501003339072,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0265,757528029685,sintetico,comun,SI,SI,rojo 40; Amarillo 5,rojo 40,,,SI,SI,NO,NO,SI
+R0266,7501000116430,ambiguo_descartado,solo_B,,SI,,CURCUMINA,,,,SI,,NO,NO
+R0267,724865024369,sintetico,comun,SI,SI,"amarillo, FD&C5; rojo FD 0","amarillo, FD&C5; rojo FD 0; amarillo FD&C5",Vit. 82,Vit. 82,SI,SI,NO,NO,SI
+R0268,7501011173521,ambiguo_descartado,comun,SI,DUDOSO,Achiote,,,Achiote,SI,SI,NO,NO,SI
+R0269,758104007929,sintetico,comun,SI,SI,rojo 40; azul 1,rojo 40; azul 1,,,SI,SI,NO,NO,NO
+R0270,7501200485022,sintetico,solo_B,,SI,,AMARILLO 5; TARTRAZINA; AMARILLO 6; AZUL 2; ROJO 40,,,,SI,,NO,NO
+R0271,7500478000722,natural,solo_B,,SI,,CARMÍN; RIBOFLAVINA-5'-FOSFATO DE SODIO; SALES DE SODIO Y POTASIO DE COMPLEJOS CÚPRICOS DE CLOROFILINAS,,CARBONATO DE CALCIO; VITAMINA B2,,SI,,NO,NO
+R0272,7500462969608,ambiguo_descartado,solo_A,SI,,antocianina,,,,SI,,NO,,NO
+R0273,7503003312093,natural,solo_A,SI,,beta caroteno,,,,SI,,NO,,NO
+R0274,5864323300330,natural,solo_A,SI,,cúrcuma,,,,SI,,NO,,NO
+R0275,88313326062,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0276,7501055375462,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0277,7501020539387,natural,solo_A,SI,,Amarilio Ocaso FCF; Curcumina,,,,SI,,NO,,NO
+R0278,7501040003233,natural,solo_A,SI,,carmín,,,,SI,,NO,,NO
+R0279,7501032397845,natural,solo_A,SI,,carmin; beta caroteno,,,,SI,,NO,,NO
+R0280,7500525199010,sintetico,solo_B,,NO,,,,,,NO,,NO,NO
+R0281,7501040003073,natural,solo_B,,SI,,carmín,,oleorresina de paprika,,SI,,NO,NO
+R0282,7500478010592,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0283,47117099107,sintetico,solo_B,,SI,,eritrosina,,jugo concentrado de uva,,SI,,NO,NO
+R0284,7501030423522,natural,solo_A,SI,,EXTRACTO DE ANNATO; ROJO ALLURA AC; AMARILLO OCASO FCF; A}UL BRILLANTE FCFL; AMARILLO 5; TARTRAZINAL,,BIOFLAVINA (VITAMINA B2),,SI,,NO,,NO
+R0285,7501000666720,sintetico,comun,SI,SI,rojo allura AC; amarillo ocaso FCF; azul brillante FCF,rojo allura AC; amarillo ocaso FCF; azul brillante FCF,carbonato de calcio,carbonato de calcio,SI,SI,NO,NO,NO
+R0286,7503009127196,ambiguo_descartado,solo_A,SI,,Dióxido de Titanio,,,,NO,,NO,,NO
+R0287,7501791650922,natural,solo_A,SI,,amarillo 5; tartrazina; amarillo 6; rojo 5; azul 2; pigmento blanco 6,,,,SI,,NO,,NO
+R0288,7506443108455,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0289,7503002671702,natural,solo_A,SI,,carmín; caroteno,,,,SI,,NO,,NO
+R0290,7501518491289,natural,comun,SI,SI,ROJO CARMIN,ROJO CARMIN,PIMENTONES,,SI,SI,NO,NO,NO
+R0291,7501055900015,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0292,7501059285118,ambiguo_descartado,solo_A,SI,,dióxido de titanio,,,,SI,,NO,,NO
+R0293,75001759,natural,solo_A,SI,,"Carmin; Beta, beta-caroteno",,,,SI,,NO,,NO
+R0294,7501071300608,ambiguo_descartado,solo_B,,SI,,beta caroteno,,,,SI,,NO,NO
+R0295,7802410002303,natural,comun,SI,SI,annato; norbixina; curcumina,annato norbixina; curcumina,,,SI,SI,NO,NO,SI
+R0296,758104001972,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0297,7501791628143,natural,solo_A,SI,,achiote; cúrcuma,,,,SI,,NO,,NO
+R0298,7501005181365,natural,solo_B,,SI,,CÚRCUMA; EXTRACTO DE ANNATO,,,,SI,,NO,NO
+R0299,7802410370244,natural,comun,SI,SI,annato norbixina,annato norbixina,,,SI,SI,NO,NO,NO
+R0300,7501005112345,natural,solo_B,,SI,,ACHIOTE; AMARILLO 5; AMARILLO 6,,,,SI,,NO,NO
+R0301,7503005273354,sintetico,solo_B,,SI,,extracto de annato; amarillo 5,,,,SI,,NO,NO
+R0302,7501011110335,ambiguo_descartado,solo_B,,DUDOSO,,,,ACHIOTE,,SI,,NO,NO
+R0303,72714110825,natural,solo_A,SI,,anaranjada alimentos 6; oleorresina de cúrcuma; amarillo 5; amarillo 6,,riboflavina,,SI,,NO,,NO
+R0304,70847003632,natural,solo_A,SI,,extracto de piel de uva,,Vitamina B2 (riboflavina),,SI,,NO,,NO
+R0305,7501040092572,sintetico,comun,SI,SI,azul 1; rojo 40; Amarillo 5,azul 1; rojo 40,,,SI,SI,NO,NO,SI
+R0306,7501052474151,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0307,7501011161542,ambiguo_descartado,solo_B,,DUDOSO,,,,achiote,,SI,,NO,NO
+R0308,7501146011811,sintetico,solo_A,SI,,yellow 5 lake; yellow 6 lake; laca amarillo 5; laca amarillo 6,,,,SI,,NO,,NO
+R0309,7501032398217,natural,comun,SI,SI,beta caroteno; carmín,beta caroteno; carmín,,,SI,SI,NO,NO,NO
+R0310,648292000553,sintetico,comun,SI,SI,colorante rojo 40; colorante azul 1,rojo 40; azul 1,,,SI,SI,NO,NO,SI
+R0311,14800001655,sintetico,solo_A,SI,,Rojo 40,,,,SI,,NO,,NO
+R0312,8410086340105,natural,solo_B,,NO,,,,,,SI,,NO,NO
+R0313,7501101545702,natural,comun,SI,SI,colorante rojo Allura AC; extracto de annato,rojo Allura AC; extracto de annato,,,SI,SI,NO,NO,SI
+R0314,7501005183703,natural,solo_B,,SI,,cúrcuma; amarillo 5; tartrazina; rojo 40,,,,SI,,NO,NO
+R0315,7503023807159,natural,comun,SI,SI,Oleorresina de Paprika,Oleorresina de Paprika,Riboflavina,Riboflavina,SI,SI,NO,NO,NO
+R0316,74323097641,sintetico,comun,SI,SI,rojo 40,rojo 40,,,SI,SI,NO,NO,NO
+R0317,2000000072530,natural,solo_B,,SI,,antocianinas,,,,SI,,NO,NO
+R0318,7503011960019,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0319,7500533003361,sintetico,solo_B,,SI,,rojo 40; amarillo 6; azul 1,,,,SI,,NO,NO
+R0320,19836103014,natural,solo_A,SI,,"Camín; Beta, beta-caroteno",,,,SI,,NO,,NO
+R0321,757528027056,sintetico,solo_A,SI,,amarillo 6; rojo 40,,,,SI,,NO,,NO
+R0322,7501073839854,sintetico,solo_A,SI,,Amarillo 6; Amarillo 5,,,,SI,,NO,,NO
+R0323,7501791667500,natural,solo_A,SI,,CARMIN,,,,SI,,NO,,NO
+R0324,7896058257489,natural,comun,SI,SI,DIÓXIDO DE TITANIO; E171,DIÓXIDO DE TITANIO,,,SI,SI,NO,NO,SI
+R0325,7501030459620,ambiguo_descartado,solo_A,SI,,EXTRACTO DE ANNATO; CURCUMINA,,,,SI,,NO,,NO
+R0326,7501032398255,sintetico,solo_B,,NO,,,,,,SI,,NO,NO
+R0327,7501047903253,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0328,7501020567854,natural,solo_A,SI,,Carmín; Beta caroteno,,,,SI,,NO,,NO
+R0329,7501006559309,natural,solo_A,SI,,extracto de annato; rojo allura AC; amarillo ocaso FCF; azul brillante FCF; tartrazina,,,,SI,,NO,,NO
+R0330,7501032397258,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0331,511389500000,natural,solo_A,SI,,Amarillo 5; Tartrazina; Rojo 40; Amarillo 6; Azul 2; Dióxido de titanio; Azul 1,,,,SI,,NO,,NO
+R0332,7501069213811,natural,solo_A,SI,,annato norbixina,,,,SI,,NO,,NO
+R0333,7500478011735,sintetico,solo_A,SI,,roboflavina; rojo allura AC; amarillo ocaso FCF; azul brillante FCF,,,,SI,,NO,,NO
+R0334,77782023770,sintetico,solo_A,SI,,beta-apo-8'-carotenal,,,,SI,,NO,,NO
+R0335,4122876,natural,comun,SI,SI,achiote; oleorresina de paprika,achiote; oleorresina de paprika,riboflavina,riboflavina,SI,SI,NO,NO,NO
+R0336,7501040083587,ambiguo_descartado,solo_B,,SI,,extracto de annato,,,,SI,,NO,NO
+R0337,77975737,sin_deteccion,solo_B,,NO,,,,RIBOFLAVINA,,SI,,NO,NO
+R0338,7501077506028,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0339,850697002029,sintetico,solo_B,,SI,,tartrazina; amarillo ocaso; rojo allura,,,,SI,,NO,NO
+R0340,875754010298,natural,comun,SI,NO,carotenos natura - les,,,,SI,SI,NO,NO,SI
+R0341,7501032397609,natural,solo_B,,SI,,carmin; beta caroteno,,,,SI,,NO,NO
+R0342,614360000381,ambiguo_descartado,solo_B,,NO,,,,,,NO,,NO,NO
+R0343,19836103601,sintetico,comun,SI,SI,Rojo 40; amarillo 5; amarillo 6; azul 1,Rojo 40; amarillo 5; amarillo 6; azul 1,,,SI,SI,NO,NO,NO
+R0344,7501011144460,sintetico,comun,SI,SI,ROJO ALLURA AC; AMARILLO OCASO FCF; TARTRAZINA; AMARILO OCASO FCF,ROJO ALLURA AC; AMARILLO OCASO FCF; TARTRAZINA,,,SI,NO,NO,NO,SI
+R0345,7501200483103,sintetico,solo_B,,SI,,amarillo 5; amarillo 6,,riboflavina,,SI,,NO,NO
+R0346,7501100202002,ambiguo_descartado,solo_B,,DUDOSO,,,,CURCUMA,,SI,,NO,NO
+R0347,7502226812700,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0348,7501058639639,natural,comun,SI,SI,EXTRACTO DE ANNATO; CURCUMA,EXTRACTO DE ANNATO; CURCUMA,,,SI,SI,NO,NO,NO
+R0349,7501003307217,ambiguo_descartado,solo_B,,DUDOSO,,,,cúrcuma,,SI,,NO,NO
+R0350,7501055352388,sintetico,comun,SI,SI,Amarillo 6; rojo 40,Amarillo 6; rojo 40,,,SI,SI,NO,NO,NO
+R0351,7501040093449,sintetico,solo_A,SI,,Rojo 40,,,,SI,,NO,,NO
+R0352,7501013610055,natural,solo_B,,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,NO
+R0353,781159415982,ambiguo_descartado,solo_B,,DUDOSO,,,,CÚRCUMA,,SI,,NO,NO
+R0354,5060323907849,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0355,757528031794,sintetico,solo_B,,SI,,amarillo 5; amarillo 6; rojo 40; azul 1,,,,SI,,NO,NO
+R0356,7500810039076,ambiguo_descartado,solo_A,SI,,extracto de paprika,,,,SI,,NO,,NO
+R0357,7501055904914,natural,solo_A,SI,,cúrcuma,,,,SI,,NO,,NO
+R0358,7802225426336,natural,solo_A,SI,,DIÓXIDO DE TITANIO; E171; ROJO ALLURA AC; E129; TARTRAZINA; E102; AMARILLO OCASO; E110; INDIGOTINA; E132; AZUL BRILLANTE FCF; E133,,,,SI,,NO,,NO
+R0359,7501040083495,ambiguo_descartado,solo_B,,SI,,dióxido de titanio,,,,SI,,NO,NO
+R0360,7501032398019,ambiguo_descartado,comun,SI,SI,beta caroteno,beta caroteno,,,SI,NO,NO,NO,NO
+R0361,7500478002559,ambiguo_descartado,solo_A,SI,,OLEORRESINA DE PAPRIKA; ACHIOTE,,,,SI,,NO,,NO
+R0362,1205129961,natural,solo_A,SI,,extracto de annato; oleorresina de paprika,,vitamina B2,,SI,,NO,,NO
+R0363,758104006298,sintetico,solo_A,SI,,Amarillo 5; rojo 40; azul1,,,,SI,,NO,,NO
+R0364,7501008019450,sintetico,solo_A,SI,,rojo 40; amarillo 6; azul 1,,,,SI,,NO,,NO
+R0365,7503006097003,ambiguo_descartado,solo_A,DUDOSO,,,,achiote,,SI,,NO,,NO
+R0366,7501077510575,ambiguo_descartado,solo_B,,SI,,extracto de annato,,,,SI,,NO,NO
+R0367,7501040081422,ambiguo_descartado,solo_B,,SI,,Extracto de annato; betacaroteno,,,,SI,,NO,NO
+R0368,7500478014606,sintetico,solo_B,,SI,,amarillo ocaso fcf; tartrazina; achiote,,,,NO,,NO,NO
+R0369,7503022361478,ambiguo_descartado,solo_B,,NO,,,,espirulina,,SI,,NO,NO
+R0370,7501040083570,ambiguo_descartado,comun,SI,SI,extracto de annato,extracto de annato,,,SI,SI,NO,NO,NO
+R0371,7501791670074,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0372,51000025548,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0373,7503021936004,ambiguo_descartado,comun,SI,SI,colorante artificial No. 5; betacaroteno,No. 5; betacaroteno,vitamina B2,vitamina B2,SI,SI,NO,NO,SI
+R0374,41789001918,natural,solo_B,,DUDOSO,,,,riboflavina; carbonato de calcio; cúrcuma,,SI,,NO,NO
+R0375,7501017043712,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0376,7501350987063,sintetico,solo_B,,SI,,"azul 1; CI, —42090; rojo 5; CI,—14720",,,,SI,,NO,NO
+R0377,7501020556124,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0378,7506306311022,natural,solo_B,,SI,,achiote; amarillo 5; tartrazina; amarillo 6,,,,SI,,NO,NO
+R0379,7501000133055,sintetico,comun,SI,SI,amarillo 5; rojo 40,amarillo 5; rojo 40,,,SI,SI,NO,NO,NO
+R0380,7503020690136,ambiguo_descartado,comun,DUDOSO,DUDOSO,,,cúrcuma,cúrcuma,SI,SI,NO,NO,NO
+R0381,7501518467505,sintetico,solo_B,,SI,,rojo 40,,,,SI,,NO,NO
+R0382,7501039400814,natural,solo_B,,SI,,Carmín,,,,SI,,NO,NO
+R0383,7501147535194,natural,solo_A,SI,,CARMIN,,,,SI,,NO,,NO
+R0384,7502261266353,natural,comun,SI,SI,rojo betabel,rojo betabel,,,SI,SI,NO,NO,NO
+R0385,7500462631420,ambiguo_descartado,solo_B,,DUDOSO,,,,Curcuma,,SI,,NO,NO
+R0386,51500037997,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0387,7501253652402,sintetico,solo_B,,SI,,rojo 5; amarillo 5; tartrazina; amarillo 6; azul 1; rojo 6,,,,SI,,NO,NO
+R0388,853267004003,ambiguo_descartado,solo_A,DUDOSO,,,,curcuma; remolacha en polvo; espinaca en polvo,,SI,,NO,,NO
+R0389,7501030424536,sintetico,solo_A,SI,,rojo 40; amarillo 6,,,,SI,,NO,,NO
+R0390,7501013105506,natural,solo_A,SI,,Carmín,,,,SI,,NO,,NO
+R0391,7501040034756,natural,solo_B,,SI,,rojo allura ac,,oleorresina de curcuma; paprika; extracto de páprika,,SI,,NO,NO
+R0392,76057110131,ambiguo_descartado,comun,SI,SI,DIOXIDO DE TITANIO; EXTRACTO DE ANNATO,DIOXIDO DE TITANIO; EXTRACTO DE ANNATO,,,SI,SI,NO,NO,NO
+R0393,7802410000617,natural,solo_B,,SI,,annato norbixina; curcumina,,,,SI,,NO,NO
+R0394,7501130935512,natural,comun,SI,SI,clorofila; cúrcuma,clorofila; cúrcuma,,,SI,SI,NO,NO,NO
+R0395,7501791629003,natural,solo_B,,SI,,achiote; cúrcuma,,,,SI,,NO,NO
+R0396,7500326103490,sintetico,comun,SI,SI,Amarillo Ocaso FCF; Rojo Allura AC,Amarillo Ocaso; Rojo Allura AC,,,SI,SI,NO,NO,SI
+R0397,15900064243,ambiguo_descartado,solo_A,SI,,oleorresina de paprika,,,,SI,,NO,,NO
+R0398,7501059285217,ambiguo_descartado,solo_A,SI,,DIOXIDO DE TITANIO,,,,SI,,NO,,NO
+R0399,7501020514056,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0400,7501058652676,sin_deteccion,solo_A,NO,,,,carbonato de calcio; vitamina B2 (riboflavina),,SI,,NO,,NO
+R0401,7501073839793,sintetico,solo_B,,SI,,Rojo 40; Amarillo 6; Azul 11,,,,SI,,NO,NO
+R0402,758104005147,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0403,7501011114623,sintetico,solo_A,SI,,AMARILLO OCASO FCF; TARTRAZINA; ACHIOTE; ROJO ALLURA; AZUL BRILLANTE FCF,,,,NO,,NO,,NO
+R0404,75012533,sintetico,solo_A,SI,,tartrazina,,,,SI,,NO,,NO
+R0405,758104007820,sintetico,solo_B,,SI,,roja 40; azul 1,,,,NO,,NO,NO
+R0406,8710912043256,natural,solo_B,,SI,,beta caroteno,,,,SI,,NO,NO
+R0407,52833227543,ambiguo_descartado,solo_B,,SI,,annatto norbixina,,,,SI,,NO,NO
+R0408,7501040092848,sintetico,comun,SI,SI,Rojo 40; Azul 1,Rojo 40; Azul 1,,,SI,SI,NO,NO,NO
+R0409,7501020552935,sin_deteccion,comun,NO,NO,,,Vitamina B2 (Riboflavina),Vitamina B2; Riboflavina,SI,SI,NO,NO,NO
+R0410,7501005126304,natural,solo_B,,SI,,achiote; oleorresina de paprika,,riboflavina,,SI,,NO,NO
+R0411,7501000111503,sintetico,solo_A,SI,,AMARILLO 5; ROJO 40,,VITAMINA B2,,SI,,NO,,NO
+R0412,2000000073393,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0413,7501032398538,natural,solo_A,SI,,CARMIN,,,,SI,,NO,,NO
+R0414,7503020427053,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0415,7501008081969,natural,comun,SI,SI,amarillo 5; amarillo 6; curcumina; annato,amarillo 5; amarillo 6; curcumina; annato,,,SI,SI,NO,NO,NO
+R0416,7501033957383,sin_deteccion,solo_B,,NO,,,,,,NO,,NO,NO
+R0417,855611002963,ambiguo_descartado,comun,SI,SI,beta caroteno; cúrcuma,beta caroteno,,cúrcuma,SI,SI,NO,NO,SI
+R0418,7501057710483,natural,solo_B,,SI,,CARMÍN,,,,SI,,NO,NO
+R0419,7501030474722,natural,comun,SI,SI,BETACAROTENO; CARMÍN; EXTRACTO DE ANNATO,BETACAROTENO; CARMÍN; EXTRACTO DE ANNATO,,,SI,SI,NO,NO,NO
+R0420,7501055328666,ambiguo_descartado,solo_B,,NO,,,,beta caroteno,,SI,,NO,NO
+R0421,2000000147300,natural,solo_A,SI,,EXTRACTO DE ANNATO,,CARBONATO DE CALCIO,,SI,,NO,,NO
+R0422,501057710407,natural,solo_A,SI,,CARMÍN,,,,SI,,NO,,NO
+R0423,7501059297227,natural,solo_B,,SI,,carmín; clorofilina de cobre,,,,SI,,NO,NO
+R0424,3800205874881,natural,solo_B,,SI,,extracto de pimentón,,,,SI,,NO,NO
+R0425,7501209701383,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0426,41220909384,sin_deteccion,comun,NO,NO,,,RIBOFLAVIN,RIBOFLAVIN,SI,SI,NO,NO,NO
+R0427,7501058619211,natural,comun,SI,SI,ANNATTO; CURCUMA,ANNATTO; CURCUMA,,,SI,SI,NO,NO,NO
+R0428,7503004911400,sintetico,solo_B,,SI,,amarillo 5; tartrazina; amarillo 6,,,,SI,,NO,NO
+R0429,7501071905094,ambiguo_descartado,solo_A,SI,,curcumina; extracto de paprika,,,,SI,,NO,,NO
+R0430,2904441855435,ambiguo_descartado,solo_A,SI,,extracto de annato,,,,SI,,NO,,NO
+R0431,7501057720529,natural,solo_B,,SI,,CARMIN,,,,SI,,NO,NO
+R0432,8719200223462,natural,solo_B,,SI,,annato; curcuma,,,,SI,,NO,NO
+R0433,7501024202249,natural,solo_B,,SI,,annato; cúrcuma,,,,SI,,NO,NO
+R0434,7500478020850,ambiguo_descartado,solo_B,,SI,,JO ALLURA AC,,DE PAPRIKA; ACHIOTE,,NO,,NO,NO
+R0435,750176188239,natural,solo_A,SI,,extracto de annato,,carbonato de calcio,,SI,,NO,,NO
+R0436,7501032398071,natural,solo_A,SI,,carmín; beta caroteno,,,,SI,,NO,,NO
+R0437,7861001238594,ambiguo_descartado,comun,DUDOSO,DUDOSO,,,Paprika en polvo,Paprika en polvo,SI,SI,NO,NO,NO
+R0438,7503023733076,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0439,7501018315207,ambiguo_descartado,solo_B,,DUDOSO,,,,vitamina B2; riboflavina; extracto de paprika; cúrcuma; extracto de annato,,SI,,NO,NO
+R0440,42400036173,natural,solo_A,SI,,cúrcuma turmérico,,riboflavina,,SI,,NO,,NO
+R0441,722776005606,natural,solo_A,SI,,dióxido de titanio; TARTRAZINA; AMARILLO OCASO FCF,,,,SI,,NO,,NO
+R0442,758104006069,natural,solo_B,,SI,,"carmin; beta, beta-caroteno; carmín",,,,SI,,NO,NO
+R0443,650240032264,sintetico,solo_B,,SI,,rojo allura; FD&C Rojo No. 40; azul brillante; FD&C Azul No. 1,,,,SI,,NO,NO
+R0444,7501791657518,natural,solo_A,SI,,colorante anaranjado natural 4,,,,SI,,NO,,NO
+R0445,7802000009280,natural,solo_A,SI,,TARTRAZINA; INS 102; cúrcuma; INS 1001; dióxido de titanio; INS 171; azul brillante FCF; INS 133; rojo allura AC; INS 129,,,,SI,,NO,,NO
+R0446,724869002202,natural,comun,SI,SI,DIOXIDO DE TITANIO; LACA ROJO 40; OLEORRESINA DE PAPRIKA,"DIOXIDO DE
+TITANIO; LACA ROJO 40; OLEORRESINA DE
+PAPRIKA",,,SI,SI,NO,NO,NO
+R0447,884912126016,sin_deteccion,solo_B,,NO,,,,vitamina B2; riboflavina,,SI,,NO,NO
+R0448,884394001290,natural,solo_B,,SI,,BETA CAROTENO,,,,SI,,NO,NO
+R0449,38000845260,natural,solo_B,,SI,,EXTRACTO DE CÚRCUMA,,PAPRIKA,,SI,,NO,NO
+R0450,4571383311817,natural,solo_B,,SI,,achiote,,,,SI,,NO,NO
+R0451,7501020548198,sintetico,solo_B,,SI,,rojo 40; azul 1,,,,SI,,NO,NO
+R0452,7502261265530,natural,comun,SI,SI,ROJO 40; CARMIN,ROJO 40; CARMIN,,,SI,SI,NO,NO,NO
+R0453,7506306300354,natural,comun,SI,SI,CURCUMA,CURCUMA,,,SI,SI,NO,NO,NO
+R0454,7501030473879,sintetico,solo_B,,SI,,AMARILLO 5; ROJO 40,,,,SI,,NO,NO
+R0455,7501030462859,sintetico,solo_B,,NO,,,,,,SI,,NO,NO
+R0456,7501253646951,natural,solo_A,SI,,extracto de paprika,,,,SI,,NO,,NO
+R0457,7790580283155,natural,solo_B,,SI,,CURCUMINA; INS100; ROJO ALLURA; INS129; AZUL BRILLANTE; INS133,,,,SI,,NO,NO
+R0458,36731328007,sintetico,solo_B,,SI,,rojo allura ac,,,,SI,,NO,NO
+R0459,738545020015,sintetico,comun,SI,SI,rojo 40,rojo 40,,,SI,SI,NO,NO,NO
+R0460,7501018319441,sin_deteccion,solo_A,NO,,,,vitamina B2 (riboflavina),,SI,,NO,,NO
+R0461,7502263310085,sin_deteccion,comun,SI,NO,colorantes artificiales,,,,SI,SI,SI,SI,SI
+R0462,7501040023712,natural,comun,SI,SI,carmin,carmin,,,SI,SI,NO,NO,NO
+R0463,7506495008116,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0464,758104007882,sintetico,solo_B,,SI,,rojo 40; azul 1,,,,SI,,NO,NO
+R0465,7506306415287,natural,solo_A,SI,,CAROTENO,,,,SI,,NO,,NO
+R0466,7501000673209,natural,solo_A,SI,,DIOXIDO DE TITANIO,,,,SI,,NO,,NO
+R0467,7501030427193,sintetico,solo_A,SI,,AMARILLO 5; ROJO 40,,,,SI,,NO,,NO
+R0468,7501100696825,ambiguo_descartado,solo_A,SI,,extracto de páprika,,,,SI,,NO,,NO
+R0469,7501018315399,ambiguo_descartado,solo_B,,DUDOSO,,,,vitamina B2; riboflavina; extracto de paprika; cúrcuma; extracto de annato,,SI,,NO,NO
+R0470,7802225688758,natural,solo_B,,SI,,DIÓXIDO DE TITANIO; ROJO ALLURA AC; TARTRAZINA; AZUL BRILLANTE FCF; AMARILLO OCASO; INDIGOTINA,,RIBOFLAVINA,,SI,,NO,NO
+R0471,7501130900411,natural,solo_A,SI,,FD&C amarillo 5; tartrazina; carmin,,,,SI,,NO,,NO
+R0472,19836100761,natural,solo_A,SI,,Carmin,,,,SI,,NO,,NO
+R0473,20899080228,natural,solo_B,,SI,,TARTRAZINA; BETA CAROTENO,,CARBONATO DE CALCIO,,SI,,NO,NO
+R0474,7503008708655,natural,solo_A,SI,,extracto de paprika; FD&C laca amarillo 6,,,,SI,,NO,,NO
+R0475,7802800727407,natural,solo_A,SI,,dioxido de titanio; amarillo 5,,,,SI,,NO,,NO
+R0476,7501013163131,sintetico,solo_A,SI,,Amarillo 5; TARTTRAZINA; Amarillo 6,,,,SI,,NO,,NO
+R0477,758104006311,natural,comun,SI,SI,rojo 40; Azul 1,rojo 40; Azul 1,,,SI,SI,NO,NO,NO
+R0478,7506306307223,natural,solo_B,,SI,,cúrcuma; achiote,,,,SI,,NO,NO
+R0479,7501040008894,natural,comun,SI,SI,carmin,carmin,,,SI,SI,NO,NO,NO
+R0480,78742091976,ambiguo_descartado,solo_B,,DUDOSO,,,,CURCUMA; EXTRACTO DE PAPRIKA,,SI,,NO,NO
+R0481,8410010802006,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0482,7501040092886,sintetico,solo_A,SI,,Amarillo 6; E180,,,,SI,,NO,,NO
+R0483,753030199995,ambiguo_descartado,solo_B,,SI,,CURCUMINA; EXTRACTO DE ANNATO,,,,SI,,NO,NO
+R0484,719886120411,sintetico,solo_A,SI,,rojo 40; amarillo 5,,,,SI,,NO,,NO
+R0485,7501008010006,natural,comun,SI,SI,curcumina; annato,curcumina; annato,,,SI,SI,NO,NO,NO
+R0486,5024593000624,ambiguo_descartado,solo_B,,SI,,paprika; annatto norbixin,,turmeric extract,,SI,,NO,NO
+R0487,7500478001620,sintetico,solo_A,SI,,ROJO ALLURA AC; AZUL BRILLANTE FCF; AMARILLO OCASO FCF; TARTRAZINA; OLEORRESINA DE PAPRIKA; ACHIOTE,,,,SI,,NO,,NO
+R0488,7501005190794,natural,solo_A,SI,,"amarilo
+R6; amarilo 5; tartrazina; rojo 40; curcuma; oleorresina de
+paprika",,,,SI,,NO,,NO
+R0489,7501020561159,sintetico,comun,SI,SI,Rojo 40,Rojo 40,,,SI,SI,NO,NO,NO
+R0490,47495605068,sin_deteccion,solo_A,SI,,Jugo de Frutas,,,,SI,,NO,,NO
+R0491,7543806322639,natural,solo_A,SI,,curcumina,,,,SI,,NO,,NO
+R0492,735257003183,sintetico,solo_B,,SI,,amarillo ocaso FCF; rojo allura AC,,,,SI,,NO,NO
+R0493,7501030461289,sintetico,solo_B,,SI,,amarillo 5; amarillo 6; rojo 40; azul1,,,,SI,,NO,NO
+R0494,2000000072661,natural,comun,SI,SI,betacaroteno; carmín,betacaroteno; carmín,,,SI,SI,NO,NO,NO
+R0495,7506306413054,natural,comun,SI,SI,caroteno; carmín,caroteno; carmín,,,SI,SI,SI,NO,NO
+R0496,7501040092589,natural,solo_A,SI,,carmín; betacaroteno; amarillo 5,,,,SI,,NO,,NO
+R0497,7501055333424,sintetico,solo_B,,SI,,AMARILLO 5; AMARILLO 6; ROJO 40,,,,SI,,NO,NO
+R0498,7506306307476,natural,comun,SI,SI,achiote; oleorresina de páprika,achiote; oleorresina de páprika,,,SI,SI,NO,NO,NO
+R0499,7501791614184,natural,solo_B,,SI,,Rojo 40; Dióxido de  Titanio; Amarillo 5; Azul 1,,,,SI,,NO,NO
+R0500,7501040006449,natural,solo_A,SI,,carmin,,,,SI,,NO,,NO
+R0501,7501040094439,natural,solo_B,,SI,,Annatto; Betacarotenol,,,,SI,,NO,NO
+R0502,7501791621175,ambiguo_descartado,comun,DUDOSO,DUDOSO,,,cúrcuma,cúrcuma,SI,SI,NO,NO,NO
+R0503,8410069006226,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0504,7501791647175,natural,solo_B,,SI,,anaranjado natural 4; Rojo natural 4,,,,SI,,NO,NO
+R0505,7502261262881,sintetico,solo_A,SI,,amarillo 5; azul 1; rojo 40; tartrazina,,,,SI,,NO,,NO
+R0506,7501791659819,ambiguo_descartado,comun,SI,SI,dióxido de titanio,dióxido de titanio,,,SI,SI,NO,NO,NO
+R0507,7501485801395,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0508,12142100661,ambiguo_descartado,solo_A,SI,,cúrcuma turmerico,,,,SI,,NO,,NO
+R0509,7502261275744,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0510,7501013610154,natural,solo_B,,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,NO
+R0511,7501030473053,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0512,7501032315207,sintetico,solo_B,,SI,,carmoisina; amarillo 5; tartrazina,,,,SI,,NO,NO
+R0513,757528029630,sintetico,solo_B,,NO,,,,,,SI,,NO,NO
+R0514,7501791607308,ambiguo_descartado,solo_A,SI,,beta caroteno,,,,SI,,NO,,NO
+R0515,7501194443091,sintetico,comun,SI,SI,AMARILLO OCASO; AZORRUBINA,AMARILLO OCASO; AZORRUBINA,,,SI,SI,NO,NO,NO
+R0516,7501020515183,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0517,7501008001486,natural,solo_A,SI,,AMARILLO NO 6; CURCUMA; ROJO NO 40; ROJO NO 3; AZUL NO1,,,,SI,,NO,,NO
+R0518,7301040083884,ambiguo_descartado,solo_B,,SI,,extracto de annato,,,,SI,,NO,NO
+R0519,7501000612147,sintetico,solo_A,SI,,TARTRAZINA; ROJO ALLURA AC; AMARILLO OCASO FCF; AZUL BRILLANTE FCF,,,,SI,,NO,,NO
+R0520,605391151364,sin_deteccion,solo_A,NO,,,,,,NO,,NO,,NO
+R0521,850697002470,sintetico,comun,SI,SI,tartrazina; amarillo 5; amarillo ocaso FCF; amarillo 6,tartrazina; amarillo 5; amarillo ocaso FCF; amarillo 6,,,SI,SI,NO,NO,NO
+R0522,7500608000271,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0523,7506443107748,sintetico,comun,SI,SI,rojo 6; amarillo 5; tartrazina,rojo 6; amarillo 5; tartrazina,,,SI,SI,NO,NO,NO
+R0524,7501295640115,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0525,7502004719788,ambiguo_descartado,comun,SI,DUDOSO,oleorresina de pimentón; achiote,,riboflavina,riboflavina; oleorresina de pimentón; achiote,SI,SI,NO,NO,SI
+R0526,7501024577064,sin_deteccion,comun,SI,SI,red 40,red 40,,,SI,SI,NO,NO,NO
+R0527,7790580169312,natural,comun,SI,SI,CARMÍN; INS120; CLOROFILINA CÚPRICA; INS141ii; DIÓXIDO DE TITANIO; INS171,CARMÍN; INS120; CLOROFILINA CÚPRICA; INS141ii; DIÓXIDO DE TITANIO; INS171,,,SI,SI,NO,NO,NO
+R0528,7501020566390,natural,solo_A,SI,,Carmín,,,,SI,,NO,,NO
+R0529,7501040094118,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0530,7501030419464,sintetico,solo_B,,SI,,AMARILLO 5; AZUL 1,,,,SI,,NO,NO
+R0531,7501025511289,natural,comun,SI,SI,colorante rojo betabel,rojo betabel,,,SI,SI,NO,NO,SI
+R0532,7500810013199,sintetico,solo_A,SI,,LACA ROJO 40; AMARILLO 6; AMARILLO 5,,,,SI,,NO,,NO
+R0533,7501030427834,sintetico,comun,SI,SI,amarillo 5; rojo 40,amarillo 5; rojo 40,,,SI,SI,NO,NO,NO
+R0534,7506306321007,sintetico,solo_B,,SI,,tartrazina; amarillo ocaso FCF,,,,SI,,NO,NO
+R0535,7501030429890,sintetico,solo_B,,NO,,,,,,SI,,NO,NO
+R0536,7501071301155,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0537,19836100211,natural,comun,SI,SI,"Beta, beta-caroteno","Beta, beta-caroteno",,,SI,SI,NO,NO,NO
+R0538,18627703488,sin_deteccion,solo_A,NO,,,,carbonato de calcio,,SI,,NO,,NO
+R0539,7501791667524,natural,solo_A,SI,,carmín,,,,SI,,NO,,NO
+R0540,7501005129947,natural,solo_B,,SI,,ACHIOTE; OLEORRESINA DE PAPRIKA,,RIBOFLAVINA,,SI,,NO,NO
+R0541,769493100139,natural,solo_B,,SI,,PAPRIKA EXTRACT,,CALCIUM CARBONATE,,SI,,NO,NO
+R0542,884912112217,natural,solo_B,,SI,,EXTRACTO DE ANNATO,,VITAMINA B2; RIBOFLAVINA,,SI,,NO,NO
+R0543,7501253680825,natural,comun,SI,SI,paprika,paprika,,,SI,SI,NO,NO,NO
+R0544,7501032398958,natural,solo_B,,SI,,caroteno; carmín,,,,SI,,NO,NO
+R0545,7501147512829,sintetico,solo_A,SI,,"amarillo 6; rojo D,C5",,,,NO,,NO,,NO
+R0546,7503023135009,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0547,49505090703,sin_deteccion,comun,NO,NO,,,B2,,SI,SI,NO,NO,NO
+R0548,7501030497660,sintetico,solo_A,SI,,amarillo 5; rojo 40,,vitamina b2,,SI,,NO,,NO
+R0549,29700001414,natural,solo_B,,SI,,annatto color,,,,SI,,SI,NO
+R0550,7501008001462,natural,solo_B,,SI,,CURCUMA; ANNATO,,,,SI,,NO,NO
+R0551,7501533611709,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0552,7501040000300,natural,solo_A,SI,,Carmín,,,,SI,,NO,,NO
+R0553,7506306307193,natural,comun,SI,SI,cúrcuma; achiote,cúrcuma; achiote,,,SI,SI,NO,NO,NO
+R0554,7506306307698,natural,solo_A,SI,,CÚRCUMA; ANARANJADO ALIMENTOS 5,,RIBOFLAVINA,,SI,,NO,,NO
+R0555,7737325039486,sintetico,solo_B,,SI,,ROJO 40; AMARILLO 6; AMARILLO 5,,,,SI,,NO,NO
+R0556,7501576276606,ambiguo_descartado,solo_A,SI,,betacaroteno,,,,SI,,NO,,NO
+R0557,38629002365,sintetico,comun,SI,SI,azul no.1; amarillo 5; rojo 40; amarillo 6; laca azul 1; laca amarillo 5; laca rojo 40; laca amarillo 6,azul no.1; amarillo 5; rojo 40; amarillo 6; laca azul 1; laca amarillo 5; laca rojo 40; laca amarillo 6,vitamina B2,vitamina B2,SI,SI,NO,NO,NO
+R0558,850697002661,sintetico,comun,SI,SI,tartrazina; amarillo FD&C 5; amarillo ocaso FCF; amarillo FD&C 6; rojo allura; roio  FD&C 40,tartrazina; amarillo FD&C 5; amarillo ocaso FCF; amarillo FD&C 6; rojo allura; roio  FD&C 40,,,SI,SI,NO,NO,NO
+R0559,7501013610413,natural,solo_B,,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,NO
+R0560,7501055302451,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0561,7506306413368,natural,solo_A,SI,,CAROTENO,,,,SI,,NO,,NO
+R0562,643795549684,sintetico,solo_A,SI,,Rojo 40; Amarillo 6; Amarillo 5,,,,SI,,NO,,NO
+R0563,8719200181366,ambiguo_descartado,solo_A,SI,,annato; cúrcuma,,,,SI,,NO,,NO
+R0564,735257003091,sintetico,solo_A,SI,,amarillo ocaso FCF,,,,SI,,NO,,NO
+R0565,757528029692,sintetico,comun,SI,NO,amarillo 5,,,,SI,SI,NO,NO,SI
+R0566,500044562286,natural,solo_A,SI,,Carmín,,,,SI,,NO,,NO
+R0567,7500810038789,ambiguo_descartado,solo_A,SI,,CURCUMINA; EXTRACTO DE ANNATO,,,,SI,,NO,,NO
+R0568,7501040095986,ambiguo_descartado,solo_B,,SI,,caroteno,,,,SI,,NO,NO
+R0569,7501002202179,ambiguo_descartado,solo_B,,SI,,EXTRACTO DE ANNATO,,,,SI,,NO,NO
+R0570,7501032395100,natural,comun,SI,SI,carmin; beta careteno; enocinina; camint; beta caroteno,carmin; beta caroteno,,,SI,SI,NO,NO,SI
+R0571,70847035916,natural,comun,SI,SI,Extracto De Piel De Uva,Extracto De Piel De Uva,Vitamina B2 (Riboflavina),Vitamina B2; Riboflavina,SI,SI,NO,NO,NO
+R0572,7501040004896,natural,solo_A,SI,,carmin,,,,SI,,NO,,NO
+R0573,7501040010286,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0574,7501033952913,sin_deteccion,solo_B,,NO,,,,carbonato de calcio; riboflavina,,SI,,NO,NO
+R0575,7501020565911,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0576,7500462286071,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0577,7501002612114,natural,comun,SI,SI,oleorresina de paprika; extracto de annato; beta-apo-8 carotenal,oleorresina de paprika; extracto de annato; beta-apo-8 carotenal,,,SI,SI,NO,NO,NO
+R0578,608875007119,ambiguo_descartado,solo_A,SI,,curcurmina; extracto de paprika,,,,SI,,NO,,NO
+R0579,738824621117,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0580,7502271918945,natural,solo_B,,SI,,DIÓXIDO DE TITANIO; AZUL 1; AMARILLO 6; ROJO 40; AMARILLO 5; AZUL 2,,,,SI,,NO,NO
+R0581,7501518466164,sintetico,solo_A,SI,,color amarillo 5; tartrazina; color amarillo 6,,,,SI,,NO,,NO
+R0582,541564262850,sintetico,comun,SI,SI,rojo 40,rojo 40,,,SI,SI,NO,NO,NO
+R0583,7501003109095,natural,comun,SI,SI,extracto de annato,extracto de annato,,,SI,SI,NO,NO,NO
+R0584,7501030430421,sin_deteccion,solo_B,,NO,,,,,,SI,,NO,NO
+R0585,7501008016572,sintetico,solo_B,,SI,,amarillo No. 5; rojo No. 40; azul No. 2,,,,SI,,NO,NO
+R0586,7501609001380,natural,solo_A,SI,,CARMÍN,,,,SI,,NO,,NO
+R0587,7506306413375,natural,solo_B,,SI,,CAROTENO,,,,SI,,NO,NO
+R0588,7503000437195,sintetico,solo_A,SI,,Color amarillo 6; amarillo,,,,NO,,NO,,NO
+R0589,7503008669055,sin_deteccion,solo_A,NO,,,,,,SI,,NO,,NO
+R0590,7503008708266,sintetico,comun,SI,SI,amarillo 5; azul 1,amarillo 5; azul 1,,,SI,SI,NO,NO,NO
+R0591,7500478037407,sintetico,solo_B,,SI,,AMARILLO OCASO FCF; TARTRAZINA; ROJO ALLURA AC; AZUL BRILLANTE FCF,,OLEORRESINA DE PAPRIKA,,SI,,NO,NO
+R0592,730399003626,sin_deteccion,comun,NO,NO,,,,,SI,SI,NO,NO,NO
+R0593,7501011135581,sintetico,solo_B,,SI,,ROJO ALLURA AC; AMARILLO OCASO FCF; INDIGOTINA; TARTRAZINA,,,,SI,,NO,NO
+R0594,7501040082016,ambiguo_descartado,solo_A,SI,,extracto de annato,,,,SI,,NO,,NO
+R0595,7501040003844,natural,solo_B,,SI,,carmín,,,,SI,,NO,NO
+R0596,7501000153800,ambiguo_descartado,solo_B,,SI,,dióxido de titanio,,,,SI,,NO,NO
+R0597,7501018315337,ambiguo_descartado,comun,SI,DUDOSO,extracto de paprika; cúrcuma,,vitamina B2 (riboflavina),extracto de paprika; cúrcuma; vitamina B2; riboflavina,SI,SI,NO,NO,SI
+R0598,7501000309726,sintetico,solo_A,SI,,AMARILLO 5,,,,SI,,NO,,NO
+R0599,7501032398095,natural,solo_B,,SI,,beta caroteno; carmín,,,,SI,,NO,NO
+R0600,7501791640930,natural,solo_B,,SI,,curcumina; azul brillante FCF; annato,,,,SI,,NO,NO
