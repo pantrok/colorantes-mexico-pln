@@ -1,0 +1,159 @@
+{
+  "n_terminos": 197,
+  "kappas": {
+    "v1_parche15_vs_dra": {
+      "acuerdo_n": 170,
+      "acuerdo_pct": 86.3,
+      "kappa": 0.7931,
+      "ic95": [
+        0.7213,
+        0.8649
+      ],
+      "se": 0.0366,
+      "po": 0.8629,
+      "pe": 0.3376,
+      "categorias": [
+        "nombre_comun_planta",
+        "nombre_tecnico",
+        "numero_codigo",
+        "otra"
+      ]
+    },
+    "v2_parche16_vs_dra": {
+      "acuerdo_n": 188,
+      "acuerdo_pct": 95.4,
+      "kappa": 0.9315,
+      "ic95": [
+        0.8881,
+        0.975
+      ],
+      "se": 0.0222,
+      "po": 0.9543,
+      "pe": 0.3328,
+      "categorias": [
+        "nombre_comun_planta",
+        "nombre_tecnico",
+        "numero_codigo",
+        "otra"
+      ]
+    },
+    "v1_parche15_vs_v2_parche16": {
+      "acuerdo_n": 179,
+      "acuerdo_pct": 90.9,
+      "kappa": 0.8628,
+      "ic95": [
+        0.8031,
+        0.9225
+      ],
+      "se": 0.0305,
+      "po": 0.9086,
+      "pe": 0.334,
+      "categorias": [
+        "nombre_comun_planta",
+        "nombre_tecnico",
+        "numero_codigo"
+      ]
+    }
+  },
+  "matriz_confusion_v2_contra_dra": {
+    "nombre_comun_planta": {
+      "nombre_comun_planta": 56,
+      "nombre_tecnico": 7,
+      "numero_codigo": 0,
+      "otra": 0
+    },
+    "nombre_tecnico": {
+      "nombre_comun_planta": 0,
+      "nombre_tecnico": 62,
+      "numero_codigo": 1,
+      "otra": 1
+    },
+    "numero_codigo": {
+      "nombre_comun_planta": 0,
+      "nombre_tecnico": 0,
+      "numero_codigo": 70,
+      "otra": 0
+    },
+    "otra": {
+      "nombre_comun_planta": 0,
+      "nombre_tecnico": 0,
+      "numero_codigo": 0,
+      "otra": 0
+    }
+  },
+  "marginales": {
+    "forma_v1_parche15": {
+      "nombre_tecnico": 82,
+      "numero_codigo": 67,
+      "nombre_comun_planta": 48
+    },
+    "forma_v2_parche16": {
+      "numero_codigo": 70,
+      "nombre_tecnico": 64,
+      "nombre_comun_planta": 63
+    },
+    "forma_dra_ciega": {
+      "numero_codigo": 71,
+      "nombre_tecnico": 69,
+      "nombre_comun_planta": 56,
+      "otra": 1
+    }
+  },
+  "desacuerdos_v2_vs_dra": [
+    {
+      "termino": "extracto de betalaina",
+      "codigo": "E162",
+      "forma_v2_parche16": "nombre_comun_planta",
+      "forma_dra_ciega": "nombre_tecnico"
+    },
+    {
+      "termino": "caroteno natural",
+      "codigo": "E160a",
+      "forma_v2_parche16": "nombre_comun_planta",
+      "forma_dra_ciega": "nombre_tecnico"
+    },
+    {
+      "termino": "carotenos mixtos",
+      "codigo": "E160a",
+      "forma_v2_parche16": "nombre_comun_planta",
+      "forma_dra_ciega": "nombre_tecnico"
+    },
+    {
+      "termino": "beta caroteno",
+      "codigo": "E160a",
+      "forma_v2_parche16": "nombre_comun_planta",
+      "forma_dra_ciega": "nombre_tecnico"
+    },
+    {
+      "termino": "anaranjado 3",
+      "codigo": "E160b",
+      "forma_v2_parche16": "nombre_tecnico",
+      "forma_dra_ciega": "numero_codigo"
+    },
+    {
+      "termino": "betacaroteno",
+      "codigo": "E160a",
+      "forma_v2_parche16": "nombre_comun_planta",
+      "forma_dra_ciega": "nombre_tecnico"
+    },
+    {
+      "termino": "rojo curry",
+      "codigo": "E129",
+      "forma_v2_parche16": "nombre_tecnico",
+      "forma_dra_ciega": "otra"
+    },
+    {
+      "termino": "carotenos",
+      "codigo": "E160a",
+      "forma_v2_parche16": "nombre_comun_planta",
+      "forma_dra_ciega": "nombre_tecnico"
+    },
+    {
+      "termino": "caroteno",
+      "codigo": "E160a",
+      "forma_v2_parche16": "nombre_comun_planta",
+      "forma_dra_ciega": "nombre_tecnico"
+    }
+  ],
+  "nota": "Kappa de Cohen simple, sin pesos, con IC por la varianza asintotica de Fleiss, Cohen y Everitt (1969) -la misma funcion que se uso para el kappa entre anotadores en el parche 15-."
+}

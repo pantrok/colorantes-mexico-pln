@@ -1,0 +1,198 @@
+termino,codigo,bloque,forma_v1_parche15,forma_v2_parche16,forma_v2_corregida,forma_fina_corregida,forma_dra_ciega,en_sinonimario_off,coinciden_v2_y_dra
+extracto de semillas de bixa orellana,E160b,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+complejos cupricos de clorofila,E141,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+caramelo al sulfito de amonio,E150,fuera_de_eje,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+extracto de papa dulce morada,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de tegumento de uva,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de zanahoria morada,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de campanilla azul,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de zanahoria negra,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de camote morado,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de cempazuchitl,E161b,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de coccus cacti,E120,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+oxido de hierro amarillo,E172,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+beta caroteno sintetico,E160a-i,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+extracto de cempasuchil,E161b,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de maiz morado,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de piel de uva,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de rabano rojo,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+amarillo de quinoleina,E104,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+anaranjado alimentos 6,E160e,sinteticos,nombre_tecnico,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+anaranjado alimentos 7,E160f,sinteticos,nombre_tecnico,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+concentrado de betabel,E162,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de cochinilla,E120,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de col morada,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de espirulina,SPIRULINA,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+oleorresina de curcuma,E100,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+oleorresina de paprika,E160c,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de betalaina,E162,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_tecnico,False,False
+extracto de zanahoria,E160a,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+oxido de hierro negro,E172,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+verde acido brillante,E142,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+amarillo alimentos 3,E110,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+amarillo alimentos 4,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+amarillo alimentos 5,E107,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+anaranjado natural 4,E160b,naturales,nombre_tecnico,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+beta apo 8 carotenal,E160e,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+carmin de cochinilla,E120,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+concentrado de sauco,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de pimenton,E160c,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+oxido de hierro rojo,E172,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+pigmento amarillo 42,E172,naturales,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+rojo raiz de betabel,E162,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+amarillo crepusculo,E110,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+amarillo quinoleina,E104,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+clorofilina cuprica,E141,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+extracto de achiote,E160b,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de betabel,E162,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de curcuma,E100,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+extracto de hibisco,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de jamaica,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de paprika,E160c,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+fd&c amarillo no. 5,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+fd&c amarillo no. 6,E110,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+amarillo natural 6,E164,naturales,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+caramelo clase iii,E150,fuera_de_eje,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+colorante caramelo,E150,fuera_de_eje,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+dioxido de titanio,E171,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+extracto de annato,E160b,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+extracto de rabano,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+azafran de indias,E100,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+caramelo clase iv,E150,fuera_de_eje,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+curcuma turmerico,E100,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+pigmento blanco 6,E171,naturales,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+pigmento negro 11,E172,naturales,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+pigmento rojo 101,E172,naturales,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+rojo alimentos 14,E127,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+rojo alimentos 17,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+rojo cochinilla a,E124,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+rojo de remolacha,E162,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+verde alimentos 3,E143,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+azul alimentos 1,E132,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+azul alimentos 2,E133,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+caramelo amonico,E150,fuera_de_eje,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+carmin de indigo,E132,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+caroteno natural,E160a,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_tecnico,False,False
+carotenos mixtos,E160a,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_tecnico,False,False
+curcuma en polvo,E100,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+fd&c rojo no. 40,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+fd&c verde no. 3,E143,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+grana cochinilla,E120,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+oxidos de hierro,E172,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+polvo de betabel,E162,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+rojo alimentos 3,E122,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+rojo alimentos 7,E124,sinteticos,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+acido carminico,E120,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+amarillo fd&c 5,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,True,True
+amarillo fd&c 6,E110,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,True,True
+amarillo num. 5,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+extracto de uva,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+fd&c amarillo 5,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+fd&c azul no. 1,E133,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+fd&c azul no. 2,E132,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+fd&c rojo no. 3,E127,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+jugo de betabel,E162,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+negro brillante,E151,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+oxido de hierro,E172,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+rojo de betabel,E162,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+verde natural 3,E140,naturales,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+amarillo fd&c5,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+amarillo no. 5,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+amarillo no. 6,E110,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+amarillo ocaso,E110,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+azul brillante,E133,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+color caramelo,E150,fuera_de_eje,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+rojo natural 4,E120,naturales,numero_codigo,numero_codigo,numero_codigo,indice_de_color,numero_codigo,False,True
+rojo remolacha,E162,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+azafran indio,E100,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+azul de jagua,E183,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+beta caroteno,E160a,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_tecnico,False,False
+conchita azul,E163,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+sunset yellow,E110,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+anaranjado 3,E160b,naturales,nombre_tecnico,nombre_tecnico,numero_codigo,indice_de_color,numero_codigo,False,False
+antocianinas,E163,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+azul patente,E131,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+betacaroteno,E160a,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_tecnico,True,False
+cantaxantina,E161g,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+capsorrubina,E160c,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+fd&c rojo 40,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+rojo betabel,E162,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+rojo ponceau,E124,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+verde rapido,E143,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+amarillo 2g,E107,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,True,True
+antocianina,E163,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+ficocianina,SPIRULINA,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+rojo allura,E129,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+rojo carmin,E120,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+rojo coccin,E129,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+rojo fd&c40,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+rojo no. 40,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+verde fd&c3,E143,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+verde japon,E143,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+verde no. 3,E143,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+allura red,E129,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+amarillo 5,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,True,True
+amarillo 6,E110,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,True,True
+azorrubina,E122,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+azul no. 1,E133,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+azul no. 2,E132,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+betalainas,E162,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+capsantina,E160c,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+carmoisina,E122,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+clorofilas,E140,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+cochinilla,E120,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+enocianina,E163,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+eritrosina,E127,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+espirulina,SPIRULINA,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+indigotina,E132,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+ponceau 4r,E124,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+rojo curry,E129,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,otra,False,False
+rojo d&c 5,E122,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+rojo no. 3,E127,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+tartrazina,E102,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+betalaina,E162,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+carotenos,E160a,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_tecnico,False,False
+clorofila,E140,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,False,True
+curcumina,E100,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+norbixina,E160b,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+rojo d&c6,E124,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+betanina,E162,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+caramelo,E150,fuera_de_eje,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+carmines,E120,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+caroteno,E160a,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_tecnico,False,False
+ci 14720,E122,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 15985,E110,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 16035,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 16255,E124,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 19140,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 42090,E133,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 45430,E127,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 73015,E132,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+ci 75470,E120,naturales,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+licopeno,E160d,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+achiote,E160b,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+annatto,E160b,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+atsuete,E160b,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+azafran,E164,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,True,True
+curcuma,E100,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+hibisco,E163,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+luteina,E161b,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+paprika,E160c,naturales,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True
+rojo 40,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,True,True
+verde 3,E143,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+verde s,E142,sinteticos,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+azul 1,E133,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+azul 2,E132,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+bixina,E160b,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+carmin,E120,naturales,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,nombre_tecnico,True,True
+rojo 3,E127,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+rojo 6,E124,sinteticos,numero_codigo,numero_codigo,numero_codigo,designacion_fdc,numero_codigo,False,True
+e 102,E102,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+e 110,E110,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,True,True
+e 129,E129,sinteticos,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,True,True
+e 150,E150,fuera_de_eje,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,False,True
+e150a,E150,fuera_de_eje,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,True,True
+e150b,E150,fuera_de_eje,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,True,True
+e150c,E150,fuera_de_eje,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,True,True
+e150d,E150,fuera_de_eje,numero_codigo,numero_codigo,numero_codigo,codigo_e_ci,numero_codigo,True,True
+urucu,E160b,naturales,nombre_tecnico,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,nombre_comun_planta,False,True

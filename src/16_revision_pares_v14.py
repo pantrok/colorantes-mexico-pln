@@ -229,11 +229,23 @@ def glmm_intercepto_aleatorio(X: np.ndarray, y: np.ndarray, grupos: np.ndarray,
     }
 
 
+# Por encima de este |coeficiente| la razon de momios pasa de 4.8e8: no es una
+# estimacion, es separacion. Se reporta como no estimable en vez de imprimir
+# un numero de catorce cifras que parece un resultado.
+COEF_SEPARACION = 20.0
+
+
 def ic_wald(beta_j: float, se_j: float, z: float = 1.959964):
-    if not np.isfinite(se_j) or se_j <= 0:
+    """IC de Wald en escala de razon de momios. Devuelve [None, None] si el
+    error estandar no es utilizable o si el intervalo desborda -pasa cuando
+    una categoria tiene una o dos observaciones en separacion perfecta-."""
+    if not np.isfinite(se_j) or se_j <= 0 or abs(beta_j) > COEF_SEPARACION:
         return [None, None]
-    return [round(float(np.exp(beta_j - z * se_j)), 2),
-            round(float(np.exp(beta_j + z * se_j)), 2)]
+    with np.errstate(over="ignore"):
+        lo, hi = np.exp(beta_j - z * se_j), np.exp(beta_j + z * se_j)
+    if not (np.isfinite(lo) and np.isfinite(hi)):
+        return [None, None]
+    return [round(float(lo), 2), round(float(hi), 2)]
 
 
 # =========================================================================
@@ -326,10 +338,12 @@ def intervalos_triples(base: pd.DataFrame, covariables: list[str], etiqueta: str
     filas = []
     for j, nombre in enumerate(nombres):
         fila_perfil = perfil_por_nombre.get(nombre, {})
+        separado = abs(float(beta[j])) > COEF_SEPARACION
         filas.append({
             "termino": nombre,
             "coef": round(float(beta[j]), 4),
-            "RM": round(float(np.exp(beta[j])), 2),
+            "RM": None if separado else round(float(np.exp(beta[j])), 2),
+            "no_estimable_por_separacion": separado,
             "ic_perfil": [fila_perfil.get("IC_bajo"), fila_perfil.get("IC_alto")],
             "ic_wald_sin_corregir": ic_wald(beta[j], se_modelo[j]),
             "ic_cuasibinomial": ic_wald(beta[j], se_modelo[j] * raiz_phi),

@@ -1,0 +1,72 @@
+{
+  "no_se_renderiza_aqui": "Sin libreria grafica en el entorno y sin pipeline de figuras en el repositorio. Se entrega el dato, no el TIFF.",
+  "spec_referida_no_encontrada": "El parche cita GRAPHICAL_ABSTRACT_spec_v2.md; no existe en el repositorio. La unica version localizable es una v1 fuera del repo, y es un brief de diseno, no una especificacion de ploteo.",
+  "valores_que_hay_que_SUSTITUIR_en_la_figura_vigente": {
+    "brecha_botanica_observada_pct": {
+      "antes": 90.41,
+      "ahora": 88.46
+    },
+    "diferencia_cruda_pp": {
+      "antes": 53.65,
+      "ahora": 51.7
+    },
+    "denominador_botanico": {
+      "antes": 438,
+      "ahora": 364
+    }
+  },
+  "valores_de_base_comun": {
+    "brecha_sintetica_pct": 36.76,
+    "brecha_botanica_pct": 88.46,
+    "diferencia_cruda_pp": 51.7,
+    "diferencia_cruda_ic95": [
+      47.8434,
+      55.5461
+    ],
+    "tasa_botanica_estandarizada_pct": 75.11,
+    "tasa_botanica_estandarizada_ic95": [
+      68.7508,
+      81.4119
+    ],
+    "reparto_residual_pct": 74.2,
+    "reparto_residual_ic95_pct": [
+      65.1,
+      82.0
+    ]
+  },
+  "descomposicion_de_kitagawa_para_la_figura": [
+    {
+      "termino": "composicion",
+      "pp": 35.11,
+      "ic95": [
+        31.1022,
+        39.015
+      ]
+    },
+    {
+      "termino": "tasa",
+      "pp": 38.36,
+      "ic95": [
+        31.9242,
+        45.0316
+      ]
+    },
+    {
+      "termino": "interaccion",
+      "pp": -21.76,
+      "ic95": [
+        -26.7647,
+        -17.4607
+      ]
+    },
+    {
+      "termino": "suma (= diferencia cruda)",
+      "pp": 51.7,
+      "ic95": [
+        47.8434,
+        55.5461
+      ]
+    }
+  ],
+  "aviso_para_quien_la_dibuje": "La interaccion es NEGATIVA y grande (-21.76 pp). Una figura que apile composicion y tasa como si sumaran la diferencia cruda estara mal: 35.11 + 38.36 = 73.47, no 51.70. El tercer termino tiene que aparecer."
+}

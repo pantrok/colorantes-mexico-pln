@@ -1,0 +1,109 @@
+{
+  "n_detecciones_de_rojo_curry": 2,
+  "opcion_1_en_nombre_tecnico": {
+    "n_modelo": 2769,
+    "coeficientes": {
+      "intercepto": {
+        "RM": 0.64,
+        "mixto": [
+          0.56,
+          0.72
+        ]
+      },
+      "natural": {
+        "RM": 1.41,
+        "mixto": [
+          0.56,
+          3.55
+        ]
+      },
+      "es_nombre_comun_planta": {
+        "RM": 81.98,
+        "mixto": [
+          23.2,
+          289.72
+        ]
+      },
+      "es_nombre_tecnico": {
+        "RM": 0.78,
+        "mixto": [
+          0.64,
+          0.95
+        ]
+      }
+    }
+  },
+  "opcion_2_excluido": {
+    "n_modelo": 2767,
+    "coeficientes": {
+      "intercepto": {
+        "RM": 0.64,
+        "mixto": [
+          0.56,
+          0.72
+        ]
+      },
+      "natural": {
+        "RM": 1.42,
+        "mixto": [
+          0.57,
+          3.58
+        ]
+      },
+      "es_nombre_comun_planta": {
+        "RM": 81.46,
+        "mixto": [
+          23.03,
+          288.15
+        ]
+      },
+      "es_nombre_tecnico": {
+        "RM": 0.78,
+        "mixto": [
+          0.64,
+          0.94
+        ]
+      }
+    }
+  },
+  "opcion_3_cuarta_categoria": {
+    "n_modelo": 2769,
+    "coeficientes": {
+      "intercepto": {
+        "RM": 0.64,
+        "mixto": [
+          null,
+          null
+        ]
+      },
+      "natural": {
+        "RM": 1.42,
+        "mixto": [
+          null,
+          null
+        ]
+      },
+      "es_nombre_comun_planta": {
+        "RM": 81.46,
+        "mixto": [
+          null,
+          null
+        ]
+      },
+      "es_nombre_tecnico": {
+        "RM": 0.78,
+        "mixto": [
+          null,
+          null
+        ]
+      },
+      "es_otra": {
+        "RM": null,
+        "mixto": [
+          null,
+          null
+        ]
+      }
+    }
+  }
+}

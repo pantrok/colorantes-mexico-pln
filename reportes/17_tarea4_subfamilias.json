@@ -1,0 +1,50 @@
+{
+  "detecciones_de_anaranjado_3": 0,
+  "subfamilias_antes": [
+    {
+      "subfamilia": "codigo_e_ci",
+      "n": 8,
+      "sin_tag": 7.0,
+      "n_terminos": 5,
+      "brecha_pct": 87.5
+    },
+    {
+      "subfamilia": "designacion_fdc",
+      "n": 1488,
+      "sin_tag": 551.0,
+      "n_terminos": 26,
+      "brecha_pct": 37.0
+    },
+    {
+      "subfamilia": "indice_de_color",
+      "n": 40,
+      "sin_tag": 40.0,
+      "n_terminos": 9,
+      "brecha_pct": 100.0
+    }
+  ],
+  "subfamilias_despues": [
+    {
+      "subfamilia": "codigo_e_ci",
+      "n": 8,
+      "sin_tag": 7.0,
+      "n_terminos": 5,
+      "brecha_pct": 87.5
+    },
+    {
+      "subfamilia": "designacion_fdc",
+      "n": 1488,
+      "sin_tag": 551.0,
+      "n_terminos": 26,
+      "brecha_pct": 37.0
+    },
+    {
+      "subfamilia": "indice_de_color",
+      "n": 40,
+      "sin_tag": 40.0,
+      "n_terminos": 9,
+      "brecha_pct": 100.0
+    }
+  ],
+  "nota": "`anaranjado 3` estaba en nombre_tecnico mientras sus hermanos `anaranjado alimentos 6` y `anaranjado alimentos 7` estaban en indice_de_color. Corregido, el termino pasa ademas de nombre_tecnico a numero_codigo en el nivel grueso, que es justo lo que dijo la Dra. por su cuenta."
+}

@@ -90,6 +90,17 @@ del `git log`.
      condicionada a la pertenencia literal al sinonimario, la forma del
      nombre SIGUE prediciendo la recuperación (brecha 16.7 % / 29.8 / 96.1 %
      dentro del vocabulario). La sección nueva no es una tautología.
+- **Parche 17 (06/09/2026) aplicado completo, 6 de 6 tareas.** La coautora
+  reclasificó los 197 términos **a ciegas** y coincide con `forma_v2` en 188
+  (**κ=0.9315**, IC 0.888–0.975): es una validación independiente de la
+  variable de forma, hecha por alguien que no vio las tasas. Pero **su
+  reclasificación no mueve el modelo**, y por una razón estructural que hay
+  que decir: de los nueve términos en disputa, **solo `rojo curry` (2
+  detecciones) está dentro de la base del modelo** — los siete carotenoides
+  son E160a, cuyas 73 detecciones son íntegramente el estrato `mandatory`
+  que el parche 16 excluyó, y los otros dos tienen cero detecciones. Su
+  hipótesis (que el efecto subiría) **se tumba**: 81.98 → 81.46. Ver la
+  sección «Parche 17».
 - **Pendiente, sin empezar (además de lo de arriba):** decidir el tratamiento
   del dióxido de titanio (E171) antes del modelo de Firth, escribir el manual
   de anotación, sortear los 600 y anotar contra el hash de v1.1.
@@ -1169,6 +1180,157 @@ script con la predicción y **sin** la salida, y correr después.
 
 ---
 
+## Parche 17 (06/09/2026): la clasificación ciega de la coautora
+
+Origen: la Dra. Granados-Balbuena reclasificó los 197 términos **a ciegas**
+—sin ver las tasas de recuperación ni el repositorio— más cuatro cabos del
+parche 16. Código en `src/17_forma_dra.py`, salidas en `reportes/17_*`.
+
+### Tarea 5 — los tres kappas, ahora calculados en el repositorio
+
+Recalculados con la misma función que el kappa entre anotadores del parche 15
+(Cohen simple, sin pesos, IC de Fleiss/Cohen/Everitt). **Reproducen exacto
+los que la Dra. calculó por fuera:**
+
+| Comparación | Acuerdo | κ | IC95 |
+|---|---|---|---|
+| `forma_v1` (parche 15) vs. Dra. | 86.3 % (170/197) | 0.7931 | 0.721 – 0.865 |
+| **`forma_v2` (parche 16) vs. Dra.** | **95.4 % (188/197)** | **0.9315** | 0.888 – 0.975 |
+| `forma_v1` vs. `forma_v2` | 90.9 % (179/197) | 0.8628 | 0.803 – 0.923 |
+
+Marginales — Dra.: 71 número/código, 69 técnico, 56 común de planta, 1 otra.
+`forma_v2`: 70 / 64 / 63. La matriz 4×4 completa está en el JSON. Los nueve
+desacuerdos son los que ella listó, ni uno más.
+
+Esto es lo que convierte la variable de forma en defendible: `forma_v2` la
+construimos nosotros mirando el mismo corpus del que salen las tasas; que una
+clasificadora independiente y ciega al resultado llegue a κ=0.93 es
+evidencia de que la categoría no se dibujó para que saliera el resultado.
+
+### Tarea 2 — el reajuste con sus etiquetas: la hipótesis de la Dra. se tumba
+
+Ella pidió que se comprobara o se tumbara, no que se asumiera: esperaba que
+sacar los siete carotenoides de «nombre común de la fuente» **subiera** el
+efecto de la categoría.
+
+| Coeficiente | `forma_v2` | `forma_dra_ciega` |
+|---|---|---|
+| natural | 1.41 | 1.42 |
+| es_nombre_común_planta | **81.98** | **81.46** |
+| es_nombre_técnico | 0.78 | 0.78 |
+
+**No sube: baja un 0.6 % relativo, muy dentro del intervalo.** Y hay una
+razón estructural, no casual, que hay que decir en el artículo:
+
+| Término reclasificado | Código | Detecciones | En la base del modelo |
+|---|---|---|---|
+| caroteno, carotenos, beta caroteno, betacaroteno | E160a | 68 | **0** |
+| carotenos mixtos, caroteno natural, extracto de betalaína, anaranjado 3 | — | **0** | 0 |
+| rojo curry | E129 | 2 | 2 |
+
+**Las 73 detecciones de E160a son todas `mandatory=True`**, es decir el
+estrato de 74 que el parche 16 (tarea 2) tuvo que excluir del modelo por no
+tener soporte común entre orígenes. De los nueve términos en disputa, **solo
+`rojo curry`, con 2 detecciones, está dentro de la base del modelo**. Su
+reclasificación es metodológicamente valiosa —sube el kappa a 0.93— pero
+**numéricamente inerte para este modelo, y no por casualidad: movió
+justamente los términos que el modelo nunca vio.**
+
+El modelo de vocabulario no lleva ningún término de forma, así que es
+idéntico con las dos clasificaciones. Queda dicho por escrito.
+
+### Tarea 3 — `rojo curry`: son 2 detecciones, no 1, y la opción 3 hace daño
+
+| Opción | n del modelo | natural | común planta | técnico | Mixto converge |
+|---|---|---|---|---|---|
+| 1. dejarlo en nombre_técnico | 2769 | 1.41 | 81.98 | 0.78 | sí |
+| 2. excluir el término | 2767 | 1.42 | 81.46 | 0.78 | sí |
+| 3. cuarta categoría (n=2) | 2769 | 1.42 | 81.46 | 0.78 | **no** |
+
+Las opciones 1 y 2 son indistinguibles (difieren en la segunda decimal). **La
+opción 3 hay que descartarla**: con 2 detecciones en separación perfecta el
+coeficiente de la categoría no es estimable y, peor, **impide que el modelo
+mixto converja para todos los demás coeficientes** — se pierden los IC de
+`natural` y de `nombre_común_planta`, que son los que importan.
+
+**Recomendación: opción 2**, excluir el término. Respeta el juicio de la
+coautora (no es ninguna de las tres categorías), es la más simple de
+explicar en una frase, y el coste es 2 detecciones de 2769.
+
+De paso: el parche decía «una sola detección»; son **2**.
+
+### Tarea 4 — `anaranjado 3`: se corrige, y no cambia nada
+
+Estaba en `nombre_tecnico` mientras `anaranjado alimentos 6` y `anaranjado
+alimentos 7` estaban en `indice_de_color`. Corregido en
+`forma_fina_corregida()`, lo que además lo mueve a `numero_codigo` en el
+nivel grueso — exactamente lo que dijo la Dra. por su cuenta.
+
+**Efecto numérico: ninguno. `anaranjado 3` tiene 0 detecciones en el
+corpus.** La tabla de subfamilias es idéntica antes y después:
+
+| Subfamilia | n | Brecha |
+|---|---|---|
+| designación FD&C | 1488 | 37.0 % |
+| índice de color | 40 | 100 % |
+| código E o CI | 8 | 87.5 % |
+
+(El parche listaba 36 para índice de color; son 40 al agrupar las dos clases
+de origen — el parche 16 los reportó separados por clase, 36 sintéticos y 4
+botánicos.)
+
+### Tarea 6 — la Figura 1: se entrega el dato, no el TIFF
+
+**No se puede renderizar aquí y conviene decir por qué**, en vez de improvisar
+algo que desentone con las Figuras 2 y 3:
+
+- No hay ninguna librería gráfica en el entorno (ni `matplotlib`, ni `PIL`,
+  ni `svgwrite`); `requirements.txt` es deliberadamente mínimo y `CLAUDE.md`
+  dice explícitamente «no hacer gráficas bonitas todavía».
+- No existe ningún script de figuras en el repositorio: las tres del
+  manuscrito se hicieron fuera.
+- **`GRAPHICAL_ABSTRACT_spec_v2.md` no existe.** La única versión localizable
+  es una v1 fuera del repositorio, y es un brief de diseño para un
+  ilustrador, no una especificación de ploteo.
+
+Lo que sí se entrega, en `reportes/17_tarea6_datos_figura1.json`, es el dato
+exacto con intervalos para que quien la dibuje sustituya:
+
+| | Figura vigente | **Base común** |
+|---|---|---|
+| Brecha botánica observada | 90.41 % (n=438) | **88.46 % (n=364)** |
+| Diferencia cruda | 53.65 pp | **51.70 pp** [47.84 – 55.55] |
+| Tasa botánica estandarizada | — | 75.11 % [68.75 – 81.41] |
+| Reparto residual | 71.5 % | **74.2 %** [65.1 – 82.0] |
+
+Kitagawa: composición **+35.11** [31.10 – 39.02], tasa **+38.36**
+[31.92 – 45.03], interacción **−21.76** [−26.76 – −17.46].
+
+**Aviso para quien la dibuje:** la interacción es negativa y grande. Una
+figura que apile composición y tasa como si sumaran la diferencia cruda
+estará mal — 35.11 + 38.36 = 73.47, no 51.70. El tercer término tiene que
+aparecer.
+
+### Defecto corregido de paso
+
+`ic_wald()` en `16_revision_pares_v14.py` imprimía una razón de momios de
+catorce cifras y un `inf` cuando una categoría estaba en separación perfecta
+(el caso de `rojo curry` con la opción 3). Ahora esos casos se reportan como
+`RM: null` con la bandera `no_estimable_por_separacion`. Fijado en
+`tests/test_forma_dra.py`.
+
+### Archivos nuevos
+
+- `src/17_forma_dra.py` — las seis tareas.
+- `tests/test_forma_dra.py` — 6 pruebas: las nueve diferencias y ni una más,
+  las 188 coincidencias, la errata `espiriulina`, `anaranjado 3`, y la
+  separación reportada como no estimable.
+- `reportes/17_forma_tres_clasificadores.csv` — los 197 términos con las
+  cinco columnas de clasificación y la pertenencia literal.
+- `reportes/17_tarea{2,3,4,5,6}_*.json`.
+
+---
+
 ## Historial completo, parche por parche
 
 Formato: **parche — commit — qué trajo — qué se corrigió o se decidió aquí
@@ -1193,6 +1355,7 @@ que el parche no traía.**
 | 14 | `3a49f53` | Sin código: especificación del filtro de advertencias de trazas, pesos de estrato a recuperar, congelar la muestra anotada, revisión de España | Implementado `util.py::quitar_advertencia_trazas()` y aplicado en `05,06,07,08,09,11,12`; congelada `07_muestra_anotacion_v1.csv` y guardia contra sobreescritura en `07_forma_y_clase.py`; `.claude/settings.json` para desactivar el trailer de autoría por configuración; corregida la afirmación del parche de que los reportes de España no estaban en el repo (sí estaban, de `afffdde`) |
 | 15 | `c01eb09` + `82f0619` | Sin código: 12 tareas de la revisión por pares del manuscrito v11 (5 revisores) | Tareas 1-2 en `08_vocabulario_off.py` (Tabla 2 con ceros explícitos; modelo sin `mandatory`); tareas 3-11 en `15_revision_pares.py` nuevo, dataset validado contra los totales ya publicados antes de usarse; tarea 12 declarada bloqueada (sin anotación real en el repo) en vez de aproximada; corregidas dos afirmaciones del propio parche (amarillo ocaso/6 invertidos; caramelo peor cubierto, no mejor, de lo que suponía el revisor) |
 | 16 | *(pendiente de commit)* | Sin código: 11 tareas de la segunda revisión por pares (manuscrito v14, 3 revisores) | Encontrado y corregido un bug de determinismo en `util.py` que el parche no pedía (el orden de términos de igual longitud dependía de PYTHONHASHSEED y movía la RM del modelo de forma entre corridas idénticas); confirmado que el efecto de origen no sobrevive a ninguna corrección de dispersión; confirmada la reconstrucción del revisor sobre base común (74.2 % de residual, no 71.5 %); la validación ponderada baja la sensibilidad de 84.8 % a 73.9 %; la tarea decisiva sale A FAVOR del artículo (la forma predice condicionada a la pertenencia literal); rechazada la explicación del número E para el carmín; documentado que la re-adjudicación independiente no existe y que el sello no acredita anterioridad |
+| 17 | *(pendiente de commit)* | La coautora reclasifico a ciegas los 197 terminos, mas cuatro cabos del parche 16 | Kappas recalculados en el repo y reproducen exacto los suyos (v2 vs Dra. k=0.9315); su hipotesis se TUMBA: el efecto no sube (81.98 -> 81.46) y la razon es estructural -de los 9 terminos en disputa solo `rojo curry` (2 detecciones) esta dentro de la base del modelo, porque las 73 detecciones de E160a son el estrato mandatory excluido en el parche 16-; `anaranjado 3` corregido pero tiene 0 detecciones; recomendada la opcion 2 para `rojo curry` porque la 4a categoria impide converger al modelo mixto; Figura 1 entregada como dato y no como TIFF (no hay libreria grafica ni existe el spec_v2 que cita el parche); corregido ic_wald() para no imprimir RM de 14 cifras en separacion |
 
 ---
 
