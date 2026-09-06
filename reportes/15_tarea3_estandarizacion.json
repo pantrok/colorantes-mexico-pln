@@ -1,0 +1,48 @@
+{
+  "poblacion_declarada": "Celdas clase x en_vocab_off con off_mandatory=False para el peso y la tasa estandarizada -mismo universo que el modelo de 2 predictores de 08_vocabulario_off.py-. La tasa CRUDA de cada origen usa TODA su poblacion, mandatory incluido.",
+  "n_bootstrap": 1000,
+  "semilla": 20260906,
+  "punto_una_sola_corrida_sin_redondear": {
+    "diferencia_cruda_pp": 53.654202147352834,
+    "direccion_A_peso_sintetico_sobre_tasas_naturales": {
+      "tasa_natural_estandarizada_pct": 75.11224934612032,
+      "diferencia_estandarizada_pp": 38.355492589363564,
+      "fraccion_residual": 0.7148646528006555
+    },
+    "direccion_B_peso_natural_sobre_tasas_sinteticas": {
+      "tasa_sintetico_estandarizada_pct": 71.86785886178598,
+      "diferencia_estandarizada_pp": 18.543100042323616,
+      "fraccion_residual": 0.3456038725801551
+    }
+  },
+  "ic95_bootstrap_por_producto": {
+    "diferencia_cruda_pp": [
+      50.2064,
+      57.1721
+    ],
+    "tasa_natural_estandarizada_pct": [
+      68.7508,
+      81.4119
+    ],
+    "diferencia_estandarizada_A_pp": [
+      31.9242,
+      45.0316
+    ],
+    "fraccion_residual_A": [
+      0.6195,
+      0.7987
+    ],
+    "tasa_sintetico_estandarizada_pct": [
+      68.2026,
+      75.5736
+    ],
+    "diferencia_estandarizada_B_pp": [
+      14.871,
+      22.1798
+    ],
+    "fraccion_residual_B": [
+      0.2812,
+      0.41
+    ]
+  }
+}

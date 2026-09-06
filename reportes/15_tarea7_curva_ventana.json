@@ -1,0 +1,99 @@
+{
+  "curva": [
+    {
+      "ventana_caracteres": 0,
+      "detecciones_retenidas": 2646,
+      "brecha_global": {
+        "n": 2646,
+        "sin_tag": 1114,
+        "brecha_pct": 42.1
+      },
+      "brecha_botanica": {
+        "n": 6,
+        "sin_tag": 5,
+        "brecha_pct": 83.3
+      },
+      "brecha_sintetica": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      }
+    },
+    {
+      "ventana_caracteres": 40,
+      "detecciones_retenidas": 3091,
+      "brecha_global": {
+        "n": 3091,
+        "sin_tag": 1485,
+        "brecha_pct": 48.0
+      },
+      "brecha_botanica": {
+        "n": 409,
+        "sin_tag": 368,
+        "brecha_pct": 90.0
+      },
+      "brecha_sintetica": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      }
+    },
+    {
+      "ventana_caracteres": 60,
+      "detecciones_retenidas": 3124,
+      "brecha_global": {
+        "n": 3124,
+        "sin_tag": 1515,
+        "brecha_pct": 48.5
+      },
+      "brecha_botanica": {
+        "n": 438,
+        "sin_tag": 396,
+        "brecha_pct": 90.4
+      },
+      "brecha_sintetica": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      }
+    },
+    {
+      "ventana_caracteres": 80,
+      "detecciones_retenidas": 3133,
+      "brecha_global": {
+        "n": 3133,
+        "sin_tag": 1520,
+        "brecha_pct": 48.5
+      },
+      "brecha_botanica": {
+        "n": 444,
+        "sin_tag": 400,
+        "brecha_pct": 90.1
+      },
+      "brecha_sintetica": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      }
+    },
+    {
+      "ventana_caracteres": 120,
+      "detecciones_retenidas": 3141,
+      "brecha_global": {
+        "n": 3141,
+        "sin_tag": 1527,
+        "brecha_pct": 48.6
+      },
+      "brecha_botanica": {
+        "n": 450,
+        "sin_tag": 406,
+        "brecha_pct": 90.2
+      },
+      "brecha_sintetica": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      }
+    }
+  ]
+}

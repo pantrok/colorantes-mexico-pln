@@ -1,0 +1,99 @@
+{
+  "n_bootstrap": 1000,
+  "semilla": 20260906,
+  "punto": {
+    "tabla1_brecha_pct": {
+      "carmin": 95.70815450643777,
+      "mineral_inorganico": 25.0,
+      "natural_botanico": 90.41095890410959,
+      "sintetico": 36.75675675675676
+    },
+    "OR_natural": 6.522972304484283,
+    "OR_fuera_vocab": 73.0464184967586,
+    "tabla2_brecha_pct": {
+      "carmin|vocab=False|mandatory=True": 100.0,
+      "carmin|vocab=True|mandatory=True": 95.37037037037037,
+      "mineral_inorganico|vocab=False|mandatory=False": 100.0,
+      "mineral_inorganico|vocab=True|mandatory=False": 21.73913043478261,
+      "natural_botanico|vocab=False|mandatory=False": 97.91666666666667,
+      "natural_botanico|vocab=False|mandatory=True": 100.0,
+      "natural_botanico|vocab=True|mandatory=False": 70.16129032258064,
+      "natural_botanico|vocab=True|mandatory=True": 100.0,
+      "sintetico|vocab=False|mandatory=False": 96.73659673659674,
+      "sintetico|vocab=True|mandatory=False": 23.734817813765183
+    }
+  },
+  "ic95_bootstrap_por_producto": {
+    "tabla1_brecha_pct": {
+      "carmin": [
+        93.06,
+        97.93
+      ],
+      "mineral_inorganico": [
+        13.63,
+        37.51
+      ],
+      "natural_botanico": [
+        87.71,
+        93.13
+      ],
+      "sintetico": [
+        34.74,
+        38.86
+      ]
+    },
+    "tabla2_brecha_pct": {
+      "carmin|vocab=False|mandatory=True": [
+        100.0,
+        100.0
+      ],
+      "carmin|vocab=True|mandatory=True": [
+        92.56,
+        97.77
+      ],
+      "mineral_inorganico|vocab=False|mandatory=False": [
+        100.0,
+        100.0
+      ],
+      "mineral_inorganico|vocab=True|mandatory=False": [
+        11.11,
+        34.09
+      ],
+      "natural_botanico|vocab=False|mandatory=False": [
+        95.87,
+        99.56
+      ],
+      "natural_botanico|vocab=False|mandatory=True": [
+        100.0,
+        100.0
+      ],
+      "natural_botanico|vocab=True|mandatory=False": [
+        62.5,
+        77.86
+      ],
+      "natural_botanico|vocab=True|mandatory=True": [
+        100.0,
+        100.0
+      ],
+      "sintetico|vocab=False|mandatory=False": [
+        94.58,
+        98.6
+      ],
+      "sintetico|vocab=True|mandatory=False": [
+        21.71,
+        25.74
+      ]
+    },
+    "modelo_OR": {
+      "OR_natural": [
+        4.49,
+        10.31
+      ],
+      "OR_fuera_vocab": [
+        46.14,
+        142.0
+      ]
+    }
+  },
+  "nota": "IC por bootstrap no parametrico, remuestreando PRODUCTOS (no detecciones) del universo completo de productos con texto. Comparar el ancho contra el IC de Wilson/Firth ya publicado, que trata cada deteccion como independiente."
+}

@@ -1,0 +1,52 @@
+{
+  "pares": [
+    {
+      "par": "rojo 40 vs rojo no. 40",
+      "forma": "rojo 40",
+      "n_detecciones": 386,
+      "n_cuentas_distintas": 66,
+      "cuenta_mas_activa": "openfoodfactsmx4",
+      "cuenta_mas_activa_pct": 22.5
+    },
+    {
+      "par": "rojo 40 vs rojo no. 40",
+      "forma": "rojo no. 40",
+      "n_detecciones": 21,
+      "n_cuentas_distintas": 11,
+      "cuenta_mas_activa": "openfoodfactsmx4",
+      "cuenta_mas_activa_pct": 19.0
+    },
+    {
+      "par": "azul brillante vs azul 1",
+      "forma": "azul brillante",
+      "n_detecciones": 144,
+      "n_cuentas_distintas": 41,
+      "cuenta_mas_activa": "openfoodfactsmx4",
+      "cuenta_mas_activa_pct": 29.2
+    },
+    {
+      "par": "azul brillante vs azul 1",
+      "forma": "azul 1",
+      "n_detecciones": 198,
+      "n_cuentas_distintas": 43,
+      "cuenta_mas_activa": "openfoodfactsmx4",
+      "cuenta_mas_activa_pct": 19.2
+    },
+    {
+      "par": "curcumina vs curcuma",
+      "forma": "curcumina",
+      "n_detecciones": 54,
+      "n_cuentas_distintas": 20,
+      "cuenta_mas_activa": "openfoodfacts-contributors",
+      "cuenta_mas_activa_pct": 11.1
+    },
+    {
+      "par": "curcumina vs curcuma",
+      "forma": "curcuma",
+      "n_detecciones": 147,
+      "n_cuentas_distintas": 24,
+      "cuenta_mas_activa": "openfoodfactsmx3",
+      "cuenta_mas_activa_pct": 20.4
+    }
+  ]
+}

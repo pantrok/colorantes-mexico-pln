@@ -1,0 +1,44 @@
+{
+  "sin_caramelo_brecha_global": {
+    "n": 3124,
+    "sin_tag": 1515,
+    "brecha_pct": 48.5
+  },
+  "con_caramelo_brecha_global": {
+    "n": 3800,
+    "sin_tag": 2152,
+    "brecha_pct": 56.6
+  },
+  "caramelo_solo": {
+    "n": 676,
+    "sin_tag": 637,
+    "brecha_pct": 94.2
+  },
+  "por_clase_con_caramelo": {
+    "caramelo": {
+      "n": 676,
+      "sin_tag": 637,
+      "brecha_pct": 94.2
+    },
+    "carmin": {
+      "n": 233,
+      "sin_tag": 223,
+      "brecha_pct": 95.7
+    },
+    "mineral_inorganico": {
+      "n": 48,
+      "sin_tag": 12,
+      "brecha_pct": 25.0
+    },
+    "natural_botanico": {
+      "n": 438,
+      "sin_tag": 396,
+      "brecha_pct": 90.4
+    },
+    "sintetico": {
+      "n": 2405,
+      "sin_tag": 884,
+      "brecha_pct": 36.8
+    }
+  }
+}

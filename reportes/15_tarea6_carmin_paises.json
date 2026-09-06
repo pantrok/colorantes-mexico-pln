@@ -1,0 +1,12 @@
+{
+  "mexico": {
+    "nombre_tecnico": 218,
+    "numero_codigo": 9,
+    "nombre_comun_planta": 8
+  },
+  "espana": {
+    "nombre_tecnico": 434,
+    "nombre_comun_planta": 64,
+    "numero_codigo": 1
+  }
+}

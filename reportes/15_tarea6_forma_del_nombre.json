@@ -1,0 +1,75 @@
+{
+  "n_terminos_diccionario": 197,
+  "distribucion_formas": {
+    "nombre_tecnico": 82,
+    "numero_codigo": 67,
+    "nombre_comun_planta": 48
+  },
+  "modelo_original_2_predictores": {
+    "OR_natural": 13.05
+  },
+  "modelo_con_forma_del_nombre": {
+    "referencia": "numero_codigo",
+    "tabla": [
+      {
+        "termino": "intercepto",
+        "coef": -0.3786,
+        "OR": 0.68,
+        "IC_bajo": 0.62,
+        "IC_alto": 0.76
+      },
+      {
+        "termino": "natural",
+        "coef": 0.6076,
+        "OR": 1.84,
+        "IC_bajo": 1.14,
+        "IC_alto": 2.94
+      },
+      {
+        "termino": "es_nombre_tecnico",
+        "coef": -0.4002,
+        "OR": 0.67,
+        "IC_bajo": 0.57,
+        "IC_alto": 0.79
+      },
+      {
+        "termino": "es_nombre_comun_planta",
+        "coef": 4.7478,
+        "OR": 115.33,
+        "IC_bajo": 36.22,
+        "IC_alto": 582.79
+      }
+    ],
+    "separacion_detectada": []
+  },
+  "pregunta_del_revisor": "Si el OR de 'natural' cambia poco entre el modelo original y el que controla por forma del nombre, el origen conserva efecto propio. Si cae hacia 1 o pierde significancia, la forma del nombre es el mecanismo real y el origen es su correlato, no una causa independiente.",
+  "caso_SIN160e": {
+    "n": 18,
+    "sin_tag": 18,
+    "brecha_pct": 100.0,
+    "formas": {
+      "nombre_tecnico": 18
+    },
+    "nota": "E160e vive en el bloque 'sinteticos' de colorantes.yaml -esta bien clasificado como sintetico por clase_de()-. Si su brecha se PARECE a la de un botanico, no es un error de clase_de(): es que sus terminos ('anaranjado alimentos 6', \"beta-apo-8'-carotenal\") tienen la misma forma tecnica/rara que penaliza a los botanicos poco cubiertos, no algo propio del origen."
+  },
+  "caso_amarillo_ocaso_vs_amarillo_6": {
+    "tabla": [
+      {
+        "termino": "amarillo 6",
+        "n": 290,
+        "sin_tag": 55,
+        "forma": "numero_codigo",
+        "brecha_pct": 19.0
+      },
+      {
+        "termino": "amarillo ocaso",
+        "n": 213,
+        "sin_tag": 175,
+        "forma": "nombre_tecnico",
+        "brecha_pct": 82.2
+      }
+    ],
+    "AVISO": "El parche 15 cita 'amarillo ocaso' con brecha 20.4 % (n=221) y 'amarillo 6' con 81.6 %. Los datos de esta corrida dan LO CONTRARIO: revisar la tabla de arriba antes de escribir nada. La direccion que sale aqui es consistente con la hipotesis de forma del nombre -numero_codigo se recupera mejor que nombre_tecnico-, la del parche no."
+  },
+  "caso_carmin_mexico_vs_espana": "ver 15_tarea6_carmin_paises.json (requiere corpus de Espana)"
+}

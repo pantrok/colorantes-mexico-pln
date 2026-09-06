@@ -276,8 +276,28 @@ def main() -> None:
                   sin_tag=("en_additives_tags", lambda s: int((~s).sum())),
                   sin_ninguna=("visible", lambda s: int((~s).sum())))
              .reset_index())
-    mec["brecha_pct"] = (100 * mec.sin_tag / mec.n).round(1)
-    mec["brecha_pct_con_otras_taxonomias"] = (100 * mec.sin_ninguna / mec.n).round(1)
+
+    # CORREGIDO parche 15 (revision por pares, tarea 1). groupby() solo emite
+    # las combinaciones que EXISTEN en los datos: sintetico x mandatory=True y
+    # mineral_inorganico x mandatory=True no aparecian -0 detecciones reales-.
+    # La "Tabla 2" del manuscrito, armada a mano sobre esta salida, sumo solo
+    # las celdas presentes: el total botanico dio 364 (124 en vocabulario +
+    # 240 fuera) en vez de 438 -exactamente las 74 detecciones de
+    # mandatory=True que faltaban por no tener fila-. Se completa el cruce
+    # clase x en_vocab_off x mandatory con CEROS EXPLICITOS en las
+    # combinaciones ausentes, para que la tabla sea autoverificable: la suma
+    # de sus celdas por clase da siempre el n de la Tabla 1
+    # (B_agregados_por_clase de 07_forma_y_clase.py). Ver BITACORA_PARCHES.md.
+    indice_completo = pd.MultiIndex.from_product(
+        [sorted(mec.clase.unique()), [False, True], [False, True]],
+        names=["clase", "en_vocab_off", "off_mandatory"])
+    mec = (mec.set_index(["clase", "en_vocab_off", "off_mandatory"])
+              .reindex(indice_completo, fill_value=0)
+              .reset_index())
+    mec["brecha_pct"] = mec.apply(
+        lambda r: round(100 * r.sin_tag / r.n, 1) if r.n else None, axis=1)
+    mec["brecha_pct_con_otras_taxonomias"] = mec.apply(
+        lambda r: round(100 * r.sin_ninguna / r.n, 1) if r.n else None, axis=1)
 
     # ---------------------------------------------------------- modelo logistico
     # Solo sintetico y natural_botanico: carmin y minerales van aparte por diseno.
@@ -285,30 +305,71 @@ def main() -> None:
     m["natural"] = (m.clase == "natural_botanico").astype(int)
     m["fuera_vocab"] = (~m.en_vocab_off).astype(int)
     m["mandatory"] = m.off_mandatory.astype(int)
+
+    # CORREGIDO parche 15 (tarea 2). El intervalo de 'mandatory' en el modelo
+    # de 3 predictores (RM 11.99, IC 1.52-1548.15) no era un problema de
+    # precision: es la firma de separacion SIN SOPORTE COMUN entre origenes.
+    # Verificado contra M2_mandatory (todos los codigos con
+    # mandatory_additive_class=True en additives.txt): E120 (carmin, fuera
+    # del modelo por diseno), E150 (caramelo, fuera del eje), E160a y E164
+    # (los dos naturales). NINGUN codigo sintetico esta en esa lista -no es
+    # que falten datos de un sintetico mandatory en este corte: no existe
+    # ninguno en la taxonomia de OFF. No hay estratificacion ni corte de
+    # datos que le de soporte comun al termino; forzarlo solo cambia el
+    # sintoma, no la causa. Se reajusta con DOS predictores -natural,
+    # fuera_vocab- sobre el estrato mandatory=False (el unico con soporte
+    # comun), y el estrato mandatory=True -integramente natural_botanico- se
+    # describe aparte, en prosa, con su n y su tasa.
+    m_mandatorio = m[m.mandatory == 1]
+    n_mand = int(m_mandatorio.n.sum())
+    sintag_mand = int(m_mandatorio.sin_tag.sum())
+    estrato_mandatorio = {
+        "n": n_mand, "sin_tag": sintag_mand,
+        "brecha_pct": round(100 * sintag_mand / n_mand, 1) if n_mand else None,
+        "nota": ("Integramente natural_botanico: ningun sintetico tiene "
+                 "mandatory_additive_class=True en la taxonomia de OFF (ver "
+                 "M2_mandatory mas abajo). Sin soporte comun entre origenes; "
+                 "se excluye del modelo de 2 predictores y se reporta aparte."),
+    }
+    m2 = m[m.mandatory == 0].copy()
+
     modelo = pd.DataFrame()
     metodo = None
     avisos_separacion = []
-    if len(m) >= 4 and m.natural.nunique() > 1 and m.fuera_vocab.nunique() > 1:
-        modelo = firth(m[["natural", "fuera_vocab", "mandatory"]],
-                       m.sin_tag.values, m.n.values)
+    if len(m2) >= 4 and m2.natural.nunique() > 1 and m2.fuera_vocab.nunique() > 1:
+        modelo = firth(m2[["natural", "fuera_vocab"]], m2.sin_tag.values, m2.n.values)
         metodo = modelo.attrs.get("metodo")
-        avisos_separacion = separacion(m, "sin_tag", "n",
-                                       ["natural", "fuera_vocab", "mandatory"])
+        avisos_separacion = separacion(m2, "sin_tag", "n", ["natural", "fuera_vocab"])
 
     # ------------------------------- estandarizacion: cuanto sobrevive al ajuste
+    # CORREGIDO parche 15 (tarea 3, parcial). Antes esto se calculaba sobre
+    # `m` (las 4 celdas de cada origen, incluido mandatory=True) y la
+    # exclusion del estrato mandatory pasaba SOLO por la interseccion de
+    # indices -sin_m nunca tiene mandatory=True, asi que `comunes` lo
+    # descartaba en silencio, sin que el codigo lo dijera-. Ahora se declara
+    # explicito: la estandarizacion usa el mismo universo que el modelo de 2
+    # predictores (m2, mandatory=False), y la tasa CRUDA de natural sigue
+    # siendo la de TODA la poblacion (m completo, incluye mandatory=True) a
+    # proposito -es la que de verdad se observa-. La version simetrica
+    # (ambas direcciones) con bootstrap va en 15_revision_pares.py, que
+    # tambien recibe el mismo universo declarado aqui.
     estand = {}
-    sin_m = m[m.natural == 0]
-    nat_m = m[m.natural == 1]
-    if len(sin_m) and len(nat_m):
-        peso = sin_m.set_index(["fuera_vocab", "mandatory"]).n
-        tasa = nat_m.set_index(["fuera_vocab", "mandatory"]).apply(
-            lambda r: r.sin_tag / r.n, axis=1)
+    sin_m = m2[m2.natural == 0]
+    nat_m_std = m2[m2.natural == 1]     # SOLO mandatory=False, para el peso/tasa
+    nat_m_cruda = m[m.natural == 1]     # TODA la poblacion, para la tasa observada
+    if len(sin_m) and len(nat_m_std):
+        peso = sin_m.set_index("fuera_vocab").n
+        tasa = nat_m_std.set_index("fuera_vocab").apply(lambda r: r.sin_tag / r.n, axis=1)
         comunes = peso.index.intersection(tasa.index)
         if len(comunes):
             p_std = float((peso[comunes] * tasa[comunes]).sum() / peso[comunes].sum())
             b_sin = 100 * sin_m.sin_tag.sum() / sin_m.n.sum()
-            b_nat = 100 * nat_m.sin_tag.sum() / nat_m.n.sum()
+            b_nat = 100 * nat_m_cruda.sin_tag.sum() / nat_m_cruda.n.sum()
             estand = {
+                "poblacion_declarada": ("Peso y tasa estandarizada: estrato "
+                    "mandatory=False de ambos origenes (mismo universo que el "
+                    "modelo de 2 predictores). Tasa cruda de natural: TODA la "
+                    "poblacion natural_botanico, incluido mandatory=True."),
                 "brecha_sintetico_pct": round(b_sin, 1),
                 "brecha_natural_cruda_pct": round(b_nat, 1),
                 "brecha_natural_estandarizada_pct": round(100 * p_std, 1),
@@ -369,6 +430,8 @@ def main() -> None:
         "mecanismos": mec.to_dict("records"),
         "modelo_firth": modelo.to_dict("records") if len(modelo) else None,
         "modelo_metodo": metodo,
+        "modelo_covariables": ["natural", "fuera_vocab"],
+        "estrato_mandatorio_excluido_del_modelo": estrato_mandatorio,
         "separacion_detectada": avisos_separacion,
         "estandarizacion": estand,
         "PENDIENTE": ("MINERALES = {E170, E171, E172} se sacaron del eje por decision "
@@ -385,8 +448,11 @@ def main() -> None:
     print(f"  brecha global {resumen['brecha_global_pct']} %  ->  "
           f"{resumen['brecha_global_con_otras_taxonomias_pct']} % contando vit/min")
     print("\n", mec.to_string(index=False))
+    print("\n  suma de la Tabla 2 por clase (debe dar el n de la Tabla 1 en 07):")
+    print("  ", mec.groupby("clase").n.sum().to_dict())
+    print(f"\n  estrato mandatory=True excluido del modelo: {estrato_mandatorio}")
     if len(modelo):
-        print(f"\n  modelo ({metodo}):\n", modelo.to_string(index=False))
+        print(f"\n  modelo de 2 predictores ({metodo}):\n", modelo.to_string(index=False))
     if avisos_separacion:
         print("\n  separacion detectada:", avisos_separacion)
     if estand:

@@ -1,0 +1,64 @@
+{
+  "por_celda": [
+    {
+      "clase": "natural_botanico",
+      "en_vocab_off": false,
+      "n_terminos": 18,
+      "n_detecciones": 240,
+      "p_celda": 0.9792,
+      "chi2_pearson": 191.62,
+      "gl": 17,
+      "phi_hat_celda": 11.27
+    },
+    {
+      "clase": "natural_botanico",
+      "en_vocab_off": true,
+      "n_terminos": 11,
+      "n_detecciones": 124,
+      "p_celda": 0.7016,
+      "chi2_pearson": 96.37,
+      "gl": 10,
+      "phi_hat_celda": 9.64
+    },
+    {
+      "clase": "sintetico",
+      "en_vocab_off": false,
+      "n_terminos": 31,
+      "n_detecciones": 429,
+      "p_celda": 0.9674,
+      "chi2_pearson": 98.69,
+      "gl": 30,
+      "phi_hat_celda": 3.29
+    },
+    {
+      "clase": "sintetico",
+      "en_vocab_off": true,
+      "n_terminos": 25,
+      "n_detecciones": 1976,
+      "p_celda": 0.2373,
+      "chi2_pearson": 487.03,
+      "gl": 24,
+      "phi_hat_celda": 20.29
+    }
+  ],
+  "phi_hat_global": 10.79,
+  "gl_total": 81,
+  "admisible_binomial_simple": false,
+  "veredicto": "El binomial simple NO es admisible: hay mas variacion entre terminos de la misma celda de la que un binomial homogeneo predice. Los errores estandar del modelo de 2 predictores deberian inflarse por sqrt(phi_hat_global) -cuasibinomial-, no leerse literales.",
+  "caso_amarillo_6_vs_ocaso": [
+    {
+      "clase": "sintetico",
+      "en_vocab_off": true,
+      "termino": "amarillo 6",
+      "n": 290,
+      "sin_tag": 55
+    },
+    {
+      "clase": "sintetico",
+      "en_vocab_off": true,
+      "termino": "amarillo ocaso",
+      "n": 213,
+      "sin_tag": 175
+    }
+  ]
+}

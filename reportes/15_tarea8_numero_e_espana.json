@@ -1,0 +1,106 @@
+{
+  "pct_textos_con_numero_E_literal": {
+    "mexico": 0.7,
+    "espana": 17.2
+  },
+  "coocurrencia_carmin_con_numero_E_por_termino": {
+    "mexico": [
+      {
+        "termino": "carmin",
+        "n_productos": 213,
+        "con_numero_E_pct": 1.4
+      },
+      {
+        "termino": "rojo natural 4",
+        "n_productos": 9,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "extracto de cochinilla",
+        "n_productos": 4,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "acido carminico",
+        "n_productos": 2,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "carmin de cochinilla",
+        "n_productos": 2,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "extracto de coccus cacti",
+        "n_productos": 2,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "rojo carmin",
+        "n_productos": 2,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "carmines",
+        "n_productos": 1,
+        "con_numero_E_pct": 0.0
+      }
+    ],
+    "espana": [
+      {
+        "termino": "carmin",
+        "n_productos": 243,
+        "con_numero_E_pct": 6.6
+      },
+      {
+        "termino": "carmines",
+        "n_productos": 128,
+        "con_numero_E_pct": 6.2
+      },
+      {
+        "termino": "acido carminico",
+        "n_productos": 58,
+        "con_numero_E_pct": 8.6
+      },
+      {
+        "termino": "cochinilla",
+        "n_productos": 56,
+        "con_numero_E_pct": 8.9
+      },
+      {
+        "termino": "carmin de cochinilla",
+        "n_productos": 8,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "rojo carmin",
+        "n_productos": 5,
+        "con_numero_E_pct": 0.0
+      },
+      {
+        "termino": "rojo natural 4",
+        "n_productos": 1,
+        "con_numero_E_pct": 0.0
+      }
+    ]
+  },
+  "formas_E110_frecuencia_literal_en_texto": {
+    "amarillo ocaso": {
+      "mexico": 221,
+      "espana": 71
+    },
+    "amarillo 6": {
+      "mexico": 299,
+      "espana": 46
+    },
+    "amarillo anaranjado s": {
+      "mexico": 0,
+      "espana": 7
+    },
+    "amarillo crepusculo": {
+      "mexico": 0,
+      "espana": 10
+    }
+  },
+  "lectura": "Si la coocurrencia carmin+numero-E es mucho mas alta en Espana que en Mexico, la recuperacion espanola del carmin se explica -al menos en parte- porque la etiqueta comunitaria imprime el numero E junto al nombre y OFF lo reconoce por ahi, no por el nombre. 'amarillo anaranjado s' es la forma que usa la taxonomia oficial de OFF para E110 en espanol (ver additives.txt); si aparece poco en los textos reales frente a 'amarillo ocaso'/'amarillo 6', la taxonomia no es el problema -tiene ambas formas, ver tarea 11-, es que el mercado no escribe esa forma."
+}

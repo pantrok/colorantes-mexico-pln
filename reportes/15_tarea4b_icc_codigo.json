@@ -1,0 +1,10 @@
+{
+  "k_codigos": 24,
+  "N_detecciones": 3124,
+  "n_promedio_por_codigo": 130.2,
+  "ICC": 0.3858,
+  "design_effect": 50.828,
+  "n_efectivo": 61.5,
+  "metodo": "ANOVA de un factor sobre datos binarios (Fleiss, 1981), estimador de momentos con correccion por tamano de grupo desigual. No es un ajuste de maxima verosimilitud -aviso explicito: no hay statsmodels ni scipy en el entorno del proyecto-.",
+  "lectura": "design_effect > 1 significa que los IC actuales -que tratan cada deteccion como independiente- son mas angostos de lo que deberian. n_efectivo es el tamano de muestra 'real' una vez descontado el anidamiento; los IC deberian recalcularse con ese n, no con N_detecciones."
+}

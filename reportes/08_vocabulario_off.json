@@ -53,12 +53,32 @@
     {
       "clase": "carmin",
       "en_vocab_off": false,
+      "off_mandatory": false,
+      "n": 0,
+      "sin_tag": 0,
+      "sin_ninguna": 0,
+      "brecha_pct": NaN,
+      "brecha_pct_con_otras_taxonomias": NaN
+    },
+    {
+      "clase": "carmin",
+      "en_vocab_off": false,
       "off_mandatory": true,
       "n": 17,
       "sin_tag": 17,
       "sin_ninguna": 17,
       "brecha_pct": 100.0,
       "brecha_pct_con_otras_taxonomias": 100.0
+    },
+    {
+      "clase": "carmin",
+      "en_vocab_off": true,
+      "off_mandatory": false,
+      "n": 0,
+      "sin_tag": 0,
+      "sin_ninguna": 0,
+      "brecha_pct": NaN,
+      "brecha_pct_con_otras_taxonomias": NaN
     },
     {
       "clase": "carmin",
@@ -82,6 +102,16 @@
     },
     {
       "clase": "mineral_inorganico",
+      "en_vocab_off": false,
+      "off_mandatory": true,
+      "n": 0,
+      "sin_tag": 0,
+      "sin_ninguna": 0,
+      "brecha_pct": NaN,
+      "brecha_pct_con_otras_taxonomias": NaN
+    },
+    {
+      "clase": "mineral_inorganico",
       "en_vocab_off": true,
       "off_mandatory": false,
       "n": 46,
@@ -89,6 +119,16 @@
       "sin_ninguna": 10,
       "brecha_pct": 21.7,
       "brecha_pct_con_otras_taxonomias": 21.7
+    },
+    {
+      "clase": "mineral_inorganico",
+      "en_vocab_off": true,
+      "off_mandatory": true,
+      "n": 0,
+      "sin_tag": 0,
+      "sin_ninguna": 0,
+      "brecha_pct": NaN,
+      "brecha_pct_con_otras_taxonomias": NaN
     },
     {
       "clase": "natural_botanico",
@@ -142,6 +182,16 @@
     },
     {
       "clase": "sintetico",
+      "en_vocab_off": false,
+      "off_mandatory": true,
+      "n": 0,
+      "sin_tag": 0,
+      "sin_ninguna": 0,
+      "brecha_pct": NaN,
+      "brecha_pct_con_otras_taxonomias": NaN
+    },
+    {
+      "clase": "sintetico",
       "en_vocab_off": true,
       "off_mandatory": false,
       "n": 1976,
@@ -149,12 +199,22 @@
       "sin_ninguna": 469,
       "brecha_pct": 23.7,
       "brecha_pct_con_otras_taxonomias": 23.7
+    },
+    {
+      "clase": "sintetico",
+      "en_vocab_off": true,
+      "off_mandatory": true,
+      "n": 0,
+      "sin_tag": 0,
+      "sin_ninguna": 0,
+      "brecha_pct": NaN,
+      "brecha_pct_con_otras_taxonomias": NaN
     }
   ],
   "modelo_firth": [
     {
       "termino": "intercepto",
-      "coef": -1.1568,
+      "coef": -1.1569,
       "OR": 0.31,
       "IC_bajo": 0.28,
       "IC_alto": 0.35
@@ -168,30 +228,26 @@
     },
     {
       "termino": "fuera_vocab",
-      "coef": 4.2909,
-      "OR": 73.03,
-      "IC_bajo": 47.23,
-      "IC_alto": 119.96
-    },
-    {
-      "termino": "mandatory",
-      "coef": 2.484,
-      "OR": 11.99,
-      "IC_bajo": 1.52,
-      "IC_alto": 1548.15
+      "coef": 4.2911,
+      "OR": 73.05,
+      "IC_bajo": 47.24,
+      "IC_alto": 119.99
     }
   ],
   "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
-  "separacion_detectada": [
-    {
-      "variable": "mandatory",
-      "valor": 1,
-      "tasa": 1.0,
-      "n": 74,
-      "nota": "separacion perfecta"
-    }
+  "modelo_covariables": [
+    "natural",
+    "fuera_vocab"
   ],
+  "estrato_mandatorio_excluido_del_modelo": {
+    "n": 74,
+    "sin_tag": 74,
+    "brecha_pct": 100.0,
+    "nota": "Integramente natural_botanico: ningun sintetico tiene mandatory_additive_class=True en la taxonomia de OFF (ver M2_mandatory mas abajo). Sin soporte comun entre origenes; se excluye del modelo de 2 predictores y se reporta aparte."
+  },
+  "separacion_detectada": [],
   "estandarizacion": {
+    "poblacion_declarada": "Peso y tasa estandarizada: estrato mandatory=False de ambos origenes (mismo universo que el modelo de 2 predictores). Tasa cruda de natural: TODA la poblacion natural_botanico, incluido mandatory=True.",
     "brecha_sintetico_pct": 36.8,
     "brecha_natural_cruda_pct": 90.4,
     "brecha_natural_estandarizada_pct": 75.1,

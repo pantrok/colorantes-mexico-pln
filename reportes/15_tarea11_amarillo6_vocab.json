@@ -1,0 +1,8 @@
+{
+  "en_vocabulario_off": {
+    "amarillo 6": true,
+    "amarillo ocaso": true,
+    "amarillo anaranjado s": true
+  },
+  "veredicto": "'amarillo 6' Y 'amarillo ocaso' estan AMBAS en el vocabulario espanol de OFF para E110 (additives.txt, linea es:). No hay brecha de vocabulario entre las dos formas: la diferencia de recuperacion entre ellas (ver tarea 5 y tarea 6) no se explica por cobertura de vocabulario, se explica por otra cosa -el manuscrito no puede afirmar que una forma 'no esta en la taxonomia' y luego usarla como el caso donde si esta, sin contradecirse-."
+}

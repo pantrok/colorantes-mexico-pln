@@ -1,11 +1,17 @@
 clase,en_vocab_off,off_mandatory,n,sin_tag,sin_ninguna,brecha_pct,brecha_pct_con_otras_taxonomias
+carmin,False,False,0,0,0,,
 carmin,False,True,17,17,17,100.0,100.0
+carmin,True,False,0,0,0,,
 carmin,True,True,216,206,206,95.4,95.4
 mineral_inorganico,False,False,2,2,2,100.0,100.0
+mineral_inorganico,False,True,0,0,0,,
 mineral_inorganico,True,False,46,10,10,21.7,21.7
+mineral_inorganico,True,True,0,0,0,,
 natural_botanico,False,False,240,235,235,97.9,97.9
 natural_botanico,False,True,63,63,63,100.0,100.0
 natural_botanico,True,False,124,87,87,70.2,70.2
 natural_botanico,True,True,11,11,11,100.0,100.0
 sintetico,False,False,429,415,415,96.7,96.7
+sintetico,False,True,0,0,0,,
 sintetico,True,False,1976,469,469,23.7,23.7
+sintetico,True,True,0,0,0,,
