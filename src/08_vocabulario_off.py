@@ -73,7 +73,8 @@ import pandas as pd
 
 from modelo import firth, separacion
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
+                  como_lista, normalizar, quitar_advertencia_trazas,
+                  terminos_ordenados, guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
 EXTERNO = RAIZ / "datos" / "externo"
@@ -213,9 +214,15 @@ def main() -> None:
     """).df()
 
     idx = {(r.codigo, norma(r.termino)): r for r in cob.itertuples()}
-    pares = []
+    pares, textos_rotos = [], []
     for t in df.itertuples(index=False):
         texto = normalizar(t.ingredientes_texto)
+        # CORREGIDO parche 14: un colorante mencionado solo dentro de una
+        # advertencia de trazas no cuenta como deteccion. Ver
+        # util.py::quitar_advertencia_trazas y BITACORA_PARCHES.md.
+        texto_det, roto = quitar_advertencia_trazas(texto)
+        if roto:
+            textos_rotos.append(t.code)
         tags_add = {str(a).replace("en:", "").upper() for a in como_lista(t.aditivos_tags)}
         tags_otro = set()
         for c in extra:
@@ -231,14 +238,14 @@ def main() -> None:
         # (OR): importa si el producto es recuperable por alguna de las
         # formas que declaro, no por una especifica. Ver BITACORA_PARCHES.md.
         por_codigo = {}
-        for codigo, bloque, termino in detectar_con_termino(texto, ordenados):
+        for codigo, bloque, termino in detectar_con_termino(texto_det, ordenados):
             cl = clase_de(codigo, bloque)
             if cl == "fuera_de_eje":
                 continue
             entry = por_codigo.setdefault(codigo, {
                 "clase": cl, "termino": termino, "contexto_ok": False,
                 "en_vocab_off": False, "off_mandatory": False})
-            if codigo not in AMBIGUOS or con_contexto(texto, termino):
+            if codigo not in AMBIGUOS or con_contexto(texto_det, termino):
                 entry["contexto_ok"] = True
             meta = idx.get((codigo, norma(termino)))
             if meta:
@@ -366,6 +373,7 @@ def main() -> None:
         "estandarizacion": estand,
         "PENDIENTE": ("MINERALES = {E170, E171, E172} se sacaron del eje por decision "
                       "propia. Requiere veredicto de la Dra. antes de fijarse."),
+        "textos_rotos_advertencia": {"n": len(textos_rotos), "codigos": textos_rotos},
     }
     guardar_reporte("08_vocabulario_off", resumen)
 

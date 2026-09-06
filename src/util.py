@@ -118,6 +118,72 @@ REQUIEREN_CONTEXTO = frozenset({
 })
 
 
+# Marcadores que abren un segmento de ADVERTENCIA DE TRAZAS ("puede contener
+# soya, leche, gluten, amarillo 5"), no una declaracion de que el producto
+# lleva el colorante. Medidos sobre los 600 textos del conjunto anotado
+# (parche 14, 05/09/2026): "puede contener" 92, "elaborado en una/un
+# linea/equipo/planta" 13, "trazas de" 10, "fabricado en una/un
+# linea/equipo/planta" 4, "pueden contener" 1. "may contain" y "puede haber"
+# no salieron en la muestra pero se agregan por si aparecen en el corpus
+# completo. Aplicar sobre texto ya normalizado (normalizar()): minusculas,
+# sin acentos.
+#
+# "CONTIENE:" NO es un marcador y no se agrega: es la declaracion obligatoria
+# de alergenos -el producto SI los lleva-, no una advertencia de trazas.
+# Tratarlo como marcador borraria detecciones legitimas (38 casos en la
+# muestra de 600).
+_MARCADORES_ADVERTENCIA_TRAZAS = [
+    re.compile(r"puede\s+contener"),
+    re.compile(r"pueden\s+contener"),
+    re.compile(r"elaborado\s+en\s+(?:una?\s+)?(?:linea|equipo|planta)"),
+    re.compile(r"fabricado\s+en\s+(?:una?\s+)?(?:linea|equipo|planta)"),
+    re.compile(r"trazas\s+de"),
+    re.compile(r"may\s+contain"),
+    re.compile(r"puede\s+haber"),
+]
+
+# Si el marcador aparece antes de este umbral (fraccion del texto), no se
+# recorta: la posicion mediana real del marcador es el 82 % del texto, y solo
+# 2 de 93 casos en la muestra caian antes del 30 %. Un marcador tan al
+# principio casi siempre es texto de OCR revuelto -ver el caso
+# 7500525199010 en la prueba de tests/test_advertencia_alergenos.py-, donde
+# recortar ahi borraria la lista de ingredientes real.
+UMBRAL_TEXTO_ROTO = 0.30
+
+
+def quitar_advertencia_trazas(texto_norm: str) -> tuple[str, bool]:
+    """(texto_para_detectar, texto_roto). Recorta el texto en el primer
+    marcador de advertencia de trazas, para que un colorante mencionado solo
+    ahi -"...puede contener...amarillo 5"- no cuente como detectado. Si el
+    colorante tambien aparece ANTES del marcador, sigue contando: se detecta
+    sobre el texto recortado, no sobre el original completo, pero el tramo
+    anterior al marcador queda intacto.
+
+    Bug que corrige (parche 14, 05/09/2026): 13 de 600 productos de la
+    muestra anotada -8.7 % del estrato sintetico- declaraban un colorante
+    unicamente dentro de una linea de "puede contener" y el flujo los contaba
+    como deteccion real. Ejemplo real (7501030421313): "PIEL DE CERDO, SAL
+    YODADA, ACEITE VEGETAL PUEDE CONTENER: SOYA, LECHE, GLUTEN, AMARILLO 5"
+    -el producto no lleva amarillo 5, la mencion es la advertencia de
+    alergenos obligatoria por la tartrazina.
+
+    Si el marcador aparece antes de UMBRAL_TEXTO_ROTO del texto, no se
+    recorta -devuelve el texto tal cual- y texto_roto=True, para que el
+    llamador registre el producto aparte en vez de confiar en el corte:
+    a esa altura del texto casi siempre es un OCR revuelto, no una etiqueta
+    real que abra con la advertencia."""
+    if not texto_norm:
+        return texto_norm, False
+    inicios = [m.start() for pat in _MARCADORES_ADVERTENCIA_TRAZAS
+               for m in [pat.search(texto_norm)] if m]
+    if not inicios:
+        return texto_norm, False
+    ini = min(inicios)
+    if ini / len(texto_norm) < UMBRAL_TEXTO_ROTO:
+        return texto_norm, True
+    return texto_norm[:ini], False
+
+
 def como_lista(valor) -> list:
     """Normaliza a lista de cadenas cualquier campo de tipo lista del parquet.
 

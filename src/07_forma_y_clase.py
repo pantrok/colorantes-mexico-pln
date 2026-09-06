@@ -46,13 +46,15 @@ from __future__ import annotations
 import math
 import re
 from collections import Counter, defaultdict
+from datetime import date
 from pathlib import Path
 
 import duckdb
 import pandas as pd
 
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
+                  como_lista, normalizar, quitar_advertencia_trazas,
+                  terminos_ordenados, guardar_reporte)
 
 AMBIGUOS = REQUIEREN_CONTEXTO
 RE_CONTEXTO = re.compile(r"colorante|color(?:es)?\b|pigmento")
@@ -209,11 +211,19 @@ def main() -> None:
     print(f"  productos con texto: {len(df):,}")
 
     # ------------------------------------------------ construccion de filas
-    filas, pares = [], []          # pares = una fila por (producto, codigo)
+    filas, pares, textos_rotos = [], [], []          # pares = una fila por (producto, codigo)
     for t in df.itertuples(index=False):
         texto = normalizar(t.ingredientes_texto)
+        # CORREGIDO parche 14 (05/09/2026). Un colorante mencionado solo
+        # dentro de una advertencia de trazas ("puede contener... amarillo 5")
+        # no cuenta como deteccion. 13 de 600 productos de la muestra anotada
+        # -8.7 % del estrato sintetico- caian en esto. Ver
+        # util.py::quitar_advertencia_trazas y BITACORA_PARCHES.md.
+        texto_det, roto = quitar_advertencia_trazas(texto)
+        if roto:
+            textos_rotos.append(t.code)
         tags = {str(a).replace("en:", "").upper() for a in como_lista(t.aditivos_tags)}
-        dets = detectar_con_forma(texto, ordenados)
+        dets = detectar_con_forma(texto_det, ordenados)
         # Agrupar por codigo, conservando TODOS los terminos que coincidieron
         # para ese codigo. CORREGIDO 05/09: un producto puede declarar el
         # mismo colorante con dos sinonimos (p.ej. "achiote" y "annatto",
@@ -240,7 +250,7 @@ def main() -> None:
                 continue
             bruto_eje.add(codigo)
             termino = terminos[0]
-            ok = codigo not in AMBIGUOS or any(con_contexto(texto, tm) for tm in terminos)
+            ok = codigo not in AMBIGUOS or any(con_contexto(texto_det, tm) for tm in terminos)
             if ok:
                 depurado_eje.add(codigo)
             else:
@@ -433,9 +443,23 @@ def main() -> None:
                    for t, c, b in ordenados])
        .to_csv(REPORTES / "07_terminos_forma.csv", index=False, encoding="utf-8"))
     if len(anotacion):
+        # CORREGIDO parche 14. Este archivo se anota a mano por dos personas;
+        # sobreescribirlo en cada corrida les borra el trabajo sin avisar. Ya
+        # paso una vez el 05/09: la corrida de ese dia regenero la muestra y
+        # solo 342 de los 600 productos ya anotados seguian en la nueva, asi
+        # que la mayoria de la anotacion quedo huerfana. La version que SI se
+        # anoto esta congelada en reportes/07_muestra_anotacion_v1.csv y no se
+        # vuelve a tocar. Si ya existe una muestra, esta corrida escribe con
+        # sufijo de fecha en vez de pisarla, y avisa.
+        salida_anotacion = REPORTES / "07_muestra_anotacion.csv"
+        if salida_anotacion.exists():
+            salida_anotacion = REPORTES / f"07_muestra_anotacion_{date.today():%Y%m%d}.csv"
+            print(f"  AVISO: ya existe 07_muestra_anotacion.csv; no se sobreescribe. "
+                  f"Se escribe en {salida_anotacion.name} en su lugar. La muestra "
+                  f"anotada de verdad es 07_muestra_anotacion_v1.csv.")
         (anotacion[["code", "estrato", "texto"]]
          .assign(anotador_1="", anotador_2="", notas="")
-         .to_csv(REPORTES / "07_muestra_anotacion.csv", index=False, encoding="utf-8"))
+         .to_csv(salida_anotacion, index=False, encoding="utf-8"))
 
     resumen = {
         "n_con_texto": n_tot,
@@ -452,6 +476,7 @@ def main() -> None:
                         "DECISION, no un hecho observado. Revisarla con la Dra. ANTES de "
                         "interpretar el falsador 1: si la asignacion esta mal, el veredicto "
                         "esta mal."),
+        "textos_rotos_advertencia": {"n": len(textos_rotos), "codigos": textos_rotos},
     }
 
     print("\n--- FALSADOR 1 ---")

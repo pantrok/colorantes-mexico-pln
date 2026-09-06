@@ -23,7 +23,8 @@ import re
 from collections import Counter
 import duckdb, pandas as pd
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
+                  como_lista, normalizar, quitar_advertencia_trazas,
+                  terminos_ordenados, guardar_reporte)
 
 AMBIGUOS = REQUIEREN_CONTEXTO   # definido en util.py, con su historial
 
@@ -83,11 +84,19 @@ def main() -> None:
     ordenados = terminos_ordenados(dic)
     validos = set(dic["sinteticos"]) | set(dic["naturales"])
 
-    filas = []
+    filas, textos_rotos = [], []
     for t in df.itertuples(index=False):
         crudo = str(t.ingredientes_texto).strip()
         texto = normalizar(crudo)
-        dets = [(c, b, term) for c, b, term in detectar_con_termino(texto, ordenados)
+        # CORREGIDO parche 14 (05/09/2026). Un colorante mencionado solo
+        # dentro de una advertencia de trazas ("puede contener... amarillo 5")
+        # no cuenta como deteccion: no es que el producto lo lleve, es la
+        # declaracion obligatoria de alergenos. Ver
+        # util.py::quitar_advertencia_trazas y BITACORA_PARCHES.md.
+        texto_det, roto = quitar_advertencia_trazas(texto)
+        if roto:
+            textos_rotos.append(t.code)
+        dets = [(c, b, term) for c, b, term in detectar_con_termino(texto_det, ordenados)
                 if b in ("sinteticos", "naturales")]
         det = {c for c, _, _ in dets}
         tags = {a.replace("en:", "").upper() for a in como_lista(t.aditivos_tags)} & validos
@@ -95,7 +104,7 @@ def main() -> None:
         # verdad coincidio para ese codigo (puede haber mas de uno; basta que
         # alguno tenga "colorante" cerca).
         depurado = {c for c, _, term in dets
-                    if c not in AMBIGUOS or contexto_de_color(texto, term)}
+                    if c not in AMBIGUOS or contexto_de_color(texto_det, term)}
         filas.append({
             "code": t.code, "texto": crudo,
             "bruto": set(det), "depurado": depurado, "tags": tags,
@@ -138,6 +147,12 @@ def main() -> None:
                             "para mostrar cuanto pesa la ambiguedad de uso, que es "
                             "justamente el argumento a favor del reconocimiento de "
                             "entidades frente al emparejamiento por diccionario."),
+        "textos_rotos_advertencia": {
+            "n": len(textos_rotos), "codigos": textos_rotos,
+            "lectura": ("Productos donde el marcador de advertencia de trazas aparece "
+                        "antes del 30 % del texto -normalmente OCR revuelto-. No se "
+                        "recortaron; revisar a mano."),
+        },
     }
     print(f"  brecha bruta:    {p_b} %  ({g_b}/{n_b})")
     print(f"  brecha depurada: {p_d} %  ({g_d}/{n_d})")

@@ -13,9 +13,9 @@ extracto de cempazuchitl,E161b,naturales,nombre_fuente
 oxido de hierro amarillo,E172,naturales,nombre_sustancia
 beta caroteno sintetico,E160a-i,sinteticos,nombre_sustancia
 extracto de cempasuchil,E161b,naturales,nombre_fuente
-extracto de maiz morado,E163,naturales,nombre_fuente
-extracto de piel de uva,E163,naturales,nombre_fuente
 extracto de rabano rojo,E163,naturales,nombre_fuente
+extracto de piel de uva,E163,naturales,nombre_fuente
+extracto de maiz morado,E163,naturales,nombre_fuente
 amarillo de quinoleina,E104,sinteticos,nombre_sustancia
 anaranjado alimentos 6,E160e,sinteticos,nombre_sustancia
 anaranjado alimentos 7,E160f,sinteticos,nombre_sustancia
@@ -38,19 +38,19 @@ anaranjado natural 4,E160b,naturales,nombre_sustancia
 extracto de pimenton,E160c,naturales,nombre_fuente
 rojo raiz de betabel,E162,naturales,nombre_sustancia
 concentrado de sauco,E163,naturales,nombre_fuente
-oxido de hierro rojo,E172,naturales,nombre_sustancia
 pigmento amarillo 42,E172,naturales,nombre_sustancia
+oxido de hierro rojo,E172,naturales,nombre_sustancia
 fd&c amarillo no. 5,E102,sinteticos,nombre_sustancia
 amarillo quinoleina,E104,sinteticos,nombre_sustancia
-fd&c amarillo no. 6,E110,sinteticos,nombre_sustancia
 amarillo crepusculo,E110,sinteticos,nombre_sustancia
+fd&c amarillo no. 6,E110,sinteticos,nombre_sustancia
 extracto de curcuma,E100,naturales,nombre_fuente
 clorofilina cuprica,E141,naturales,nombre_sustancia
 extracto de achiote,E160b,naturales,nombre_fuente
 extracto de paprika,E160c,naturales,nombre_fuente
 extracto de betabel,E162,naturales,nombre_fuente
-extracto de jamaica,E163,naturales,nombre_fuente
 extracto de hibisco,E163,naturales,nombre_fuente
+extracto de jamaica,E163,naturales,nombre_fuente
 extracto de annato,E160b,naturales,nombre_fuente
 extracto de rabano,E163,naturales,nombre_fuente
 dioxido de titanio,E171,naturales,nombre_sustancia
@@ -77,14 +77,14 @@ azul alimentos 2,E133,sinteticos,nombre_sustancia
 fd&c verde no. 3,E143,sinteticos,nombre_sustancia
 curcuma en polvo,E100,naturales,nombre_sustancia
 grana cochinilla,E120,naturales,nombre_fuente
-caroteno natural,E160a,naturales,nombre_sustancia
 carotenos mixtos,E160a,naturales,nombre_sustancia
+caroteno natural,E160a,naturales,nombre_sustancia
 polvo de betabel,E162,naturales,nombre_sustancia
 oxidos de hierro,E172,naturales,nombre_sustancia
 caramelo amonico,E150,fuera_de_eje,nombre_sustancia
-fd&c amarillo 5,E102,sinteticos,nombre_sustancia
 amarillo num. 5,E102,sinteticos,nombre_sustancia
 amarillo fd&c 5,E102,sinteticos,nombre_sustancia
+fd&c amarillo 5,E102,sinteticos,nombre_sustancia
 amarillo fd&c 6,E110,sinteticos,nombre_sustancia
 fd&c rojo no. 3,E127,sinteticos,nombre_sustancia
 fd&c azul no. 2,E132,sinteticos,nombre_sustancia
@@ -98,8 +98,8 @@ extracto de uva,E163,naturales,nombre_fuente
 oxido de hierro,E172,naturales,nombre_sustancia
 amarillo no. 5,E102,sinteticos,nombre_sustancia
 amarillo fd&c5,E102,sinteticos,nombre_sustancia
-amarillo no. 6,E110,sinteticos,nombre_sustancia
 amarillo ocaso,E110,sinteticos,nombre_sustancia
+amarillo no. 6,E110,sinteticos,nombre_sustancia
 azul brillante,E133,sinteticos,nombre_sustancia
 rojo natural 4,E120,naturales,nombre_sustancia
 rojo remolacha,E162,naturales,nombre_sustancia
@@ -119,12 +119,12 @@ anaranjado 3,E160b,naturales,nombre_sustancia
 capsorrubina,E160c,naturales,nombre_sustancia
 rojo betabel,E162,naturales,nombre_sustancia
 antocianinas,E163,naturales,nombre_sustancia
-rojo coccin,E129,sinteticos,nombre_sustancia
-rojo fd&c40,E129,sinteticos,nombre_sustancia
-rojo no. 40,E129,sinteticos,nombre_sustancia
 rojo allura,E129,sinteticos,nombre_sustancia
-verde fd&c3,E143,sinteticos,nombre_sustancia
+rojo fd&c40,E129,sinteticos,nombre_sustancia
+rojo coccin,E129,sinteticos,nombre_sustancia
+rojo no. 40,E129,sinteticos,nombre_sustancia
 verde no. 3,E143,sinteticos,nombre_sustancia
+verde fd&c3,E143,sinteticos,nombre_sustancia
 verde japon,E143,sinteticos,nombre_sustancia
 amarillo 2g,E107,sinteticos,nombre_sustancia
 rojo carmin,E120,naturales,nombre_sustancia
@@ -133,16 +133,16 @@ ficocianina,SPIRULINA,naturales,nombre_sustancia
 amarillo 5,E102,sinteticos,nombre_sustancia
 tartrazina,E102,sinteticos,nombre_sustancia
 amarillo 6,E110,sinteticos,nombre_sustancia
+carmoisina,E122,sinteticos,nombre_sustancia
 rojo d&c 5,E122,sinteticos,nombre_sustancia
 azorrubina,E122,sinteticos,nombre_sustancia
-carmoisina,E122,sinteticos,nombre_sustancia
 ponceau 4r,E124,sinteticos,nombre_sustancia
 eritrosina,E127,sinteticos,nombre_sustancia
 rojo no. 3,E127,sinteticos,nombre_sustancia
 rojo curry,E129,sinteticos,nombre_sustancia
 allura red,E129,sinteticos,nombre_sustancia
-azul no. 2,E132,sinteticos,nombre_sustancia
 indigotina,E132,sinteticos,nombre_sustancia
+azul no. 2,E132,sinteticos,nombre_sustancia
 azul no. 1,E133,sinteticos,nombre_sustancia
 cochinilla,E120,naturales,nombre_fuente
 clorofilas,E140,naturales,nombre_sustancia
@@ -174,9 +174,9 @@ rojo 40,E129,sinteticos,nombre_sustancia
 verde s,E142,sinteticos,nombre_sustancia
 verde 3,E143,sinteticos,nombre_sustancia
 curcuma,E100,naturales,nombre_fuente
+achiote,E160b,naturales,nombre_fuente
 atsuete,E160b,naturales,nombre_sustancia
 annatto,E160b,naturales,nombre_fuente
-achiote,E160b,naturales,nombre_fuente
 paprika,E160c,naturales,nombre_fuente
 luteina,E161b,naturales,nombre_sustancia
 hibisco,E163,naturales,nombre_fuente
@@ -191,8 +191,8 @@ e 102,E102,sinteticos,codigo_e
 e 110,E110,sinteticos,codigo_e
 e 129,E129,sinteticos,codigo_e
 urucu,E160b,naturales,nombre_sustancia
+e150c,E150,fuera_de_eje,codigo_e
 e150b,E150,fuera_de_eje,codigo_e
 e 150,E150,fuera_de_eje,codigo_e
-e150c,E150,fuera_de_eje,codigo_e
 e150d,E150,fuera_de_eje,codigo_e
 e150a,E150,fuera_de_eje,codigo_e

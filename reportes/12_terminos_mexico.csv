@@ -1,7 +1,7 @@
 codigo,clase,termino,en_vocab_off,n,recuperadas,pct_recuperado
-E102,sintetico,amarillo 5,True,452,361,79.9
-E129,sintetico,rojo 40,True,388,319,82.2
-E102,sintetico,tartrazina,True,387,333,86.0
+E129,sintetico,rojo 40,True,386,317,82.1
+E102,sintetico,amarillo 5,True,370,314,84.9
+E102,sintetico,tartrazina,True,359,317,88.3
 E110,sintetico,amarillo 6,True,299,244,81.6
 E129,sintetico,rojo allura,True,251,201,80.1
 E110,sintetico,amarillo ocaso,True,221,45,20.4
@@ -17,9 +17,9 @@ E160c,natural_botanico,oleorresina de paprika,False,37,0,0.0
 E160a,natural_botanico,beta caroteno,False,36,0,0.0
 E100,natural_botanico,curcumina,True,33,27,81.8
 E132,sintetico,indigotina,True,31,27,87.1
-E102,sintetico,amarillo no. 5,False,26,9,34.6
 E124,sintetico,rojo 6,False,26,0,0.0
 E127,sintetico,rojo 3,False,24,0,0.0
+E102,sintetico,amarillo no. 5,False,23,8,34.8
 E129,sintetico,rojo no. 40,False,21,1,4.8
 E160b,natural_botanico,annatto,False,18,0,0.0
 E160c,natural_botanico,extracto de paprika,True,18,0,0.0
@@ -34,7 +34,7 @@ E102,sintetico,amarillo fd&c 5,True,11,11,100.0
 E160a,natural_botanico,betacaroteno,True,11,0,0.0
 E160a-i,sintetico,beta caroteno sintetico,False,10,0,0.0
 E120,carmin,rojo natural 4,False,9,0,0.0
-E102,sintetico,amarillo fd&c5,False,9,1,11.1
+E102,sintetico,amarillo fd&c5,False,8,1,12.5
 E163,natural_botanico,antocianinas,True,8,7,87.5
 E132,sintetico,azul no. 2,False,7,1,14.3
 E122,sintetico,azorrubina,True,7,4,57.1

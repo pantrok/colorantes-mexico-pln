@@ -1,25 +1,25 @@
 {
   "pais": "en:mexico",
   "fuente": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\intermedio\\productos_mx.parquet",
-  "n_detecciones": 3085,
+  "n_detecciones": 2981,
   "prevalencia_de_las_marcas": {
     "pct_detecciones_con_codigo_en_texto": 1.9,
-    "pct_con_clase_declarada_antes": 41.9
+    "pct_con_clase_declarada_antes": 43.3
   },
   "tabla_decisoria": [
     {
       "tiene_codigo": false,
       "tiene_clase": false,
-      "n": 1772,
-      "recuperadas": 983,
+      "n": 1671,
+      "recuperadas": 927,
       "pct_recuperado": 55.5
     },
     {
       "tiene_codigo": false,
       "tiene_clase": true,
-      "n": 1255,
+      "n": 1252,
       "recuperadas": 612,
-      "pct_recuperado": 48.8
+      "pct_recuperado": 48.9
     },
     {
       "tiene_codigo": true,
@@ -61,22 +61,22 @@
   ],
   "por_codigo": [
     {
-      "codigo": "E102",
-      "clase": "sintetico",
-      "sujeto_a_regla": false,
-      "n": 760,
-      "pct_con_codigo": 1.3,
-      "pct_con_clase": 35.3,
-      "pct_recuperado": 78.3
-    },
-    {
       "codigo": "E129",
       "clase": "sintetico",
       "sujeto_a_regla": false,
-      "n": 669,
+      "n": 667,
       "pct_con_codigo": 1.5,
-      "pct_con_clase": 36.0,
+      "pct_con_clase": 36.1,
       "pct_recuperado": 77.4
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "sujeto_a_regla": false,
+      "n": 658,
+      "pct_con_codigo": 1.5,
+      "pct_con_clase": 40.3,
+      "pct_recuperado": 82.2
     },
     {
       "codigo": "E110",
@@ -294,17 +294,67 @@
       "pct_recuperado": 11.6
     },
     "sintetico": {
-      "n": 2509,
-      "recuperadas": 1577,
-      "pct_recuperado": 62.9
+      "n": 2405,
+      "recuperadas": 1521,
+      "pct_recuperado": 63.2
     }
   },
   "VEREDICTO": {
     "solo_codigo_pct": 100.0,
-    "solo_clase_pct": 48.8,
+    "solo_clase_pct": 48.9,
     "ninguna_pct": 55.5,
     "apoya": "H2 el codigo en el texto",
     "nota": "Se compara cuanto sube la recuperacion respecto de las detecciones que no traen ni codigo ni clase. La marca que mas la suba es el mecanismo."
   },
-  "advertencia": "`tiene_codigo` mira todo el texto, no la vecindad del termino: un producto con varios aditivos puede traer el codigo de OTRO. Es una cota superior."
+  "advertencia": "`tiene_codigo` mira todo el texto, no la vecindad del termino: un producto con varios aditivos puede traer el codigo de OTRO. Es una cota superior.",
+  "textos_rotos_advertencia": {
+    "n": 45,
+    "codigos": [
+      "7501030457428",
+      "7501485801234",
+      "7501791637626",
+      "8410069002211",
+      "7503023054003",
+      "7506306414945",
+      "7501791660792",
+      "7501047932024",
+      "7501011144460",
+      "0756774011734",
+      "7502270310320",
+      "0731082001004",
+      "0759686562189",
+      "0756774002381",
+      "7501008754030",
+      "8413700003264",
+      "7500463096723",
+      "0094331198697",
+      "9556001271358",
+      "7501000103034",
+      "7506443104624",
+      "7503003877301",
+      "7501791638623",
+      "7501030458814",
+      "7500525199010",
+      "75038502",
+      "0730399004869",
+      "75039127",
+      "7500478015511",
+      "7503031361544",
+      "7506495005818",
+      "7500810000304",
+      "7501071304101",
+      "7501372810325",
+      "7500810024676",
+      "7506443108868",
+      "7501639313187",
+      "0750410052405",
+      "8410010403930",
+      "7501639308251",
+      "7501023509851",
+      "7501100403348",
+      "7501071303630",
+      "7502254498143",
+      "7506495003654"
+    ]
+  }
 }

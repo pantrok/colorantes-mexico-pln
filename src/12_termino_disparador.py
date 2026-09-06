@@ -50,7 +50,8 @@ import duckdb
 import pandas as pd
 
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
+                  como_lista, normalizar, quitar_advertencia_trazas,
+                  terminos_ordenados, guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
 EXTERNO = RAIZ / "datos" / "externo"
@@ -176,12 +177,18 @@ def analizar(args) -> None:
             vs |= vocab.get(k, set())
         en_vocab[(codigo, norma(termino))] = norma(termino) in vs
 
-    filas = []
+    filas, textos_rotos = [], []
     for t in df.itertuples(index=False):
         texto = normalizar(getattr(t, col["texto"]))
+        # CORREGIDO parche 14: un colorante mencionado solo dentro de una
+        # advertencia de trazas no cuenta como deteccion. Ver
+        # util.py::quitar_advertencia_trazas y BITACORA_PARCHES.md.
+        texto_det, roto = quitar_advertencia_trazas(texto)
+        if roto:
+            textos_rotos.append(t.code)
         tags = {str(a).replace("en:", "").upper()
                 for a in como_lista(getattr(t, col["aditivos"]))}
-        restante = texto
+        restante = texto_det
         for termino, codigo, bloque in ordenados:
             if not termino:
                 continue
@@ -192,7 +199,7 @@ def analizar(args) -> None:
             if not pat.search(restante):
                 continue
             restante = pat.sub(" ", restante)
-            if codigo in AMBIGUOS and not con_contexto(texto, termino):
+            if codigo in AMBIGUOS and not con_contexto(texto_det, termino):
                 continue
             filas.append({
                 "codigo": codigo, "clase": cl, "termino": termino,
@@ -227,6 +234,7 @@ def analizar(args) -> None:
         "por_termino": tab.to_dict("records"),
         "terminos_clave": tab[tab.codigo.isin(["E120", "E100", "E160a", "E160c"])]
                              .to_dict("records"),
+        "textos_rotos_advertencia": {"n": len(textos_rotos), "codigos": textos_rotos},
     })
     print(f"\n  recuperacion segun cobertura del termino:\n{porvocab.to_string(index=False)}")
     print(f"\n  los codigos que quedaron abiertos:")

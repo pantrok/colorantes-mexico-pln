@@ -47,8 +47,8 @@
     "recuperadas": 0,
     "por_codigo": {}
   },
-  "brecha_global_pct": 48.4,
-  "brecha_global_con_otras_taxonomias_pct": 48.4,
+  "brecha_global_pct": 48.5,
+  "brecha_global_con_otras_taxonomias_pct": 48.5,
   "mecanismos": [
     {
       "clase": "carmin",
@@ -134,51 +134,51 @@
       "clase": "sintetico",
       "en_vocab_off": false,
       "off_mandatory": false,
-      "n": 431,
-      "sin_tag": 417,
-      "sin_ninguna": 417,
-      "brecha_pct": 96.8,
-      "brecha_pct_con_otras_taxonomias": 96.8
+      "n": 429,
+      "sin_tag": 415,
+      "sin_ninguna": 415,
+      "brecha_pct": 96.7,
+      "brecha_pct_con_otras_taxonomias": 96.7
     },
     {
       "clase": "sintetico",
       "en_vocab_off": true,
       "off_mandatory": false,
-      "n": 2078,
-      "sin_tag": 515,
-      "sin_ninguna": 515,
-      "brecha_pct": 24.8,
-      "brecha_pct_con_otras_taxonomias": 24.8
+      "n": 1976,
+      "sin_tag": 469,
+      "sin_ninguna": 469,
+      "brecha_pct": 23.7,
+      "brecha_pct_con_otras_taxonomias": 23.7
     }
   ],
   "modelo_firth": [
     {
       "termino": "intercepto",
-      "coef": -1.1008,
-      "OR": 0.33,
-      "IC_bajo": 0.3,
-      "IC_alto": 0.37
+      "coef": -1.1568,
+      "OR": 0.31,
+      "IC_bajo": 0.28,
+      "IC_alto": 0.35
     },
     {
       "termino": "natural",
-      "coef": 1.8218,
-      "OR": 6.18,
-      "IC_bajo": 4.27,
-      "IC_alto": 9.09
+      "coef": 1.8753,
+      "OR": 6.52,
+      "IC_bajo": 4.5,
+      "IC_alto": 9.6
     },
     {
       "termino": "fuera_vocab",
-      "coef": 4.2438,
-      "OR": 69.67,
-      "IC_bajo": 45.1,
-      "IC_alto": 114.36
+      "coef": 4.2909,
+      "OR": 73.03,
+      "IC_bajo": 47.23,
+      "IC_alto": 119.96
     },
     {
       "termino": "mandatory",
-      "coef": 2.4847,
-      "OR": 12.0,
-      "IC_bajo": 1.53,
-      "IC_alto": 1548.91
+      "coef": 2.484,
+      "OR": 11.99,
+      "IC_bajo": 1.52,
+      "IC_alto": 1548.15
     }
   ],
   "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
@@ -192,12 +192,62 @@
     }
   ],
   "estandarizacion": {
-    "brecha_sintetico_pct": 37.1,
+    "brecha_sintetico_pct": 36.8,
     "brecha_natural_cruda_pct": 90.4,
-    "brecha_natural_estandarizada_pct": 74.9,
-    "diferencia_cruda_pp": 53.3,
-    "diferencia_atribuible_al_origen_pp": 37.8,
-    "pct_de_la_diferencia_que_es_origen": 70.9
+    "brecha_natural_estandarizada_pct": 75.1,
+    "diferencia_cruda_pp": 53.7,
+    "diferencia_atribuible_al_origen_pp": 38.4,
+    "pct_de_la_diferencia_que_es_origen": 71.5
   },
-  "PENDIENTE": "MINERALES = {E170, E171, E172} se sacaron del eje por decision propia. Requiere veredicto de la Dra. antes de fijarse."
+  "PENDIENTE": "MINERALES = {E170, E171, E172} se sacaron del eje por decision propia. Requiere veredicto de la Dra. antes de fijarse.",
+  "textos_rotos_advertencia": {
+    "n": 45,
+    "codigos": [
+      "7501030457428",
+      "7501485801234",
+      "7501791637626",
+      "8410069002211",
+      "7503023054003",
+      "7506306414945",
+      "7501791660792",
+      "7501047932024",
+      "7501011144460",
+      "0756774011734",
+      "7502270310320",
+      "0731082001004",
+      "0759686562189",
+      "0756774002381",
+      "7501008754030",
+      "8413700003264",
+      "7500463096723",
+      "0094331198697",
+      "9556001271358",
+      "7501000103034",
+      "7506443104624",
+      "7503003877301",
+      "7501791638623",
+      "7501030458814",
+      "7500525199010",
+      "75038502",
+      "0730399004869",
+      "75039127",
+      "7500478015511",
+      "7503031361544",
+      "7506495005818",
+      "7500810000304",
+      "7501071304101",
+      "7501372810325",
+      "7500810024676",
+      "7506443108868",
+      "7501639313187",
+      "0750410052405",
+      "8410010403930",
+      "7501639308251",
+      "7501023509851",
+      "7501100403348",
+      "7501071303630",
+      "7502254498143",
+      "7506495003654"
+    ]
+  }
 }

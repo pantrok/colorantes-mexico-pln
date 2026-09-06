@@ -47,7 +47,8 @@ import pandas as pd
 
 from modelo import firth, separacion
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
+                  como_lista, normalizar, quitar_advertencia_trazas,
+                  terminos_ordenados, guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
 EXTERNO = RAIZ / "datos" / "externo"
@@ -147,7 +148,7 @@ def clase_de(codigo: str, bloque: str) -> str:
         bloque, "fuera_de_eje")
 
 
-def analizar(df: pd.DataFrame, col: dict, dic, ordenados, vocab, mand) -> pd.DataFrame:
+def analizar(df: pd.DataFrame, col: dict, dic, ordenados, vocab, mand) -> tuple[pd.DataFrame, list]:
     """Una fila por (producto, codigo) detectado, nunca por termino.
 
     CORREGIDO 05/09. `detectar()` devuelve una tupla por CADA termino que
@@ -169,20 +170,26 @@ def analizar(df: pd.DataFrame, col: dict, dic, ordenados, vocab, mand) -> pd.Dat
             es_mand = es_mand or mand.get(k, False)
         cob[(codigo, norma(termino))] = (norma(termino) in vs, es_mand)
 
-    pares = []
+    pares, textos_rotos = [], []
     for t in df.itertuples(index=False):
         texto = normalizar(getattr(t, col["texto"]))
+        # CORREGIDO parche 14: un colorante mencionado solo dentro de una
+        # advertencia de trazas no cuenta como deteccion. Ver
+        # util.py::quitar_advertencia_trazas y BITACORA_PARCHES.md.
+        texto_det, roto = quitar_advertencia_trazas(texto)
+        if roto:
+            textos_rotos.append(t.code)
         tags = {str(a).replace("en:", "").upper()
                 for a in como_lista(getattr(t, col["aditivos"]))}
         por_codigo = {}
-        for codigo, bloque, termino in detectar(texto, ordenados):
+        for codigo, bloque, termino in detectar(texto_det, ordenados):
             cl = clase_de(codigo, bloque)
             if cl == "fuera_de_eje":
                 continue
             entry = por_codigo.setdefault(codigo, {
                 "clase": cl, "contexto_ok": False,
                 "en_vocab": False, "mandatory": False})
-            if codigo not in AMBIGUOS or con_contexto(texto, termino):
+            if codigo not in AMBIGUOS or con_contexto(texto_det, termino):
                 entry["contexto_ok"] = True
             en_vocab, es_mand = cob.get((codigo, norma(termino)), (False, False))
             entry["en_vocab"] = entry["en_vocab"] or en_vocab
@@ -193,7 +200,7 @@ def analizar(df: pd.DataFrame, col: dict, dic, ordenados, vocab, mand) -> pd.Dat
             pares.append({"codigo": codigo, "clase": info["clase"],
                           "en_vocab": info["en_vocab"], "mandatory": info["mandatory"],
                           "en_tags": codigo in tags})
-    return pd.DataFrame(pares)
+    return pd.DataFrame(pares), textos_rotos
 
 
 def mecanismos(p: pd.DataFrame) -> pd.DataFrame:
@@ -255,7 +262,7 @@ def main() -> None:
     ordenados = terminos_ordenados(dic)
     vocab, mand = leer_taxonomia(EXTERNO / "additives.txt")
 
-    p = analizar(df, col, dic, ordenados, vocab, mand)
+    p, textos_rotos = analizar(df, col, dic, ordenados, vocab, mand)
     if p.empty:
         raise SystemExit("Cero detecciones. Revisa que el idioma del texto sea espanol.")
     mec = mecanismos(p)
@@ -277,13 +284,15 @@ def main() -> None:
     porclase["brecha_pct"] = (100 * porclase.sin_tag / porclase.n).round(1)
 
     # cifras de Mexico, para comparar
-    # Actualizado 05/09/2026 tras corregir el bug de no-deduplicacion por
-    # codigo en `analizar()` (contaba dos veces un producto que trae dos
-    # sinonimos del mismo colorante). Los valores anteriores (n=2693/441/235)
-    # venian de la corrida del 02/09, previa a esa correccion. Recalcular con:
+    # Actualizado 05/09/2026 (parche 14) tras corregir el filtro de
+    # advertencias de trazas ("puede contener... amarillo 5" no es una
+    # deteccion real). El sintetico baja de n=2509 a n=2405; natural y carmin
+    # no cambian -el bug era especifico del estrato sintetico-. El valor
+    # previo a esta correccion (n=2509/37.1 %/82.8 %) ya incorporaba el
+    # arreglo de deduplicacion del 05/09 anterior. Recalcular con:
     #   python src/09_replica_pais.py --pais en:mexico
     # y leer la tabla `por_clase` de reportes/09_replica_mexico.json.
-    MEXICO = {"sintetico": {"brecha_pct": 37.1, "pct_en_vocab": 82.8, "n": 2509},
+    MEXICO = {"sintetico": {"brecha_pct": 36.8, "pct_en_vocab": 82.2, "n": 2405},
               "natural_botanico": {"brecha_pct": 90.4, "pct_en_vocab": 30.8, "n": 438},
               "carmin": {"brecha_pct": 95.7, "pct_en_vocab": 92.7, "n": 233}}
 
@@ -337,6 +346,7 @@ def main() -> None:
         "advertencia": ("Solo se comparan BRECHAS, que condicionan sobre el texto. "
                         "Las prevalencias NO son comparables entre paises: el tamano y "
                         "la composicion del subconjunto son muy distintos."),
+        "textos_rotos_advertencia": {"n": len(textos_rotos), "codigos": textos_rotos},
     })
 
     print("\n", porclase.to_string(index=False))

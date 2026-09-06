@@ -17,7 +17,7 @@ del `git log`.
 
 ---
 
-## Estado actual (después del parche 13)
+## Estado actual (después del parche 14)
 
 - **Diccionario:** congelado, **v1.1**, `sha256: 8c7c8790221bf161dc1353282d1da34595a7176f9a4cf16046c22486e88e9640`
   (ver `config/colorantes.lock.json` y `config/DICCIONARIO_CONGELADO.md`).
@@ -42,6 +42,18 @@ del `git log`.
   y `12_termino_disparador.py` se revisaron y **no tienen este bug**: su
   unidad de conteo es intencionalmente la forma/término, no el código, así
   que una fila por término es el diseño correcto ahí, no un defecto.
+- **Parche 14 (05/09/2026) aplicado completo.** Muestra anotada congelada en
+  `reportes/07_muestra_anotacion_v1.csv` (no tocar); `07_forma_y_clase.py` ya
+  no sobreescribe la muestra si existe. Filtro de advertencias de trazas
+  ("puede contener... amarillo 5" no es detección real) agregado en
+  `util.py::quitar_advertencia_trazas()` y aplicado en `05, 06, 07, 08, 09,
+  11, 12`. Sin autoría de IA en el repo (verificado); `.claude/settings.json`
+  con `includeCoAuthoredBy: false` para que ningún commit futuro la agregue
+  sola. Ver la sección «Parche 14» más abajo para el detalle completo,
+  cifras antes/después y la revisión de la anomalía de España.
+  **La brecha depurada citable pasa de 69.7 % a 70.3 %** (05, universo
+  completo) y el sintético agregado de 07 baja de n=2509/37.1 % a
+  n=2405/36.8 %.
 - **Pendiente, sin empezar (además de lo de arriba):** decidir el tratamiento
   del dióxido de titanio (E171) antes del modelo de Firth, escribir el manual
   de anotación, sortear los 600 y anotar contra el hash de v1.1.
@@ -310,6 +322,190 @@ previas a esta corrida — están reemplazadas por las de esta tabla.**
 
 ---
 
+## Parche 14 (05/09/2026): advertencias de alérgenos, muestra congelada, España
+
+Llegó sin código (`PARCHE_14_instrucciones.md`), pidiendo explícitamente que
+la implementación se escribiera aquí. Cinco tareas.
+
+### Tarea 1 — muestra anotada congelada
+
+La corrida del 05/09 (parche/corrida anterior, ver arriba) regeneró
+`reportes/07_muestra_anotacion.csv`; los dos anotadores ya habían trabajado
+sobre la muestra **anterior** y solo 342 de los 600 productos seguían
+coincidiendo. Se recuperó la versión que sí se anotó desde
+`git show d721107:reportes/07_muestra_anotacion.csv` (la corrida del 02/09,
+antes de los cuatro bugs de conteo) y se congeló como
+**`reportes/07_muestra_anotacion_v1.csv` — no se vuelve a tocar nunca.**
+Verificado: 600 filas, estratos 150/250/100/100 correctos, 342 códigos en
+común con la muestra que produce hoy `07_forma_y_clase.py`.
+
+`07_forma_y_clase.py` ya no sobreescribe `07_muestra_anotacion.csv` si el
+archivo existe: escribe con sufijo de fecha
+(`07_muestra_anotacion_YYYYMMDD.csv`) y avisa por consola. Ya se probó: la
+corrida del parche 14 generó `07_muestra_anotacion_20260905.csv` sin tocar
+la muestra existente.
+
+### Tarea 2 — pesos de estrato recuperados
+
+Los pesos con los que se sorteó la muestra que SÍ se anotó (commit
+`d721107`, `reportes/07_forma_y_clase.json`, campo `E_muestra_anotacion`):
+
+| Estrato | N población | n muestra | peso |
+|---|---|---|---|
+| sintetico | 1 139 | 150 | 7.593 |
+| natural | 595 | 250 | 2.380 |
+| ambiguo_descartado | 351 | 100 | 3.510 |
+| sin_deteccion | 5 690 | 100 | 56.900 |
+
+Semilla: `20260825` (sin cambios). Usar estos pesos para proyectar la
+anotación de `07_muestra_anotacion_v1.csv` a la población, no los que
+publica hoy `07_forma_y_clase.json` (esos son de la corrida corregida, con
+otra población por estrato).
+
+### Tarea 3a — autoría de IA
+
+Revisado el repo completo: scripts, README, `CLAUDE.md`, `BITACORA_PARCHES.md`,
+historial de commits. **Cero menciones de autoría de IA** — las únicas
+apariciones de "Claude" son referencias a "Claude Code" como la herramienta
+que lee `CLAUDE.md`/esta bitácora, no firmas de autoría. No existe
+`CITATION.cff`. Ningún commit trae `Co-Authored-By`.
+
+Se agregó `.claude/settings.json` con `"includeCoAuthoredBy": false` para
+que el trailer no se agregue solo por configuración por defecto —el aviso
+del propio parche 14 sobre esto era correcto y no estaba cubierto todavía.
+
+### Tarea 3b — el detector: advertencias de alérgenos
+
+**Bug confirmado.** Un colorante mencionado solo dentro de una advertencia
+de trazas ("...puede contener: soya, leche, gluten, amarillo 5.") se contaba
+como detección real. 13/600 de la muestra anotada, 8.7 % del estrato
+sintético, todos declaraban el colorante SOLO ahí.
+
+**Arreglo:** `util.py::quitar_advertencia_trazas(texto_norm)`, función
+compartida, que devuelve `(texto_para_detectar, texto_roto)`. Recorta el
+texto en el primer marcador ("puede/pueden contener", "trazas de",
+"elaborado/fabricado en una/un línea/equipo/planta", "may contain", "puede
+haber"); "CONTIENE:" NO es marcador (es declaración obligatoria, no
+advertencia). Si el marcador aparece antes del 30 % del texto —normalmente
+OCR revuelto— no se recorta y se marca `texto_roto=True` para revisión
+aparte en vez de confiar en el corte. Aplicada en `05, 06, 07, 08, 09, 11,
+12` (todas usan la misma función; ninguna la reimplementa). Cada script
+agrega `textos_rotos_advertencia: {n, codigos}` a su JSON.
+
+**Probada contra los 13 casos reales del parche** (código de barras exacto,
+sacados de `datos/intermedio/productos_mx.parquet`): los 12 con la
+advertencia bien formada pierden la detección; el caso OCR-revuelto
+(`7500525199010`, marcador en la posición 0) queda marcado `texto_roto=True`
+y sin recortar, tal como pedía el parche. Prueba fijada en
+`tests/test_advertencia_alergenos.py` (5 casos, incluye los dos ejemplos
+sintéticos que pedía el parche: colorante solo en la advertencia, y
+colorante antes Y dentro de la advertencia —cuenta una vez—).
+
+**Antes / después (México, universo completo del corte v1.1):**
+
+| Métrica | Antes | Después |
+|---|---|---|
+| 05 brecha depurada | 69.7 % (1208/1734) | **70.3 % (1170/1665)** |
+| 05 brecha bruta | 74.1 % | 74.6 % |
+| 06 categorías con n≥30 | 12 | 12 (sin cambio) |
+| 07 sintético, nivel detección | n=2509, 37.1 % | **n=2405, 36.8 %** (−104) |
+| 07 sintético, nivel producto | n=1242, 57.3 % | **n=1168, 57.5 %** (−74 productos) |
+| 07 natural / carmín / mineral | 438/90.4 % · 233/95.7 % · 48/25.0 % | sin cambio — el bug era solo del estrato sintético |
+| 08 brecha global | 48.4 % | 48.5 % |
+| 08 estandarización, brecha sintético | 37.1 % | **36.8 %** (baja, como predijo el parche) |
+| 08 estandarización, diferencia cruda | 53.3 pp | **53.7 pp** (se ensancha, como predijo el parche) |
+| 08 estandarización, % atribuible al origen | 70.9 % | **71.5 %** |
+| 09 México, sintético | n=2509, 37.1 % | n=2405, 36.8 % (igual que 07) |
+| 09 España, sintético | n=795, 33.2 % | n=769, 32.1 % |
+| 09 España, carmín | n=488, 32.0 % | n=487, 32.0 % |
+| 09 España, natural_botánico | n=2585, 80.5 % | n=2572, 80.5 % |
+| 11 México, E102 (tartrazina+amarillo5) | n=760 | n=658 (−102, la mayor parte del efecto) |
+| 12 comparar, P7 | 85.7 % estables | 85.7 % estables (sin cambio) |
+
+Dirección esperada por el parche —"la brecha sintética baja y la diferencia
+de origen se ensancha"— **se cumple en las tres métricas que lo prueban**
+(08: brecha sintético, diferencia cruda, % atribuible al origen). Magnitud:
+−104 detecciones / −74 productos, dentro del orden de 100 que proyectaba el
+parche a partir del 8.7 % del estrato. 45 productos quedaron marcados
+`texto_roto` (universo de 05/07/08); incluye el caso `7500525199010` que el
+propio parche citaba.
+
+El diccionario `MEXICO` hardcodeado en `09_replica_pais.py` se actualizó de
+nuevo: `sintetico n=2405/36.8 %/82.2 %`; natural y carmín sin cambio.
+
+### Tarea 4 — revisión de España
+
+**Los reportes ya estaban en el repositorio** (commit `afffdde`, subido
+horas antes de este parche): `09_replica_spain.json`,
+`09_mecanismos_spain.csv`, `09_comparacion.csv`, `11_estructura_spain.*`,
+`12_terminos_spain.*`, `12_comparacion_terminos.csv`. El parche 14 los daba
+por ausentes porque trabajó sobre una copia del repo anterior a ese commit,
+no porque faltaran. Quedan actualizados con las cifras post-parche-14 de la
+tabla de arriba.
+
+**Las tres comprobaciones pedidas sobre la inversión natural/sintético:**
+
+1. **¿Qué términos concentran las detecciones naturales de España?**
+   `12_terminos_spain.csv`, clase `natural_botanico`: los tres términos que
+   sospechaba el parche dominan — `carotenos` (E160a, n=661),
+   `extracto de pimenton` (E160c, n=506) y `curcumina` (E100, n=325). Los
+   tres códigos juntos (E160a+E160c+E100, todas sus variantes) suman 2 027
+   de 2 594 detecciones de término, **78 %**. Esto coincide exactamente con
+   la sospecha del parche, pero **no implica que sea un artefacto**: el
+   Reglamento (CE) 1333/2008 obliga a declarar «colorante: X» en la UE (ver
+   H1 en `11_estructura_declaracion.py`), así que estos términos aparecen
+   con "colorante" al lado sistemáticamente en España, mientras que en
+   México no hay esa obligación. La comprobación 3 (abajo) muestra que esto
+   no distorsiona la comparación de forma asimétrica.
+2. **Tamaño del subconjunto.** España: 52 255 productos con texto de
+   ingredientes. México: 7 775. España es **6.7×** más grande. La brecha
+   condiciona sobre el texto (no es una prevalencia), así que el tamaño no
+   sesga el porcentaje por sí mismo, pero sí explica por qué los conteos
+   absolutos de España son mucho mayores — ya advertido en el propio script
+   ("OJO CON LA ASIMETRIA DE MUESTRA").
+3. **Dependencia de la regla de contexto de 60 caracteres** (calibrada sobre
+   etiquetas mexicanas). Fracción de las detecciones `natural_botanico` que
+   necesitan la regla de contexto para contar (código en `REQUIEREN_CONTEXTO`)
+   frente a las que cuentan sin condición:
+
+   | País | Total natural (12) | Vía contexto ambiguo | % |
+   |---|---|---|---|
+   | México | 441 | 435 | 98.6 % |
+   | España | 2 594 | 2 515 | 97.0 % |
+
+   **Prácticamente idéntico entre los dos países.** La regla de contexto no
+   depende del país de forma distinta: ambos dependen de ella casi por
+   completo, así que la comparación de brechas entre países no está sesgada
+   de forma asimétrica por este mecanismo — aunque el hecho de que ambos
+   dependan tanto de un umbral fijo de 60 caracteres sigue siendo una
+   limitación a declarar, no una comparación limpia sin matices.
+
+**P4, enunciado literal** (`src/09_replica_pais.py`, líneas 21-22, registrado
+ANTES de correr): *"La brecha de la clase natural_botanico en España será al
+menos 15 puntos porcentuales menor que en México."* Predijo una **caída**
+de 15+ pp. Observado: −9.9 pp (cae, pero no lo suficiente). Lectura correcta
+para el manuscrito: **"predijimos una caída de al menos 15 pp y no se
+alcanzó"**, no "predijimos estabilidad y se cumplió" — el signo de P4 es una
+caída, y sí hubo caída, solo que menor a la apostada.
+
+**Carmín, formas de declaración en España** (`12_terminos_spain.csv`,
+clase `carmin`): `carmin` n=243 (65.4 % recuperado), `carmines` n=128
+(68.8 %), `acido carminico` n=58 (84.5 %), `cochinilla` n=56 (69.6 %),
+`carmin de cochinilla` n=8 (25.0 %), `rojo carmin` n=5 (20.0 %),
+`rojo natural 4` n=1 (0.0 %). La diferencia México 95.7 % vs España 32.0 %
+(63.7 pp) sigue siendo la anomalía más grande del trabajo; estos son los
+datos crudos para que la Dra. y el manuscrito la trabajen, el parche no pidió
+una explicación aquí.
+
+### Tarea 5 — reportes que faltan
+
+Ya resuelto arriba: los archivos de España ya estaban trackeados en git.
+`06_matriz_categoria_clase.csv` (con la columna `mineral_inorganico`) y
+`11_estructura_declaracion` en su versión corregida quedan actualizados con
+esta misma corrida — ver la tabla de antes/después.
+
+---
+
 ## Historial completo, parche por parche
 
 Formato: **parche — commit — qué trajo — qué se corrigió o se decidió aquí
@@ -330,7 +526,8 @@ que el parche no traía.**
 | 11 | `c38774c` | `13_buscar_antecedentes.py` v3: exigencias derivadas de las frases de la consulta, tres cajones, control de recuperación | Mismo fix de `UnicodeEncodeError`, reaplicado (el archivo llegó fresco sin él) |
 | 12 | `b7cd1c4` | `14_congelar_diccionario.py` v1.0; `config/decisiones_dra.yaml`; congela v1.0 | `TypeError` en `recorre()`/`aplica()` por los bloques `genericos`/`sustituibilidad` (ver arriba); agregado E172/SPIRULINA/E164 a `REQUIEREN_CONTEXTO` en `util.py` (el parche solo lo mencionaba como paso manual, no traía el archivo); **se detectó pero no se corrigió** que `lactoflavina`/`vitamina b-2`/`carbon medicinal` sobrevivían con el mismo motivo que sus pares — decisión del usuario: congelar tal cual y preguntarle a la Dra. después |
 | 13 | *(este commit)* | `14_congelar_diccionario.py` v1.1: `codigo_completo`, detección estructural de bloques, invariante de códigos ausentes; recongela v1.1 | Falso positivo de «fusión pendiente» contra términos ya podados a propósito (ver arriba); prueba desactualizada en `test_diccionario.py` (E101 ya no existe) |
-| — (sin número, `DIAGNOSTICO_1597.md`) | *(pendiente de commit)* | No trajo código: un diagnóstico externo pidió investigar la coincidencia 1597=1597 entre `05` y `07`/`08` | Encontrados y corregidos los 4 bugs de conteo de la sección de arriba en `05`, `06`, `07`, `08`; el alcance se amplió en local a `09` y `11`, que compartían el mismo bug de no-deduplicación sin que el diagnóstico externo los hubiera señalado. Brecha depurada pasa a citarse en 69.7 % |
+| — (sin número, `DIAGNOSTICO_1597.md`) | `afffdde` | No trajo código: un diagnóstico externo pidió investigar la coincidencia 1597=1597 entre `05` y `07`/`08` | Encontrados y corregidos los 4 bugs de conteo de la sección de arriba en `05`, `06`, `07`, `08`; el alcance se amplió en local a `09` y `11`, que compartían el mismo bug de no-deduplicación sin que el diagnóstico externo los hubiera señalado. Brecha depurada pasa a citarse en 69.7 % |
+| 14 | *(pendiente de commit)* | Sin código: especificación del filtro de advertencias de trazas, pesos de estrato a recuperar, congelar la muestra anotada, revisión de España | Implementado `util.py::quitar_advertencia_trazas()` y aplicado en `05,06,07,08,09,11,12`; congelada `07_muestra_anotacion_v1.csv` y guardia contra sobreescritura en `07_forma_y_clase.py`; `.claude/settings.json` para desactivar el trailer de autoría por configuración; corregida la afirmación del parche de que los reportes de España no estaban en el repo (sí estaban, de `afffdde`) |
 
 ---
 

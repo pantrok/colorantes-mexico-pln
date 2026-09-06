@@ -2,7 +2,7 @@
   "pais": "en:mexico",
   "volcado": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\crudo\\food.parquet",
   "n_productos_con_texto": 7775,
-  "n_detecciones_depuradas": 3228,
+  "n_detecciones_depuradas": 3124,
   "por_clase": [
     {
       "clase": "carmin",
@@ -27,10 +27,10 @@
     },
     {
       "clase": "sintetico",
-      "n": 2509,
-      "sin_tag": 932,
-      "pct_en_vocab": 82.8,
-      "brecha_pct": 37.1
+      "n": 2405,
+      "sin_tag": 884,
+      "pct_en_vocab": 82.2,
+      "brecha_pct": 36.8
     }
   ],
   "mecanismos": [
@@ -102,47 +102,47 @@
       "clase": "sintetico",
       "en_vocab": false,
       "mandatory": false,
-      "n": 431,
-      "sin_tag": 417,
-      "brecha_pct": 96.8
+      "n": 429,
+      "sin_tag": 415,
+      "brecha_pct": 96.7
     },
     {
       "clase": "sintetico",
       "en_vocab": true,
       "mandatory": false,
-      "n": 2078,
-      "sin_tag": 515,
-      "brecha_pct": 24.8
+      "n": 1976,
+      "sin_tag": 469,
+      "brecha_pct": 23.7
     }
   ],
   "modelo_firth": [
     {
       "termino": "intercepto",
-      "coef": -1.1008,
-      "OR": 0.33,
-      "IC_bajo": 0.3,
-      "IC_alto": 0.37
+      "coef": -1.1568,
+      "OR": 0.31,
+      "IC_bajo": 0.28,
+      "IC_alto": 0.35
     },
     {
       "termino": "natural",
-      "coef": 1.8218,
-      "OR": 6.18,
-      "IC_bajo": 4.27,
-      "IC_alto": 9.09
+      "coef": 1.8753,
+      "OR": 6.52,
+      "IC_bajo": 4.5,
+      "IC_alto": 9.6
     },
     {
       "termino": "fuera_vocab",
-      "coef": 4.2438,
-      "OR": 69.67,
-      "IC_bajo": 45.1,
-      "IC_alto": 114.36
+      "coef": 4.2909,
+      "OR": 73.03,
+      "IC_bajo": 47.23,
+      "IC_alto": 119.96
     },
     {
       "termino": "mandatory",
-      "coef": 2.4847,
-      "OR": 12.0,
-      "IC_bajo": 1.53,
-      "IC_alto": 1548.91
+      "coef": 2.484,
+      "OR": 11.99,
+      "IC_bajo": 1.52,
+      "IC_alto": 1548.15
     }
   ],
   "modelo_metodo": "Firth penalizada; IC de verosimilitud perfilada al 95 %",
@@ -172,10 +172,10 @@
     },
     {
       "clase": "sintetico",
-      "n_mexico": 2509,
-      "brecha_mexico_pct": 37.1,
+      "n_mexico": 2405,
+      "brecha_mexico_pct": 36.8,
       "diferencia_pp": 0.0,
-      "en_vocab_mexico_pct": 82.8
+      "en_vocab_mexico_pct": 82.2
     }
   ],
   "VEREDICTO": {
@@ -185,5 +185,55 @@
     "P5_diferencia_observada_pp": 0.0,
     "lectura": "Si P4 se cumple y P5 tambien, el mecanismo de cobertura de vocabulario queda demostrado. Si P4 falla, el mecanismo esta mal planteado y hay que rehacerlo ANTES de escribir la Introduccion."
   },
-  "advertencia": "Solo se comparan BRECHAS, que condicionan sobre el texto. Las prevalencias NO son comparables entre paises: el tamano y la composicion del subconjunto son muy distintos."
+  "advertencia": "Solo se comparan BRECHAS, que condicionan sobre el texto. Las prevalencias NO son comparables entre paises: el tamano y la composicion del subconjunto son muy distintos.",
+  "textos_rotos_advertencia": {
+    "n": 45,
+    "codigos": [
+      "7501030457428",
+      "7501485801234",
+      "7501791637626",
+      "8410069002211",
+      "7503023054003",
+      "7506306414945",
+      "7501791660792",
+      "7501047932024",
+      "7501011144460",
+      "0756774011734",
+      "7502270310320",
+      "0731082001004",
+      "0759686562189",
+      "0756774002381",
+      "7501008754030",
+      "8413700003264",
+      "7500463096723",
+      "0094331198697",
+      "9556001271358",
+      "7501000103034",
+      "7506443104624",
+      "7503003877301",
+      "7501791638623",
+      "7501030458814",
+      "7500525199010",
+      "75038502",
+      "0730399004869",
+      "75039127",
+      "7500478015511",
+      "7503031361544",
+      "7506495005818",
+      "7500810000304",
+      "7501071304101",
+      "7501372810325",
+      "7500810024676",
+      "7506443108868",
+      "7501639313187",
+      "0750410052405",
+      "8410010403930",
+      "7501639308251",
+      "7501023509851",
+      "7501100403348",
+      "7501071303630",
+      "7502254498143",
+      "7506495003654"
+    ]
+  }
 }

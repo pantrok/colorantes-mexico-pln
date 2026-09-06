@@ -29,7 +29,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 import duckdb, pandas as pd, yaml
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
+                  como_lista, normalizar, quitar_advertencia_trazas,
+                  terminos_ordenados, guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
 AMBIGUOS = REQUIEREN_CONTEXTO   # definido en util.py, con su historial
@@ -104,17 +105,23 @@ def main() -> None:
           AND length(trim(ingredientes_texto)) > 0
     """).df()
 
-    filas = []
+    filas, textos_rotos = [], []
     for t in df.itertuples(index=False):
         tags = [x for x in como_lista(t.categorias) if x.startswith("en:")]
         if not tags:
             continue
         cat = clasificar(tags, cfg)
         texto = normalizar(t.ingredientes_texto)
-        dets = [(c, b, term) for c, b, term in detectar_con_termino(texto, ordenados)
+        # CORREGIDO parche 14: un colorante mencionado solo dentro de una
+        # advertencia de trazas no cuenta como deteccion. Ver
+        # util.py::quitar_advertencia_trazas y BITACORA_PARCHES.md.
+        texto_det, roto = quitar_advertencia_trazas(texto)
+        if roto:
+            textos_rotos.append(t.code)
+        dets = [(c, b, term) for c, b, term in detectar_con_termino(texto_det, ordenados)
                 if b in ("sinteticos", "naturales")]
         eje = {c: b for c, b, term in dets
-               if c not in AMBIGUOS or con_contexto(texto, term)}
+               if c not in AMBIGUOS or con_contexto(texto_det, term)}
         filas.append({
             "code": t.code, "marca": t.marcas, "categoria": cat,
             "sinteticos": {c for c, k in eje.items() if k == "sinteticos"},
@@ -223,6 +230,7 @@ def main() -> None:
         "P3_marcas": p3,
         "advertencia": ("El indice de sustitucion describe composicion actual del anaquel "
                         "documentado, NO reformulacion. El diseno es transversal."),
+        "textos_rotos_advertencia": {"n": len(textos_rotos), "codigos": textos_rotos},
     }
 
     print(f"  analizables: {len(analizables):,} de {len(r):,} con texto y categoria")

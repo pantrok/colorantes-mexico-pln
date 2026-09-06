@@ -19,8 +19,8 @@ E163,depurado,natural,14,7,50.0,26.8,73.2
 E110,depurado,sintetico,542,252,46.5,42.3,50.7
 E140,depurado,natural,4,1,25.0,4.6,69.9
 E171,depurado,mineral,48,12,25.0,14.9,38.8
-E129,depurado,sintetico,669,151,22.6,19.6,25.9
-E102,depurado,sintetico,760,165,21.7,18.9,24.8
+E129,depurado,sintetico,667,151,22.6,19.6,26.0
+E102,depurado,sintetico,658,117,17.8,15.0,20.9
 E141,depurado,natural,1,0,0.0,0.0,79.3
 E143,depurado,sintetico,1,0,0.0,0.0,79.3
 E140,descartado,natural,1,1,100.0,20.7,100.0
@@ -31,4 +31,4 @@ E162,descartado,natural,8,8,100.0,67.6,100.0
 SPIRULINA,descartado,natural,6,6,100.0,61.0,100.0
 E100,descartado,natural,114,94,82.5,74.4,88.3
 E163,descartado,natural,20,11,55.0,34.2,74.2
-E171,descartado,mineral,90,21,23.3,15.8,33.1
+E171,descartado,mineral,89,20,22.5,15.0,32.2

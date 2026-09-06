@@ -1,17 +1,17 @@
 {
   "n_con_texto": 7775,
   "BRECHA_BRUTA": {
-    "n_con_colorante": 2085,
-    "n_con_brecha": 1545,
-    "pct": 74.1
+    "n_con_colorante": 2020,
+    "n_con_brecha": 1506,
+    "pct": 74.6
   },
   "BRECHA_DEPURADA": {
-    "n_con_colorante": 1734,
-    "n_con_brecha": 1208,
-    "pct": 69.7,
+    "n_con_colorante": 1665,
+    "n_con_brecha": 1170,
+    "pct": 70.3,
     "criterio": "excluye ['E100', 'E101', 'E140', 'E160a', 'E160b', 'E160c', 'E162', 'E163', 'E164', 'E170', 'E171', 'E172', 'SPIRULINA'] salvo que 'colorante' aparezca a menos de 60 caracteres"
   },
-  "n_descartados_por_ambiguedad": 542,
+  "n_descartados_por_ambiguedad": 541,
   "descartados_por_codigo": [
     [
       "E160b",
@@ -31,7 +31,7 @@
     ],
     [
       "E171",
-      90
+      89
     ],
     [
       "E163",
@@ -52,10 +52,61 @@
   ],
   "sesgo_truncamiento": {
     "pct_textos_truncados": 16.0,
-    "deteccion_en_truncados_pct": 14.3,
-    "deteccion_en_completos_pct": 23.8,
-    "diferencia_pp": 9.5,
+    "deteccion_en_truncados_pct": 13.7,
+    "deteccion_en_completos_pct": 22.9,
+    "diferencia_pp": 9.2,
     "lectura": "Si la diferencia es positiva y grande, el truncamiento hace perder colorantes y la prevalencia real es mayor. Va en limitaciones."
   },
-  "para_el_resumen": "Reportar la cifra DEPURADA. La bruta se menciona en metodos para mostrar cuanto pesa la ambiguedad de uso, que es justamente el argumento a favor del reconocimiento de entidades frente al emparejamiento por diccionario."
+  "para_el_resumen": "Reportar la cifra DEPURADA. La bruta se menciona en metodos para mostrar cuanto pesa la ambiguedad de uso, que es justamente el argumento a favor del reconocimiento de entidades frente al emparejamiento por diccionario.",
+  "textos_rotos_advertencia": {
+    "n": 45,
+    "codigos": [
+      "7501030457428",
+      "7501485801234",
+      "7501791637626",
+      "8410069002211",
+      "7503023054003",
+      "7506306414945",
+      "7501791660792",
+      "7501047932024",
+      "7501011144460",
+      "0756774011734",
+      "7502270310320",
+      "0731082001004",
+      "0759686562189",
+      "0756774002381",
+      "7501008754030",
+      "8413700003264",
+      "7500463096723",
+      "0094331198697",
+      "9556001271358",
+      "7501000103034",
+      "7506443104624",
+      "7503003877301",
+      "7501791638623",
+      "7501030458814",
+      "7500525199010",
+      "75038502",
+      "0730399004869",
+      "75039127",
+      "7500478015511",
+      "7503031361544",
+      "7506495005818",
+      "7500810000304",
+      "7501071304101",
+      "7501372810325",
+      "7500810024676",
+      "7506443108868",
+      "7501639313187",
+      "0750410052405",
+      "8410010403930",
+      "7501639308251",
+      "7501023509851",
+      "7501100403348",
+      "7501071303630",
+      "7502254498143",
+      "7506495003654"
+    ],
+    "lectura": "Productos donde el marcador de advertencia de trazas aparece antes del 30 % del texto -normalmente OCR revuelto-. No se recortaron; revisar a mano."
+  }
 }

@@ -1,6 +1,6 @@
 codigo,clase,sujeto_a_regla,n,pct_con_codigo,pct_con_clase,pct_recuperado
-E102,sintetico,False,760,1.3,35.3,78.3
-E129,sintetico,False,669,1.5,36.0,77.4
+E129,sintetico,False,667,1.5,36.1,77.4
+E102,sintetico,False,658,1.5,40.3,82.2
 E110,sintetico,False,542,1.3,32.3,53.5
 E133,sintetico,False,356,3.1,34.6,36.0
 E120,carmin,True,233,1.3,31.8,4.3

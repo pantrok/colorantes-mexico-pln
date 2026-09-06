@@ -66,7 +66,8 @@ import duckdb
 import pandas as pd
 
 from util import (INTERMEDIO, REPORTES, REQUIEREN_CONTEXTO, cargar_diccionario,
-                  como_lista, normalizar, terminos_ordenados, guardar_reporte)
+                  como_lista, normalizar, quitar_advertencia_trazas,
+                  terminos_ordenados, guardar_reporte)
 
 RAIZ = Path(__file__).resolve().parents[1]
 EXTERNO = RAIZ / "datos" / "externo"
@@ -203,12 +204,20 @@ def main() -> None:
     # `tiene_clase` se combina con OR entre los terminos que coincidieron
     # -"tiene_codigo" y "en_tags" ya son por codigo, no dependen del termino-.
     # Detalle en BITACORA_PARCHES.md.
-    filas = []
+    filas, textos_rotos = [], []
     for t in df.itertuples(index=False):
         texto = normalizar(getattr(t, col["texto"]))
+        # CORREGIDO parche 14: un colorante mencionado solo dentro de una
+        # advertencia de trazas no cuenta como deteccion. Se detecta sobre el
+        # texto recortado; "tiene_codigo" sigue mirando el texto completo,
+        # que ya esta documentado como cota superior en la advertencia de
+        # abajo. Ver util.py::quitar_advertencia_trazas y BITACORA_PARCHES.md.
+        texto_det, roto = quitar_advertencia_trazas(texto)
+        if roto:
+            textos_rotos.append(t.code)
         tags = {str(a).replace("en:", "").upper()
                 for a in como_lista(getattr(t, col["aditivos"]))}
-        restante = texto
+        restante = texto_det
         por_codigo = {}
         for termino, codigo, bloque in ordenados:
             if not termino:
@@ -223,7 +232,7 @@ def main() -> None:
             restante = pat.sub(" ", restante)
 
             ini = max(0, m.start() - VENTANA_CLASE)
-            antes = texto[ini:m.start()]
+            antes = texto_det[ini:m.start()]
             mc = None
             for mm in RE_CLASE.finditer(antes):
                 mc = mm
@@ -310,6 +319,7 @@ def main() -> None:
         "advertencia": ("`tiene_codigo` mira todo el texto, no la vecindad del termino: "
                         "un producto con varios aditivos puede traer el codigo de OTRO. "
                         "Es una cota superior."),
+        "textos_rotos_advertencia": {"n": len(textos_rotos), "codigos": textos_rotos},
     })
 
     print(f"\n  marcas sobre {len(p)} detecciones: {prevalencia}")

@@ -1,49 +1,49 @@
 {
   "pais": "en:mexico",
   "fuente": "G:\\Mi unidad\\Publicaciones\\CienciaUAT Colorantes\\Código\\datos\\intermedio\\productos_mx.parquet",
-  "n_detecciones": 3417,
+  "n_detecciones": 3301,
   "n_terminos_distintos": 95,
   "recuperacion_por_cobertura": [
     {
       "en_vocab_off": false,
-      "n": 806,
-      "recuperadas": 48,
-      "pct_recuperado": 6.0
+      "n": 802,
+      "recuperadas": 47,
+      "pct_recuperado": 5.9
     },
     {
       "en_vocab_off": true,
-      "n": 2611,
-      "recuperadas": 1772,
-      "pct_recuperado": 67.9
+      "n": 2499,
+      "recuperadas": 1707,
+      "pct_recuperado": 68.3
     }
   ],
   "por_termino": [
-    {
-      "codigo": "E102",
-      "clase": "sintetico",
-      "termino": "amarillo 5",
-      "en_vocab_off": true,
-      "n": 452,
-      "recuperadas": 361,
-      "pct_recuperado": 79.9
-    },
     {
       "codigo": "E129",
       "clase": "sintetico",
       "termino": "rojo 40",
       "en_vocab_off": true,
-      "n": 388,
-      "recuperadas": 319,
-      "pct_recuperado": 82.2
+      "n": 386,
+      "recuperadas": 317,
+      "pct_recuperado": 82.1
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "amarillo 5",
+      "en_vocab_off": true,
+      "n": 370,
+      "recuperadas": 314,
+      "pct_recuperado": 84.9
     },
     {
       "codigo": "E102",
       "clase": "sintetico",
       "termino": "tartrazina",
       "en_vocab_off": true,
-      "n": 387,
-      "recuperadas": 333,
-      "pct_recuperado": 86.0
+      "n": 359,
+      "recuperadas": 317,
+      "pct_recuperado": 88.3
     },
     {
       "codigo": "E110",
@@ -181,15 +181,6 @@
       "pct_recuperado": 87.1
     },
     {
-      "codigo": "E102",
-      "clase": "sintetico",
-      "termino": "amarillo no. 5",
-      "en_vocab_off": false,
-      "n": 26,
-      "recuperadas": 9,
-      "pct_recuperado": 34.6
-    },
-    {
       "codigo": "E124",
       "clase": "sintetico",
       "termino": "rojo 6",
@@ -206,6 +197,15 @@
       "n": 24,
       "recuperadas": 0,
       "pct_recuperado": 0.0
+    },
+    {
+      "codigo": "E102",
+      "clase": "sintetico",
+      "termino": "amarillo no. 5",
+      "en_vocab_off": false,
+      "n": 23,
+      "recuperadas": 8,
+      "pct_recuperado": 34.8
     },
     {
       "codigo": "E129",
@@ -338,9 +338,9 @@
       "clase": "sintetico",
       "termino": "amarillo fd&c5",
       "en_vocab_off": false,
-      "n": 9,
+      "n": 8,
       "recuperadas": 1,
-      "pct_recuperado": 11.1
+      "pct_recuperado": 12.5
     },
     {
       "codigo": "E163",
@@ -1073,5 +1073,55 @@
       "recuperadas": 0,
       "pct_recuperado": 0.0
     }
-  ]
+  ],
+  "textos_rotos_advertencia": {
+    "n": 45,
+    "codigos": [
+      "7501030457428",
+      "7501485801234",
+      "7501791637626",
+      "8410069002211",
+      "7503023054003",
+      "7506306414945",
+      "7501791660792",
+      "7501047932024",
+      "7501011144460",
+      "0756774011734",
+      "7502270310320",
+      "0731082001004",
+      "0759686562189",
+      "0756774002381",
+      "7501008754030",
+      "8413700003264",
+      "7500463096723",
+      "0094331198697",
+      "9556001271358",
+      "7501000103034",
+      "7506443104624",
+      "7503003877301",
+      "7501791638623",
+      "7501030458814",
+      "7500525199010",
+      "75038502",
+      "0730399004869",
+      "75039127",
+      "7500478015511",
+      "7503031361544",
+      "7506495005818",
+      "7500810000304",
+      "7501071304101",
+      "7501372810325",
+      "7500810024676",
+      "7506443108868",
+      "7501639313187",
+      "0750410052405",
+      "8410010403930",
+      "7501639308251",
+      "7501023509851",
+      "7501100403348",
+      "7501071303630",
+      "7502254498143",
+      "7506495003654"
+    ]
+  }
 }
