@@ -87,3 +87,32 @@ def test_normalizacion():
     assert normalizar("  Rojo  ALLURA (AC)  ") == "rojo allura ac"
     assert normalizar("Cúrcuma") == "curcuma"
     assert normalizar(None) == ""
+
+
+def test_orden_de_terminos_es_determinista():
+    """El orden de `terminos_ordenados` no puede depender del proceso.
+
+    Antes lo hacia: `terminos_norm` se ordenaba con `key=len` sobre un SET, y
+    el orden de iteracion de un set de cadenas depende de PYTHONHASHSEED, que
+    Python aleatoriza en cada proceso. Como `sorted` es estable, los terminos
+    de igual longitud salian en un orden distinto en cada corrida -los tres
+    de E160b de 7 caracteres, por ejemplo- y eso movia el termino
+    representante de cada deteccion y con el la RM del modelo de forma del
+    nombre. Detectado en el parche 16.
+    """
+    orden = [t for t, _, _ in terminos_ordenados(cargar_diccionario())]
+    # 1) longitud no creciente
+    assert all(len(a) >= len(b) for a, b in zip(orden, orden[1:]))
+    # 2) dentro de cada longitud, alfabetico: eso es lo que fija el desempate
+    for largo in {len(t) for t in orden}:
+        iguales = [t for t in orden if len(t) == largo]
+        assert iguales == sorted(iguales), f"empate no determinista en longitud {largo}"
+
+
+def test_orden_estable_entre_cargas_del_diccionario():
+    """Dos cargas independientes dentro del mismo proceso tienen que dar el
+    mismo orden. La prueba entre PROCESOS distintos la cubre el desempate
+    alfabetico de arriba, que es una propiedad verificable sin relanzar."""
+    a = [t for t, _, _ in terminos_ordenados(cargar_diccionario())]
+    b = [t for t, _, _ in terminos_ordenados(cargar_diccionario())]
+    assert a == b

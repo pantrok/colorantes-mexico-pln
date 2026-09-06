@@ -1,0 +1,6 @@
+{
+  "hay_commit_anterior_a_la_corrida": false,
+  "evidencia": "`git log --diff-filter=A` sobre src/09_replica_pais.py y sobre reportes/09_replica_spain.json devuelve EL MISMO commit: 6f761050442abb6162a1c34a6d1d035f0c0260e9, 2026-08-27 10:06:11 -0600. El script con las predicciones P4/P5/P6 y los resultados de Espana entraron al repositorio a la vez.",
+  "veredicto": "No existe un hash con fecha anterior a la corrida de Espana. El sellado SHA-256 del diccionario prueba INTEGRIDAD, no ANTERIORIDAD, y el texto tiene que decirlo asi. Las predicciones se escribieron antes de correr -esta en el docstring y en el flujo de trabajo- pero el repositorio no puede acreditarlo, y esa distincion es justo la que pedia el revisor.",
+  "para_la_proxima": "Si se quiere acreditar anterioridad de una prediccion, hay que commitear el script CON la prediccion y SIN la salida, y correr despues."
+}

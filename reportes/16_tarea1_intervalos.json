@@ -1,0 +1,236 @@
+{
+  "base_declarada": "sintetico + natural_botanico con off_mandatory=False: 2769 detecciones (2405 sinteticas + 364 botanicas). El manuscrito calculo el n efectivo sobre las 3124 totales y por eso publico 61.5; el n efectivo de la muestra que de verdad entra al modelo esta abajo.",
+  "modelo_vocabulario": {
+    "modelo": "vocabulario (natural + fuera_vocab)",
+    "covariables": [
+      "natural",
+      "fuera_vocab"
+    ],
+    "n_detecciones": 2769,
+    "n_codigos": 20,
+    "phi_cuasibinomial": 10.826,
+    "gl_phi": 80,
+    "raiz_phi": 3.29,
+    "mixto": {
+      "convergio": true,
+      "sigma_intercepto": 1.1033,
+      "icc_latente": 0.2701,
+      "n_grupos": 20,
+      "aviso": "Solo hay 24 codigos: la varianza del intercepto aleatorio queda mal identificada con tan pocos conglomerados y su IC es ancho. Verificado en tests/test_revision_pares_v14.py que la implementacion recupera sigma con 200-400 grupos; con 24 no se le debe pedir precision."
+    },
+    "coeficientes": [
+      {
+        "termino": "intercepto",
+        "coef": -1.1576,
+        "RM": 0.31,
+        "ic_perfil": [
+          0.28,
+          0.35
+        ],
+        "ic_wald_sin_corregir": [
+          0.28,
+          0.35
+        ],
+        "ic_cuasibinomial": [
+          0.22,
+          0.44
+        ],
+        "ic_mixto_intercepto_por_codigo": [
+          0.26,
+          0.37
+        ],
+        "ic_robusto_conglomerado_codigo": [
+          0.15,
+          0.64
+        ]
+      },
+      {
+        "termino": "natural",
+        "coef": 1.8826,
+        "RM": 6.57,
+        "ic_perfil": [
+          4.5,
+          9.6
+        ],
+        "ic_wald_sin_corregir": [
+          4.5,
+          9.6
+        ],
+        "ic_cuasibinomial": [
+          1.89,
+          22.87
+        ],
+        "ic_mixto_intercepto_por_codigo": [
+          2.85,
+          15.15
+        ],
+        "ic_robusto_conglomerado_codigo": [
+          0.91,
+          47.55
+        ]
+      },
+      {
+        "termino": "fuera_vocab",
+        "coef": 4.3176,
+        "RM": 75.01,
+        "ic_perfil": [
+          47.24,
+          119.99
+        ],
+        "ic_wald_sin_corregir": [
+          46.92,
+          119.91
+        ],
+        "ic_cuasibinomial": [
+          16.02,
+          351.17
+        ],
+        "ic_mixto_intercepto_por_codigo": [
+          44.55,
+          126.29
+        ],
+        "ic_robusto_conglomerado_codigo": [
+          28.26,
+          199.1
+        ]
+      }
+    ],
+    "agrupamiento_sobre_la_muestra_del_modelo": {
+      "k_codigos": 20,
+      "N_detecciones_del_modelo": 2769,
+      "ICC_momentos": 0.323,
+      "design_effect": 45.396,
+      "n_efectivo": 61.0
+    }
+  },
+  "modelo_forma_del_nombre": {
+    "modelo": "forma del nombre (natural + forma, referencia numero_codigo)",
+    "covariables": [
+      "natural",
+      "es_nombre_tecnico",
+      "es_nombre_comun_planta"
+    ],
+    "n_detecciones": 2769,
+    "n_codigos": 20,
+    "phi_cuasibinomial": 18.893,
+    "gl_phi": 72,
+    "raiz_phi": 4.347,
+    "mixto": {
+      "convergio": true,
+      "sigma_intercepto": 0.9914,
+      "icc_latente": 0.23,
+      "n_grupos": 20,
+      "aviso": "Solo hay 24 codigos: la varianza del intercepto aleatorio queda mal identificada con tan pocos conglomerados y su IC es ancho. Verificado en tests/test_revision_pares_v14.py que la implementacion recupera sigma con 200-400 grupos; con 24 no se le debe pedir precision."
+    },
+    "coeficientes": [
+      {
+        "termino": "intercepto",
+        "coef": -0.4756,
+        "RM": 0.62,
+        "ic_perfil": [
+          0.56,
+          0.69
+        ],
+        "ic_wald_sin_corregir": [
+          0.56,
+          0.69
+        ],
+        "ic_cuasibinomial": [
+          0.39,
+          0.98
+        ],
+        "ic_mixto_intercepto_por_codigo": [
+          0.55,
+          0.7
+        ],
+        "ic_robusto_conglomerado_codigo": [
+          0.24,
+          1.63
+        ]
+      },
+      {
+        "termino": "natural",
+        "coef": 0.46,
+        "RM": 1.58,
+        "ic_perfil": [
+          0.98,
+          2.55
+        ],
+        "ic_wald_sin_corregir": [
+          0.98,
+          2.56
+        ],
+        "ic_cuasibinomial": [
+          0.2,
+          12.77
+        ],
+        "ic_mixto_intercepto_por_codigo": [
+          0.52,
+          4.79
+        ],
+        "ic_robusto_conglomerado_codigo": [
+          0.26,
+          9.61
+        ]
+      },
+      {
+        "termino": "es_nombre_tecnico",
+        "coef": -0.1793,
+        "RM": 0.84,
+        "ic_perfil": [
+          0.7,
+          0.99
+        ],
+        "ic_wald_sin_corregir": [
+          0.7,
+          0.99
+        ],
+        "ic_cuasibinomial": [
+          0.4,
+          1.76
+        ],
+        "ic_mixto_intercepto_por_codigo": [
+          0.69,
+          1.01
+        ],
+        "ic_robusto_conglomerado_codigo": [
+          0.16,
+          4.28
+        ]
+      },
+      {
+        "termino": "es_nombre_comun_planta",
+        "coef": 4.9888,
+        "RM": 146.77,
+        "ic_perfil": [
+          36.73,
+          594.15
+        ],
+        "ic_wald_sin_corregir": [
+          33.58,
+          641.42
+        ],
+        "ic_cuasibinomial": [
+          0.24,
+          89280.2
+        ],
+        "ic_mixto_intercepto_por_codigo": [
+          30.18,
+          713.79
+        ],
+        "ic_robusto_conglomerado_codigo": [
+          23.69,
+          909.21
+        ]
+      }
+    ],
+    "agrupamiento_sobre_la_muestra_del_modelo": {
+      "k_codigos": 20,
+      "N_detecciones_del_modelo": 2769,
+      "ICC_momentos": 0.323,
+      "design_effect": 45.396,
+      "n_efectivo": 61.0
+    }
+  },
+  "lectura": "El IC que el articulo debe citar es el mixto o el robusto por conglomerado, no el de perfil: los predictores varian entre codigos y terminos, no entre detecciones, y el perfil trata cada deteccion como independiente."
+}

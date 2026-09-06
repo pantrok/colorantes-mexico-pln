@@ -1,0 +1,218 @@
+{
+  "cruce_origen_x_forma_3_niveles": [
+    {
+      "clase": "natural_botanico",
+      "forma_v2": "nombre_comun_planta",
+      "n": 375,
+      "sin_tag": 371.0,
+      "n_terminos": 24,
+      "n_codigos": 7,
+      "brecha_pct": 98.9
+    },
+    {
+      "clase": "natural_botanico",
+      "forma_v2": "nombre_tecnico",
+      "n": 62,
+      "sin_tag": 24.0,
+      "n_terminos": 7,
+      "n_codigos": 7,
+      "brecha_pct": 38.7
+    },
+    {
+      "clase": "natural_botanico",
+      "forma_v2": "numero_codigo",
+      "n": 4,
+      "sin_tag": 4.0,
+      "n_terminos": 3,
+      "n_codigos": 3,
+      "brecha_pct": 100.0
+    },
+    {
+      "clase": "sintetico",
+      "forma_v2": "nombre_tecnico",
+      "n": 1045,
+      "sin_tag": 317.0,
+      "n_terminos": 14,
+      "n_codigos": 10,
+      "brecha_pct": 30.3
+    },
+    {
+      "clase": "sintetico",
+      "forma_v2": "numero_codigo",
+      "n": 1532,
+      "sin_tag": 594.0,
+      "n_terminos": 37,
+      "n_codigos": 10,
+      "brecha_pct": 38.8
+    }
+  ],
+  "cruce_origen_x_forma_5_niveles": [
+    {
+      "clase": "natural_botanico",
+      "forma_fina_v2": "indice_de_color",
+      "n": 4,
+      "sin_tag": 4.0,
+      "n_terminos": 3,
+      "n_codigos": 3,
+      "brecha_pct": 100.0
+    },
+    {
+      "clase": "natural_botanico",
+      "forma_fina_v2": "nombre_comun_planta",
+      "n": 375,
+      "sin_tag": 371.0,
+      "n_terminos": 24,
+      "n_codigos": 7,
+      "brecha_pct": 98.9
+    },
+    {
+      "clase": "natural_botanico",
+      "forma_fina_v2": "nombre_tecnico",
+      "n": 62,
+      "sin_tag": 24.0,
+      "n_terminos": 7,
+      "n_codigos": 7,
+      "brecha_pct": 38.7
+    },
+    {
+      "clase": "sintetico",
+      "forma_fina_v2": "codigo_e_ci",
+      "n": 8,
+      "sin_tag": 7.0,
+      "n_terminos": 5,
+      "n_codigos": 5,
+      "brecha_pct": 87.5
+    },
+    {
+      "clase": "sintetico",
+      "forma_fina_v2": "designacion_fdc",
+      "n": 1488,
+      "sin_tag": 551.0,
+      "n_terminos": 26,
+      "n_codigos": 9,
+      "brecha_pct": 37.0
+    },
+    {
+      "clase": "sintetico",
+      "forma_fina_v2": "indice_de_color",
+      "n": 36,
+      "sin_tag": 36.0,
+      "n_terminos": 6,
+      "n_codigos": 6,
+      "brecha_pct": 100.0
+    },
+    {
+      "clase": "sintetico",
+      "forma_fina_v2": "nombre_tecnico",
+      "n": 1045,
+      "sin_tag": 317.0,
+      "n_terminos": 14,
+      "n_codigos": 10,
+      "brecha_pct": 30.3
+    }
+  ],
+  "celdas_vacias_o_escasas": [
+    "natural_botanico x numero_codigo: n=4"
+  ],
+  "dispersion_dentro_de_numero_codigo": [
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "amarillo fd&c 6",
+      "n": 12,
+      "sin_tag": 0.0,
+      "brecha_pct": 0.0
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "amarillo fd&c 5",
+      "n": 11,
+      "sin_tag": 0.0,
+      "brecha_pct": 0.0
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "amarillo 5",
+      "n": 370,
+      "sin_tag": 56.0,
+      "brecha_pct": 15.1
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "rojo 40",
+      "n": 386,
+      "sin_tag": 69.0,
+      "brecha_pct": 17.9
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "amarillo 6",
+      "n": 299,
+      "sin_tag": 55.0,
+      "brecha_pct": 18.4
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "amarillo no. 5",
+      "n": 23,
+      "sin_tag": 15.0,
+      "brecha_pct": 65.2
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "azul 2",
+      "n": 40,
+      "sin_tag": 36.0,
+      "brecha_pct": 90.0
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "amarillo no. 6",
+      "n": 16,
+      "sin_tag": 15.0,
+      "brecha_pct": 93.8
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "rojo no. 40",
+      "n": 21,
+      "sin_tag": 20.0,
+      "brecha_pct": 95.2
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "azul 1",
+      "n": 198,
+      "sin_tag": 189.0,
+      "brecha_pct": 95.5
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "rojo 3",
+      "n": 24,
+      "sin_tag": 24.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "azul no. 1",
+      "n": 14,
+      "sin_tag": 14.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "termino": "rojo 6",
+      "n": 26,
+      "sin_tag": 26.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "forma_fina_v2": "indice_de_color",
+      "termino": "anaranjado alimentos 6",
+      "n": 12,
+      "sin_tag": 12.0,
+      "brecha_pct": 100.0
+    }
+  ],
+  "veredicto_particion": "Si la brecha difiere mucho entre codigo_e_ci, designacion_fdc e indice_de_color, la categoria 'numero o codigo' del parche 15 mezclaba cosas distintas y hay que reportarla partida."
+}

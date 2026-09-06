@@ -1,0 +1,135 @@
+{
+  "mexico": [
+    {
+      "termino": "carmin",
+      "n_detecciones": 213,
+      "n_productos": 213,
+      "con_numero_E": 3,
+      "con_numero_E_pct": 1.4,
+      "brecha_pct": 95.8
+    },
+    {
+      "termino": "rojo natural 4",
+      "n_detecciones": 9,
+      "n_productos": 9,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "termino": "extracto de cochinilla",
+      "n_detecciones": 4,
+      "n_productos": 4,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "termino": "acido carminico",
+      "n_detecciones": 2,
+      "n_productos": 2,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "termino": "carmin de cochinilla",
+      "n_detecciones": 2,
+      "n_productos": 2,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "termino": "extracto de coccus cacti",
+      "n_detecciones": 2,
+      "n_productos": 2,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "termino": "rojo carmin",
+      "n_detecciones": 2,
+      "n_productos": 2,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 100.0
+    },
+    {
+      "termino": "carmines",
+      "n_detecciones": 1,
+      "n_productos": 1,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 0.0
+    }
+  ],
+  "mexico_total_carmin": {
+    "n_detecciones": 235,
+    "con_numero_E_pct": 1.3
+  },
+  "espana": [
+    {
+      "termino": "carmin",
+      "n_detecciones": 243,
+      "n_productos": 243,
+      "con_numero_E": 16,
+      "con_numero_E_pct": 6.6,
+      "brecha_pct": 34.6
+    },
+    {
+      "termino": "carmines",
+      "n_detecciones": 128,
+      "n_productos": 128,
+      "con_numero_E": 8,
+      "con_numero_E_pct": 6.2,
+      "brecha_pct": 31.2
+    },
+    {
+      "termino": "acido carminico",
+      "n_detecciones": 58,
+      "n_productos": 58,
+      "con_numero_E": 5,
+      "con_numero_E_pct": 8.6,
+      "brecha_pct": 15.5
+    },
+    {
+      "termino": "cochinilla",
+      "n_detecciones": 56,
+      "n_productos": 56,
+      "con_numero_E": 5,
+      "con_numero_E_pct": 8.9,
+      "brecha_pct": 30.4
+    },
+    {
+      "termino": "carmin de cochinilla",
+      "n_detecciones": 8,
+      "n_productos": 8,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 75.0
+    },
+    {
+      "termino": "rojo carmin",
+      "n_detecciones": 5,
+      "n_productos": 5,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 80.0
+    },
+    {
+      "termino": "rojo natural 4",
+      "n_detecciones": 1,
+      "n_productos": 1,
+      "con_numero_E": 0,
+      "con_numero_E_pct": 0.0,
+      "brecha_pct": 100.0
+    }
+  ],
+  "espana_total_carmin": {
+    "n_detecciones": 499,
+    "con_numero_E_pct": 6.8
+  },
+  "lectura": "El articulo declara esta explicacion 'no comprobable con este diseno' teniendo los datos. Aqui estan por termino y por pais."
+}

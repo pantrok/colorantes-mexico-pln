@@ -1,0 +1,150 @@
+{
+  "curva": [
+    {
+      "ventana_caracteres": 0,
+      "detecciones_retenidas": 2646,
+      "global": {
+        "n": 2646,
+        "sin_tag": 1114,
+        "brecha_pct": 42.1
+      },
+      "sintetico": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      },
+      "natural_botanico": {
+        "n": 6,
+        "sin_tag": 5,
+        "brecha_pct": 83.3
+      },
+      "carmin": {
+        "n": 233,
+        "sin_tag": 223,
+        "brecha_pct": 95.7
+      },
+      "mineral_inorganico": {
+        "n": 2,
+        "sin_tag": 2,
+        "brecha_pct": 100.0
+      }
+    },
+    {
+      "ventana_caracteres": 40,
+      "detecciones_retenidas": 3091,
+      "global": {
+        "n": 3091,
+        "sin_tag": 1485,
+        "brecha_pct": 48.0
+      },
+      "sintetico": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      },
+      "natural_botanico": {
+        "n": 409,
+        "sin_tag": 368,
+        "brecha_pct": 90.0
+      },
+      "carmin": {
+        "n": 233,
+        "sin_tag": 223,
+        "brecha_pct": 95.7
+      },
+      "mineral_inorganico": {
+        "n": 44,
+        "sin_tag": 10,
+        "brecha_pct": 22.7
+      }
+    },
+    {
+      "ventana_caracteres": 60,
+      "detecciones_retenidas": 3124,
+      "global": {
+        "n": 3124,
+        "sin_tag": 1515,
+        "brecha_pct": 48.5
+      },
+      "sintetico": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      },
+      "natural_botanico": {
+        "n": 438,
+        "sin_tag": 396,
+        "brecha_pct": 90.4
+      },
+      "carmin": {
+        "n": 233,
+        "sin_tag": 223,
+        "brecha_pct": 95.7
+      },
+      "mineral_inorganico": {
+        "n": 48,
+        "sin_tag": 12,
+        "brecha_pct": 25.0
+      }
+    },
+    {
+      "ventana_caracteres": 80,
+      "detecciones_retenidas": 3133,
+      "global": {
+        "n": 3133,
+        "sin_tag": 1520,
+        "brecha_pct": 48.5
+      },
+      "sintetico": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      },
+      "natural_botanico": {
+        "n": 444,
+        "sin_tag": 400,
+        "brecha_pct": 90.1
+      },
+      "carmin": {
+        "n": 233,
+        "sin_tag": 223,
+        "brecha_pct": 95.7
+      },
+      "mineral_inorganico": {
+        "n": 51,
+        "sin_tag": 13,
+        "brecha_pct": 25.5
+      }
+    },
+    {
+      "ventana_caracteres": 120,
+      "detecciones_retenidas": 3141,
+      "global": {
+        "n": 3141,
+        "sin_tag": 1527,
+        "brecha_pct": 48.6
+      },
+      "sintetico": {
+        "n": 2405,
+        "sin_tag": 884,
+        "brecha_pct": 36.8
+      },
+      "natural_botanico": {
+        "n": 450,
+        "sin_tag": 406,
+        "brecha_pct": 90.2
+      },
+      "carmin": {
+        "n": 233,
+        "sin_tag": 223,
+        "brecha_pct": 95.7
+      },
+      "mineral_inorganico": {
+        "n": 53,
+        "sin_tag": 14,
+        "brecha_pct": 26.4
+      }
+    }
+  ],
+  "lectura": "La botanica es la magnitud sobre la que descansa el articulo y es la que mas se mueve al bajar a cero; entre 40 y 120 la curva es plana en las cuatro clases."
+}

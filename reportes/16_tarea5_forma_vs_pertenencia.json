@@ -1,0 +1,278 @@
+{
+  "pregunta": "Si el campo derivado es un emparejador de diccionario, decir que recupera las formas que su diccionario contiene es analitico. Para que sea empirico, la FORMA tiene que predecir la recuperacion CONDICIONADA a la pertenencia literal de la cadena al sinonimario.",
+  "n_terminos_del_diccionario": 197,
+  "nota_202_vs_197": "El manifiesto de congelamiento cuenta 202 terminos y aqui salen los que devuelve terminos_ordenados() tras normalizar y deduplicar por codigo; la diferencia son formas que colapsan al normalizar.",
+  "tabla_terminos_del_diccionario_forma_x_pertenencia": {
+    "nombre_comun_planta": {
+      "false": 54,
+      "true": 9
+    },
+    "nombre_tecnico": {
+      "false": 26,
+      "true": 38
+    },
+    "numero_codigo": {
+      "false": 58,
+      "true": 12
+    }
+  },
+  "cruce_detecciones_3x2": [
+    {
+      "forma_v2": "nombre_comun_planta",
+      "en_vocab_off": false,
+      "n_detecciones": 299,
+      "sin_tag": 298.0,
+      "n_terminos": 18,
+      "brecha_pct": 99.7
+    },
+    {
+      "forma_v2": "nombre_comun_planta",
+      "en_vocab_off": true,
+      "n_detecciones": 76,
+      "sin_tag": 73.0,
+      "n_terminos": 6,
+      "brecha_pct": 96.1
+    },
+    {
+      "forma_v2": "nombre_tecnico",
+      "en_vocab_off": false,
+      "n_detecciones": 24,
+      "sin_tag": 18.0,
+      "n_terminos": 7,
+      "brecha_pct": 75.0
+    },
+    {
+      "forma_v2": "nombre_tecnico",
+      "en_vocab_off": true,
+      "n_detecciones": 1083,
+      "sin_tag": 323.0,
+      "n_terminos": 14,
+      "brecha_pct": 29.8
+    },
+    {
+      "forma_v2": "numero_codigo",
+      "en_vocab_off": false,
+      "n_detecciones": 458,
+      "sin_tag": 418.0,
+      "n_terminos": 35,
+      "brecha_pct": 91.3
+    },
+    {
+      "forma_v2": "numero_codigo",
+      "en_vocab_off": true,
+      "n_detecciones": 1078,
+      "sin_tag": 180.0,
+      "n_terminos": 5,
+      "brecha_pct": 16.7
+    }
+  ],
+  "cruce_detecciones_fino": [
+    {
+      "forma_fina_v2": "codigo_e_ci",
+      "en_vocab_off": false,
+      "n_detecciones": 8,
+      "sin_tag": 7.0,
+      "n_terminos": 5,
+      "brecha_pct": 87.5
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "en_vocab_off": false,
+      "n_detecciones": 410,
+      "sin_tag": 371.0,
+      "n_terminos": 21,
+      "brecha_pct": 90.5
+    },
+    {
+      "forma_fina_v2": "designacion_fdc",
+      "en_vocab_off": true,
+      "n_detecciones": 1078,
+      "sin_tag": 180.0,
+      "n_terminos": 5,
+      "brecha_pct": 16.7
+    },
+    {
+      "forma_fina_v2": "indice_de_color",
+      "en_vocab_off": false,
+      "n_detecciones": 40,
+      "sin_tag": 40.0,
+      "n_terminos": 9,
+      "brecha_pct": 100.0
+    },
+    {
+      "forma_fina_v2": "nombre_comun_planta",
+      "en_vocab_off": false,
+      "n_detecciones": 299,
+      "sin_tag": 298.0,
+      "n_terminos": 18,
+      "brecha_pct": 99.7
+    },
+    {
+      "forma_fina_v2": "nombre_comun_planta",
+      "en_vocab_off": true,
+      "n_detecciones": 76,
+      "sin_tag": 73.0,
+      "n_terminos": 6,
+      "brecha_pct": 96.1
+    },
+    {
+      "forma_fina_v2": "nombre_tecnico",
+      "en_vocab_off": false,
+      "n_detecciones": 24,
+      "sin_tag": 18.0,
+      "n_terminos": 7,
+      "brecha_pct": 75.0
+    },
+    {
+      "forma_fina_v2": "nombre_tecnico",
+      "en_vocab_off": true,
+      "n_detecciones": 1083,
+      "sin_tag": 323.0,
+      "n_terminos": 14,
+      "brecha_pct": 29.8
+    }
+  ],
+  "modelo_condicionado_a_pertenencia": {
+    "n_detecciones": 2237,
+    "formas_presentes": [
+      "nombre_comun_planta",
+      "nombre_tecnico",
+      "numero_codigo"
+    ],
+    "n_por_forma": {
+      "nombre_tecnico": 1083,
+      "numero_codigo": 1078,
+      "nombre_comun_planta": 76
+    },
+    "referencia": "numero_codigo",
+    "modelo": {
+      "modelo": "forma dentro del sinonimario (referencia numero_codigo)",
+      "covariables": [
+        "natural",
+        "es_nombre_comun_planta",
+        "es_nombre_tecnico"
+      ],
+      "n_detecciones": 2237,
+      "n_codigos": 16,
+      "phi_cuasibinomial": 22.479,
+      "gl_phi": 21,
+      "raiz_phi": 4.741,
+      "mixto": {
+        "convergio": true,
+        "sigma_intercepto": 0.6622,
+        "icc_latente": 0.1176,
+        "n_grupos": 16,
+        "aviso": "Solo hay 24 codigos: la varianza del intercepto aleatorio queda mal identificada con tan pocos conglomerados y su IC es ancho. Verificado en tests/test_revision_pares_v14.py que la implementacion recupera sigma con 200-400 grupos; con 24 no se le debe pedir precision."
+      },
+      "coeficientes": [
+        {
+          "termino": "intercepto",
+          "coef": -1.6072,
+          "RM": 0.2,
+          "ic_perfil": [
+            0.17,
+            0.24
+          ],
+          "ic_wald_sin_corregir": [
+            0.17,
+            0.24
+          ],
+          "ic_cuasibinomial": [
+            0.09,
+            0.43
+          ],
+          "ic_mixto_intercepto_por_codigo": [
+            0.17,
+            0.24
+          ],
+          "ic_robusto_conglomerado_codigo": [
+            0.18,
+            0.23
+          ]
+        },
+        {
+          "termino": "natural",
+          "coef": 0.5388,
+          "RM": 1.71,
+          "ic_perfil": [
+            1.0,
+            2.93
+          ],
+          "ic_wald_sin_corregir": [
+            1.0,
+            2.94
+          ],
+          "ic_cuasibinomial": [
+            0.13,
+            22.14
+          ],
+          "ic_mixto_intercepto_por_codigo": [
+            0.67,
+            4.37
+          ],
+          "ic_robusto_conglomerado_codigo": [
+            0.22,
+            13.22
+          ]
+        },
+        {
+          "termino": "es_nombre_comun_planta",
+          "coef": 4.2603,
+          "RM": 70.83,
+          "ic_perfil": [
+            20.27,
+            242.25
+          ],
+          "ic_wald_sin_corregir": [
+            19.6,
+            255.89
+          ],
+          "ic_cuasibinomial": [
+            0.16,
+            31264.76
+          ],
+          "ic_mixto_intercepto_por_codigo": [
+            15.02,
+            333.9
+          ],
+          "ic_robusto_conglomerado_codigo": [
+            9.37,
+            535.44
+          ]
+        },
+        {
+          "termino": "es_nombre_tecnico",
+          "coef": 0.7201,
+          "RM": 2.05,
+          "ic_perfil": [
+            1.67,
+            2.53
+          ],
+          "ic_wald_sin_corregir": [
+            1.67,
+            2.53
+          ],
+          "ic_cuasibinomial": [
+            0.76,
+            5.54
+          ],
+          "ic_mixto_intercepto_por_codigo": [
+            1.63,
+            2.59
+          ],
+          "ic_robusto_conglomerado_codigo": [
+            0.62,
+            6.76
+          ]
+        }
+      ],
+      "agrupamiento_sobre_la_muestra_del_modelo": {
+        "k_codigos": 16,
+        "N_detecciones_del_modelo": 2237,
+        "ICC_momentos": 0.2394,
+        "design_effect": 34.232,
+        "n_efectivo": 65.3
+      }
+    }
+  }
+}

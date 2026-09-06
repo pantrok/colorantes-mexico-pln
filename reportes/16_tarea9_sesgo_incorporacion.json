@@ -1,0 +1,48 @@
+{
+  "1_registros_que_necesitaron_adjudicacion": {
+    "n": 30,
+    "pct": 5.0,
+    "de": 600,
+    "desglose": "`en_desempate=SI` marca desacuerdo entre los dos anotadores, sea en el veredicto o en la lista de terminos. De esos, 12 tienen ademas el veredicto en desacuerdo y el archivo no trae la resolucion."
+  },
+  "2_VPP_solo_con_acuerdo_humano_previo": {
+    "n": 526,
+    "TP": 360,
+    "FP": 8,
+    "FN": 65,
+    "TN": 93,
+    "VPP_pct": 97.8,
+    "VPP_ic95": [
+      95.8,
+      98.9
+    ],
+    "sensibilidad_pct": 84.7
+  },
+  "3_VPP_de_los_registros_adjudicados": {
+    "n": 16,
+    "TP": 14,
+    "FP": 0,
+    "FN": 2,
+    "TN": 0,
+    "VPP_pct": 100.0,
+    "VPP_ic95": [
+      78.5,
+      100.0
+    ],
+    "sensibilidad_pct": 87.5
+  },
+  "4_sensibilidad_excluyendo_adjudicados": {
+    "n": 526,
+    "TP": 360,
+    "FP": 8,
+    "FN": 65,
+    "TN": 93,
+    "VPP_pct": 97.8,
+    "VPP_ic95": [
+      95.8,
+      98.9
+    ],
+    "sensibilidad_pct": 84.7
+  },
+  "lectura": "Si el VPP con acuerdo previo y el global casi no difieren, la cifra no depende de la fase no independiente y la objecion de sesgo de incorporacion queda acotada."
+}

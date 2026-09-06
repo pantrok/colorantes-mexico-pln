@@ -1,0 +1,60 @@
+{
+  "base_declarada": "Los DOS origenes sobre off_mandatory=False: 2405 sinteticas y 364 botanicas. La tasa botanica observada sobre esa base es la que hay que comparar contra la estandarizada, no el 90.4 % de las 438.",
+  "punto": {
+    "brecha_sintetica_base_comun_pct": 36.75675675675676,
+    "brecha_botanica_base_comun_pct": 88.46153846153845,
+    "diferencia_cruda_base_comun_pp": 51.704781704781695,
+    "descomposicion_kitagawa": {
+      "efecto_composicion_pp": 35.11110210502923,
+      "efecto_tasa_pp": 38.35549258936356,
+      "efecto_interaccion_pp": -21.761812989611087,
+      "suma_de_los_tres_pp": 51.70478170478171
+    },
+    "direccion_A_peso_sintetico": {
+      "tasa_botanica_estandarizada_pct": 75.11224934612032,
+      "diferencia_estandarizada_pp": 38.355492589363564,
+      "fraccion_residual": 0.7418171264770357
+    },
+    "direccion_B_peso_botanico": {
+      "tasa_sintetica_estandarizada_pct": 71.86785886178599,
+      "diferencia_estandarizada_pp": 16.593679599752463,
+      "fraccion_residual": 0.3209312379365073
+    }
+  },
+  "contraste_con_la_base_mixta_del_manuscrito": {
+    "brecha_botanica_sobre_438_incluye_mandatory_pct": 90.41,
+    "brecha_botanica_sobre_364_base_comun_pct": 88.46,
+    "nota": "El manuscrito compara la estandarizada (calculada sobre 364) contra la observada de 438. Sobre base comun la observada baja y con ella la diferencia cruda, y el reparto residual sube."
+  },
+  "ic95_bootstrap_por_producto": {
+    "diferencia_cruda_pp": [
+      47.8434,
+      55.5461
+    ],
+    "tasa_botanica_estandarizada_pct": [
+      68.7508,
+      81.4119
+    ],
+    "diferencia_estandarizada_A_pp": [
+      31.9242,
+      45.0316
+    ],
+    "fraccion_residual_A": [
+      0.6512,
+      0.8197
+    ],
+    "efecto_composicion_pp": [
+      31.1022,
+      39.015
+    ],
+    "efecto_tasa_pp": [
+      31.9242,
+      45.0316
+    ],
+    "efecto_interaccion_pp": [
+      -26.7647,
+      -17.4607
+    ]
+  },
+  "n_bootstrap": 1000
+}

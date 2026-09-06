@@ -31,8 +31,20 @@ def cargar_diccionario() -> dict:
         for codigo, info in d.get(bloque, {}).items():
             info["clase"] = bloque
             info["codigo"] = codigo
+            # El desempate alfabetico NO es cosmetico. Antes esto era
+            # `key=len, reverse=True` sobre un SET: el orden de iteracion de
+            # un set de cadenas depende de PYTHONHASHSEED, que Python
+            # aleatoriza en cada proceso, y `sorted` es estable, asi que los
+            # terminos de IGUAL longitud quedaban en un orden distinto en
+            # cada corrida ("achiote"/"atsuete"/"annatto", los tres de E160b
+            # y los tres de 7 caracteres). Eso cambiaba que termino queda
+            # como representante de cada deteccion y con el su
+            # forma_del_nombre, moviendo la RM del modelo de forma entre
+            # corridas identicas (1.59 contra 1.77 observado). Detectado y
+            # corregido en el parche 16. Ver BITACORA_PARCHES.md.
             info["terminos_norm"] = sorted(
-                {normalizar(t) for t in info.get("terminos", [])}, key=len, reverse=True
+                {normalizar(t) for t in info.get("terminos", [])},
+                key=lambda t: (-len(t), t)
             )
     d["genericos"]["terminos_norm"] = [normalizar(t) for t in d["genericos"]["terminos"]]
     return d
@@ -66,7 +78,10 @@ def terminos_ordenados(dic: dict) -> list[tuple[str, str, str]]:
         for codigo, info in dic.get(bloque, {}).items()
         for t in info["terminos_norm"] if t
     ]
-    terminos.sort(key=lambda x: len(x[0]), reverse=True)
+    # Desempate explicito por termino y codigo: sin el, el orden entre
+    # terminos de igual longitud dependia del hash del proceso. Ver la nota
+    # en cargar_diccionario().
+    terminos.sort(key=lambda x: (-len(x[0]), x[0], x[1]))
     return terminos
 
 

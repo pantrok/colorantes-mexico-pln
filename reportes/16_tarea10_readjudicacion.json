@@ -1,0 +1,5 @@
+{
+  "existe_en_el_repositorio": false,
+  "que_se_busco": "Se recorrio el arbol completo -md, csv, json, py, yaml- buscando 'readjudic', 're-adjudic', 'tercer anotador', 'adjudicacion independiente'. El unico acierto es una entrada bibliografica en 13_antecedentes.csv, sin relacion. La anotacion consolidada tiene una columna `en_desempate` que MARCA los 30 registros en desacuerdo, pero no trae ningun veredicto de re-adjudicacion ni una segunda ronda.",
+  "recomendacion": "La declaracion de contribuciones de la v14 anuncia una 'independent re-adjudication of the validation subsample'. No hay nada en el repositorio que la respalde: hay que quitarla de la declaracion hasta que exista, o incorporar el archivo si se hizo fuera del repo."
+}

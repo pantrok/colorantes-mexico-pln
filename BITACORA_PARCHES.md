@@ -74,6 +74,22 @@ del `git log`.
      sensibilidad del pipeline (84.8 %) viene casi todo de ahí, no del
      estrato sin detección (6 % de falsos negativos). Kappa recalculado de
      forma independiente reproduce exacto el 0.770 ya reportado.
+- **Parche 16 (06/09/2026) aplicado completo, 11 de 11 tareas.** Segunda
+  revisión por pares (manuscrito v14). Todo en `src/16_revision_pares_v14.py`.
+  **Tres cosas que cambian lo que el artículo puede afirmar:**
+  1. **Bug de determinismo corregido en `util.py`** (encontrado al hacer la
+     tarea 1, no estaba en el parche): el orden de los términos de igual
+     longitud dependía de `PYTHONHASHSEED` y cambiaba en cada proceso. No
+     movía ninguna cifra publicada de 05-12, pero sí la RM del modelo de
+     forma del parche 15 (1.59 ↔ 1.77 en corridas idénticas).
+  2. **El efecto de origen no sobrevive a la corrección de dispersión.** Con
+     el error estándar escalado por √φ̂, con modelo mixto por código o con
+     sandwich por conglomerado, el IC de la RM de origen cruza 1 en el modelo
+     de forma. Los revisores tenían razón.
+  3. **Pero la tarea 5 —la decisiva— sale a favor del artículo:**
+     condicionada a la pertenencia literal al sinonimario, la forma del
+     nombre SIGUE prediciendo la recuperación (brecha 16.7 % / 29.8 / 96.1 %
+     dentro del vocabulario). La sección nueva no es una tautología.
 - **Pendiente, sin empezar (además de lo de arriba):** decidir el tratamiento
   del dióxido de titanio (E171) antes del modelo de Firth, escribir el manual
   de anotación, sortear los 600 y anotar contra el hash de v1.1.
@@ -896,6 +912,263 @@ número.
 
 ---
 
+## Parche 16 (06/09/2026): segunda revisión por pares (manuscrito v14)
+
+Origen: `REVISION_PARES_v14.md`, panel en modo re-review (metodología,
+dominio, abogado del diablo). Once tareas, todas resueltas.
+Salidas en `reportes/16_*.json`, código en `src/16_revision_pares_v14.py`,
+primitivas verificadas en `tests/test_revision_pares_v14.py`.
+
+### Hallazgo fuera de guion: bug de determinismo en `util.py`
+
+Al hacer la tarea 1 la RM de origen del modelo de forma salió **1.77 en una
+corrida y 1.59 en la siguiente, con los mismos datos y el mismo código**.
+Causa: `cargar_diccionario()` construía `terminos_norm` con
+`sorted(SET, key=len, reverse=True)`. El orden de iteración de un set de
+cadenas depende de `PYTHONHASHSEED`, que Python aleatoriza en cada proceso,
+y `sorted` es estable: los términos de **igual longitud** quedaban en un
+orden distinto cada vez. Los tres sinónimos de E160b de 7 caracteres son
+`achiote`, `annatto` y `atsuete`; según el proceso, la misma detección se
+quedaba con uno u otro como término representante, y `forma_del_nombre` los
+clasificaba distinto.
+
+Corregido con desempate alfabético explícito en `cargar_diccionario()` y en
+`terminos_ordenados()`. Verificado: cuatro procesos distintos dan ahora el
+mismo hash de orden. Dos pruebas nuevas en `tests/test_diccionario.py` lo
+fijan.
+
+**Radio de impacto, medido, no supuesto:** se reejecutaron 05, 07 y 08 y
+**ninguna cifra publicada cambia** — brecha depurada 70.3 %, Tabla 2
+(233/48/438/2405), falsador 1 (n=7/2398/438) idénticos. Solo cambió el
+orden de filas de `07_terminos_forma.csv`, `08_cobertura_terminos.csv` y
+`08_revision_dra.csv`, y la clasificación de forma del parche 15, que es lo
+que este parche rehace de todos modos. El SHA-256 del diccionario congelado
+no se ve afectado (`test_congelado.py` sigue pasando).
+
+### Tarea 1 — intervalos con la dispersión propagada
+
+Base declarada: **2769 detecciones** (2405 sintéticas + 364 botánicas con
+`mandatory=False`), no las 3124 del total. El *n* efectivo sobre esa base es
+**61.0**, casi igual al 61.5 que publicó el manuscrito sobre 3124: corregir
+la base no salva el problema, el efecto de diseño (45.4) lo domina.
+
+| Modelo | Coef. | RM | Perfil | Cuasibinomial | Mixto por código | Robusto conglomerado |
+|---|---|---|---|---|---|---|
+| Vocabulario (φ̂=10.8) | natural | 6.57 | 4.50–9.60 | 1.89–22.87 | 2.85–15.15 | **0.91–47.55** |
+| | fuera_vocab | 75.01 | 47.24–119.99 | 16.02–351.17 | 44.55–126.29 | 28.26–199.10 |
+| Forma (φ̂=18.9) | natural | 1.58 | **0.98–2.55** | 0.20–12.77 | 0.52–4.79 | 0.26–9.61 |
+| | es_nombre_técnico | 0.84 | 0.70–0.99 | 0.40–1.76 | 0.69–1.01 | 0.16–4.28 |
+| | es_nombre_común_planta | 146.77 | 36.73–594.15 | 0.24–89280 | 30.18–713.79 | 23.69–909.21 |
+
+**El efecto de origen no sobrevive.** En el modelo de forma su IC ya toca 1
+en el perfil y cruza 1 en las tres correcciones. En el modelo de
+vocabulario aguanta cuasibinomial y mixto pero cruza 1 con el sandwich por
+conglomerado. Lo que sí sobrevive a todo es **`fuera_vocab`** y
+**`nombre_común_planta`**.
+
+El modelo mixto **sí convergió** (σ=1.10, ICC latente 0.27 en el de
+vocabulario). Aviso declarado en el reporte: solo hay 20 códigos en la
+muestra del modelo, así que σ está mal identificada; la implementación se
+verificó recuperando σ con 250 grupos en las pruebas, pero con 20 no se le
+debe pedir precisión.
+
+### Tarea 2 — estandarización sobre base común
+
+**El revisor tenía razón y su reconstrucción se reproduce exacta.** El
+manuscrito comparaba la tasa estandarizada (calculada sobre las 364
+botánicas de `mandatory=False`) contra la observada de 438, que incluye las
+74 del estrato de clase funcional, todas con brecha 100 %.
+
+| | Manuscrito (base mixta) | **Base común (correcto)** |
+|---|---|---|
+| Brecha botánica observada | 90.41 % (sobre 438) | **88.46 % (sobre 364)** |
+| Diferencia cruda | 53.65 pp | **51.70 pp** |
+| Tasa botánica estandarizada | 75.11 % | 75.11 % |
+| Reparto residual | 71.5 % | **74.2 %** |
+
+IC bootstrap por producto del residual: **[65.1 %, 82.0 %]**.
+
+Descomposición de Kitagawa en tres términos (la identidad se verifica en las
+pruebas: los tres suman exacto la diferencia cruda):
+
+| Término | pp | IC95 |
+|---|---|---|
+| Composición | +35.11 | 31.10 – 39.02 |
+| Tasa | +38.36 | 31.92 – 45.03 |
+| Interacción | **−21.76** | −26.76 – −17.46 |
+| Suma | 51.70 | |
+
+La interacción es grande y negativa: composición y tasa **no son aditivas**,
+y presentar solo una de las dos exagera su papel.
+
+### Tarea 3 — validación ponderada
+
+| Estrato | N población | n analizable | Peso | TP | FP | FN | TN |
+|---|---|---|---|---|---|---|---|
+| sintético | 1139 | 137 | 7.59 | 131 | 6 | 0 | 0 |
+| natural | 595 | 245 | 2.38 | 243 | 2 | 0 | 0 |
+| ambiguo_descartado | 351 | 65 | 3.51 | 0 | 0 | 61 | 4 |
+| sin_detección | 5690 | 95 | 56.90 | 0 | 0 | 6 | 89 |
+
+| | Crudas (como hoy) | **Ponderadas (principal)** | IC95 bootstrap estratificado |
+|---|---|---|---|
+| VPP | 97.9 % | **96.9 %** | 94.4 – 99.1 |
+| Sensibilidad | 84.8 % | **73.9 %** | 65.2 – 82.8 |
+| Especificidad | 92.1 % | **99.0 %** | 98.2 – 99.7 |
+
+**La cifra principal del artículo debe ser la ponderada.** La sensibilidad
+cae 11 puntos porque los dos estratos que aportan todos los falsos negativos
+representan 6041 productos con 160 observaciones.
+
+### Tarea 4 — los 104 sin mapear pesan sobre la sensibilidad, no sobre el VPP
+
+Regla documentada: Levenshtein normalizado contra los términos del
+diccionario, umbral 0.82 (elegido para que `camin`/`carmin` entre y
+`rojo 6`/`rojo 40` no).
+
+- **9** eran otro sinónimo del mismo código, que el detector sí recuperó.
+- **56 son falsos negativos de mención reales** — E160b concentra 21, es
+  decir las variantes de achiote/annatto.
+- **58** no son identificables como colorante conocido.
+
+El parche tiene razón: decir que «no se cuentan como falso positivo» era
+correcto pero incompleto, y excluirlos del todo inflaba la sensibilidad de
+mención. La sensibilidad **a nivel de producto no cambia**, porque esos
+productos ya contaban como detectados por otro colorante.
+
+### Tarea 5 — LA DECISIVA: forma contra pertenencia literal
+
+Cruce de detecciones, forma × pertenencia literal al sinonimario:
+
+| Forma | En el sinonimario | n | Brecha | Fuera | n | Brecha |
+|---|---|---|---|---|---|---|
+| número/código | sí | 1078 | **16.7 %** | no | 458 | 91.3 % |
+| nombre técnico | sí | 1083 | **29.8 %** | no | 24 | 75.0 % |
+| nombre común de planta | sí | 76 | **96.1 %** | no | 299 | 99.7 % |
+
+**Dentro del sinonimario las tres formas están presentes con n suficiente y
+siguen separándose: 16.7 %, 29.8 % y 96.1 %.** El modelo condicionado
+(n=2237) da `nombre_común_planta` RM **70.83**, con mixto [15.02, 333.9] y
+robusto [9.37, 535.44] — excluye 1 en las dos correcciones que importan.
+
+**Veredicto: la afirmación es EMPÍRICA, no analítica.** La objeción más
+fuerte del panel no se sostiene: la forma predice la recuperación aun
+condicionando a que la cadena pertenezca al sinonimario. La sección nueva
+del artículo se queda, con esta tabla como respaldo.
+
+En el mismo modelo, el origen (`natural`, RM 1.71) **no** sobrevive: todos
+sus IC corregidos cruzan 1. Es coherente con la tarea 1.
+
+### Tarea 6 — tabla cruzada origen × forma
+
+| Clase | Forma | n | Términos | Códigos | Brecha |
+|---|---|---|---|---|---|
+| natural_botánico | nombre común planta | 375 | 24 | 7 | 98.9 % |
+| natural_botánico | nombre técnico | 62 | 7 | 7 | 38.7 % |
+| natural_botánico | número/código | **4** | 3 | 3 | 100 % |
+| sintético | nombre técnico | 1045 | 14 | 10 | 30.3 % |
+| sintético | número/código | 1532 | 37 | 10 | 38.8 % |
+| sintético | nombre común planta | **0** | — | — | — |
+
+**Las dos celdas que harían falta para separar origen de forma están vacías
+o casi:** no hay ningún sintético declarado con nombre común de planta, y
+solo 4 detecciones botánicas con número. Origen y forma están **casi
+colineales en los datos**, y eso —no la falta de potencia— es la razón de
+que la RM de origen sea inestable y su IC tan ancho. Es la respuesta a «no
+se puede saber sobre qué contraste se estima la RM».
+
+**La categoría sí necesitaba partirse**, como sospechaba el revisor:
+
+| Subfamilia de «número o código» | n | Brecha |
+|---|---|---|
+| designación FD&C (`rojo 40`, `amarillo 6`) | 1488 | **37.0 %** |
+| código E/CI (`e 102`, `ci 15985`) | 8 | 87.5 % |
+| índice de color (`amarillo alimentos 3`, `pigmento blanco 6`) | 36 | **100 %** |
+
+### Tarea 7 — curva de la ventana, completa
+
+| Ventana | n | Global | **Botánica** | Sintética | Carmín | Mineral |
+|---|---|---|---|---|---|---|
+| 0 | 2646 | 42.1 % | 83.3 % (**n=6**) | 36.8 % | 95.7 % | 100 % |
+| 40 | 3091 | 48.0 % | 90.0 % (n=409) | 36.8 % | 95.7 % | 22.7 % |
+| **60** | 3124 | 48.5 % | 90.4 % (n=438) | 36.8 % | 95.7 % | 25.0 % |
+| 80 | 3133 | 48.5 % | 90.1 % (n=444) | 36.8 % | 95.7 % | 25.5 % |
+| 120 | 3141 | 48.6 % | 90.2 % (n=450) | 36.8 % | 95.7 % | 26.4 % |
+
+**El dato que faltaba y que no se puede citar sin su n:** en ventana 0 la
+clase botánica no baja a 83.3 %, **desaparece** — quedan 6 detecciones de
+438. El brazo botánico del estudio existe gracias a la regla de contexto.
+Entre 40 y 120 la curva es plana en las cuatro clases.
+
+### Tarea 8 — número E y carmín, por término (la explicación europea NO se sostiene)
+
+| País | Término | n | Con número E | Brecha |
+|---|---|---|---|---|
+| México | carmin | 213 | 1.4 % | 95.8 % |
+| México | *(total carmín)* | 235 | **1.3 %** | |
+| España | carmin | 243 | 6.6 % | **34.6 %** |
+| España | carmines | 128 | 6.2 % | 31.2 % |
+| España | acido carminico | 58 | 8.6 % | 15.5 % |
+| España | cochinilla | 56 | 8.9 % | 30.4 % |
+| España | *(total carmín)* | 499 | **6.8 %** | |
+
+**Medido y rechazado.** El mismo término `carmin` tiene brecha 95.8 % en
+México y 34.6 % en España, con una coocurrencia con número E de 1.4 % contra
+6.6 %. Cinco puntos de diferencia en la presencia del número E no pueden
+explicar 61 puntos de diferencia en recuperación. El artículo debe dejar de
+decir «no comprobable con este diseño» —sí se comprobó— y **tampoco puede
+adoptar la explicación del número E**: queda descartada, y la anomalía del
+carmín sigue abierta.
+
+### Tarea 9 — sesgo de incorporación
+
+1. **30 de 600 (5.0 %)** necesitaron adjudicación.
+2. VPP solo con acuerdo humano previo (n=526): **97.8 %** [95.8–98.9].
+3. VPP de los adjudicados (n=16 analizables): 100 % [78.5–100].
+4. Sensibilidad excluyendo adjudicados: 84.7 % (contra 84.8 % global crudo).
+
+**La cifra no depende de la fase no independiente:** 97.8 % contra 97.9 %.
+La objeción de sesgo de incorporación queda acotada y se puede responder con
+estos cuatro números.
+
+### Tarea 10 — la re-adjudicación independiente NO existe
+
+Se recorrió el árbol completo buscando `readjudic`, `re-adjudic`, `tercer
+anotador`, `adjudicación independiente`. El único acierto es una entrada
+bibliográfica sin relación. `07_anotacion_consolidada.csv` tiene la columna
+`en_desempate`, que **marca** los 30 registros en desacuerdo, pero no trae
+ningún veredicto de segunda ronda.
+
+**Hay que quitar de la declaración de contribuciones de la v14 la frase
+«independent re-adjudication of the validation subsample»** hasta que exista,
+o incorporar el archivo si se hizo fuera del repositorio.
+
+### Tarea 11 — el sello prueba integridad, no anterioridad
+
+`git log --diff-filter=A` sobre `src/09_replica_pais.py` y sobre
+`reportes/09_replica_spain.json` devuelve **el mismo commit**:
+`6f761050442abb6162a1c34a6d1d035f0c0260e9`, 2026-08-27 10:06:11 -0600. El
+script con P4/P5/P6 y los resultados de España entraron al repositorio a la
+vez.
+
+**No hay hash con fecha anterior a la corrida.** El texto debe decir que el
+SHA-256 acredita integridad, no anterioridad. Para la próxima: commitear el
+script con la predicción y **sin** la salida, y correr después.
+
+### Archivos nuevos
+
+- `src/16_revision_pares_v14.py` — las once tareas y las primitivas
+  (IRLS, sandwich por conglomerado, Nelder-Mead, GLMM por Gauss-Hermite,
+  Kitagawa con interacción, Levenshtein).
+- `tests/test_revision_pares_v14.py` — 11 pruebas: log-OR y EE analíticos de
+  una 2×2, recuperación de σ con 250 grupos, identidad de Kitagawa,
+  ensanchamiento del sandwich, umbral de similitud.
+- `reportes/16_forma_vs_sinonimario.csv` — los términos del diccionario con
+  forma (v1, v2 fina y v2 agrupada) y pertenencia literal, para auditar.
+- `reportes/16_tarea{1..11}_*.json`.
+
+---
+
 ## Historial completo, parche por parche
 
 Formato: **parche — commit — qué trajo — qué se corrigió o se decidió aquí
@@ -918,7 +1191,8 @@ que el parche no traía.**
 | 13 | *(este commit)* | `14_congelar_diccionario.py` v1.1: `codigo_completo`, detección estructural de bloques, invariante de códigos ausentes; recongela v1.1 | Falso positivo de «fusión pendiente» contra términos ya podados a propósito (ver arriba); prueba desactualizada en `test_diccionario.py` (E101 ya no existe) |
 | — (sin número, `DIAGNOSTICO_1597.md`) | `afffdde` | No trajo código: un diagnóstico externo pidió investigar la coincidencia 1597=1597 entre `05` y `07`/`08` | Encontrados y corregidos los 4 bugs de conteo de la sección de arriba en `05`, `06`, `07`, `08`; el alcance se amplió en local a `09` y `11`, que compartían el mismo bug de no-deduplicación sin que el diagnóstico externo los hubiera señalado. Brecha depurada pasa a citarse en 69.7 % |
 | 14 | `3a49f53` | Sin código: especificación del filtro de advertencias de trazas, pesos de estrato a recuperar, congelar la muestra anotada, revisión de España | Implementado `util.py::quitar_advertencia_trazas()` y aplicado en `05,06,07,08,09,11,12`; congelada `07_muestra_anotacion_v1.csv` y guardia contra sobreescritura en `07_forma_y_clase.py`; `.claude/settings.json` para desactivar el trailer de autoría por configuración; corregida la afirmación del parche de que los reportes de España no estaban en el repo (sí estaban, de `afffdde`) |
-| 15 | *(pendiente de commit)* | Sin código: 12 tareas de la revisión por pares del manuscrito v11 (5 revisores) | Tareas 1-2 en `08_vocabulario_off.py` (Tabla 2 con ceros explícitos; modelo sin `mandatory`); tareas 3-11 en `15_revision_pares.py` nuevo, dataset validado contra los totales ya publicados antes de usarse; tarea 12 declarada bloqueada (sin anotación real en el repo) en vez de aproximada; corregidas dos afirmaciones del propio parche (amarillo ocaso/6 invertidos; caramelo peor cubierto, no mejor, de lo que suponía el revisor) |
+| 15 | `c01eb09` + `82f0619` | Sin código: 12 tareas de la revisión por pares del manuscrito v11 (5 revisores) | Tareas 1-2 en `08_vocabulario_off.py` (Tabla 2 con ceros explícitos; modelo sin `mandatory`); tareas 3-11 en `15_revision_pares.py` nuevo, dataset validado contra los totales ya publicados antes de usarse; tarea 12 declarada bloqueada (sin anotación real en el repo) en vez de aproximada; corregidas dos afirmaciones del propio parche (amarillo ocaso/6 invertidos; caramelo peor cubierto, no mejor, de lo que suponía el revisor) |
+| 16 | *(pendiente de commit)* | Sin código: 11 tareas de la segunda revisión por pares (manuscrito v14, 3 revisores) | Encontrado y corregido un bug de determinismo en `util.py` que el parche no pedía (el orden de términos de igual longitud dependía de PYTHONHASHSEED y movía la RM del modelo de forma entre corridas idénticas); confirmado que el efecto de origen no sobrevive a ninguna corrección de dispersión; confirmada la reconstrucción del revisor sobre base común (74.2 % de residual, no 71.5 %); la validación ponderada baja la sensibilidad de 84.8 % a 73.9 %; la tarea decisiva sale A FAVOR del artículo (la forma predice condicionada a la pertenencia literal); rechazada la explicación del número E para el carmín; documentado que la re-adjudicación independiente no existe y que el sello no acredita anterioridad |
 
 ---
 

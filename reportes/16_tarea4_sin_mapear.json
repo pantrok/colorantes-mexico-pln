@@ -1,0 +1,331 @@
+{
+  "regla_documentada": "Levenshtein normalizado sobre el fragmento del anotador contra los terminos del diccionario; umbral 0.82.",
+  "recuperados_por_otro_sinonimo": 9,
+  "falsos_negativos_de_mencion": {
+    "n": 56,
+    "por_codigo": {
+      "E160b": 21,
+      "E129": 6,
+      "E127": 5,
+      "E133": 4,
+      "E171": 3,
+      "E160e": 3,
+      "E100": 3,
+      "E120": 2,
+      "E122": 2,
+      "E110": 2,
+      "E160a": 2,
+      "E162": 1,
+      "E102": 1,
+      "E163": 1
+    },
+    "ejemplos": [
+      {
+        "code": "0020899001605",
+        "fragmento": "ANNATO",
+        "termino_mas_cercano": "annatto",
+        "codigo": "E160b",
+        "similitud": 0.857
+      },
+      {
+        "code": "75013820",
+        "fragmento": "camin",
+        "termino_mas_cercano": "carmin",
+        "codigo": "E120",
+        "similitud": 0.833
+      },
+      {
+        "code": "7501024203413",
+        "fragmento": "ANNATO",
+        "termino_mas_cercano": "annatto",
+        "codigo": "E160b",
+        "similitud": 0.857
+      },
+      {
+        "code": "7502004719764",
+        "fragmento": "rojo FD%C 40",
+        "termino_mas_cercano": "rojo fd&c40",
+        "codigo": "E129",
+        "similitud": 0.833
+      },
+      {
+        "code": "2548791659284",
+        "fragmento": "pigmente blanco 6",
+        "termino_mas_cercano": "pigmento blanco 6",
+        "codigo": "E171",
+        "similitud": 0.941
+      },
+      {
+        "code": "7501008010259",
+        "fragmento": "annato",
+        "termino_mas_cercano": "annatto",
+        "codigo": "E160b",
+        "similitud": 0.857
+      },
+      {
+        "code": "7501008010259",
+        "fragmento": "annato",
+        "termino_mas_cercano": "annatto",
+        "codigo": "E160b",
+        "similitud": 0.857
+      },
+      {
+        "code": "7501791625012",
+        "fragmento": "ROJO NO 40",
+        "termino_mas_cercano": "rojo no. 40",
+        "codigo": "E129",
+        "similitud": 0.909
+      },
+      {
+        "code": "7501791625012",
+        "fragmento": "ROJO NO 40",
+        "termino_mas_cercano": "rojo no. 40",
+        "codigo": "E129",
+        "similitud": 0.909
+      },
+      {
+        "code": "0041220169542",
+        "fragmento": "JUGO DE REMOLACHA",
+        "termino_mas_cercano": "rojo de remolacha",
+        "codigo": "E162",
+        "similitud": 0.824
+      },
+      {
+        "code": "7501010403506",
+        "fragmento": "annato",
+        "termino_mas_cercano": "annatto",
+        "codigo": "E160b",
+        "similitud": 0.857
+      },
+      {
+        "code": "7501010403506",
+        "fragmento": "annato",
+        "termino_mas_cercano": "annatto",
+        "codigo": "E160b",
+        "similitud": 0.857
+      },
+      {
+        "code": "7501791628167",
+        "fragmento": "aciote",
+        "termino_mas_cercano": "achiote",
+        "codigo": "E160b",
+        "similitud": 0.857
+      },
+      {
+        "code": "7501791666398",
+        "fragmento": "rojo 5",
+        "termino_mas_cercano": "rojo 3",
+        "codigo": "E127",
+        "similitud": 0.833
+      },
+      {
+        "code": "75026196",
+        "fragmento": "carmioisina",
+        "termino_mas_cercano": "carmoisina",
+        "codigo": "E122",
+        "similitud": 0.909
+      },
+      {
+        "code": "75026196",
+        "fragmento": "carmioisina",
+        "termino_mas_cercano": "carmoisina",
+        "codigo": "E122",
+        "similitud": 0.909
+      },
+      {
+        "code": "0561801022399",
+        "fragmento": "dióxido de titaniol",
+        "termino_mas_cercano": "dioxido de titanio",
+        "codigo": "E171",
+        "similitud": 0.947
+      },
+      {
+        "code": "0561801022399",
+        "fragmento": "dióxido de titaniol",
+        "termino_mas_cercano": "dioxido de titanio",
+        "codigo": "E171",
+        "similitud": 0.947
+      },
+      {
+        "code": "75042813",
+        "fragmento": "anaranjado alimentos 5",
+        "termino_mas_cercano": "anaranjado alimentos 6",
+        "codigo": "E160e",
+        "similitud": 0.955
+      },
+      {
+        "code": "7501032485030",
+        "fragmento": "rojo 401",
+        "termino_mas_cercano": "rojo 40",
+        "codigo": "E129",
+        "similitud": 0.875
+      },
+      {
+        "code": "0044774056061",
+        "fragmento": "extracto de anato",
+        "termino_mas_cercano": "extracto de annato",
+        "codigo": "E160b",
+        "similitud": 0.944
+      },
+      {
+        "code": "0044774056061",
+        "fragmento": "rojo 40y",
+        "termino_mas_cercano": "rojo 40",
+        "codigo": "E129",
+        "similitud": 0.875
+      },
+      {
+        "code": "7501059296756",
+        "fragmento": "curcumlna",
+        "termino_mas_cercano": "curcumina",
+        "codigo": "E100",
+        "similitud": 0.889
+      },
+      {
+        "code": "7501059296756",
+        "fragmento": "curcumlna",
+        "termino_mas_cercano": "curcumina",
+        "codigo": "E100",
+        "similitud": 0.889
+      },
+      {
+        "code": "7501008015261",
+        "fragmento": "annato",
+        "termino_mas_cercano": "annatto",
+        "codigo": "E160b",
+        "similitud": 0.857
+      }
+    ]
+  },
+  "no_identificables_como_colorante": {
+    "n": 58,
+    "ejemplos": [
+      {
+        "fragmento": "jugo de zanahoria",
+        "mas_cercano": "extracto de zanahoria",
+        "similitud": 0.667
+      },
+      {
+        "fragmento": "E171",
+        "mas_cercano": "e 102",
+        "similitud": 0.4
+      },
+      {
+        "fragmento": "E102",
+        "mas_cercano": "e 102",
+        "similitud": 0.8
+      },
+      {
+        "fragmento": "E129",
+        "mas_cercano": "e 129",
+        "similitud": 0.8
+      },
+      {
+        "fragmento": "E110",
+        "mas_cercano": "e 110",
+        "similitud": 0.8
+      },
+      {
+        "fragmento": "E133",
+        "mas_cercano": "e 102",
+        "similitud": 0.4
+      },
+      {
+        "fragmento": "E132",
+        "mas_cercano": "e 102",
+        "similitud": 0.6
+      },
+      {
+        "fragmento": "CONCENTRADO DE FRUTAS Y VERDURAS",
+        "mas_cercano": "concentrado de betabel",
+        "similitud": 0.562
+      },
+      {
+        "fragmento": "Azul brillate FCF",
+        "mas_cercano": "azul brillante",
+        "similitud": 0.706
+      },
+      {
+        "fragmento": "dorofilinad sodio y potasio",
+        "mas_cercano": "clorofilina cuprica",
+        "similitud": 0.37
+      },
+      {
+        "fragmento": "cloroñla",
+        "mas_cercano": "clorofila",
+        "similitud": 0.778
+      },
+      {
+        "fragmento": "ennato",
+        "mas_cercano": "annatto",
+        "similitud": 0.714
+      },
+      {
+        "fragmento": "TURMERIC",
+        "mas_cercano": "curcuma turmerico",
+        "similitud": 0.471
+      },
+      {
+        "fragmento": "TURMERIC",
+        "mas_cercano": "curcuma turmerico",
+        "similitud": 0.471
+      },
+      {
+        "fragmento": "FRUIT AND VEGETABLE JUICE",
+        "mas_cercano": "rojo raiz de betabel",
+        "similitud": 0.32
+      },
+      {
+        "fragmento": "TURMERIC",
+        "mas_cercano": "curcuma turmerico",
+        "similitud": 0.471
+      },
+      {
+        "fragmento": "FRUIT AND VEGETABLE JUICE",
+        "mas_cercano": "rojo raiz de betabel",
+        "similitud": 0.32
+      },
+      {
+        "fragmento": "anato",
+        "mas_cercano": "annatto",
+        "similitud": 0.714
+      },
+      {
+        "fragmento": "rojo FD 0",
+        "mas_cercano": "rojo fd&c40",
+        "similitud": 0.727
+      },
+      {
+        "fragmento": "rojo FD 0",
+        "mas_cercano": "rojo fd&c40",
+        "similitud": 0.727
+      },
+      {
+        "fragmento": "RIBOFLAVINA-5'-FOSFATO DE SODIO",
+        "mas_cercano": "caramelo al sulfito de amonio",
+        "similitud": 0.367
+      },
+      {
+        "fragmento": "SALES DE SODIO Y POTASIO DE COMPLEJOS CÚPRICOS DE CLOROFILINAS",
+        "mas_cercano": "complejos cupricos de clorofila",
+        "similitud": 0.5
+      },
+      {
+        "fragmento": "Amarilio Ocaso FCF",
+        "mas_cercano": "amarillo ocaso",
+        "similitud": 0.722
+      },
+      {
+        "fragmento": "A}UL BRILLANTE FCFL",
+        "mas_cercano": "azul brillante",
+        "similitud": 0.684
+      },
+      {
+        "fragmento": "yellow 5 lake",
+        "mas_cercano": "negro brillante",
+        "similitud": 0.333
+      }
+    ]
+  },
+  "efecto_sobre_la_sensibilidad": "Los que quedan como falso negativo de mencion se suman al denominador de la sensibilidad A NIVEL DE MENCION; la sensibilidad a nivel de PRODUCTO no cambia, porque esos productos ya contaban como detectados por otro colorante. Ver el conteo de arriba."
+}
